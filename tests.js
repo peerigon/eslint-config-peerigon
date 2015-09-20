@@ -1,9 +1,6 @@
 "use strict";
 
-var base = require("./index.js");
-var es5 = JSON.parse(JSON.stringify(base));
+var combine = require("./lib/combine.js");
+var base = require("./lib/configs/base.js");
 
-es5.rules["no-var"] = 0;
-es5.rules["prefer-arrow-callback"] = 0;
-
-module.exports = es5;
+module.exports = combine(base(), "tests");
