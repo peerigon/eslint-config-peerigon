@@ -1,0 +1,26 @@
+{
+  "name": "eslint-config-peerigon",
+  "version": "0.0.0",
+  "description": "Peerigon coding rules as eslint config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peerigon/eslint-config-peerigon.git"
+  },
+  "keywords": [
+    "eslint",
+    "peerigon",
+    "coding",
+    "rules",
+    "style"
+  ],
+  "author": "developers@peerigon.com",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/peerigon/eslint-config-peerigon/issues"
+  },
+  "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
+  "peerDependencies": {
+    "eslint": "^1.5.0"
+  }
+}
