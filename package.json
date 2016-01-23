@@ -2,7 +2,7 @@
   "name": "eslint-config-peerigon",
   "version": "0.1.1",
   "description": "Peerigon coding rules as eslint config",
-  "main": "index.js",
+  "main": "base.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/peerigon/eslint-config-peerigon.git"
