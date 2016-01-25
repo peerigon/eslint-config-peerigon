@@ -122,7 +122,7 @@ module.exports = {
         "no-unreachable": 2, // http://eslint.org/docs/rules/no-unreachable
         "no-unused-expressions": [2, {
             "allowShortCircuit": true,
-            "allowTernary": false
+            "allowTernary": true
         }], // http://eslint.org/docs/rules/no-unused-expressions
         "no-unused-vars": [2, {"vars": "all", "args": "none"}], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": 0, // http://eslint.org/docs/rules/no-use-before-define
