@@ -1,4 +1,7 @@
 module.exports = {
+    "env": {
+        "mocha": true
+    },
     "rules": {
         "padded-blocks": 0, // mocha blocks tend to be more readable with padding
         "max-nested-callbacks": 0, // mocha blocks are nested all the way down
