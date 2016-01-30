@@ -188,7 +188,7 @@ module.exports = {
         "prefer-spread": 2, // http://eslint.org/docs/rules/prefer-spread
         "prefer-reflect": 0, // http://eslint.org/docs/rules/prefer-reflect
         "prefer-template": 0, // http://eslint.org/docs/rules/prefer-template
-        "quote-props": [2, "consistent-as-needed"], // http://eslint.org/docs/rules/quote-props
+        "quote-props": [2, "as-needed"], // http://eslint.org/docs/rules/quote-props
         "quotes": [2, "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
         "radix": 0, // http://eslint.org/docs/rules/radix
         "id-match": 0, // http://eslint.org/docs/rules/id-match
