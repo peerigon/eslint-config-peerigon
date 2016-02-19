@@ -48,7 +48,7 @@ module.exports = {
         "no-else-return": 2, // http://eslint.org/docs/rules/no-else-return
         "no-empty": 2, // http://eslint.org/docs/rules/no-empty
         "no-empty-character-class": 2,
-        "no-empty-label": 2, // http://eslint.org/docs/rules/no-empty-label
+        "no-labels": 2, // http://eslint.org/docs/rules/no-labels
         "no-eq-null": 0, // http://eslint.org/docs/rules/no-eq-null
         "no-eval": 2, // http://eslint.org/docs/rules/no-eval
         "no-ex-assign": 2, // http://eslint.org/docs/rules/no-ex-assign
@@ -69,7 +69,6 @@ module.exports = {
         "no-irregular-whitespace": 2, // http://eslint.org/docs/rules/no-irregular-whitespace
         "no-iterator": 2, // http://eslint.org/docs/rules/no-iterator
         "no-label-var": 2, // http://eslint.org/docs/rules/no-label-var
-        "no-labels": 0, // http://eslint.org/docs/rules/no-labels
         "no-lone-blocks": 2, // http://eslint.org/docs/rules/no-lone-blocks
         "no-lonely-if": 0, // http://eslint.org/docs/rules/no-lonely-if
         "no-loop-func": 2, // http://eslint.org/docs/rules/no-loop-func
@@ -197,13 +196,11 @@ module.exports = {
         "semi": 2, // http://eslint.org/docs/rules/semi
         "semi-spacing": [2, {"before": false, "after": true}], // http://eslint.org/docs/rules/semi-spacing
         "sort-vars": 0, // http://eslint.org/docs/rules/sort-vars
-        "space-after-keywords": [2, "always"], // http://eslint.org/docs/rules/space-after-keywords
-        "space-before-keywords": [2, "always"], // http://eslint.org/docs/rules/space-before-keywords
+        "keyword-spacing": [2], // http://eslint.org/docs/rules/keyword-spacing
         "space-before-blocks": [2, "always"], // http://eslint.org/docs/rules/space-before-blocks
         "space-before-function-paren": [2, { "anonymous": "always", "named": "never" }], // http://eslint.org/docs/rules/space-before-function-paren
         "space-in-parens": [2, "never"], // http://eslint.org/docs/rules/space-in-parens
         "space-infix-ops": 2, // http://eslint.org/docs/rules/space-infix-ops
-        "space-return-throw-case": 2, // http://eslint.org/docs/rules/space-return-throw-case
         "space-unary-ops": [2, { "words": true, "nonwords": false }], // http://eslint.org/docs/rules/space-unary-ops
         "spaced-comment": 0, // http://eslint.org/docs/rules/spaced-comment
         "strict": 0, // http://eslint.org/docs/rules/strict
