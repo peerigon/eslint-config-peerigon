@@ -1,6 +1,11 @@
 Changelog
 ---------
 
+### 3.0.0
+- **Breaking:** Add rule "no-labels" with severity 2
+- Update to eslint@^2.0.0
+- Remove obsolete rules
+
 ### 2.0.0
 - **Breaking:** Change rule "quote-props" to "as-needed"
 - Add mocha env to tests config
