@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+### 3.1.1
+- Fix parser options for es6 and es5
+
 ### 3.1.0
 - Change severity of "arrow-parens" rule to 0
 
