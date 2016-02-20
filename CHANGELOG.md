@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+### 3.1.0
+- Change severity of "arrow-parens" rule to 0
+
 ### 3.0.0
 - **Breaking:** Add rule "no-labels" with severity 2
 - Update to eslint@^2.0.0
