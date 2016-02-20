@@ -132,7 +132,7 @@ module.exports = {
         "no-warning-comments": [1, { "terms": ["todo", "fixme", "quickfix"], "location": "anywhere" }],
         "no-with": 2, // http://eslint.org/docs/rules/no-with
         "array-bracket-spacing": [2, "never"], // http://eslint.org/docs/rules/array-bracket-spacing
-        "arrow-parens": [2, "always"], // http://eslint.org/docs/rules/arrow-parens
+        "arrow-parens": 0, // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": [2, { "before": true, "after": true }], // http://eslint.org/docs/rules/arrow-spacing
         "accessor-pairs": [2, {
             "getWithoutSet": true
