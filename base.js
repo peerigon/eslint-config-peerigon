@@ -1,29 +1,11 @@
 module.exports = {
     "parser": "espree",
-    "ecmaFeatures": {
-        "arrowFunctions": true,
-        "binaryLiterals": true,
-        "blockBindings": true,
-        "classes": true,
-        "defaultParams": true,
-        "destructuring": true,
-        "forOf": true,
-        "generators": true,
-        "modules": true,
-        "objectLiteralComputedProperties": true,
-        "objectLiteralDuplicateProperties": true,
-        "objectLiteralShorthandMethods": true,
-        "objectLiteralShorthandProperties": true,
-        "octalLiterals": true,
-        "regexUFlag": true,
-        "regexYFlag": true,
-        "restParams": true,
-        "spread": true,
-        "superInFunctions": true,
-        "templateStrings": true,
-        "unicodeCodePointEscapes": true,
-        "globalReturn": true,
-        "jsx": true
+    "env": {
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
     },
     "rules": {
         "no-alert": 0, // http://eslint.org/docs/rules/no-alert
@@ -216,4 +198,4 @@ module.exports = {
         "wrap-regex": 0, // http://eslint.org/docs/rules/wrap-regex
         "yoda": [2, "never"] // http://eslint.org/docs/rules/yoda
     }
-}
+};
