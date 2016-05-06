@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+### 4.0.0
+- **Breaking:** Improve JSDoc validation (some rules are a bit stricter now)
+
 ### 3.1.1
 - Fix parser options for es6 and es5
 
