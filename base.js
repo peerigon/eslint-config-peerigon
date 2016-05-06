@@ -7,6 +7,9 @@ module.exports = {
         "ecmaVersion": 6,
         "sourceType": "module"
     },
+    "plugins": [
+        "jsdoc"
+    ],
     "rules": {
         "no-alert": 0, // http://eslint.org/docs/rules/no-alert
         "no-array-constructor": 2, // http://eslint.org/docs/rules/no-array-constructor
@@ -184,14 +187,29 @@ module.exports = {
         "space-in-parens": [2, "never"], // http://eslint.org/docs/rules/space-in-parens
         "space-infix-ops": 2, // http://eslint.org/docs/rules/space-infix-ops
         "space-unary-ops": [2, { "words": true, "nonwords": false }], // http://eslint.org/docs/rules/space-unary-ops
-        "spaced-comment": 0, // http://eslint.org/docs/rules/spaced-comment
+        "spaced-comment": [2, "always", { "exceptions": ["-"] }], // http://eslint.org/docs/rules/spaced-comment
         "strict": 0, // http://eslint.org/docs/rules/strict
         "use-isnan": 2, // http://eslint.org/docs/rules/use-isnan
         "valid-jsdoc": [2, {
             "requireParamDescription": false,
             "requireReturnDescription": false,
-            "requireReturn": false
+            "requireReturn": false, // still requires to document returns if there is a return
+            "prefer": {
+                "return": "returns"
+            }
         }], // http://eslint.org/docs/rules/valid-jsdoc
+        // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
+        "jsdoc/check-param-names": 2,
+        "jsdoc/check-tag-names": 2,
+        "jsdoc/check-types": 2,
+        "jsdoc/newline-after-description": 2,
+        "jsdoc/require-description-complete-sentence": 2,
+        "jsdoc/require-hyphen-before-param-description": 2,
+        "jsdoc/require-param": 2,
+        "jsdoc/require-param-description": 0,
+        "jsdoc/require-param-type": 2,
+        "jsdoc/require-returns-description": 0,
+        "jsdoc/require-returns-type": 2,
         "valid-typeof": 2, // http://eslint.org/docs/rules/valid-typeof
         "vars-on-top": 2, // http://eslint.org/docs/rules/vars-on-top
         "wrap-iife": 0, // http://eslint.org/docs/rules/wrap-iife
