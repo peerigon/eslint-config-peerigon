@@ -151,7 +151,7 @@ module.exports = {
         "guard-for-in": 0, // http://eslint.org/docs/rules/guard-for-in
         "handle-callback-err": [2, "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
         "id-length": 0, // http://eslint.org/docs/rules/id-length
-        "indent": [2, 4], // http://eslint.org/docs/rules/indent
+        "indent": [2, 4, { "SwitchCase": 1 }], // http://eslint.org/docs/rules/indent
         "init-declarations": 0, // http://eslint.org/docs/rules/init-declarations
         "jsx-quotes": [2, "prefer-double"], // http://eslint.org/docs/rules/jsx-quotes
         "key-spacing": [2, { "beforeColon": false, "afterColon": true }], // http://eslint.org/docs/rules/key-spacing
