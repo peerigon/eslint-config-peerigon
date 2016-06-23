@@ -21,9 +21,7 @@
   },
   "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
   "peerDependencies": {
-    "eslint": "^2.0.0"
-  },
-  "dependencies": {
+    "eslint": "^2.0.0",
     "eslint-plugin-jsdoc": "^2.3.1"
   }
 }
