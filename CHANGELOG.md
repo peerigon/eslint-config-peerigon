@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+### 5.0.0
+- **Breaking:** Make eslint-plugin-jsdoc ^2.3.1 a peer dependency
+- Add config for eslint-plugin-react
+
 ### 4.0.0
 - **Breaking:** Improve JSDoc validation (some rules are a bit stricter now)
 
