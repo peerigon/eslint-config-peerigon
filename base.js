@@ -133,7 +133,9 @@ module.exports = {
         "comma-dangle": [2, "never"], // http://eslint.org/docs/rules/comma-dangle
         "comma-spacing": [2, {"before": false, "after": true}], // http://eslint.org/docs/rules/comma-spacing
         "comma-style": [2, "last"], // http://eslint.org/docs/rules/comma-style
-        "complexity": [1, 5], // http://eslint.org/docs/rules/complexity
+        "complexity": [1, {
+            "max": 20
+        }], // http://eslint.org/docs/rules/complexity
         "computed-property-spacing": [2, "never"], // http://eslint.org/docs/rules/computed-property-spacing
         "consistent-return": 2, // http://eslint.org/docs/rules/consistent-return
         "consistent-this": [0, "self"], // http://eslint.org/docs/rules/consistent-this
