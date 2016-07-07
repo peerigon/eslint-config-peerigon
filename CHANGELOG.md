@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+### 5.1.0
+- Increase allowed max complexity
+
 ### 5.0.0
 - **Breaking:** Make eslint-plugin-jsdoc ^2.3.1 a peer dependency
 - Add config for eslint-plugin-react
