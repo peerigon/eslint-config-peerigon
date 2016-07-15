@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+### 6.0.0
+- Update peer dependency eslint to ^3.0.0
+
 ### 5.1.0
 - Increase allowed max complexity
 
