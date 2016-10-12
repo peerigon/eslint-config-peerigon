@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+### 6.0.1
+- Fix parser silently switching back to es2015 when using the es5 rules
+
 ### 6.0.0
 - Update peer dependency eslint to ^3.0.0
 
