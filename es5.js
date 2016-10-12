@@ -3,7 +3,8 @@ module.exports = {
         "es6": false
     },
     "parserOptions": {
-        "ecmaVersion": 5
+        "ecmaVersion": 5,
+        "sourceType": "script"
     },
     "rules": {
         "no-var": 0,
