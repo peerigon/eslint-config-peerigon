@@ -1,6 +1,9 @@
 Changelog
 ---------
 
+### 7.0.0
+- Add new react rules
+
 ### 6.0.1
 - Fix parser silently switching back to es2015 when using the es5 rules
 
