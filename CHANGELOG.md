@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+### 8.0.0
+- **Breaking:** Add/change react rules based on discussion in [#5](https://github.com/peerigon/eslint-config-peerigon/issues/5)
+- **Breaking:** Add rule to prevent curly spaces in template strings c600bd8b71094ee972b933762d646faef091376d
+
 ### 7.0.0
 - Add new react rules
 
