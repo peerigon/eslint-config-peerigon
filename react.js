@@ -19,7 +19,7 @@ module.exports = {
         "react/no-did-update-set-state": [2, "disallow-in-func"],
         "react/no-direct-mutation-state": 2,
         "react/no-is-mounted": 2,
-        "react/no-multi-comp": 0,
+        'react/no-multi-comp': [2, { ignoreStateless: true }],
         "react/no-set-state": 2,
         "react/no-string-refs": 2,
         "react/no-unknown-property": 2,
@@ -42,13 +42,13 @@ module.exports = {
         "react/no-find-dom-node": 2,
 
         "react/jsx-boolean-value": 0,
-        "react/jsx-closing-bracket-location": 2,
+        "react/jsx-closing-bracket-location": [2, "line-aligned"],
         "react/jsx-curly-spacing": [2, "never"],
         "react/jsx-equals-spacing": [2, "never"],
         "react/jsx-first-prop-new-line": [2, "multiline"],
         "react/jsx-handler-names": [2, {
-          "eventHandlerPrefix": "handle",
-          "eventHandlerPropPrefix": "on"
+            "eventHandlerPrefix": "handle",
+            "eventHandlerPropPrefix": "on"
         }],
         "react/jsx-indent-props": [2, 4],
         "react/jsx-indent": [2, 4],
@@ -62,7 +62,7 @@ module.exports = {
             "allowBind": false,
         }],
         "react/jsx-no-duplicate-props": [2, {
-            "ignoreCase": false,
+            "ignoreCase": true,
         }],
         "react/jsx-no-undef": 2,
         "react/jsx-pascal-case": 2,
