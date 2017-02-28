@@ -180,7 +180,6 @@ module.exports = {
         "prefer-arrow-callback": 2, // http://eslint.org/docs/rules/prefer-arrow-callback
         "prefer-const": 2, // http://eslint.org/docs/rules/prefer-const
         "prefer-spread": 2, // http://eslint.org/docs/rules/prefer-spread
-        "prefer-reflect": 0, // http://eslint.org/docs/rules/prefer-reflect
         "prefer-template": 0, // http://eslint.org/docs/rules/prefer-template
         "template-curly-spacing": [2, "always"], // http://eslint.org/docs/rules/template-curly-spacing
         "quote-props": [2, "as-needed"], // http://eslint.org/docs/rules/quote-props
