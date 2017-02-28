@@ -15,6 +15,7 @@ module.exports = {
         "import"
     ],
     "extends": [
+        "eslint:recommended",
         "plugin:import/recommended"
     ],
     "rules": {
