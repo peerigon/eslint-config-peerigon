@@ -10,6 +10,9 @@ module.exports = {
             "jsx": true,
         }
     },
+    "extends": [
+        "plugin:import/react"
+    ],
     "rules": {
         "no-nested-ternary": 0, // nested ternaries can increase the readability of JSX components
         "react/display-name": 2,

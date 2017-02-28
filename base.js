@@ -11,7 +11,11 @@ module.exports = {
         }
     },
     "plugins": [
-        "jsdoc"
+        "jsdoc",
+        "import"
+    ],
+    "extends": [
+        "plugin:import/recommended"
     ],
     "rules": {
         "no-alert": 0, // http://eslint.org/docs/rules/no-alert
