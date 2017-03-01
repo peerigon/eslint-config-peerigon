@@ -53,6 +53,7 @@ module.exports = {
         "no-fallthrough": "error", // http://eslint.org/docs/rules/no-fallthrough
         "no-floating-decimal": "error", // http://eslint.org/docs/rules/no-floating-decimal
         "no-func-assign": "error", // http://eslint.org/docs/rules/no-func-assign
+        "no-global-assign": "error", // http://eslint.org/docs/rules/no-global-assign
         "no-implicit-coercion": "error", // http://eslint.org/docs/rules/no-implicit-coercion
         "no-implied-eval": "error", // http://eslint.org/docs/rules/no-implied-eval
         "no-inline-comments": "off", // http://eslint.org/docs/rules/no-inline-comments
@@ -71,8 +72,6 @@ module.exports = {
         "no-multi-spaces": "error", // http://eslint.org/docs/rules/no-multi-spaces
         "no-multi-str": "error", // http://eslint.org/docs/rules/no-multi-str
         "no-multiple-empty-lines": ["error", { max: 1 }], // http://eslint.org/docs/rules/no-multiple-empty-lines
-        "no-native-reassign": "error", // http://eslint.org/docs/rules/no-native-reassign
-        "no-negated-in-lhs": "error", // http://eslint.org/docs/rules/no-negated-in-lhs
         "no-nested-ternary": "error", // http://eslint.org/docs/rules/no-nested-ternary
         "no-new": "error", // http://eslint.org/docs/rules/no-new
         "no-new-func": "error", // http://eslint.org/docs/rules/no-new-func
@@ -98,7 +97,6 @@ module.exports = {
         "no-sequences": "error", // http://eslint.org/docs/rules/no-sequences
         "no-shadow": "off", // http://eslint.org/docs/rules/no-shadow
         "no-shadow-restricted-names": "error", // http://eslint.org/docs/rules/no-shadow-restricted-names
-        "no-spaced-func": "error", // http://eslint.org/docs/rules/no-spaced-func
         "no-sparse-arrays": "error", // http://eslint.org/docs/rules/no-sparse-arrays
         "no-sync": "off", // http://eslint.org/docs/rules/no-sync
         "no-ternary": "off", // eslint.org/docs/rules/no-ternary
@@ -111,6 +109,7 @@ module.exports = {
         "no-unexpected-multiline": "error", // http://eslint.org/docs/rules/no-unexpected-multiline
         "no-underscore-dangle": "off", // http://eslint.org/docs/rules/no-underscore-dangle
         "no-unneeded-ternary": "error", // http://eslint.org/docs/rules/no-unneeded-ternary
+        "no-unsafe-negation": "error", // http://eslint.org/docs/rules/no-unsafe-negation
         "no-unreachable": "error", // http://eslint.org/docs/rules/no-unreachable
         "no-unused-expressions": ["error", {
             allowShortCircuit: true,
@@ -153,6 +152,7 @@ module.exports = {
         eqeqeq: ["error", "smart"], // http://eslint.org/docs/rules/eqeqeq
         "func-names": "off", // http://eslint.org/docs/rules/func-names
         "func-style": ["error", "declaration"], // http://eslint.org/docs/rules/func-style
+        "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
         "generator-star-spacing": ["error", { before: false, after: true }], // http://eslint.org/docs/rules/generator-star-spacing
         "global-require": "off", // http://eslint.org/docs/rules/global-require
         "guard-for-in": "off", // http://eslint.org/docs/rules/guard-for-in
