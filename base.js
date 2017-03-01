@@ -178,7 +178,7 @@ module.exports = {
         "max-depth": ["warn", 4], // http://eslint.org/docs/rules/max-depth
         "max-len": ["off", 80, 4], // http://eslint.org/docs/rules/max-len
         "max-nested-callbacks": ["error", 3], // http://eslint.org/docs/rules/max-nested-callbacks
-        "max-params": ["off", 3], // http://eslint.org/docs/rules/max-params
+        "max-params": ["warn", { max: 4 }], // http://eslint.org/docs/rules/max-params
         "max-statements": ["off", 10], // http://eslint.org/docs/rules/max-statements
         "new-cap": "error", // http://eslint.org/docs/rules/new-cap"
         "new-parens": "error", // http://eslint.org/docs/rules/new-parens
