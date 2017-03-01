@@ -21,7 +21,7 @@ module.exports = {
     rules: {
         "no-alert": "error", // http://eslint.org/docs/rules/no-alert
         "no-array-constructor": "error", // http://eslint.org/docs/rules/no-array-constructor
-        "no-bitwise": "off",
+        "no-bitwise": "off", // http://eslint.org/docs/rules/no-bitwise
         "no-caller": "error", // http://eslint.org/docs/rules/no-caller
         "no-catch-shadow": "off", // http://eslint.org/docs/rules/no-catch-shadow
         "no-class-assign": "error", // http://eslint.org/docs/rules/no-class-assign
