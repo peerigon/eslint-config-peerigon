@@ -198,7 +198,7 @@ module.exports = {
         "space-infix-ops": 2, // http://eslint.org/docs/rules/space-infix-ops
         "space-unary-ops": [2, { "words": true, "nonwords": false }], // http://eslint.org/docs/rules/space-unary-ops
         "spaced-comment": [2, "always", { "exceptions": ["-"] }], // http://eslint.org/docs/rules/spaced-comment
-        "strict": 0, // http://eslint.org/docs/rules/strict
+        "strict": 2, // http://eslint.org/docs/rules/strict
         "use-isnan": 2, // http://eslint.org/docs/rules/use-isnan
         "valid-jsdoc": [2, {
             "requireParamDescription": false,
