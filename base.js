@@ -40,7 +40,7 @@ module.exports = {
         "no-duplicate-case": "error", // http://eslint.org/docs/rules/no-duplicate-case
         "no-else-return": "error", // http://eslint.org/docs/rules/no-else-return
         "no-empty": "error", // http://eslint.org/docs/rules/no-empty
-        "no-empty-character-class": "error",
+        "no-empty-character-class": "error", // http://eslint.org/docs/rules/no-empty-character-class
         "no-labels": "error", // http://eslint.org/docs/rules/no-labels
         "no-eq-null": "error", // http://eslint.org/docs/rules/no-eq-null
         "no-eval": "error", // http://eslint.org/docs/rules/no-eval
@@ -86,7 +86,7 @@ module.exports = {
         "no-path-concat": "error", // http://eslint.org/docs/rules/no-path-concat
         "no-plusplus": "off",
         "no-process-env": "off", // http://eslint.org/docs/rules/no-process-env
-        "no-process-exit": "off", // http://eslint.org/docs/rules/no-process-exit
+        "no-process-exit": "error", // http://eslint.org/docs/rules/no-process-exit
         "no-proto": "error", // http://eslint.org/docs/rules/no-proto
         "no-redeclare": "error", // http://eslint.org/docs/rules/no-redeclare
         "no-regex-spaces": "error", // http://eslint.org/docs/rules/no-regex-spaces
