@@ -19,7 +19,7 @@ module.exports = {
         "plugin:import/recommended"
     ],
     rules: {
-        "no-alert": "off", // http://eslint.org/docs/rules/no-alert
+        "no-alert": "error", // http://eslint.org/docs/rules/no-alert
         "no-array-constructor": "error", // http://eslint.org/docs/rules/no-array-constructor
         "no-bitwise": "off",
         "no-caller": "error", // http://eslint.org/docs/rules/no-caller
