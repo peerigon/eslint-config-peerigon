@@ -21,7 +21,7 @@ module.exports = {
     rules: {
         "no-alert": "error", // http://eslint.org/docs/rules/no-alert
         "no-array-constructor": "error", // http://eslint.org/docs/rules/no-array-constructor
-        "no-bitwise": "off", // http://eslint.org/docs/rules/no-bitwise
+        "no-bitwise": "error", // http://eslint.org/docs/rules/no-bitwise
         "no-caller": "error", // http://eslint.org/docs/rules/no-caller
         "no-catch-shadow": "off", // http://eslint.org/docs/rules/no-catch-shadow
         "no-class-assign": "error", // http://eslint.org/docs/rules/no-class-assign
@@ -42,7 +42,7 @@ module.exports = {
         "no-empty": "error", // http://eslint.org/docs/rules/no-empty
         "no-empty-character-class": "error",
         "no-labels": "error", // http://eslint.org/docs/rules/no-labels
-        "no-eq-null": "off", // http://eslint.org/docs/rules/no-eq-null
+        "no-eq-null": "error", // http://eslint.org/docs/rules/no-eq-null
         "no-eval": "error", // http://eslint.org/docs/rules/no-eval
         "no-ex-assign": "error", // http://eslint.org/docs/rules/no-ex-assign
         "no-extend-native": "error", // http://eslint.org/docs/rules/no-extend-native
