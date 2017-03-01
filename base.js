@@ -139,7 +139,7 @@ module.exports = {
         "comma-spacing": ["error", { before: false, after: true }], // http://eslint.org/docs/rules/comma-spacing
         "comma-style": ["error", "last"], // http://eslint.org/docs/rules/comma-style
         complexity: ["warn", {
-            max: 20
+            max: 7
         }], // http://eslint.org/docs/rules/complexity
         "computed-property-spacing": ["error", "never"], // http://eslint.org/docs/rules/computed-property-spacing
         "consistent-return": "error", // http://eslint.org/docs/rules/consistent-return
