@@ -84,7 +84,7 @@ module.exports = {
         "no-octal-escape": "error", // http://eslint.org/docs/rules/no-octal-escape
         "no-param-reassign": "off", // http://eslint.org/docs/rules/no-param-reassign
         "no-path-concat": "error", // http://eslint.org/docs/rules/no-path-concat
-        "no-plusplus": "off",
+        "no-plusplus": "off", // http://eslint.org/docs/rules/no-plusplus
         "no-process-env": "off", // http://eslint.org/docs/rules/no-process-env
         "no-process-exit": "error", // http://eslint.org/docs/rules/no-process-exit
         "no-proto": "error", // http://eslint.org/docs/rules/no-proto
@@ -93,7 +93,7 @@ module.exports = {
         "no-restricted-modules": "off", // http://eslint.org/docs/rules/no-restricted-modules
         "no-restricted-syntax": "off", // http://eslint.org/docs/rules/no-restricted-syntax
         "no-return-assign": "off", // http://eslint.org/docs/rules/no-return-assign
-        "no-script-url": "off", // http://eslint.org/docs/rules/no-script-url
+        "no-script-url": "error", // http://eslint.org/docs/rules/no-script-url
         "no-self-compare": "error", // http://eslint.org/docs/rules/no-self-compare
         "no-sequences": "error", // http://eslint.org/docs/rules/no-sequences
         "no-shadow": "off", // http://eslint.org/docs/rules/no-shadow
