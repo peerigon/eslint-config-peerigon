@@ -160,6 +160,18 @@ module.exports = {
         "id-length": "off", // http://eslint.org/docs/rules/id-length
         indent: ["error", 4, { SwitchCase: 1 }], // http://eslint.org/docs/rules/indent
         "init-declarations": "off", // http://eslint.org/docs/rules/init-declarations
+        // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
+        "jsdoc/check-param-names": "error",
+        "jsdoc/check-tag-names": "error",
+        "jsdoc/check-types": "error",
+        "jsdoc/newline-after-description": "error",
+        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/require-hyphen-before-param-description": "error",
+        "jsdoc/require-param": "error",
+        "jsdoc/require-param-description": "off",
+        "jsdoc/require-param-type": "error",
+        "jsdoc/require-returns-description": "off",
+        "jsdoc/require-returns-type": "error",
         "jsx-quotes": ["error", "prefer-double"], // http://eslint.org/docs/rules/jsx-quotes
         "key-spacing": ["error", { beforeColon: false, afterColon: true }], // http://eslint.org/docs/rules/key-spacing
         "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
@@ -208,18 +220,6 @@ module.exports = {
                 return: "returns"
             }
         }], // http://eslint.org/docs/rules/valid-jsdoc
-        // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
-        "jsdoc/check-param-names": "error",
-        "jsdoc/check-tag-names": "error",
-        "jsdoc/check-types": "error",
-        "jsdoc/newline-after-description": "error",
-        "jsdoc/require-description-complete-sentence": "error",
-        "jsdoc/require-hyphen-before-param-description": "error",
-        "jsdoc/require-param": "error",
-        "jsdoc/require-param-description": "off",
-        "jsdoc/require-param-type": "error",
-        "jsdoc/require-returns-description": "off",
-        "jsdoc/require-returns-type": "error",
         "valid-typeof": "error", // http://eslint.org/docs/rules/valid-typeof
         "vars-on-top": "error", // http://eslint.org/docs/rules/vars-on-top
         "wrap-iife": "off", // http://eslint.org/docs/rules/wrap-iife
