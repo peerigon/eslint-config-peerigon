@@ -175,7 +175,7 @@ module.exports = {
         "jsx-quotes": ["error", "prefer-double"], // http://eslint.org/docs/rules/jsx-quotes
         "key-spacing": ["error", { beforeColon: false, afterColon: true }], // http://eslint.org/docs/rules/key-spacing
         "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
-        "max-depth": ["off", 4], // http://eslint.org/docs/rules/max-depth
+        "max-depth": ["warn", 4], // http://eslint.org/docs/rules/max-depth
         "max-len": ["off", 80, 4], // http://eslint.org/docs/rules/max-len
         "max-nested-callbacks": ["error", 3], // http://eslint.org/docs/rules/max-nested-callbacks
         "max-params": ["off", 3], // http://eslint.org/docs/rules/max-params
