@@ -1,3 +1,6 @@
+/* eslint sort-keys: ["error", "asc"], quote-props: ["error", "consistent"] */
+/* eslint-disable sort-keys */
+
 module.exports = {
     parser: "espree",
     env: {
@@ -19,6 +22,70 @@ module.exports = {
         "plugin:import/recommended"
     ],
     rules: {
+        /* eslint-enable sort-keys */
+        "accessor-pairs": ["error", {
+            getWithoutSet: true
+        }], // http://eslint.org/docs/rules/accessor-pairs
+        "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
+        "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
+        "arrow-spacing": ["error", { after: true, before: true }], // http://eslint.org/docs/rules/arrow-spacing
+        "block-scoped-var": "error", // http://eslint.org/docs/rules/block-scoped-var
+        "block-spacing": "error", // http://eslint.org/docs/rules/block-spacing
+        "brace-style": ["error", "1tbs"], // http://eslint.org/docs/rules/brace-style
+        "callback-return": "error", // http://eslint.org/docs/rules/callback-return
+        "camelcase": ["error", { properties: "always" }], // http://eslint.org/docs/rules/camelcase
+        "comma-dangle": ["error", "never"], // http://eslint.org/docs/rules/comma-dangle
+        "comma-spacing": ["error", { after: true, before: false }], // http://eslint.org/docs/rules/comma-spacing
+        "comma-style": ["error", "last"], // http://eslint.org/docs/rules/comma-style
+        "complexity": ["warn", {
+            max: 7
+        }], // http://eslint.org/docs/rules/complexity
+        "computed-property-spacing": ["error", "never"], // http://eslint.org/docs/rules/computed-property-spacing
+        "consistent-return": "error", // http://eslint.org/docs/rules/consistent-return
+        "consistent-this": ["off", "self"], // http://eslint.org/docs/rules/consistent-this
+        "constructor-super": "error", // http://eslint.org/docs/rules/constructor-super
+        "curly": ["error", "all"], // http://eslint.org/docs/rules/curly
+        "default-case": "error", // http://eslint.org/docs/rules/default-case
+        "dot-location": ["error", "property"], // http://eslint.org/docs/rules/dot-location
+        "dot-notation": ["error", { allowKeywords: true }], // http://eslint.org/docs/rules/dot-notation
+        "eol-last": "off", // http://eslint.org/docs/rules/eol-last
+        "eqeqeq": ["error", "smart"], // http://eslint.org/docs/rules/eqeqeq
+        "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
+        "func-names": "off", // http://eslint.org/docs/rules/func-names
+        "func-style": ["error", "declaration"], // http://eslint.org/docs/rules/func-style
+        "generator-star-spacing": ["error", { after: true, before: false }], // http://eslint.org/docs/rules/generator-star-spacing
+        "global-require": "off", // http://eslint.org/docs/rules/global-require
+        "guard-for-in": "off", // http://eslint.org/docs/rules/guard-for-in
+        "handle-callback-err": ["error", "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
+        "id-length": "off", // http://eslint.org/docs/rules/id-length
+        "id-match": "off", // http://eslint.org/docs/rules/id-match
+        "indent": ["error", 4, { SwitchCase: 1 }], // http://eslint.org/docs/rules/indent
+        "init-declarations": "off", // http://eslint.org/docs/rules/init-declarations
+        // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
+        "jsdoc/check-param-names": "error",
+        "jsdoc/check-tag-names": "error",
+        "jsdoc/check-types": "error",
+        "jsdoc/newline-after-description": "error",
+        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/require-hyphen-before-param-description": "error",
+        "jsdoc/require-param": "error",
+        "jsdoc/require-param-description": "off",
+        "jsdoc/require-param-type": "error",
+        "jsdoc/require-returns-description": "off",
+        "jsdoc/require-returns-type": "error",
+        "jsx-quotes": ["error", "prefer-double"], // http://eslint.org/docs/rules/jsx-quotes
+        "key-spacing": ["error", { afterColon: true, beforeColon: false }], // http://eslint.org/docs/rules/key-spacing
+        "keyword-spacing": ["error"], // http://eslint.org/docs/rules/keyword-spacing
+        "linebreak-style": ["off", "unix"], // http://eslint.org/docs/rules/linebreak-style
+        "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
+        "max-depth": ["warn", 4], // http://eslint.org/docs/rules/max-depth
+        "max-len": ["off", 80, 4], // http://eslint.org/docs/rules/max-len
+        "max-nested-callbacks": ["error", 3], // http://eslint.org/docs/rules/max-nested-callbacks
+        "max-params": ["warn", { max: 4 }], // http://eslint.org/docs/rules/max-params
+        "max-statements": ["off", 10], // http://eslint.org/docs/rules/max-statements
+        "new-cap": "error", // http://eslint.org/docs/rules/new-cap"
+        "new-parens": "error", // http://eslint.org/docs/rules/new-parens
+        "newline-after-var": ["error", "always"], // http://eslint.org/docs/rules/newline-after-var
         "no-alert": "error", // http://eslint.org/docs/rules/no-alert
         "no-array-constructor": "error", // http://eslint.org/docs/rules/no-array-constructor
         "no-bitwise": "error", // http://eslint.org/docs/rules/no-bitwise
@@ -34,14 +101,13 @@ module.exports = {
         "no-debugger": "error", // http://eslint.org/docs/rules/no-debugger
         "no-delete-var": "error", // http://eslint.org/docs/rules/no-delete-var
         "no-div-regex": "off", // http://eslint.org/docs/rules/no-div-regex
+        "no-dupe-args": "error", // http://eslint.org/docs/rules/no-dupe-args
         "no-dupe-class-members": "error", // http://eslint.org/docs/rules/no-dupe-class-members
         "no-dupe-keys": "error", // http://eslint.org/docs/rules/no-dupe-keys
-        "no-dupe-args": "error", // http://eslint.org/docs/rules/no-dupe-args
         "no-duplicate-case": "error", // http://eslint.org/docs/rules/no-duplicate-case
         "no-else-return": "error", // http://eslint.org/docs/rules/no-else-return
         "no-empty": "error", // http://eslint.org/docs/rules/no-empty
         "no-empty-character-class": "error", // http://eslint.org/docs/rules/no-empty-character-class
-        "no-labels": "error", // http://eslint.org/docs/rules/no-labels
         "no-eq-null": "error", // http://eslint.org/docs/rules/no-eq-null
         "no-eval": "error", // http://eslint.org/docs/rules/no-eval
         "no-ex-assign": "error", // http://eslint.org/docs/rules/no-ex-assign
@@ -63,12 +129,12 @@ module.exports = {
         "no-irregular-whitespace": "error", // http://eslint.org/docs/rules/no-irregular-whitespace
         "no-iterator": "error", // http://eslint.org/docs/rules/no-iterator
         "no-label-var": "error", // http://eslint.org/docs/rules/no-label-var
+        "no-labels": "error", // http://eslint.org/docs/rules/no-labels
         "no-lone-blocks": "error", // http://eslint.org/docs/rules/no-lone-blocks
         "no-lonely-if": "off", // http://eslint.org/docs/rules/no-lonely-if
         "no-loop-func": "error", // http://eslint.org/docs/rules/no-loop-func
         "no-mixed-requires": ["off", false], // http://eslint.org/docs/rules/no-mixed-requires
         "no-mixed-spaces-and-tabs": ["error", false], // http://eslint.org/docs/rules/no-mixed-spaces-and-tabs
-        "linebreak-style": ["off", "unix"], // http://eslint.org/docs/rules/linebreak-style
         "no-multi-spaces": "error", // http://eslint.org/docs/rules/no-multi-spaces
         "no-multi-str": "error", // http://eslint.org/docs/rules/no-multi-str
         "no-multiple-empty-lines": ["error", { max: 1 }], // http://eslint.org/docs/rules/no-multiple-empty-lines
@@ -100,89 +166,29 @@ module.exports = {
         "no-sparse-arrays": "error", // http://eslint.org/docs/rules/no-sparse-arrays
         "no-sync": "off", // http://eslint.org/docs/rules/no-sync
         "no-ternary": "off", // eslint.org/docs/rules/no-ternary
-        "no-trailing-spaces": "error", // http://eslint.org/docs/rules/no-trailing-spaces
         "no-this-before-super": "error", // http://eslint.org/docs/rules/no-this-before-super
         "no-throw-literal": "error", // http://eslint.org/docs/rules/no-throw-literal
+        "no-trailing-spaces": "error", // http://eslint.org/docs/rules/no-trailing-spaces
         "no-undef": "error", // http://eslint.org/docs/rules/no-undef
         "no-undef-init": "error", // http://eslint.org/docs/rules/no-undef-init
         "no-undefined": "error", // http://eslint.org/docs/rules/no-undefined
-        "no-unexpected-multiline": "error", // http://eslint.org/docs/rules/no-unexpected-multiline
         "no-underscore-dangle": "off", // http://eslint.org/docs/rules/no-underscore-dangle
+        "no-unexpected-multiline": "error", // http://eslint.org/docs/rules/no-unexpected-multiline
         "no-unneeded-ternary": "error", // http://eslint.org/docs/rules/no-unneeded-ternary
-        "no-unsafe-negation": "error", // http://eslint.org/docs/rules/no-unsafe-negation
         "no-unreachable": "error", // http://eslint.org/docs/rules/no-unreachable
+        "no-unsafe-negation": "error", // http://eslint.org/docs/rules/no-unsafe-negation
         "no-unused-expressions": ["error", {
             allowShortCircuit: true,
             allowTernary: true
         }], // http://eslint.org/docs/rules/no-unused-expressions
-        "no-unused-vars": ["error", { vars: "all", args: "none" }], // http://eslint.org/docs/rules/no-unused-vars
+        "no-unused-vars": ["error", { args: "none", vars: "all" }], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": "off", // http://eslint.org/docs/rules/no-use-before-define
         "no-useless-call": "error", // http://eslint.org/docs/rules/no-useless-call
         "no-useless-concat": "error", // http://eslint.org/docs/rules/no-useless-concat
-        "no-void": "error", // http://eslint.org/docs/rules/no-void
         "no-var": "error", // http://eslint.org/docs/rules/no-var
-        "no-warning-comments": ["warn", { terms: ["todo", "fixme", "quickfix"], location: "anywhere" }],
+        "no-void": "error", // http://eslint.org/docs/rules/no-void
+        "no-warning-comments": ["warn", { location: "anywhere", terms: ["todo", "fixme", "quickfix"] }],
         "no-with": "error", // http://eslint.org/docs/rules/no-with
-        "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
-        "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
-        "arrow-spacing": ["error", { before: true, after: true }], // http://eslint.org/docs/rules/arrow-spacing
-        "accessor-pairs": ["error", {
-            getWithoutSet: true
-        }], // http://eslint.org/docs/rules/accessor-pairs
-        "block-scoped-var": "error", // http://eslint.org/docs/rules/block-scoped-var
-        "block-spacing": "error", // http://eslint.org/docs/rules/block-spacing
-        "brace-style": ["error", "1tbs"], // http://eslint.org/docs/rules/brace-style
-        "callback-return": "error", // http://eslint.org/docs/rules/callback-return
-        camelcase: ["error", { properties: "always" }], // http://eslint.org/docs/rules/camelcase
-        "comma-dangle": ["error", "never"], // http://eslint.org/docs/rules/comma-dangle
-        "comma-spacing": ["error", { before: false, after: true }], // http://eslint.org/docs/rules/comma-spacing
-        "comma-style": ["error", "last"], // http://eslint.org/docs/rules/comma-style
-        complexity: ["warn", {
-            max: 7
-        }], // http://eslint.org/docs/rules/complexity
-        "computed-property-spacing": ["error", "never"], // http://eslint.org/docs/rules/computed-property-spacing
-        "consistent-return": "error", // http://eslint.org/docs/rules/consistent-return
-        "consistent-this": ["off", "self"], // http://eslint.org/docs/rules/consistent-this
-        "constructor-super": "error", // http://eslint.org/docs/rules/constructor-super
-        curly: ["error", "all"], // http://eslint.org/docs/rules/curly
-        "default-case": "error", // http://eslint.org/docs/rules/default-case
-        "dot-location": ["error", "property"], // http://eslint.org/docs/rules/dot-location
-        "dot-notation": ["error", { allowKeywords: true }], // http://eslint.org/docs/rules/dot-notation
-        "eol-last": "off", // http://eslint.org/docs/rules/eol-last
-        eqeqeq: ["error", "smart"], // http://eslint.org/docs/rules/eqeqeq
-        "func-names": "off", // http://eslint.org/docs/rules/func-names
-        "func-style": ["error", "declaration"], // http://eslint.org/docs/rules/func-style
-        "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
-        "generator-star-spacing": ["error", { before: false, after: true }], // http://eslint.org/docs/rules/generator-star-spacing
-        "global-require": "off", // http://eslint.org/docs/rules/global-require
-        "guard-for-in": "off", // http://eslint.org/docs/rules/guard-for-in
-        "handle-callback-err": ["error", "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
-        "id-length": "off", // http://eslint.org/docs/rules/id-length
-        indent: ["error", 4, { SwitchCase: 1 }], // http://eslint.org/docs/rules/indent
-        "init-declarations": "off", // http://eslint.org/docs/rules/init-declarations
-        // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
-        "jsdoc/check-param-names": "error",
-        "jsdoc/check-tag-names": "error",
-        "jsdoc/check-types": "error",
-        "jsdoc/newline-after-description": "error",
-        "jsdoc/require-description-complete-sentence": "error",
-        "jsdoc/require-hyphen-before-param-description": "error",
-        "jsdoc/require-param": "error",
-        "jsdoc/require-param-description": "off",
-        "jsdoc/require-param-type": "error",
-        "jsdoc/require-returns-description": "off",
-        "jsdoc/require-returns-type": "error",
-        "jsx-quotes": ["error", "prefer-double"], // http://eslint.org/docs/rules/jsx-quotes
-        "key-spacing": ["error", { beforeColon: false, afterColon: true }], // http://eslint.org/docs/rules/key-spacing
-        "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
-        "max-depth": ["warn", 4], // http://eslint.org/docs/rules/max-depth
-        "max-len": ["off", 80, 4], // http://eslint.org/docs/rules/max-len
-        "max-nested-callbacks": ["error", 3], // http://eslint.org/docs/rules/max-nested-callbacks
-        "max-params": ["warn", { max: 4 }], // http://eslint.org/docs/rules/max-params
-        "max-statements": ["off", 10], // http://eslint.org/docs/rules/max-statements
-        "new-cap": "error", // http://eslint.org/docs/rules/new-cap"
-        "new-parens": "error", // http://eslint.org/docs/rules/new-parens
-        "newline-after-var": ["error", "always"], // http://eslint.org/docs/rules/newline-after-var
         "object-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/object-curly-spacing
         "object-shorthand": ["error", "always"], // http://eslint.org/docs/rules/object-shorthand
         "one-var": ["error", "never"], // http://eslint.org/docs/rules/one-var
@@ -193,37 +199,35 @@ module.exports = {
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
         "prefer-spread": "error", // http://eslint.org/docs/rules/prefer-spread
         "prefer-template": "off", // http://eslint.org/docs/rules/prefer-template
-        "template-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/template-curly-spacing
         "quote-props": ["error", "as-needed"], // http://eslint.org/docs/rules/quote-props
-        quotes: ["error", "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
-        radix: "off", // http://eslint.org/docs/rules/radix
-        "id-match": "off", // http://eslint.org/docs/rules/id-match
+        "quotes": ["error", "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
+        "radix": "off", // http://eslint.org/docs/rules/radix
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
         "require-yield": "error", // http://eslint.org/docs/rules/require-yield
-        semi: "error", // http://eslint.org/docs/rules/semi
-        "semi-spacing": ["error", { before: false, after: true }], // http://eslint.org/docs/rules/semi-spacing
+        "semi": "error", // http://eslint.org/docs/rules/semi
+        "semi-spacing": ["error", { after: true, before: false }], // http://eslint.org/docs/rules/semi-spacing
         "sort-vars": "off", // http://eslint.org/docs/rules/sort-vars
-        "keyword-spacing": ["error"], // http://eslint.org/docs/rules/keyword-spacing
         "space-before-blocks": ["error", "always"], // http://eslint.org/docs/rules/space-before-blocks
         "space-before-function-paren": ["error", { anonymous: "always", named: "never" }], // http://eslint.org/docs/rules/space-before-function-paren
         "space-in-parens": ["error", "never"], // http://eslint.org/docs/rules/space-in-parens
         "space-infix-ops": "error", // http://eslint.org/docs/rules/space-infix-ops
-        "space-unary-ops": ["error", { words: true, nonwords: false }], // http://eslint.org/docs/rules/space-unary-ops
+        "space-unary-ops": ["error", { nonwords: false, words: true }], // http://eslint.org/docs/rules/space-unary-ops
         "spaced-comment": ["error", "always", { exceptions: ["-"] }], // http://eslint.org/docs/rules/spaced-comment
-        strict: "error", // http://eslint.org/docs/rules/strict
+        "strict": "error", // http://eslint.org/docs/rules/strict
+        "template-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/template-curly-spacing
         "use-isnan": "error", // http://eslint.org/docs/rules/use-isnan
         "valid-jsdoc": ["error", {
-            requireParamDescription: false,
-            requireReturnDescription: false,
-            requireReturn: false, // still requires to document returns if there is a return
             prefer: {
                 return: "returns"
-            }
+            },
+            requireParamDescription: false,
+            requireReturn: false, // still requires to document returns if there is a return
+            requireReturnDescription: false
         }], // http://eslint.org/docs/rules/valid-jsdoc
         "valid-typeof": "error", // http://eslint.org/docs/rules/valid-typeof
         "vars-on-top": "error", // http://eslint.org/docs/rules/vars-on-top
         "wrap-iife": "off", // http://eslint.org/docs/rules/wrap-iife
         "wrap-regex": "off", // http://eslint.org/docs/rules/wrap-regex
-        yoda: ["error", "never"] // http://eslint.org/docs/rules/yoda
+        "yoda": ["error", "never"] // http://eslint.org/docs/rules/yoda
     }
 };
