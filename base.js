@@ -118,7 +118,7 @@ module.exports = {
         }], // http://eslint.org/docs/rules/no-unused-expressions
         "no-unused-vars": ["error", { vars: "all", args: "none" }], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": "off", // http://eslint.org/docs/rules/no-use-before-define
-        "no-useless-call": "off", // http://eslint.org/docs/rules/no-useless-call
+        "no-useless-call": "error", // http://eslint.org/docs/rules/no-useless-call
         "no-useless-concat": "error", // http://eslint.org/docs/rules/no-useless-concat
         "no-void": "error", // http://eslint.org/docs/rules/no-void
         "no-var": "error", // http://eslint.org/docs/rules/no-var
