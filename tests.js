@@ -1,12 +1,12 @@
 module.exports = {
-    "env": {
-        "mocha": true
+    env: {
+        mocha: true
     },
-    "rules": {
-        "padded-blocks": 0, // mocha blocks tend to be more readable with padding
-        "max-nested-callbacks": 0, // mocha blocks are nested all the way down
-        "no-undefined": 0,// sometimes it's necessary to check for undefined explicitly
-        "brace-style": [2, "1tbs", { "allowSingleLine": true }], // in order to make mocks more condensed, single line blocks are allowed in tests,
-        "no-unused-expressions": 0  // chai uses these as assertions
+    rules: {
+        "padded-blocks": "off", // mocha blocks tend to be more readable with padding
+        "max-nested-callbacks": "off", // mocha blocks are nested all the way down
+        "no-undefined": "off",// sometimes it's necessary to check for undefined explicitly
+        "brace-style": ["error", "1tbs", { allowSingleLine: true }], // in order to make mocks more condensed, single line blocks are allowed in tests,
+        "no-unused-expressions": "off"  // chai uses these as assertions
     }
 };
