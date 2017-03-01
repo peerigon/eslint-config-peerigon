@@ -3,6 +3,9 @@
   "version": "9.0.0",
   "description": "Peerigon coding rules as eslint config",
   "main": "base.js",
+  "scripts": {
+    "unused": "eslint-find-rules -u -n"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/peerigon/eslint-config-peerigon.git"
@@ -26,5 +29,8 @@
   "dependencies": {
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsdoc": "^2.4.0"
+  },
+  "devDependencies": {
+    "eslint-find-rules": "^1.14.3"
   }
 }
