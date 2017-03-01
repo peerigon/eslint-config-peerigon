@@ -1,3 +1,6 @@
+/* eslint sort-keys: ["error", "asc"], quote-props: ["error", "consistent"] */
+/* eslint-disable sort-keys */
+
 module.exports = {
     env: {
         es6: false
@@ -7,11 +10,14 @@ module.exports = {
         sourceType: "script"
     },
     rules: {
+        /* eslint-enable sort-keys */
         "no-var": "off",
+        "object-shorthand": "off",
         "prefer-arrow-callback": "off",
         "prefer-const": "off",
+        "prefer-numeric-literals": "off",
+        "prefer-rest-params": "off",
         "prefer-spread": "off",
-        "prefer-template": "off",
-        "object-shorthand": "off"
+        "prefer-template": "off"
     }
 };
