@@ -2,17 +2,6 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    parser: "espree",
-    env: {
-        es6: true,
-    },
-    parserOptions: {
-        ecmaVersion: 6,
-        sourceType: "module",
-        ecmaFeatures: {
-            jsx: true,
-        }
-    },
     extends: [
         "plugin:import/react"
     ],

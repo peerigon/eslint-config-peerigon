@@ -7,11 +7,21 @@ module.exports = {
     },
     rules: {
         /* eslint-enable sort-keys */
-        "brace-style": ["error", "1tbs", { allowSingleLine: true }], // in order to make mocks more condensed, single line blocks are allowed in tests,
-        "max-nested-callbacks": "off", // mocha blocks are nested all the way down
-        "max-statements-per-line": ["error", { max: 2 }], // can increase the readability of a test if simple mocking functions are in one line
-        "no-undefined": "off",// sometimes it's necessary to check for undefined explicitly
-        "no-unused-expressions": "off",  // chai uses these as assertions
-        "padded-blocks": "off" // mocha blocks tend to be more readable with padding
+        // In case the fp rules are used
+        "arrow-body-style": ["error", "as-needed"],
+        // In order to make mocks more condensed, single line blocks are allowed in tests
+        "brace-style": ["error", "1tbs", { allowSingleLine: true }],
+        // mocha blocks are nested all the way down
+        "max-nested-callbacks": "off",
+        // In case the fp rules are used
+        "max-statements": "off",
+        // Can increase the readability of a test if simple mocking functions are in one line
+        "max-statements-per-line": ["error", { max: 2 }],
+        // Sometimes it's necessary to check for undefined explicitly
+        "no-undefined": "off",
+        // chai uses these as assertions
+        "no-unused-expressions": "off",
+        // mocha blocks tend to be more readable with padding
+        "padded-blocks": "off"
     }
 };
