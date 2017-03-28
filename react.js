@@ -42,6 +42,7 @@ module.exports = {
         "react/jsx-space-before-closing": ["error", "always"],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
+        "react/jsx-wrap-multilines": "error",
         "react/no-children-prop": "error",
         "react/no-danger": "error",
         "react/no-danger-with-children": "error",
@@ -66,7 +67,6 @@ module.exports = {
         "react/self-closing-comp": "error",
         "react/sort-comp": "off",
         "react/sort-prop-types": "off",
-        "react/style-prop-object": "off",
-        "react/wrap-multilines": "error"
+        "react/style-prop-object": "off"
     }
 };
