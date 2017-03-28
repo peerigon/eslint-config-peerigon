@@ -38,7 +38,13 @@ module.exports = {
         "camelcase": ["error", { properties: "always" }], // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
         "class-methods-use-this": ["error"], // http://eslint.org/docs/rules/class-methods-use-this
-        "comma-dangle": ["error", "always"], // http://eslint.org/docs/rules/comma-dangle
+        "comma-dangle": ["error", {
+            arrays: "always-multiline",
+            exports: "always-multiline",
+            functions: "ignore",
+            imports: "always-multiline",
+            objects: "always-multiline",
+        }], // http://eslint.org/docs/rules/comma-dangle
         "comma-spacing": ["error", { after: true, before: false }], // http://eslint.org/docs/rules/comma-spacing
         "comma-style": ["error", "last"], // http://eslint.org/docs/rules/comma-style
         "complexity": ["warn", {
