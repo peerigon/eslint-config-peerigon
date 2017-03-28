@@ -71,7 +71,8 @@ module.exports = {
         "handle-callback-err": ["error", "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
         "id-blacklist": ["off"], // http://eslint.org/docs/rules/id-blacklist
         "id-length": ["warn", {
-            max: 40
+            max: 40,
+            min: 0
         }], // http://eslint.org/docs/rules/id-length
         "id-match": "off", // http://eslint.org/docs/rules/id-match
         "import/default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
