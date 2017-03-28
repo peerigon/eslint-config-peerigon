@@ -314,7 +314,8 @@ module.exports = {
             typeof: true
         }], // http://eslint.org/docs/rules/no-undef
         "no-undef-init": "error", // http://eslint.org/docs/rules/no-undef-init
-        "no-undefined": "error", // http://eslint.org/docs/rules/no-undefined
+        // Since we disallow shadowing of undefined, it is safe to turn this rule off
+        "no-undefined": "off", // http://eslint.org/docs/rules/no-undefined
         "no-underscore-dangle": "off", // http://eslint.org/docs/rules/no-underscore-dangle
         "no-unexpected-multiline": "error", // http://eslint.org/docs/rules/no-unexpected-multiline
         "no-unmodified-loop-condition": "error", // http://eslint.org/docs/rules/no-unmodified-loop-condition
