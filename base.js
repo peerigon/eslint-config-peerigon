@@ -57,8 +57,8 @@ module.exports = {
         "curly": ["error", "all"], // http://eslint.org/docs/rules/curly
         "default-case": "off", // http://eslint.org/docs/rules/default-case
         "dot-location": ["error", "property"], // http://eslint.org/docs/rules/dot-location
-        // We don't support ES3 envs anymore, so allowKeywords: false is ok
-        "dot-notation": ["error", { allowKeywords: false }], // http://eslint.org/docs/rules/dot-notation
+        // We don't support ES3 envs anymore, so allowKeywords: true is ok
+        "dot-notation": ["error", { allowKeywords: true }], // http://eslint.org/docs/rules/dot-notation
         "eol-last": "off", // http://eslint.org/docs/rules/eol-last
         "eqeqeq": ["error", "always"], // http://eslint.org/docs/rules/eqeqeq
         "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
