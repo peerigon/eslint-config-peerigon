@@ -309,7 +309,10 @@ module.exports = {
         "no-this-before-super": "error", // http://eslint.org/docs/rules/no-this-before-super
         "no-throw-literal": "error", // http://eslint.org/docs/rules/no-throw-literal
         "no-trailing-spaces": "error", // http://eslint.org/docs/rules/no-trailing-spaces
-        "no-undef": "error", // http://eslint.org/docs/rules/no-undef
+        "no-undef": ["error", {
+            // A developer should introduce global variables explicitly to eslint
+            typeof: true
+        }], // http://eslint.org/docs/rules/no-undef
         "no-undef-init": "error", // http://eslint.org/docs/rules/no-undef-init
         "no-undefined": "error", // http://eslint.org/docs/rules/no-undefined
         "no-underscore-dangle": "off", // http://eslint.org/docs/rules/no-underscore-dangle
