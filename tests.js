@@ -7,8 +7,6 @@ module.exports = {
     },
     rules: {
         /* eslint-enable sort-keys */
-        // In case the fp rules are used
-        "arrow-body-style": ["error", "as-needed"],
         // In order to make mocks more condensed, single line blocks are allowed in tests
         "brace-style": ["error", "1tbs", { allowSingleLine: true }],
         // mocha blocks are nested all the way down
@@ -17,6 +15,10 @@ module.exports = {
         "max-statements": "off",
         // Can increase the readability of a test if simple mocking functions are in one line
         "max-statements-per-line": ["error", { max: 2 }],
+        // In case the fp rules are used, we need to relax them again
+        "no-restricted-syntax": ["error",
+            "WithStatement", // deprecated
+        ], // http://eslint.org/docs/rules/no-restricted-syntax
         // Sometimes it's necessary to check for undefined explicitly
         "no-undefined": "off",
         // chai uses these as assertions

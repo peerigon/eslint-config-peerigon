@@ -4,25 +4,23 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    plugins: [
-        "flowtype"
-    ],
     rules: {
-        /* eslint-enable sort-keys */
-        // Arrow functions are very common in functional programming, that's why we allow them as expression.
-        // But they should return immediately. Unfortunately, there's currently no rule to enforce that.
-        // https://github.com/eslint/eslint/issues/7765
-        "arrow-body-style": ["error", "never"],
-        "flowtype/semi": ["error", "never"],
-        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
-        "max-statements": ["error", 1],
+        "func-style": ["error", "expression"],
+        "max-statements": ["warn", 10],
         // Can be quite common in functional programming
         "no-nested-ternary": "off",
-        // Sequences are the only way to do multiple side-effects while still allowing only one statement
-        "no-sequences": "off",
-        // The void operator can be used to flag functions with side-effects
-        "no-void": "off",
-        // When you can only do one statement, you don't need semicolons
-        "semi": ["error", "never"]
+        "no-unused-expressions": ["error"],
+        // The syntax constructs are typical for procedural/imperative code
+        // Use their functional counter-parts instead
+        "no-restricted-syntax": ["error",
+            "WithStatement", // deprecated
+            // Side-effect expressions should be prefixed with void
+            // Hopefully we can improve the error message some day: https://github.com/eslint/eslint/issues/8298
+            "ExpressionStatement > *:not(AssignmentExpression,UnaryExpression[operator=void],Literal[value=/use strict/],CallExpression[callee.type=Super])",
+            "FunctionDeclaration[generator=false]:not([id.name=captureThis])",
+            "*:not(MethodDefinition) > FunctionExpression[generator=false]:not([id.name=captureThis])",
+            "ForStatement", // use forEach, map, reduce, etc.
+            "WhileStatement" // use forEach, map, reduce, etc.
+        ], // http://eslint.org/docs/rules/no-restricted-syntax
     }
 };
