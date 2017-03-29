@@ -144,7 +144,7 @@ module.exports = {
         "jsdoc/check-tag-names": "error",
         "jsdoc/check-types": "error",
         "jsdoc/newline-after-description": "error",
-        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/require-description-complete-sentence": "off",
         "jsdoc/require-hyphen-before-param-description": "error",
         "jsdoc/require-param": "error",
         "jsdoc/require-param-description": "off",
