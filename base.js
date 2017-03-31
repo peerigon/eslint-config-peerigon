@@ -119,7 +119,10 @@ module.exports = {
         "import/no-unresolved": ["error", { commonjs: true }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
         "import/no-webpack-loader-syntax": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
         "import/order": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-        "import/prefer-default-export": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+        // While default exports are better most of the time, there may be cases where you just have one named export
+        // but it is very likely that there will be more exports in the future.
+        // In this case, this warning can be annoying.
+        "import/prefer-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
         "import/unambiguous": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
         "indent": ["error", 4, {
             ArrayExpression: 1,
