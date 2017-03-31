@@ -1,6 +1,3 @@
-Changelog
----------
-
 ### 9.0.0
 - **Breaking:** Enforce template-curly-spacing (see a3409a3613a58e002921db8cb54db0550fbfa56d)
 
