@@ -20,7 +20,7 @@ in order to enable specific globals.
 
 Add an `.eslintrc.json` to the project's root folder:
 
-```json
+```js
 {
     "extends": [
         // Base rules for every project
@@ -37,7 +37,7 @@ Add an `.eslintrc.json` to the project's root folder:
 
 In case you changed the resolving behavior, you can use the [resolvers option](https://github.com/benmosher/eslint-plugin-import#resolvers) of the `eslint-plugin-import`. For instance, if you're using webpack, you just need to install the [`eslint-import-resolver-webpack`](https://www.npmjs.com/package/eslint-import-resolver-webpack) module and tell the plugin the location of your `webpack.config.js` like this:
 
-```json
+```js
     "settings": {
         "import/resolver": {
             "webpack": {
@@ -56,7 +56,7 @@ You don't need to do that if you stick to node's/webpack's default resolver.
 Special rules for tests, like allowing deeper function nesting and function inlining.
 Simply create a `.eslintrc` file inside your `test` folder with these contents:
 
-```json
+```js
 {
     "extends": [
         "peerigon/tests"
@@ -71,7 +71,7 @@ Do not add `"root": true` here since we want to *extend* our project config.
 Special rules for node.js >= 4.0.0 environments. Use these rules if you do not
 want to transpile your code with babel:
 
-```json
+```js
 {
     "extends": [
         // Base rules with full ES2015 support
@@ -89,7 +89,7 @@ want to transpile your code with babel:
 Additional rules for [React](https://facebook.github.io/react/) development.
 Can also be used in other JSX environments, like [Preact](https://github.com/developit/preact):
 
-```json
+```js
 {
     "extends": [
         "peerigon",
@@ -103,7 +103,7 @@ Can also be used in other JSX environments, like [Preact](https://github.com/dev
 
 Additional rules for [Flowtype](https://flowtype.org/).
 
-```json
+```js
 {
     "extends": [
         "peerigon",
@@ -152,7 +152,7 @@ export default (
 
 Special rules for older projects:
 
-```json
+```js
 {
     "extends": [
         // Base rules with full ES2015 support
