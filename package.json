@@ -4,7 +4,8 @@
   "description": "Peerigon coding rules as eslint config",
   "main": "base.js",
   "scripts": {
-    "unused": "eslint-find-rules -u -n"
+    "unused": "eslint-find-rules -u -n",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "eslint-plugin-jsdoc": "^3.0.0"
   },
   "devDependencies": {
-    "eslint-find-rules": "^1.14.3"
+    "eslint-find-rules": "^1.14.3",
+    "standard-version": "^4.0.0"
   }
 }
