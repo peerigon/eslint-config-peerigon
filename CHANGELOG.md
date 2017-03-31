@@ -1,3 +1,33 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="10.0.0"></a>
+# [10.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v9.0.0...v10.0.0) (2017-03-31)
+
+
+### Features
+
+* Refactor rules ([691bfb2](https://github.com/peerigon/eslint-config-peerigon/commit/691bfb2))
+
+
+### BREAKING CHANGES
+
+* This version introduces also some breaking changes:
+
+- Switch "no-alert" to "error" (a831ed4fc3b17d4a932745cdda7f31cbc00e955d)
+- Switch "no-bitwise" to "error" (e8f38b6289c6b3ae7d17dc35a445b1837143c4bd)
+- Switch "no-eq-null" to "error" (329ae4bbaf5b4fd732f899bd89cd8f152b7ac1e2)
+- Switch "no-process-exit" to "error" (850275f029ea37c85c7e766f8d976a38ea89dce3)
+- Switch "no-script-url" to "error" (5b10357db3fe6f836858066c44e740956ad3df61)
+- Switch "no-useless-call" to "error" (66ab5190f01d27d81c5d0654c303f77466c37d47)
+- Switch "no-script-url" to "error" (5b10357db3fe6f836858066c44e740956ad3df61)
+- Add dangling commas (356adb84c3d7c9ba937c4248a38e1d1cc6ba46df)
+- Add a bunch of new rules (bf343f51cba2ae93bc38dff541122705776b2259)
+- Make "no-undef" rule stricter (6ae63b3b83925ebdbcb1586f3292ef9cb93d8dc9)
+
+
+
 ### 9.0.0
 - **Breaking:** Enforce template-curly-spacing (see a3409a3613a58e002921db8cb54db0550fbfa56d)
 
