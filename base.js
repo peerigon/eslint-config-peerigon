@@ -85,7 +85,6 @@ module.exports = {
         "import/first": ["error", "absolute-first"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
         // Using more than 15 dependencies in one module is a sign that this module is doing too much.
         // You should consider splitting that module into different parts.
-        // Small modules are easier to reason about and can prevent merge conflicts.
         "import/max-dependencies": ["warn", { max: 15 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
         "import/named": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
         "import/namespace": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
@@ -244,7 +243,7 @@ module.exports = {
         "no-lonely-if": "error", // http://eslint.org/docs/rules/no-lonely-if
         "no-loop-func": "warn", // http://eslint.org/docs/rules/no-loop-func
         "no-magic-numbers": ["off", {
-            // These settings are currently unused, but may be re-used once we decide to have that rule again
+            // These settings are currently unused, but we may re-use them once we decide to have that rule again.
             ignore: [
                 // digits are ok
                 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
