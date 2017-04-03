@@ -198,7 +198,7 @@ module.exports = {
         "no-catch-shadow": "off", // http://eslint.org/docs/rules/no-catch-shadow
         "no-class-assign": "error", // http://eslint.org/docs/rules/no-class-assign
         "no-cond-assign": ["error", "except-parens"], // http://eslint.org/docs/rules/no-cond-assign
-        "no-confusing-arrow": ["error", { allowParens : true }], // http://eslint.org/docs/rules/no-confusing-arrow
+        "no-confusing-arrow": ["off", { allowParens: true }], // http://eslint.org/docs/rules/no-confusing-arrow
         "no-console": "off", // http://eslint.org/docs/rules/no-console
         "no-const-assign": "error", // http://eslint.org/docs/rules/no-const-assign
         "no-constant-condition": "error", // http://eslint.org/docs/rules/no-constant-condition
