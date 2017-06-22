@@ -99,6 +99,7 @@ module.exports = {
         "import/no-extraneous-dependencies": ["error", {
             devDependencies: [
                 "test/**",
+                "config/**",
                 "scripts/**", // contains usually npm scripts
                 "tools/**", // often used for other scripts
                 "**/*.test.js", "**/*.spec.js", "**/types.js"
