@@ -12,6 +12,7 @@ Provided configs
 ### [`peerigon`](base.js)
 
 **Base rules for every project. You should always add these rules.**
+**Requires [babel-eslint](https://github.com/babel/babel-eslint), [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import) and [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) as peer dependency in npm@2 environments (usually node 4).**
 
 These rules assume a modern project with full ES2015 support and a module system with a node.js-like resolving behavior (like node.js and webpack). For special rules, which extend these base rules for older environments, see below.
 
@@ -86,6 +87,8 @@ want to transpile your code with babel:
 
 ### [`peerigon/react`](react.js)
 
+**Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) as peer dependency.**
+
 Additional rules for [React](https://facebook.github.io/react/) development.
 Can also be used in other JSX environments, like [Preact](https://github.com/developit/preact):
 
@@ -100,6 +103,8 @@ Can also be used in other JSX environments, like [Preact](https://github.com/dev
 ```
 
 ### [`peerigon/flowtype`](flowtype.js)
+
+**Requires [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as peer dependency.**
 
 Additional rules for [Flowtype](https://flowtype.org/).
 
@@ -243,27 +248,27 @@ We should also take into account that code is different than regular paragraphs 
 
 ### A change should be as atomic as possible
 
-That's why this
+That's why this change:
 
 ```javascript
-let a = 1;            let a = 1;
-let bb = 2;     >>    const bb = 2;
-let ccc = 3;          let ccc = 3;
+let a = 1;                   let a = 1;
+let bb = 2;     change to    const bb = 2;
+let ccc = 3;                 let ccc = 3;
 
-// one line changed
+// only line 2 has been changed
 ```
 
-is better than that
+is better than that change:
 
 ```javascript
-let a   = 1,          let   a   = 1,
-    bbb = 2,    >>          cc  = 3;
-    cc  = 3;          const bbb = 3;
+let a   = 1,                 let   a   = 1,
+    bbb = 2,    change to          cc  = 3;
+    cc  = 3;                 const bbb = 3;
 
-// three lines changed
+// all three lines have been changed
 ```
 
-If I don't have to change a lot of lines, refactoring is more fun. As a nice side-effect, `git diff` also becomes more readable.
+If you don't have to change a lot of lines, refactoring is more fun. As a nice side-effect, `git diff` also becomes more readable.
 
 Recommendations
 ------------------------------------------------------------------------
@@ -278,7 +283,7 @@ Sometimes, there is a legitimate use-case to disable a specific rule. You can di
 
 where `rule-code` is the code that is displayed along the error message.
 
-In rare cases, it makes sense to disable a rule for the whole project. For instance, if you work with JSON data coming from a foregin API that uses underscore property names.
+In rare cases, it makes sense to disable a rule for the whole project. For instance, if you work with JSON data coming from a foreign API that uses underscore property names.
 
 If you don't agree with a rule, please do not just disable the rule. It's better to create an issue here in order to discuss the pros and cons of a rule.
 
