@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="11.0.0"></a>
+# [11.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v10.1.1...v11.0.0) (2017-06-22)
+
+
+### Chores
+
+* Remove eslint-plugin-flowtype ([e99537a](https://github.com/peerigon/eslint-config-peerigon/commit/e99537a))
+
+
+### BREAKING CHANGES
+
+* This commit removes eslint-plugin-flowtype from the package.json. In case you're using the flowtype config, you need to add eslint-plugin-flowtype to your package.json now.
+
+
+
 <a name="10.1.1"></a>
 ## [10.1.1](https://github.com/peerigon/eslint-config-peerigon/compare/v10.1.0...v10.1.1) (2017-04-03)
 
