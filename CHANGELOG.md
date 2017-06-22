@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="11.2.0"></a>
+# [11.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v11.1.0...v11.2.0) (2017-06-22)
+
+
+### Features
+
+* Relax no-extraneous-dependencies rule ([50710b5](https://github.com/peerigon/eslint-config-peerigon/commit/50710b5))
+
+
+
 <a name="11.1.0"></a>
 # [11.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v11.0.1...v11.1.0) (2017-06-22)
 
