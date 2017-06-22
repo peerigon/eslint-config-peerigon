@@ -97,9 +97,14 @@ module.exports = {
         "import/no-duplicates": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
         "import/no-dynamic-require": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
         "import/no-extraneous-dependencies": ["error", {
-            devDependencies: ["test/**", "**/*.test.js", "**/*.spec.js", "**/types.js"],
+            devDependencies: [
+                "test/**",
+                "scripts/**", // contains usually npm scripts
+                "tools/**", // often used for other scripts
+                "**/*.test.js", "**/*.spec.js", "**/types.js"
+            ],
             optionalDependencies: true,
-            peerDependencies: true
+            peerDependencies: false
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
         "import/no-internal-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
         "import/no-mutable-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
