@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="11.0.1"></a>
+## [11.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v11.0.0...v11.0.1) (2017-06-22)
+
+
+### Bug Fixes
+
+* Missing plugin declaration in react rules ([3a39340](https://github.com/peerigon/eslint-config-peerigon/commit/3a39340))
+
+
+
 <a name="11.0.0"></a>
 # [11.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v10.1.1...v11.0.0) (2017-06-22)
 
