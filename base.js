@@ -37,7 +37,7 @@ module.exports = {
         "callback-return": "error", // http://eslint.org/docs/rules/callback-return
         "camelcase": ["error", { properties: "always" }], // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
-        "class-methods-use-this": ["error"], // http://eslint.org/docs/rules/class-methods-use-this
+        "class-methods-use-this": ["warn"], // http://eslint.org/docs/rules/class-methods-use-this
         "comma-dangle": ["error", {
             arrays: "always-multiline",
             exports: "always-multiline",
