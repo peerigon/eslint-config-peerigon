@@ -10,6 +10,17 @@ module.exports = {
     ],
     rules: {
         /* eslint-enable sort-keys */
+        // Allow certain react methods to have no this
+        // See https://github.com/peerigon/eslint-config-peerigon/issues/12
+        "class-methods-use-this": ["warn", {
+            "exceptMethods": [
+                "render",
+                "getInitialState",
+                "getDefaultProps",
+                "getChildContext",
+                "shouldComponentUpdate",
+            ],
+        }],
         "no-nested-ternary": "off", // nested ternaries can increase the readability of JSX components
         "react/display-name": "error",
         "react/forbid-component-props": "off",
@@ -67,9 +78,9 @@ module.exports = {
         "react/no-unknown-property": "error",
         "react/no-unused-prop-types": "error",
         "react/prefer-es6-class": "error",
-        "react/prefer-stateless-function": "error",
+        "react/prefer-stateless-function": "warn",
         "react/prop-types": "error",
-        "react/react-in-jsx-scope": "error",
+        "react/react-in-jsx-scope": "off",
         "react/require-render-return": "error",
         "react/self-closing-comp": "error",
         "react/sort-comp": "off",
