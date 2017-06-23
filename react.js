@@ -43,9 +43,9 @@ module.exports = {
         "react/jsx-pascal-case": "error",
         "react/jsx-sort-props": "off",
         "react/jsx-tag-spacing": ["error", {
-            "closingSlash": "never",
-            "beforeSelfClosing": "always",
             "afterOpening": "never",
+            "beforeSelfClosing": "always",
+            "closingSlash": "never",
         }],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
