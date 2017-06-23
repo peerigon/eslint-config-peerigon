@@ -42,7 +42,11 @@ module.exports = {
         "react/jsx-no-undef": "error",
         "react/jsx-pascal-case": "error",
         "react/jsx-sort-props": "off",
-        "react/jsx-space-before-closing": ["error", "always"],
+        "react/jsx-tag-spacing": ["error", {
+            "closingSlash": "never",
+            "beforeSelfClosing": "always",
+            "afterOpening": "never",
+        }],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/jsx-wrap-multilines": "error",
