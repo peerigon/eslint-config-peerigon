@@ -72,7 +72,7 @@ module.exports = {
         "react/no-is-mounted": "error",
         'react/no-multi-comp': ["error", { ignoreStateless: true }],
         "react/no-render-return-value": "error",
-        "react/no-set-state": "error",
+        "react/no-set-state": "off",
         "react/no-string-refs": "error",
         "react/no-unescaped-entities": "error",
         "react/no-unknown-property": "error",
