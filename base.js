@@ -26,8 +26,10 @@ module.exports = {
         "accessor-pairs": ["error", {
             getWithoutSet: true
         }], // http://eslint.org/docs/rules/accessor-pairs
+        "array-bracket-newline": ["error", { "multiline": true }], // http://eslint.org/docs/rules/array-bracket-newline
         "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
         "array-callback-return": ["error"], // http://eslint.org/docs/rules/array-callback-return
+        "array-element-newline": ["off"], // http://eslint.org/docs/rules/array-element-newline
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
         "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": ["error", { after: true, before: true }], // http://eslint.org/docs/rules/arrow-spacing
@@ -61,6 +63,7 @@ module.exports = {
         "dot-notation": ["error", { allowKeywords: true }], // http://eslint.org/docs/rules/dot-notation
         "eol-last": "off", // http://eslint.org/docs/rules/eol-last
         "eqeqeq": ["error", "always"], // http://eslint.org/docs/rules/eqeqeq
+        "for-direction": "error", // http://eslint.org/docs/rules/for-direction
         "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
         "func-name-matching": ["off"], // http://eslint.org/docs/rules/func-name-matching
         "func-names": "off", // http://eslint.org/docs/rules/func-names
@@ -88,7 +91,8 @@ module.exports = {
         "import/max-dependencies": ["warn", { max: 15 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
         "import/named": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
         "import/namespace": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
-        "import/newline-after-import": ["error", { count: 1 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
+        // Is already covered by eslint rule padding-line-between-statements
+        "import/newline-after-import": ["off", { count: 1 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
         "import/no-absolute-path": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
         "import/no-amd": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         "import/no-anonymous-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
@@ -168,7 +172,6 @@ module.exports = {
         "line-comment-position": "off", // http://eslint.org/docs/rules/line-comment-position
         "linebreak-style": ["off", "unix"], // http://eslint.org/docs/rules/linebreak-style
         "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
-        "lines-around-directive": ["error", { after: "always", before: "never" }], // http://eslint.org/docs/rules/lines-around-directive
         "max-depth": ["warn", 4], // http://eslint.org/docs/rules/max-depth
         "max-len": ["warn", {
             code: 120,
@@ -192,13 +195,12 @@ module.exports = {
         "multiline-ternary": "off", // http://eslint.org/docs/rules/multiline-ternary
         "new-cap": "error", // http://eslint.org/docs/rules/new-cap
         "new-parens": "error", // http://eslint.org/docs/rules/new-parens
-        "newline-after-var": ["error", "always"], // http://eslint.org/docs/rules/newline-after-var
-        "newline-before-return": "error", // http://eslint.org/docs/rules/newline-before-return
         "newline-per-chained-call": "error", // http://eslint.org/docs/rules/newline-per-chained-call
         "no-alert": "warn", // http://eslint.org/docs/rules/no-alert
         "no-array-constructor": "error", // http://eslint.org/docs/rules/no-array-constructor
         "no-await-in-loop": "warn", // http://eslint.org/docs/rules/no-await-in-loop
         "no-bitwise": "error", // http://eslint.org/docs/rules/no-bitwise
+        "no-buffer-constructor": "error", // http://eslint.org/docs/rules/no-buffer-constructor
         "no-caller": "error", // http://eslint.org/docs/rules/no-caller
         "no-case-declarations": "error", // http://eslint.org/docs/rules/no-case-declarations
         "no-catch-shadow": "off", // http://eslint.org/docs/rules/no-catch-shadow
@@ -359,7 +361,7 @@ module.exports = {
         "no-warning-comments": ["warn", { location: "anywhere", terms: ["todo", "fixme", "quickfix"] }],
         "no-whitespace-before-property": "error", // http://eslint.org/docs/rules/no-whitespace-before-property
         "no-with": "error", // http://eslint.org/docs/rules/no-with
-        "object-curly-newline": "off",// http://eslint.org/docs/rules/object-curly-newline
+        "object-curly-newline": ["error", { "consistent": true, "multiline": true }], // http://eslint.org/docs/rules/object-curly-newline
         "object-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/object-curly-spacing
         "object-property-newline": "off", // http://eslint.org/docs/rules/object-property-newline
         "object-shorthand": ["error", "always"], // http://eslint.org/docs/rules/object-shorthand
@@ -368,6 +370,18 @@ module.exports = {
         "operator-assignment": ["off", "always"], // http://eslint.org/docs/rules/operator-assignment
         "operator-linebreak": ["error", "after"], // http://eslint.org/docs/rules/operator-linebreak
         "padded-blocks": ["error", "never"], // http://eslint.org/docs/rules/padded-blocks
+        "padding-line-between-statements": [
+            "error",
+            { blankLine: "always", next: "return", prev: "*" },
+            { blankLine: "always", next: "*", prev: ["const", "let", "var"] },
+            { blankLine: "never", next: ["const", "let", "var"], prev: ["const", "let", "var"] },
+            { blankLine: "always", next: "*", prev: "directive" },
+            { blankLine: "any", next: "directive", prev: "directive" },
+            { blankLine: "always", next: "function", prev: "*" },
+            { blankLine: "always", next: "*", prev: "function" },
+            { blankLine: "always", next: "*", prev: ["import", "cjs-import"] },
+            { blankLine: "never", next: ["import", "cjs-import"], prev: ["import", "cjs-import"] },
+        ], // http://eslint.org/docs/rules/padding-line-between-statements
         "prefer-arrow-callback": "error", // http://eslint.org/docs/rules/prefer-arrow-callback
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
         "prefer-destructuring": "off", // http://eslint.org/docs/rules/prefer-destructuring
@@ -385,6 +399,7 @@ module.exports = {
         "rest-spread-spacing": ["error", "never"], // http://eslint.org/docs/rules/rest-spread-spacing
         "semi": "error", // http://eslint.org/docs/rules/semi
         "semi-spacing": ["error", { after: true, before: false }], // http://eslint.org/docs/rules/semi-spacing
+        "semi-style": ["error", "last"], // http://eslint.org/docs/rules/semi-style
         "sort-imports": "off", // http://eslint.org/docs/rules/sort-imports
         "sort-keys": "off", // http://eslint.org/docs/rules/sort-keys
         "sort-vars": "off", // http://eslint.org/docs/rules/sort-vars
@@ -395,6 +410,7 @@ module.exports = {
         "space-unary-ops": ["error", { nonwords: false, words: true }], // http://eslint.org/docs/rules/space-unary-ops
         "spaced-comment": ["error", "always", { exceptions: ["-"] }], // http://eslint.org/docs/rules/spaced-comment
         "strict": "error", // http://eslint.org/docs/rules/strict
+        "switch-colon-spacing": ["error", { "after": true, "before": false }], // "switch-colon-spacing": ["error", {"after": true, "before": false}]
         "symbol-description": "error", // http://eslint.org/docs/rules/symbol-description
         "template-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/template-curly-spacing
         "template-tag-spacing": ["error", "never"], // http://eslint.org/docs/rules/template-tag-spacing
