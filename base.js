@@ -29,7 +29,7 @@ module.exports = {
         "array-bracket-newline": ["error", { "multiline": true }], // http://eslint.org/docs/rules/array-bracket-newline
         "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
         "array-callback-return": ["error"], // http://eslint.org/docs/rules/array-callback-return
-        "array-element-newline": ["error", { "multiline": true }] // http://eslint.org/docs/rules/array-element-newline
+        "array-element-newline": ["error", { "multiline": true }], // http://eslint.org/docs/rules/array-element-newline
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
         "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": ["error", { after: true, before: true }], // http://eslint.org/docs/rules/arrow-spacing
