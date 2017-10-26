@@ -372,15 +372,15 @@ module.exports = {
         "padded-blocks": ["error", "never"], // http://eslint.org/docs/rules/padded-blocks
         "padding-line-between-statements": [
             "error",
-            { blankLine: "always", prev: "*", next: "return" },
-            { blankLine: "always", prev: ["const", "let", "var"], next: "*" },
-            { blankLine: "never", prev: ["const", "let", "var"], next: ["const", "let", "var"] },
-            { blankLine: "always", prev: "directive", next: "*" },
-            { blankLine: "any", prev: "directive", next: "directive" },
-            { blankLine: "always", prev: "*", next: "function" },
-            { blankLine: "always", prev: "function", next: "*" },
-            { blankLine: "always", prev: ["import", "cjs-import"], next: "*" },
-            { blankLine: "never", prev: ["import", "cjs-import"], next: ["import", "cjs-import"] },
+            { blankLine: "always", next: "return", prev: "*" },
+            { blankLine: "always", next: "*", prev: ["const", "let", "var"] },
+            { blankLine: "never", next: ["const", "let", "var"], prev: ["const", "let", "var"] },
+            { blankLine: "always", next: "*", prev: "directive" },
+            { blankLine: "any", next: "directive", prev: "directive" },
+            { blankLine: "always", next: "function", prev: "*" },
+            { blankLine: "always", next: "*", prev: "function" },
+            { blankLine: "always", next: "*", prev: ["import", "cjs-import"] },
+            { blankLine: "never", next: ["import", "cjs-import"], prev: ["import", "cjs-import"] },
         ], // http://eslint.org/docs/rules/padding-line-between-statements
         "prefer-arrow-callback": "error", // http://eslint.org/docs/rules/prefer-arrow-callback
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
