@@ -91,7 +91,8 @@ module.exports = {
         "import/max-dependencies": ["warn", { max: 15 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
         "import/named": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
         "import/namespace": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
-        "import/newline-after-import": ["error", { count: 1 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
+        // Is already covered by eslint rule padding-line-between-statements
+        "import/newline-after-import": ["off", { count: 1 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
         "import/no-absolute-path": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
         "import/no-amd": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         "import/no-anonymous-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
@@ -360,7 +361,7 @@ module.exports = {
         "no-warning-comments": ["warn", { location: "anywhere", terms: ["todo", "fixme", "quickfix"] }],
         "no-whitespace-before-property": "error", // http://eslint.org/docs/rules/no-whitespace-before-property
         "no-with": "error", // http://eslint.org/docs/rules/no-with
-        "object-curly-newline": ["error", { "consistent": true }], // http://eslint.org/docs/rules/object-curly-newline
+        "object-curly-newline": ["error", { "consistent": true, "multiline": true }], // http://eslint.org/docs/rules/object-curly-newline
         "object-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/object-curly-spacing
         "object-property-newline": "off", // http://eslint.org/docs/rules/object-property-newline
         "object-shorthand": ["error", "always"], // http://eslint.org/docs/rules/object-shorthand
