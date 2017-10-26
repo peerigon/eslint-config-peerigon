@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-peerigon",
-  "version": "11.3.1",
+  "version": "12.0.0",
   "description": "Peerigon coding rules as eslint config",
   "main": "base.js",
   "scripts": {

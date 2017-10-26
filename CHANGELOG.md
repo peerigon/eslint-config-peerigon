@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="12.0.0"></a>
+# [12.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v11.3.1...v12.0.0) (2017-10-26)
+
+
+### Chores
+
+* Update eslint peer dependency ([b0c3e28](https://github.com/peerigon/eslint-config-peerigon/commit/b0c3e28))
+
+
+### Features
+
+* Update rules ([#14](https://github.com/peerigon/eslint-config-peerigon/issues/14)) ([47edb7e](https://github.com/peerigon/eslint-config-peerigon/commit/47edb7e))
+
+
+### BREAKING CHANGES
+
+* The eslint-config-peerigon now requires at least eslint@^4.9.0
+* There have been new rules added which might break your build. But they should be auto-fixable 🖖 
+
+
+
 <a name="11.3.1"></a>
 ## [11.3.1](https://github.com/peerigon/eslint-config-peerigon/compare/v11.3.0...v11.3.1) (2017-06-25)
 
