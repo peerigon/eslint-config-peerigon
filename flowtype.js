@@ -2,17 +2,13 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
+    parser: "babel-eslint",
     plugins: [
         "flowtype"
     ],
     extends: [
         "plugin:flowtype/recommended"
     ],
-    parserOptions: {
-        ecmaFeatures: {
-            flow: true
-        }
-    },
     settings: {
         flowtype: {
             onlyFilesWithFlowAnnotation: false
