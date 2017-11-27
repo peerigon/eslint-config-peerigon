@@ -12,7 +12,7 @@ Provided configs
 ### [`peerigon`](base.js)
 
 **Base rules for every project. You should always add these rules.**
-**Requires [babel-eslint](https://github.com/babel/babel-eslint), [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import) and [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) as peer dependency in npm@2 environments (usually node 4).**
+**Requires [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import) and [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) as installed project dependency in npm@2 environments (usually node 4).**
 
 These rules assume a modern project with full ES2015 support and a module system with a node.js-like resolving behavior (like node.js and webpack). For special rules, which extend these base rules for older environments, see below.
 
@@ -87,7 +87,7 @@ want to transpile your code with babel:
 
 ### [`peerigon/react`](react.js)
 
-**Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) as peer dependency.**
+**Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) to be installed as project dependency.**
 
 Additional rules for [React](https://facebook.github.io/react/) development.
 Can also be used in other JSX environments, like [Preact](https://github.com/developit/preact):
@@ -104,7 +104,7 @@ Can also be used in other JSX environments, like [Preact](https://github.com/dev
 
 ### [`peerigon/flowtype`](flowtype.js)
 
-**Requires [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as peer dependency.**
+**Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) to be installed as project dependency.**
 
 Additional rules for [Flowtype](https://flowtype.org/).
 
