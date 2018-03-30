@@ -28,11 +28,12 @@
     "eslint": "^4.9.0"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsdoc": "^3.0.0"
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsdoc": "^3.5.0"
   },
   "devDependencies": {
-    "eslint-find-rules": "^1.14.3",
-    "standard-version": "^4.0.0"
+    "eslint": "^4.19.1",
+    "eslint-find-rules": "^3.2.2",
+    "standard-version": "^4.3.0"
   }
 }
