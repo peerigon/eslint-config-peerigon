@@ -12,12 +12,10 @@ Provided configs
 ### [`peerigon`](base.js)
 
 **Base rules for every project. You should always add these rules.**
-**Requires [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import) and [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) as installed project dependency in npm@2 environments (usually node 4).**
 
 These rules assume a modern project with full ES2015 support and a module system with a node.js-like resolving behavior (like node.js and webpack). For special rules, which extend these base rules for older environments, see below.
 
-The base rules do not define an `env`, so you might do that for yourself
-in order to enable specific globals.
+The base rules do not define an `env`, so you might want to do that for yourself to enable specific globals.
 
 Add an `.eslintrc.json` to the project's root folder:
 
@@ -36,7 +34,7 @@ Add an `.eslintrc.json` to the project's root folder:
 }
 ```
 
-In case you changed the resolving behavior, you can use the [resolvers option](https://github.com/benmosher/eslint-plugin-import#resolvers) of the `eslint-plugin-import`. For instance, if you're using webpack, you just need to install the [`eslint-import-resolver-webpack`](https://www.npmjs.com/package/eslint-import-resolver-webpack) module and tell the plugin the location of your `webpack.config.js` like this:
+In case you changed the resolving behavior, you can use the [resolvers option](https://github.com/benmosher/eslint-plugin-import#resolvers) of the `eslint-plugin-import`. For instance, if you're using webpack, you need to install the [`eslint-import-resolver-webpack`](https://www.npmjs.com/package/eslint-import-resolver-webpack) module and tell the plugin the location of your `webpack.config.js` like this:
 
 ```js
     "settings": {
@@ -55,7 +53,7 @@ You don't need to do that if you stick to node's/webpack's default resolver.
 ### [`peerigon/tests`](tests.js)
 
 Special rules for tests, like allowing deeper function nesting and function inlining.
-Simply create a `.eslintrc` file inside your `test` folder with these contents:
+Create a `.eslintrc` file inside your `test` folder with these contents:
 
 ```js
 {
@@ -89,8 +87,8 @@ want to transpile your code with babel:
 
 **Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) to be installed as project dependency.**
 
-Additional rules for [React](https://facebook.github.io/react/) development.
-Can also be used in other JSX environments, like [Preact](https://github.com/developit/preact):
+Rules for [React](https://facebook.github.io/react/) development.
+Also applicable in other JSX environments, like [Preact](https://github.com/developit/preact):
 
 ```js
 {
@@ -106,7 +104,7 @@ Can also be used in other JSX environments, like [Preact](https://github.com/dev
 
 **Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) to be installed as project dependency.**
 
-Additional rules for [Flowtype](https://flowtype.org/).
+Rules for [Flowtype](https://flowtype.org/).
 
 ```js
 {
@@ -120,7 +118,7 @@ Additional rules for [Flowtype](https://flowtype.org/).
 
 ### [`peerigon/fp`](fp.js)
 
-Additional rules if you want to enforce a functional programming style in your project.
+Rules if you want to enforce a functional programming style in your project.
 
 These rules are changed:
 
@@ -171,8 +169,8 @@ Special rules for older projects:
 
 Goals
 ------------------------------------------------------------------------
-Coding rules and coding conventions are always a hot topic because they are very subjective.
-However, for the benefit of all team members, it's reasonable to have common rules among projects.
+Coding rules and coding conventions are always a hot topic because they tend to be subjective.
+But for the benefit of all team members, it's reasonable to have common rules among projects.
 
 In order to make good decisions, we judge our rules by these features, ordered by priority:
 

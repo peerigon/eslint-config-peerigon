@@ -9,10 +9,5 @@ module.exports = {
     },
     parserOptions: {
         sourceType: "script"
-    },
-    rules: {
-        /* eslint-enable sort-keys */
-        "prefer-rest": "off",
-        "prefer-spread": "off"
     }
 };
