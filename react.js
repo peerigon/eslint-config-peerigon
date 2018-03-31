@@ -2,8 +2,15 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    plugins: ["react"],
-    extends: ["plugin:import/react", "plugin:react/recommended"],
+    plugins: [
+        "react",
+        "jsx-a11y"
+    ],
+    extends: [
+        "plugin:import/react",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
+    ],
     rules: {
         /* eslint-enable sort-keys */
         // Allow certain react methods to have no this
