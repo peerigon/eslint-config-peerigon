@@ -291,7 +291,7 @@ module.exports = {
         "no-multi-str": "error", // http://eslint.org/docs/rules/no-multi-str
         "no-multiple-empty-lines": ["error", { max: 1 }], // http://eslint.org/docs/rules/no-multiple-empty-lines
         "no-negated-condition": "error", // http://eslint.org/docs/rules/no-negated-condition
-        "no-nested-ternary": "error", // http://eslint.org/docs/rules/no-nested-ternary
+        "no-nested-ternary": "off", // http://eslint.org/docs/rules/no-nested-ternary
         "no-new": "error", // http://eslint.org/docs/rules/no-new
         "no-new-func": "error", // http://eslint.org/docs/rules/no-new-func
         "no-new-object": "error", // http://eslint.org/docs/rules/no-new-object
