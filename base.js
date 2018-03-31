@@ -202,7 +202,7 @@ module.exports = {
         "max-params": ["warn", { max: 4 }], // http://eslint.org/docs/rules/max-params
         "max-statements": "off", // http://eslint.org/docs/rules/max-statements
         "max-statements-per-line": ["error", { max: 1 }], // http://eslint.org/docs/rules/max-statements-per-line
-        "multiline-ternary": "off", // http://eslint.org/docs/rules/multiline-ternary
+        "multiline-ternary": ["error", "always-multiline"], // http://eslint.org/docs/rules/multiline-ternary
         "new-cap": "error", // http://eslint.org/docs/rules/new-cap
         "new-parens": "error", // http://eslint.org/docs/rules/new-parens
         "newline-per-chained-call": "error", // http://eslint.org/docs/rules/newline-per-chained-call
