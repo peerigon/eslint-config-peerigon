@@ -79,11 +79,7 @@ module.exports = {
         "import/default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
         "import/export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
         "import/exports-last": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/exports-last.md
-        "import/extensions": ["error", "always", {
-            "js": "never",
-            "json": "never",
-            "jsx": "never"
-        }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+        "import/extensions": ["error", "ignorePackages"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
         "import/first": ["error", "absolute-first"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
         "import/group-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/group-exports.md
         // Using more than 15 dependencies in one module is a sign that this module is doing too much.
