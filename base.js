@@ -78,12 +78,14 @@ module.exports = {
         "id-match": "off", // http://eslint.org/docs/rules/id-match
         "import/default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
         "import/export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
+        "import/exports-last": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/exports-last.md
         "import/extensions": ["error", "always", {
             "js": "never",
             "json": "never",
             "jsx": "never"
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
         "import/first": ["error", "absolute-first"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
+        "import/group-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/group-exports.md
         // Using more than 15 dependencies in one module is a sign that this module is doing too much.
         // You should consider splitting that module into different parts.
         "import/max-dependencies": ["warn", { max: 15 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
@@ -95,6 +97,12 @@ module.exports = {
         "import/no-amd": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         "import/no-anonymous-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
         "import/no-commonjs": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
+        // Dependency cycles are usually the sign of a problematic architecture and may also
+        // have odd execution behavior where values are unexpectedly undefined.
+        // There are rare situations where dependency cycles are wanted or necessary.
+        // Disable this rule if you're sure that the cyclic dependency is a good idea.
+        "import/no-cycle": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-cycle.md
+        "import/no-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-default-export.md
         "import/no-deprecated": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
         "import/no-duplicates": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
         "import/no-dynamic-require": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
@@ -123,8 +131,10 @@ module.exports = {
                 { from: "./client", target: "./server" }
             ]
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
+        "import/no-self-import": "error", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-self-import.md
         "import/no-unassigned-import": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
         "import/no-unresolved": ["error", { commonjs: true }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+        "import/no-useless-path-segments": "error", // currently undocumented :(, see https://github.com/benmosher/eslint-plugin-import/issues/1032
         "import/no-webpack-loader-syntax": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
         "import/order": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
         // While default exports are better most of the time, there may be cases where you just have one named export
@@ -158,9 +168,11 @@ module.exports = {
         "jsdoc/check-types": "error",
         "jsdoc/newline-after-description": "error",
         "jsdoc/require-description-complete-sentence": "off",
+        "jsdoc/require-example": "off",
         "jsdoc/require-hyphen-before-param-description": "error",
         "jsdoc/require-param": "error",
         "jsdoc/require-param-description": "off",
+        "jsdoc/require-param-name": "off",
         "jsdoc/require-param-type": "error",
         "jsdoc/require-returns-description": "off",
         "jsdoc/require-returns-type": "error",
