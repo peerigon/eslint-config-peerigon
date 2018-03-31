@@ -330,8 +330,7 @@ module.exports = {
         "no-throw-literal": "error", // http://eslint.org/docs/rules/no-throw-literal
         "no-trailing-spaces": "error", // http://eslint.org/docs/rules/no-trailing-spaces
         "no-undef": ["error", {
-            // A developer should introduce global variables explicitly to eslint
-            typeof: true
+            typeof: false
         }], // http://eslint.org/docs/rules/no-undef
         "no-undef-init": "error", // http://eslint.org/docs/rules/no-undef-init
         // Since we disallow shadowing of undefined, it is safe to turn this rule off
