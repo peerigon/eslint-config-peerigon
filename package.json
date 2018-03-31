@@ -28,11 +28,11 @@
     "eslint": "^4.9.0"
   },
   "dependencies": {
+    "babel-eslint": "^8.2.2",
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jsdoc": "^3.5.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
     "eslint-find-rules": "^3.2.2",
     "eslint-plugin-flowtype": "^2.46.1",

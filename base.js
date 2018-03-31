@@ -2,6 +2,7 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
+    parser: "babel-eslint",
     env: {
         es6: true
     },
