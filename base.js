@@ -121,7 +121,7 @@ module.exports = {
         "import/export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
         "import/exports-last": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/exports-last.md
         "import/extensions": ["error", "ignorePackages"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-        "import/first": ["error", "absolute-first"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
+        "import/first": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
         "import/group-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/group-exports.md
         // Using more than 15 dependencies in one module is a sign that this module is doing too much.
         // You should consider splitting that module into different parts.
@@ -132,7 +132,7 @@ module.exports = {
         "import/newline-after-import": ["off", {count: 1}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
         "import/no-absolute-path": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
         "import/no-amd": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
-        "import/no-anonymous-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
+        "import/no-anonymous-default-export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
         "import/no-commonjs": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
         // Dependency cycles are usually the sign of a problematic architecture and may also
         // have odd execution behavior where values are unexpectedly undefined.
@@ -157,7 +157,7 @@ module.exports = {
         ], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
         "import/no-internal-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
         "import/no-mutable-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
-        "import/no-named-as-default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
+        "import/no-named-as-default": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
         "import/no-named-as-default-member": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
         "import/no-named-default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
         "import/no-namespace": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
@@ -179,14 +179,19 @@ module.exports = {
             },
         ], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
         "import/no-self-import": "error", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-self-import.md
-        "import/no-unassigned-import": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
+        "import/no-unassigned-import": ["warn", {
+            allow: [
+                "**/*.css",
+                "**/*.less",
+                "**/*.scss",
+                "**/*.sass",
+                "**/*register*"
+            ]
+        }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
         "import/no-unresolved": ["error", {commonjs: true}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
         "import/no-useless-path-segments": "error", // currently undocumented :(, see https://github.com/benmosher/eslint-plugin-import/issues/1032
         "import/no-webpack-loader-syntax": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
-        "import/order": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-        // While default exports are better most of the time, there may be cases where you just have one named export
-        // but it is very likely that there will be more exports in the future.
-        // In this case, this warning can be annoying.
+        "import/order": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
         "import/prefer-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
         "import/unambiguous": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
         "indent": [
