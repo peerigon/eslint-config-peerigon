@@ -103,7 +103,15 @@ module.exports = {
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
         "react/jsx-uses-react": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
         "react/jsx-uses-vars": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
-        "react/jsx-wrap-multilines": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
+        "react/jsx-wrap-multilines": ["error", {
+            "arrow": "parens-new-line",
+            "assignment": "parens-new-line",
+            "condition": "parens-new-line",
+            "declaration": "parens-new-line",
+            "logical": "parens-new-line",
+            "prop": "parens-new-line",
+            "return": "parens-new-line"
+        }], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
         "react/no-access-state-in-setstate": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
         "react/no-array-index-key": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
         "react/no-children-prop": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
