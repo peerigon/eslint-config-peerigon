@@ -3,16 +3,12 @@
 
 module.exports = {
     parser: "babel-eslint",
-    plugins: [
-        "flowtype"
-    ],
-    extends: [
-        "plugin:flowtype/recommended"
-    ],
+    plugins: ["flowtype"],
+    extends: ["plugin:flowtype/recommended"],
     settings: {
         flowtype: {
-            onlyFilesWithFlowAnnotation: false
-        }
+            onlyFilesWithFlowAnnotation: false,
+        },
     },
     rules: {
         "flowtype/boolean-style": ["error", "boolean"],
@@ -29,9 +25,13 @@ module.exports = {
         // Annotating curried functions is pretty overkill
         // Also pure lambda functions don't need a return type
         "flowtype/require-return-type": "off",
-        "flowtype/require-valid-file-annotation": ["error", "always", {
-            annotationStyle: "line"
-        }],
+        "flowtype/require-valid-file-annotation": [
+            "error",
+            "always",
+            {
+                annotationStyle: "line",
+            },
+        ],
         // It's ok to not declare types inside functions
         "flowtype/require-variable-type": "off",
         "flowtype/semi": ["error", "always"],
@@ -41,6 +41,6 @@ module.exports = {
         "flowtype/space-before-type-colon": ["error", "never"],
         "flowtype/type-id-match": "off",
         "flowtype/union-intersection-spacing": ["error", "always"],
-        "flowtype/use-flow-type": "warn"
-    }
+        "flowtype/use-flow-type": "warn",
+    },
 };
