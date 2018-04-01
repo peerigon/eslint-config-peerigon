@@ -25,16 +25,22 @@ module.exports = {
         "accessor-pairs": ["error", {
             getWithoutSet: true
         }], // http://eslint.org/docs/rules/accessor-pairs
-        "array-bracket-newline": ["error", { "multiline": true }], // http://eslint.org/docs/rules/array-bracket-newline
+        "array-bracket-newline": ["error", {
+            multiline: true
+        }], // http://eslint.org/docs/rules/array-bracket-newline
         "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
         "array-callback-return": ["error"], // http://eslint.org/docs/rules/array-callback-return
-        "array-element-newline": ["off"], // http://eslint.org/docs/rules/array-element-newline
+        "array-element-newline": ["error", {
+            multiline: true
+        }], // http://eslint.org/docs/rules/array-element-newline
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
         "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": ["error", { after: true, before: true }], // http://eslint.org/docs/rules/arrow-spacing
         "block-scoped-var": "error", // http://eslint.org/docs/rules/block-scoped-var
         "block-spacing": "error", // http://eslint.org/docs/rules/block-spacing
-        "brace-style": ["error", "1tbs"], // http://eslint.org/docs/rules/brace-style
+        "brace-style": ["error", "1tbs", {
+            "allowSingleLine": false
+        }], // http://eslint.org/docs/rules/brace-style
         "callback-return": "error", // http://eslint.org/docs/rules/callback-return
         "camelcase": ["error", { properties: "always" }], // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
@@ -364,12 +370,20 @@ module.exports = {
         "no-useless-return": "error", // http://eslint.org/docs/rules/no-useless-return
         "no-var": "error", // http://eslint.org/docs/rules/no-var
         "no-void": "off", // http://eslint.org/docs/rules/no-void
-        "no-warning-comments": ["warn", { location: "anywhere", terms: ["todo", "fixme", "quickfix"] }],
+        "no-warning-comments": ["warn", {
+            location: "anywhere",
+            terms: ["todo", "fixme", "quickfix"]
+        }],
         "no-whitespace-before-property": "error", // http://eslint.org/docs/rules/no-whitespace-before-property
         "no-with": "error", // http://eslint.org/docs/rules/no-with
-        "object-curly-newline": ["error", { "consistent": true, "multiline": true }], // http://eslint.org/docs/rules/object-curly-newline
-        "object-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/object-curly-spacing
-        "object-property-newline": "off", // http://eslint.org/docs/rules/object-property-newline
+        "object-curly-newline": ["error", {
+            consistent: true,
+            multiline: true
+        }], // http://eslint.org/docs/rules/object-curly-newline
+        "object-curly-spacing": ["error", "never"], // http://eslint.org/docs/rules/object-curly-spacing
+        "object-property-newline": ["error", {
+            allowAllPropertiesOnSameLine: false
+        }], // http://eslint.org/docs/rules/object-property-newline
         "object-shorthand": ["error", "always"], // http://eslint.org/docs/rules/object-shorthand
         "one-var": ["error", "never"], // http://eslint.org/docs/rules/one-var
         "one-var-declaration-per-line": "off", // http://eslint.org/docs/rules/one-var-declaration-per-line
@@ -418,7 +432,7 @@ module.exports = {
         "strict": "error", // http://eslint.org/docs/rules/strict
         "switch-colon-spacing": ["error", { "after": true, "before": false }], // "switch-colon-spacing": ["error", {"after": true, "before": false}]
         "symbol-description": "error", // http://eslint.org/docs/rules/symbol-description
-        "template-curly-spacing": ["error", "always"], // http://eslint.org/docs/rules/template-curly-spacing
+        "template-curly-spacing": ["error", "never"], // http://eslint.org/docs/rules/template-curly-spacing
         "template-tag-spacing": ["error", "never"], // http://eslint.org/docs/rules/template-tag-spacing
         "unicode-bom": ["error", "never"], // http://eslint.org/docs/rules/unicode-bom
         "use-isnan": "error", // http://eslint.org/docs/rules/use-isnan
