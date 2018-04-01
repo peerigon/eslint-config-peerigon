@@ -4,8 +4,7 @@
 module.exports = {
     parser: "babel-eslint",
     plugins: [
-        "flowtype",
-        "flowtype-errors"
+        "flowtype"
     ],
     extends: ["plugin:flowtype/recommended"],
     settings: {
@@ -15,9 +14,6 @@ module.exports = {
     },
     rules: {
         /* eslint-enable sort-keys */
-        "flowtype-errors/enforce-min-coverage": ["error", 100],
-        "flowtype-errors/show-errors": "error",
-        "flowtype-errors/show-warnings": "warn",
         "flowtype/boolean-style": ["error", "boolean"],
         "flowtype/define-flow-type": "warn",
         "flowtype/delimiter-dangle": ["error", "never"],

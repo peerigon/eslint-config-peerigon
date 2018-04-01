@@ -90,9 +90,9 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 
 ### [`peerigon/flowtype`](flowtype.js)
 
-**Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint), [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) and [`eslint-plugin-flowtype-errors`](https://github.com/gajus/eslint-plugin-flowtype-errors) as project dependency.**
+**Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as project dependency.**
 
-Rules for [Flowtype](https://flowtype.org/). Use [`eslint-plugin-flowtype-errors`](https://github.com/gajus/eslint-plugin-flowtype-errors) to integrate Flowtype checks as ESLint errors and warnings. This should simplify the editor integration.
+Rules for [Flowtype](https://flowtype.org/).
 
 ```js
 {
