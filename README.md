@@ -55,7 +55,7 @@ Do not add `"root": true` here since we want to *extend* our project config.
 
 ### [`peerigon/node`](node.js)
 
-**Important: Requires [`eslint-plugin-security`](https://github.com/yannickcr/eslint-plugin-security) as project dependency.**
+**Important: Requires [`eslint-plugin-security`](https://github.com/nodesecurity/eslint-plugin-security) as project dependency.**
 
 Special rules for Node.js >= 8.0.0 environments:
 
@@ -90,9 +90,9 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 
 ### [`peerigon/flowtype`](flowtype.js)
 
-**Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as project dependency.**
+**Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint), [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) and [`eslint-plugin-flowtype-errors`](https://github.com/gajus/eslint-plugin-flowtype-errors) as project dependency.**
 
-Rules for [Flowtype](https://flowtype.org/).
+Rules for [Flowtype](https://flowtype.org/). Use [`eslint-plugin-flowtype-errors`](https://github.com/gajus/eslint-plugin-flowtype-errors) to integrate Flowtype checks as ESLint errors and warnings. This should simplify the editor integration.
 
 ```js
 {

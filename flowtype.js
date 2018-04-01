@@ -3,7 +3,10 @@
 
 module.exports = {
     parser: "babel-eslint",
-    plugins: ["flowtype"],
+    plugins: [
+        "flowtype",
+        "flowtype-errors"
+    ],
     extends: ["plugin:flowtype/recommended"],
     settings: {
         flowtype: {
@@ -11,6 +14,10 @@ module.exports = {
         },
     },
     rules: {
+        /* eslint-enable sort-keys */
+        "flowtype-errors/enforce-min-coverage": ["error", 100],
+        "flowtype-errors/show-errors": "error",
+        "flowtype-errors/show-warnings": "warn",
         "flowtype/boolean-style": ["error", "boolean"],
         "flowtype/define-flow-type": "warn",
         "flowtype/delimiter-dangle": ["error", "never"],
