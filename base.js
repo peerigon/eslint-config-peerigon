@@ -132,6 +132,9 @@ module.exports = {
         "import/newline-after-import": ["off", {count: 1}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
         "import/no-absolute-path": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
         "import/no-amd": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
+        // The auto-import feature of VS Code (and probably other editors) cannot work when things are
+        // exported anonmously because the editor does not know what the user wants to import.
+        // By just allowing default exports with names, refactoring and auto-importing becomes easier.
         "import/no-anonymous-default-export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
         "import/no-commonjs": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
         // Dependency cycles are usually the sign of a problematic architecture and may also
