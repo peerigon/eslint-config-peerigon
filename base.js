@@ -12,8 +12,19 @@ module.exports = {
             experimentalObjectRestSpread: true,
         },
     },
-    plugins: ["jsdoc", "import"],
-    extends: ["eslint:recommended", "plugin:import/recommended"],
+    plugins: [
+        "jsdoc",
+        "import",
+        "optimize-regex",
+        "array-func",
+        "promise"
+    ],
+    extends: [
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:array-func/recommended",
+        "plugin:promise/recommended"
+    ],
     rules: {
         /* eslint-enable sort-keys */
         "accessor-pairs": [
@@ -478,6 +489,7 @@ module.exports = {
         "one-var-declaration-per-line": "off", // http://eslint.org/docs/rules/one-var-declaration-per-line
         "operator-assignment": ["off", "always"], // http://eslint.org/docs/rules/operator-assignment
         "operator-linebreak": ["error", "after"], // http://eslint.org/docs/rules/operator-linebreak
+        "optimize-regex/optimize-regex": "error",
         "padded-blocks": ["error", "never"], // http://eslint.org/docs/rules/padded-blocks
         "padding-line-between-statements": [
             "error",
@@ -535,6 +547,23 @@ module.exports = {
         "prefer-rest-params": "error", // http://eslint.org/docs/rules/prefer-rest-params
         "prefer-spread": "error", // http://eslint.org/docs/rules/prefer-spread
         "prefer-template": "off", // http://eslint.org/docs/rules/prefer-template
+        "promise/always-return": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/always-return.md
+        "promise/avoid-new": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/avoid-new.md
+        "promise/catch-or-return": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/catch-or-return.md
+        "promise/no-callback-in-promise": "warn", // https://github.com/xjamundx/eslint-plugin-promise
+        "promise/no-native": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-native.md
+        // Nesting is rarely necessary and often the sign of confusing code.
+        // You can often simplify it, see https://github.com/xjamundx/eslint-plugin-promise/issues/42
+        // In rare cases where nesting is desired, disable this rule.
+        "promise/no-nesting": "warn", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-nesting.md
+        "promise/no-new-statics": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-new-statics.md
+        "promise/no-promise-in-callback": "warn", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-promise-in-callback.md
+        "promise/no-return-in-finally": "warn", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-return-in-finally.md
+        "promise/no-return-wrap": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-return-wrap.md
+        "promise/param-names": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/param-names.md
+        "promise/prefer-await-to-callbacks": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-callbacks.md
+        "promise/prefer-await-to-then": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-then.md
+        "promise/valid-params": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/valid-params.md
         "quote-props": ["error", "as-needed"], // http://eslint.org/docs/rules/quote-props
         "quotes": ["error", "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
         "radix": "off", // http://eslint.org/docs/rules/radix
