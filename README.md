@@ -55,8 +55,9 @@ Do not add `"root": true` here since we want to *extend* our project config.
 
 ### [`peerigon/node`](node.js)
 
-Special rules for node.js >= 4.0.0 environments. Use these rules if you do not
-want to transpile your code with babel:
+**Important: Requires [`eslint-plugin-security`](https://github.com/yannickcr/eslint-plugin-security) as project dependency.**
+
+Special rules for Node.js >= 8.0.0 environments:
 
 ```js
 {
