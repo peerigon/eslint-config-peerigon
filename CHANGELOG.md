@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="13.0.0"></a>
+# [13.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v12.0.1...v13.0.0) (2018-04-27)
+
+
+### Features
+
+* Add eslint-plugin-flowtype-errors ([fc15db3](https://github.com/peerigon/eslint-config-peerigon/commit/fc15db3))
+* Add eslint-plugin-jsx-a11y to react rules ([7d8dbdc](https://github.com/peerigon/eslint-config-peerigon/commit/7d8dbdc))
+* Add useful eslint plugins to base rules ([caf6088](https://github.com/peerigon/eslint-config-peerigon/commit/caf6088))
+* Allow nested ternaries ([15107ac](https://github.com/peerigon/eslint-config-peerigon/commit/15107ac))
+* Allow possibly undefined variables in typeof checks ([1e657c3](https://github.com/peerigon/eslint-config-peerigon/commit/1e657c3))
+* Configure new rules ([273e139](https://github.com/peerigon/eslint-config-peerigon/commit/273e139))
+* Enforce multiline ternary for long expressions ([92031d2](https://github.com/peerigon/eslint-config-peerigon/commit/92031d2))
+* Make file extensions mandatory in imports ([6ea3964](https://github.com/peerigon/eslint-config-peerigon/commit/6ea3964))
+* Refactor import rules ([53f41d4](https://github.com/peerigon/eslint-config-peerigon/commit/53f41d4))
+* Refactor node rules ([8a4e2b5](https://github.com/peerigon/eslint-config-peerigon/commit/8a4e2b5))
+* Refactor react rules ([9994d2b](https://github.com/peerigon/eslint-config-peerigon/commit/9994d2b))
+* Refactor react/jsx-wrap-multilines rules ([efe8ebd](https://github.com/peerigon/eslint-config-peerigon/commit/efe8ebd))
+* Refactor tests rules ([820124f](https://github.com/peerigon/eslint-config-peerigon/commit/820124f))
+* Remove curly and bracket spacings ([4ff321c](https://github.com/peerigon/eslint-config-peerigon/commit/4ff321c))
+* Remove eslint-plugin-flowtype-error again ([13bbca7](https://github.com/peerigon/eslint-config-peerigon/commit/13bbca7))
+* Remove fp rules ([34543bc](https://github.com/peerigon/eslint-config-peerigon/commit/34543bc))
+* Switch back to babel-eslint again ([f3ba862](https://github.com/peerigon/eslint-config-peerigon/commit/f3ba862))
+* Switch back to eslint default parser ([#18](https://github.com/peerigon/eslint-config-peerigon/issues/18)) ([5ab10a8](https://github.com/peerigon/eslint-config-peerigon/commit/5ab10a8))
+* Update peerigon/node to match node >= 6 ([c8ff737](https://github.com/peerigon/eslint-config-peerigon/commit/c8ff737))
+
+
+### BREAKING CHANGES
+
+* If you're using Flowtype and the flowtype rules,
+you just need to call ESLint now to also do the typechecking.
+* You need to add babel-eslint as project dependencies in project where the peerigon/flowtype rules are used. You don't need to change anything if you're using other rules.
+* These plugins introduce new rules that might
+cause linting errors now.
+* - Add autofixable order of imports
+- Discourage anonymous default exports
+* Changes a lot of rules that are concerned with
+whitespace after curlies and brackets. For consistency reasons,
+we do not write spaces after these characters.
+* Always add new line before multiline wraps. This change
+was necessary because of the new react/jsx-closing-tag-location
+which requires the closing tag to be on the same indentation as the
+opening tag. In combination with the parentheses rule, it could lead
+to an unstable state where eslint was trying to fix it
+by switching back and forth between two states.
+* This change adds a lot of new rules which
+help us to improve the accessibility of our applications.
+* There are new rules that might cause errors now.
+* The padded-blocks rule has been activated for tests again.
+* The fp rules where part of an experiment.
+These overly strict rules don't make sense in JavaScript.
+* Remove node 4 support
+* - "import/extensions": ["error", "ignorePackages"],
+* - "multiline-ternary": ["error", "always-multiline"]
+* - import/no-self-import error
+- import/no-useless-path-segments error
+* A lof of rules have changed, expect some new errors.
+
+
+
 <a name="12.0.1"></a>
 ## [12.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v12.0.0...v12.0.1) (2017-10-26)
 
