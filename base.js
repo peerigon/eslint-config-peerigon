@@ -41,12 +41,7 @@ module.exports = {
         ], // http://eslint.org/docs/rules/array-bracket-newline
         "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
         "array-callback-return": ["error"], // http://eslint.org/docs/rules/array-callback-return
-        "array-element-newline": [
-            "error",
-            {
-                multiline: true,
-            },
-        ], // http://eslint.org/docs/rules/array-element-newline
+        "array-element-newline": "off", // http://eslint.org/docs/rules/array-element-newline
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
         "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": [
@@ -569,7 +564,7 @@ module.exports = {
         "quote-props": ["error", "as-needed"], // http://eslint.org/docs/rules/quote-props
         "quotes": ["error", "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
         "radix": "off", // http://eslint.org/docs/rules/radix
-        "require-await": "error", // http://eslint.org/docs/rules/require-await
+        "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
         "require-yield": "error", // http://eslint.org/docs/rules/require-yield
         "rest-spread-spacing": ["error", "never"], // http://eslint.org/docs/rules/rest-spread-spacing
