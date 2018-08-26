@@ -46,12 +46,14 @@ module.exports = {
         "react/jsx-filename-extension": [
             "error",
             {
-                // The React team recommends to use .js only
-                // See https://github.com/facebook/create-react-app/issues/87
-                extensions: [".js"],
+                // There's a big discussion whether the jsx/tsx is necessary:
+                // - https://github.com/facebook/create-react-app/issues/87
+                // - https://github.com/airbnb/javascript/pull/985
+                // Since VSCode handles tsx files out-of-the-box, let's stick with the x-extensions
+                extensions: [".jsx", ".tsx"],
             },
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-        "react/jsx-first-prop-new-line": ["error", "multiline"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
+        "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
         "react/jsx-handler-names": [
             "error",
             {
@@ -85,7 +87,12 @@ module.exports = {
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
         "react/jsx-no-target-blank": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
         "react/jsx-no-undef": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
-        "react/jsx-one-expression-per-line": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
+        "react/jsx-one-expression-per-line": [
+            "error",
+            {
+                allow: "literal"
+            }
+        ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
         "react/jsx-pascal-case": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
         "react/jsx-sort-default-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
         "react/jsx-sort-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
