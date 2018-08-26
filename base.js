@@ -526,7 +526,7 @@ module.exports = {
         "object-property-newline": [
             "error",
             {
-                allowAllPropertiesOnSameLine: false,
+                allowAllPropertiesOnSameLine: true,
             },
         ], // http://eslint.org/docs/rules/object-property-newline
         "object-shorthand": ["error", "always"], // http://eslint.org/docs/rules/object-shorthand
