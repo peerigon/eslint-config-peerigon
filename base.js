@@ -44,6 +44,7 @@ module.exports = {
         "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
         "array-callback-return": ["error"], // http://eslint.org/docs/rules/array-callback-return
         "array-element-newline": "off", // http://eslint.org/docs/rules/array-element-newline
+        "array-func/prefer-array-from": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
         "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": [
