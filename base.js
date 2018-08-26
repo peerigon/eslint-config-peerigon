@@ -607,7 +607,7 @@ module.exports = {
         "radix": "off", // http://eslint.org/docs/rules/radix
         "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
-        "require-yield": "error", // http://eslint.org/docs/rules/require-yield
+        "require-yield": "off", // http://eslint.org/docs/rules/require-yield
         "rest-spread-spacing": ["error", "never"], // http://eslint.org/docs/rules/rest-spread-spacing
         // Handled by babel/semi
         "semi": "off", // http://eslint.org/docs/rules/semi
