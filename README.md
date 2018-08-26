@@ -1,5 +1,5 @@
-eslint-config-peerigon
-======================
+# eslint-config-peerigon
+
 **[Peerigon](https://peerigon.com/) coding rules as [ESLint](http://eslint.org/) config.**
 
 [![](https://img.shields.io/npm/v/eslint-config-peerigon.svg)](https://www.npmjs.com/package/eslint-config-peerigon)
@@ -8,8 +8,7 @@ eslint-config-peerigon
 
 These rules are intentionally strict about formatting or whitespace issues. You should use an editor configuration where you can apply autofixes (`eslint --fix`) on demand (for instance when saving the file). The goal of these rules is to achieve a consistent coding style while avoiding common pitfalls.
 
-Provided configs
-------------------------------------------------------------------------
+## Provided configs
 
 ### [`peerigon`](base.js)
 
@@ -118,8 +117,29 @@ Special rules for older projects:
 }
 ```
 
-Goals
-------------------------------------------------------------------------
+## Styles
+
+The following rules enable specific writing styles. Use them as you prefer.
+
+### [`peerigon/styles/prefer-arrow`](styles/prefer-arrow.js)
+
+**Important: Requires [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow) as project dependency.**
+
+Enforces arrow function expressions instead of function declarations (see [#23](https://github.com/peerigon/eslint-config-peerigon/issues/23)).
+Regular functions are still allowed as methods in objects or classes.
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/styles/prefer-arrow"
+    ],
+    "root": true
+}
+```
+
+## Goals
+
 Coding rules and coding conventions are always a hot topic because they tend to be subjective.
 But for the benefit of all team members, it's reasonable to have common rules among projects.
 
@@ -219,8 +239,7 @@ let a   = 1,                 let   a   = 1,
 
 If you don't have to change a lot of lines, refactoring is more fun. As a nice side-effect, `git diff` also becomes more readable.
 
-Recommendations
-------------------------------------------------------------------------
+## Recommendations
 
 ### Disabling rules
 
@@ -240,12 +259,10 @@ If you don't agree with a rule, please do not disable the rule. It's better to c
 
 **No**. Because this way, eslint won't report all linting errors on Travis CI. Thus, a PR could contain linting errors without Travis CI complaining about it.
 
-License
-------------------------------------------------------------------------
+## License
 
 Unlicense
 
-Sponsors
-------------------------------------------------------------------------
+## Sponsors
 
 [<img src="https://assets.peerigon.com/peerigon/logo/peerigon-logo-flat-spinat.png" width="150" />](https://peerigon.com)
