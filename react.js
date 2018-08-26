@@ -87,7 +87,12 @@ module.exports = {
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
         "react/jsx-no-target-blank": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
         "react/jsx-no-undef": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
-        "react/jsx-one-expression-per-line": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
+        "react/jsx-one-expression-per-line": [
+            "error",
+            {
+                allow: "literal"
+            }
+        ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
         "react/jsx-pascal-case": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
         "react/jsx-sort-default-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
         "react/jsx-sort-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
