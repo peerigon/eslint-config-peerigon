@@ -30,6 +30,7 @@
   "dependencies": {
     "babel-eslint": "^8.2.6",
     "eslint-plugin-array-func": "^3.0.0",
+    "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsdoc": "^3.8.0",
     "eslint-plugin-optimize-regex": "^1.1.5",

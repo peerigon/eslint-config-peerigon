@@ -17,7 +17,8 @@ module.exports = {
         "import",
         "optimize-regex",
         "array-func",
-        "promise"
+        "promise",
+        "babel"
     ],
     extends: [
         "eslint:recommended",
@@ -51,6 +52,19 @@ module.exports = {
                 before: true,
             },
         ], // http://eslint.org/docs/rules/arrow-spacing
+        // https://github.com/babel/eslint-plugin-babel
+        "babel/new-cap": "error",
+        "babel/no-invalid-this": "error",
+        "babel/no-unused-expressions": [
+            "error",
+            {
+                allowShortCircuit: true,
+                allowTernary: true,
+            },
+        ],
+        "babel/object-curly-spacing": ["error", "never"],
+        "babel/quotes": ["error", "double", "avoid-escape"],
+        "babel/semi": "error",
         "block-scoped-var": "error", // http://eslint.org/docs/rules/block-scoped-var
         "block-spacing": "error", // http://eslint.org/docs/rules/block-spacing
         "brace-style": [
@@ -299,7 +313,8 @@ module.exports = {
         "max-statements": "off", // http://eslint.org/docs/rules/max-statements
         "max-statements-per-line": ["error", {max: 1}], // http://eslint.org/docs/rules/max-statements-per-line
         "multiline-ternary": ["error", "always-multiline"], // http://eslint.org/docs/rules/multiline-ternary
-        "new-cap": "error", // http://eslint.org/docs/rules/new-cap
+        // Handled by babel/new-cap
+        "new-cap": "off", // http://eslint.org/docs/rules/new-cap
         "new-parens": "error", // http://eslint.org/docs/rules/new-parens
         "newline-per-chained-call": "error", // http://eslint.org/docs/rules/newline-per-chained-call
         "no-alert": "warn", // http://eslint.org/docs/rules/no-alert
@@ -351,7 +366,8 @@ module.exports = {
         "no-inline-comments": "off", // http://eslint.org/docs/rules/no-inline-comments
         "no-inner-declarations": ["error", "functions"], // http://eslint.org/docs/rules/no-inner-declarations
         "no-invalid-regexp": "error", // http://eslint.org/docs/rules/no-invalid-regexp
-        "no-invalid-this": "error", // http://eslint.org/docs/rules/no-invalid-this
+        // Handled by babel/no-invalid-this
+        "no-invalid-this": "off", // http://eslint.org/docs/rules/no-invalid-this
         "no-irregular-whitespace": "error", // http://eslint.org/docs/rules/no-irregular-whitespace
         "no-iterator": "error", // http://eslint.org/docs/rules/no-iterator
         "no-label-var": "error", // http://eslint.org/docs/rules/no-label-var
@@ -448,8 +464,9 @@ module.exports = {
         "no-unreachable": "error", // http://eslint.org/docs/rules/no-unreachable
         "no-unsafe-finally": "error", // http://eslint.org/docs/rules/no-unsafe-finally
         "no-unsafe-negation": "error", // http://eslint.org/docs/rules/no-unsafe-negation
+        // Handled by babel/no-unusd-expressions
         "no-unused-expressions": [
-            "error",
+            "off",
             {
                 allowShortCircuit: true,
                 allowTernary: true,
@@ -491,7 +508,8 @@ module.exports = {
                 multiline: true,
             },
         ], // http://eslint.org/docs/rules/object-curly-newline
-        "object-curly-spacing": ["error", "never"], // http://eslint.org/docs/rules/object-curly-spacing
+        // Handled by babel/object-curly-spacing
+        "object-curly-spacing": ["off", "never"], // http://eslint.org/docs/rules/object-curly-spacing
         "object-property-newline": [
             "error",
             {
@@ -581,13 +599,15 @@ module.exports = {
         "promise/prefer-await-to-then": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-then.md
         "promise/valid-params": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/valid-params.md
         "quote-props": ["error", "as-needed"], // http://eslint.org/docs/rules/quote-props
-        "quotes": ["error", "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
+        // Handled by babel/quotes
+        "quotes": ["off", "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
         "radix": "off", // http://eslint.org/docs/rules/radix
         "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
         "require-yield": "error", // http://eslint.org/docs/rules/require-yield
         "rest-spread-spacing": ["error", "never"], // http://eslint.org/docs/rules/rest-spread-spacing
-        "semi": "error", // http://eslint.org/docs/rules/semi
+        // Handled by babel/semi
+        "semi": "off", // http://eslint.org/docs/rules/semi
         "semi-spacing": [
             "error",
             {
