@@ -53,7 +53,7 @@ module.exports = {
                 extensions: [".jsx", ".tsx"],
             },
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-        "react/jsx-first-prop-new-line": ["error", "multiline"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
+        "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
         "react/jsx-handler-names": [
             "error",
             {
