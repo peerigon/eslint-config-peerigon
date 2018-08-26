@@ -120,9 +120,7 @@ module.exports = {
         "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
         "func-name-matching": ["off"], // http://eslint.org/docs/rules/func-name-matching
         "func-names": "off", // http://eslint.org/docs/rules/func-names
-        "func-style": ["error", "declaration", {
-            allowArrowFunctions: true
-        }], // http://eslint.org/docs/rules/func-style
+        "func-style": ["error", "expression"], // http://eslint.org/docs/rules/func-style
         "generator-star-spacing": [
             "error",
             {
@@ -594,8 +592,7 @@ module.exports = {
             "error",
             {
                 classPropertiesAllowed: true,
-                disallowPrototype: false,
-                singleReturnOnly: true
+                disallowPrototype: true
             }
         ],
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
