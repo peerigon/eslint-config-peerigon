@@ -257,6 +257,9 @@ module.exports = {
                 ObjectExpression: 1,
                 SwitchCase: 1,
                 VariableDeclarator: 1,
+                // JSX nodes are handled by react/jsx-indent and should be excluded from this rule
+                // See https://github.com/yannickcr/eslint-plugin-react/issues/1679#issuecomment-363908562
+                ignoredNodes: ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"],
                 outerIIFEBody: 1,
             },
         ], // http://eslint.org/docs/rules/indent
