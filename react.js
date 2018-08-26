@@ -23,7 +23,7 @@ module.exports = {
         "react/boolean-prop-naming": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
         "react/button-has-type": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
         "react/default-props-match-prop-types": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
-        "react/destructuring-assignment": ["error", "always"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+        "react/destructuring-assignment": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
         "react/display-name": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
         "react/forbid-component-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
         "react/forbid-dom-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md
