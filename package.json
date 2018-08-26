@@ -35,7 +35,6 @@
     "eslint-plugin-jsdoc": "^3.8.0",
     "eslint-plugin-no-unsafe-regex": "^1.0.0",
     "eslint-plugin-optimize-regex": "^1.1.5",
-    "eslint-plugin-prefer-arrow": "^1.1.2",
     "eslint-plugin-promise": "^4.0.0"
   },
   "devDependencies": {

@@ -19,8 +19,7 @@ module.exports = {
         "array-func",
         "promise",
         "babel",
-        "no-unsafe-regex",
-        "prefer-arrow"
+        "no-unsafe-regex"
     ],
     extends: [
         "eslint:recommended",
@@ -120,7 +119,7 @@ module.exports = {
         "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
         "func-name-matching": ["off"], // http://eslint.org/docs/rules/func-name-matching
         "func-names": "off", // http://eslint.org/docs/rules/func-names
-        "func-style": ["error", "expression"], // http://eslint.org/docs/rules/func-style
+        "func-style": ["error", "declaration"], // http://eslint.org/docs/rules/func-style
         "generator-star-spacing": [
             "error",
             {
@@ -587,14 +586,6 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/padding-line-between-statements
         "prefer-arrow-callback": "error", // http://eslint.org/docs/rules/prefer-arrow-callback
-        // https://github.com/TristonJ/eslint-plugin-prefer-arrow
-        "prefer-arrow/prefer-arrow-functions": [
-            "error",
-            {
-                classPropertiesAllowed: true,
-                disallowPrototype: true
-            }
-        ],
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
         "prefer-destructuring": "off", // http://eslint.org/docs/rules/prefer-destructuring
         "prefer-numeric-literals": "error", // http://eslint.org/docs/rules/prefer-numeric-literals
