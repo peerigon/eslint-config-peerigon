@@ -124,6 +124,7 @@ module.exports = {
         ], // http://eslint.org/docs/rules/id-length
         "id-match": "off", // http://eslint.org/docs/rules/id-match
         "import/default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
+        "import/dynamic-import-chunkname": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
         "import/export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
         "import/exports-last": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/exports-last.md
         "import/extensions": ["error", "ignorePackages"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
@@ -171,18 +172,34 @@ module.exports = {
         "import/no-named-default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
         "import/no-namespace": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
         "import/no-nodejs-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
+        "import/no-relative-parent-imports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
         "import/no-restricted-paths": [
             "error",
             {
-                basePath: "./app",
                 zones: [
                     {
-                        from: "./server",
-                        target: "./client",
+                        from: "./app/server",
+                        target: "./app/client",
                     },
                     {
-                        from: "./client",
-                        target: "./server",
+                        from: "./app/client",
+                        target: "./app/server",
+                    },
+                    {
+                        from: "./app",
+                        target: "./test",
+                    },
+                    {
+                        from: "./src/server",
+                        target: "./src/client",
+                    },
+                    {
+                        from: "./src/client",
+                        target: "./src/server",
+                    },
+                    {
+                        from: "./src",
+                        target: "./test",
                     },
                 ],
             },
@@ -232,6 +249,7 @@ module.exports = {
         "jsdoc/check-tag-names": "error",
         "jsdoc/check-types": "error",
         "jsdoc/newline-after-description": "error",
+        "jsdoc/no-undefined-types": "error",
         "jsdoc/require-description-complete-sentence": "off",
         "jsdoc/require-example": "off",
         "jsdoc/require-hyphen-before-param-description": "error",
@@ -241,6 +259,7 @@ module.exports = {
         "jsdoc/require-param-type": "error",
         "jsdoc/require-returns-description": "off",
         "jsdoc/require-returns-type": "error",
+        "jsdoc/valid-types": "error",
         "jsx-quotes": ["error", "prefer-double"], // http://eslint.org/docs/rules/jsx-quotes
         "key-spacing": [
             "error",
