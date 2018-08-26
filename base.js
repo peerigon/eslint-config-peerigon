@@ -18,7 +18,8 @@ module.exports = {
         "optimize-regex",
         "array-func",
         "promise",
-        "babel"
+        "babel",
+        "no-unsafe-regex"
     ],
     extends: [
         "eslint:recommended",
@@ -464,6 +465,7 @@ module.exports = {
         "no-unreachable": "error", // http://eslint.org/docs/rules/no-unreachable
         "no-unsafe-finally": "error", // http://eslint.org/docs/rules/no-unsafe-finally
         "no-unsafe-negation": "error", // http://eslint.org/docs/rules/no-unsafe-negation
+        'no-unsafe-regex/no-unsafe-regex': "warn", // https://github.com/kgryte/eslint-plugin-no-unsafe-regex
         // Handled by babel/no-unusd-expressions
         "no-unused-expressions": [
             "off",
