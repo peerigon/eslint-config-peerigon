@@ -55,8 +55,6 @@ Do not add `"root": true` here since we want to *extend* our project config.
 
 ### [`peerigon/node`](node.js)
 
-**Important: Requires [`eslint-plugin-security`](https://github.com/nodesecurity/eslint-plugin-security) as project dependency.**
-
 Special rules for Node.js >= 8.0.0 environments:
 
 ```js
