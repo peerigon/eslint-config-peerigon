@@ -30,7 +30,7 @@ module.exports = {
     rules: {
         /* eslint-enable sort-keys */
         "accessor-pairs": [
-            "error",
+            "warn",
             {
                 getWithoutSet: true,
             },
@@ -42,7 +42,7 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/array-bracket-newline
         "array-bracket-spacing": ["error", "never"], // http://eslint.org/docs/rules/array-bracket-spacing
-        "array-callback-return": ["error"], // http://eslint.org/docs/rules/array-callback-return
+        "array-callback-return": ["warn"], // http://eslint.org/docs/rules/array-callback-return
         "array-element-newline": "off", // http://eslint.org/docs/rules/array-element-newline
         "array-func/prefer-array-from": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
@@ -76,7 +76,7 @@ module.exports = {
                 "allowSingleLine": false,
             },
         ], // http://eslint.org/docs/rules/brace-style
-        "callback-return": "error", // http://eslint.org/docs/rules/callback-return
+        "callback-return": "warn", // http://eslint.org/docs/rules/callback-return
         "camelcase": ["error", {properties: "always"}], // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
         "class-methods-use-this": ["warn"], // http://eslint.org/docs/rules/class-methods-use-this
@@ -105,7 +105,7 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/complexity
         "computed-property-spacing": ["error", "never"], // http://eslint.org/docs/rules/computed-property-spacing
-        "consistent-return": "error", // http://eslint.org/docs/rules/consistent-return
+        "consistent-return": "warn", // http://eslint.org/docs/rules/consistent-return
         "consistent-this": ["off", "self"], // http://eslint.org/docs/rules/consistent-this
         "constructor-super": "error", // http://eslint.org/docs/rules/constructor-super
         "curly": ["error", "all"], // http://eslint.org/docs/rules/curly
@@ -114,7 +114,7 @@ module.exports = {
         // We don't support ES3 envs anymore, so allowKeywords: true is ok
         "dot-notation": ["error", {allowKeywords: true}], // http://eslint.org/docs/rules/dot-notation
         "eol-last": "off", // http://eslint.org/docs/rules/eol-last
-        "eqeqeq": ["error", "always"], // http://eslint.org/docs/rules/eqeqeq
+        "eqeqeq": ["warn", "always"], // http://eslint.org/docs/rules/eqeqeq
         "for-direction": "error", // http://eslint.org/docs/rules/for-direction
         "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
         "func-name-matching": ["off"], // http://eslint.org/docs/rules/func-name-matching
@@ -156,7 +156,7 @@ module.exports = {
         "import/no-absolute-path": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
         "import/no-amd": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         // The auto-import feature of VS Code (and probably other editors) cannot work when things are
-        // exported anonmously because the editor does not know what the user wants to import.
+        // exported anonymously because the editor does not know what the user wants to import.
         // By just allowing default exports with names, refactoring and auto-importing becomes easier.
         "import/no-anonymous-default-export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
         "import/no-commonjs": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
@@ -190,7 +190,7 @@ module.exports = {
         "import/no-nodejs-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
         "import/no-relative-parent-imports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
         "import/no-restricted-paths": [
-            "error",
+            "warn",
             {
                 zones: [
                     {
@@ -227,10 +227,13 @@ module.exports = {
                 "**/*.less",
                 "**/*.scss",
                 "**/*.sass",
-                "**/*register*"
+                "babel-register",
+                "@babel/register",
+                "**/polyfills*",
+                "ts-node/register*"
             ]
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
-        "import/no-unresolved": ["error", {commonjs: true}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+        "import/no-unresolved": ["warn", {commonjs: true}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
         "import/no-useless-path-segments": "error", // currently undocumented :(, see https://github.com/benmosher/eslint-plugin-import/issues/1032
         "import/no-webpack-loader-syntax": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
         "import/order": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
@@ -424,7 +427,13 @@ module.exports = {
         "no-path-concat": "warn", // http://eslint.org/docs/rules/no-path-concat
         "no-plusplus": "off", // http://eslint.org/docs/rules/no-plusplus
         "no-process-env": "off", // http://eslint.org/docs/rules/no-process-env
-        "no-process-exit": "error", // http://eslint.org/docs/rules/no-process-exit
+        // process.exit() is often used in situations where it would have been better to either throw an error or
+        // let the process exit by itself.
+        // There are situations where process.exit() is the cause of truncated stdout output,
+        // see https://nodejs.org/api/process.html#process_process_exit_code
+        // If you want to set the exit code, you can also use process.exitCode.
+        // Disable this rule if you have to exit the process forcefully and you know what you're doing.
+        "no-process-exit": "warn", // http://eslint.org/docs/rules/no-process-exit
         "no-proto": "error", // http://eslint.org/docs/rules/no-proto
         "no-prototype-builtins": "warn", // http://eslint.org/docs/rules/no-prototype-builtins
         "no-redeclare": "error", // http://eslint.org/docs/rules/no-redeclare
