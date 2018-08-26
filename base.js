@@ -19,7 +19,8 @@ module.exports = {
         "array-func",
         "promise",
         "babel",
-        "no-unsafe-regex"
+        "no-unsafe-regex",
+        "prefer-arrow"
     ],
     extends: [
         "eslint:recommended",
@@ -46,7 +47,7 @@ module.exports = {
         "array-element-newline": "off", // http://eslint.org/docs/rules/array-element-newline
         "array-func/prefer-array-from": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
-        "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
+        "arrow-parens": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": [
             "error",
             {
@@ -119,7 +120,9 @@ module.exports = {
         "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
         "func-name-matching": ["off"], // http://eslint.org/docs/rules/func-name-matching
         "func-names": "off", // http://eslint.org/docs/rules/func-names
-        "func-style": ["error", "declaration"], // http://eslint.org/docs/rules/func-style
+        "func-style": ["error", "declaration", {
+            allowArrowFunctions: true
+        }], // http://eslint.org/docs/rules/func-style
         "generator-star-spacing": [
             "error",
             {
@@ -586,6 +589,15 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/padding-line-between-statements
         "prefer-arrow-callback": "error", // http://eslint.org/docs/rules/prefer-arrow-callback
+        // https://github.com/TristonJ/eslint-plugin-prefer-arrow
+        "prefer-arrow/prefer-arrow-functions": [
+            "error",
+            {
+                classPropertiesAllowed: true,
+                disallowPrototype: false,
+                singleReturnOnly: true
+            }
+        ],
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
         "prefer-destructuring": "off", // http://eslint.org/docs/rules/prefer-destructuring
         "prefer-numeric-literals": "error", // http://eslint.org/docs/rules/prefer-numeric-literals
