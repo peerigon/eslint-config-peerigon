@@ -46,7 +46,7 @@ module.exports = {
         "array-element-newline": "off", // http://eslint.org/docs/rules/array-element-newline
         "array-func/prefer-array-from": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
-        "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
+        "arrow-parens": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": [
             "error",
             {
