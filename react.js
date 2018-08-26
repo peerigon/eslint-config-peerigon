@@ -46,9 +46,11 @@ module.exports = {
         "react/jsx-filename-extension": [
             "error",
             {
-                // The React team recommends to use .js only
-                // See https://github.com/facebook/create-react-app/issues/87
-                extensions: [".js"],
+                // There's a big discussion whether the jsx/tsx is necessary:
+                // - https://github.com/facebook/create-react-app/issues/87
+                // - https://github.com/airbnb/javascript/pull/985
+                // Since VSCode handles tsx files out-of-the-box, let's stick with the x-extensions
+                extensions: [".jsx", ".tsx"],
             },
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
         "react/jsx-first-prop-new-line": ["error", "multiline"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
