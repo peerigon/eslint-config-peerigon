@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="14.0.0"></a>
+# [14.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v13.0.0...v14.0.0) (2018-08-27)
+
+
+### Bug Fixes
+
+* Add eslint-plugin-babel ([#33](https://github.com/peerigon/eslint-config-peerigon/issues/33)) ([3032b19](https://github.com/peerigon/eslint-config-peerigon/commit/3032b19))
+* Disable array-func/prefer-array-from ([#35](https://github.com/peerigon/eslint-config-peerigon/issues/35)) ([69e2601](https://github.com/peerigon/eslint-config-peerigon/commit/69e2601))
+* Disable react/destructuring-assignment ([#36](https://github.com/peerigon/eslint-config-peerigon/issues/36)) ([01eaced](https://github.com/peerigon/eslint-config-peerigon/commit/01eaced))
+* Disable require-yield ([#37](https://github.com/peerigon/eslint-config-peerigon/issues/37)) ([8e7ceb7](https://github.com/peerigon/eslint-config-peerigon/commit/8e7ceb7))
+* Fix react rules ([#43](https://github.com/peerigon/eslint-config-peerigon/issues/43)) ([47b82bb](https://github.com/peerigon/eslint-config-peerigon/commit/47b82bb)), closes [/github.com/yannickcr/eslint-plugin-react/issues/1679#issuecomment-363908562](https://github.com//github.com/yannickcr/eslint-plugin-react/issues/1679/issues/issuecomment-363908562)
+* Lower the severity of some rules ([#39](https://github.com/peerigon/eslint-config-peerigon/issues/39)) ([4c4f531](https://github.com/peerigon/eslint-config-peerigon/commit/4c4f531))
+* Remove eslint-plugin-security ([#38](https://github.com/peerigon/eslint-config-peerigon/issues/38)) ([e329dc0](https://github.com/peerigon/eslint-config-peerigon/commit/e329dc0))
+* Replace deprecated experimentalObjectRestSpread option ([#42](https://github.com/peerigon/eslint-config-peerigon/issues/42)) ([6509fe8](https://github.com/peerigon/eslint-config-peerigon/commit/6509fe8))
+
+
+### Features
+
+* Add no-unsafe-regex plugin ([#34](https://github.com/peerigon/eslint-config-peerigon/issues/34)) ([1b17d18](https://github.com/peerigon/eslint-config-peerigon/commit/1b17d18))
+* Add TypeScript rules ([#44](https://github.com/peerigon/eslint-config-peerigon/issues/44)) ([a25ec5a](https://github.com/peerigon/eslint-config-peerigon/commit/a25ec5a))
+* Config new rules ([#32](https://github.com/peerigon/eslint-config-peerigon/issues/32)) ([fc9f007](https://github.com/peerigon/eslint-config-peerigon/commit/fc9f007))
+* Enable arrow-parens rule ([#40](https://github.com/peerigon/eslint-config-peerigon/issues/40)) ([6ef3259](https://github.com/peerigon/eslint-config-peerigon/commit/6ef3259))
+* Introduce custom style one-line arrow functions ([#41](https://github.com/peerigon/eslint-config-peerigon/issues/41)) ([3555781](https://github.com/peerigon/eslint-config-peerigon/commit/3555781))
+* Update dependencies ([#31](https://github.com/peerigon/eslint-config-peerigon/issues/31)) ([0ff4147](https://github.com/peerigon/eslint-config-peerigon/commit/0ff4147))
+
+
+### BREAKING CHANGES
+
+* * Switch back to jsx and tsx extension
+* Switch to multiline-multiprop in react/jsx-first-prop-new-line
+* Arrow functions shouldn't have parenthesis around
+a single argument
+* The new rule can break tests
+* jsdoc/no-undefined-types and jsdoc/valid-types are errors
+now. This could break tests.
+* Update peer dependency on eslint to ^5.4.0
+
+
+
 <a name="13.0.0"></a>
 # [13.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v12.0.1...v13.0.0) (2018-04-27)
 
