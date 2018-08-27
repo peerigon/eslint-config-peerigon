@@ -85,6 +85,22 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 }
 ```
 
+### [`peerigon/typescript`](typescript.js)
+
+**Important: Requires [`typescript-eslint-parser`](https://github.com/babel/typescript-eslint-parser) and [`eslint-plugin-typescript`](https://github.com/nzakas/eslint-plugin-typescript) as project dependency.**
+
+Rules for [TypeScript](https://www.typescriptlang.org/).
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/typescript"
+    ],
+    "root": true
+}
+```
+
 ### [`peerigon/flowtype`](flowtype.js)
 
 **Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as project dependency.**
