@@ -111,7 +111,7 @@ module.exports = {
         "dot-location": ["error", "property"], // http://eslint.org/docs/rules/dot-location
         // We don't support ES3 envs anymore, so allowKeywords: true is ok
         "dot-notation": ["error", {allowKeywords: true}], // http://eslint.org/docs/rules/dot-notation
-        "eol-last": "off", // http://eslint.org/docs/rules/eol-last
+        "eol-last": ["error", "always"], // http://eslint.org/docs/rules/eol-last
         "eqeqeq": ["warn", "always"], // http://eslint.org/docs/rules/eqeqeq
         "for-direction": "error", // http://eslint.org/docs/rules/for-direction
         "func-call-spacing": ["error", "never"], // http://eslint.org/docs/rules/func-call-spacing
