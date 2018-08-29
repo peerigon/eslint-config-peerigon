@@ -171,9 +171,9 @@ module.exports = {
             "error",
             {
                 devDependencies: [
-                    "test/**", "config/**", "scripts/**", // contains usually npm scripts
-                    "tools/**", // often used for other scripts
-                    "**/*.test.js", "**/*.spec.js", "**/types.js",
+                    "test{,s}/**", "config{,s}/**", "script{,s}/**", // contains usually npm scripts
+                    "tool{,s}/**", // often used for other scripts
+                    "**/*.test.js", "**/*.spec.js", "**/type{,s}.js",
                 ],
                 optionalDependencies: true,
                 peerDependencies: false,
@@ -477,7 +477,7 @@ module.exports = {
         "no-unsafe-finally": "error", // http://eslint.org/docs/rules/no-unsafe-finally
         "no-unsafe-negation": "error", // http://eslint.org/docs/rules/no-unsafe-negation
         'no-unsafe-regex/no-unsafe-regex': "warn", // https://github.com/kgryte/eslint-plugin-no-unsafe-regex
-        // Handled by babel/no-unusd-expressions
+        // Handled by babel/no-unused-expressions
         "no-unused-expressions": [
             "off",
             {
