@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="15.0.0"></a>
+# [15.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v14.0.0...v15.0.0) (2018-08-29)
+
+
+### Bug Fixes
+
+* Enable singular folder names ([#46](https://github.com/peerigon/eslint-config-peerigon/issues/46)) ([166eece](https://github.com/peerigon/eslint-config-peerigon/commit/166eece))
+
+
+### Features
+
+* Enforce eol-last ([#47](https://github.com/peerigon/eslint-config-peerigon/issues/47)) ([985d474](https://github.com/peerigon/eslint-config-peerigon/commit/985d474))
+
+
+### BREAKING CHANGES
+
+* Enforce [eol-last](https://eslint.org/docs/rules/eol-last)
+
+
+
 <a name="14.0.0"></a>
 # [14.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v13.0.0...v14.0.0) (2018-08-27)
 
