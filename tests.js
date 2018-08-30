@@ -14,12 +14,14 @@ module.exports = {
         "max-nested-callbacks": "off",
         // Can increase the readability of a test if simple mocking functions are in one line
         "max-statements-per-line": ["error", { max: 2 }],
+        // Allows empty catch blocks in try clauses
+        "no-empty": "error",
         // If you want to test for thrown errors in a constructor function, it's common to ignore the result
         // @see https://github.com/peerigon/clockodo/pull/1#discussion_r180795825
         "no-new": "off",
         // Sometimes it's necessary to check for undefined explicitly
         "no-undefined": "off",
         // chai uses these as assertions
-        "no-unused-expressions": "off"
+        "no-unused-expressions": "off",
     }
 };
