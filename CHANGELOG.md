@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="15.0.1"></a>
+## [15.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v15.0.0...v15.0.1) (2018-08-30)
+
+
+### Bug Fixes
+
+* Disable no-empty rule in tests config ([#48](https://github.com/peerigon/eslint-config-peerigon/issues/48)) ([a1a1431](https://github.com/peerigon/eslint-config-peerigon/commit/a1a1431))
+
+
+
 <a name="15.0.0"></a>
 # [15.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v14.0.0...v15.0.0) (2018-08-29)
 
