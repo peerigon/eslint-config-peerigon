@@ -200,8 +200,8 @@ module.exports = {
                         target: "./app/server",
                     },
                     {
-                        from: "./app",
-                        target: "./test",
+                        from: "./test",
+                        target: "./app",
                     },
                     {
                         from: "./src/server",
@@ -212,8 +212,8 @@ module.exports = {
                         target: "./src/server",
                     },
                     {
-                        from: "./src",
-                        target: "./test",
+                        from: "./test",
+                        target: "./src",
                     },
                 ],
             },
