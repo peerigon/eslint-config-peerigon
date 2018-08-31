@@ -8,6 +8,8 @@ module.exports = {
     },
     rules: {
         /* eslint-enable sort-keys */
+        // chai uses these as assertions
+        "babel/no-unused-expressions": "off",
         // In order to make mocks more condensed, single line blocks are allowed in tests
         "brace-style": ["error", "1tbs", { allowSingleLine: true }],
         // mocha blocks are nested all the way down
@@ -15,13 +17,9 @@ module.exports = {
         // Can increase the readability of a test if simple mocking functions are in one line
         "max-statements-per-line": ["error", { max: 2 }],
         // Allows empty catch blocks in try clauses
-        "no-empty": "error",
+        "no-empty": "off",
         // If you want to test for thrown errors in a constructor function, it's common to ignore the result
         // @see https://github.com/peerigon/clockodo/pull/1#discussion_r180795825
         "no-new": "off",
-        // Sometimes it's necessary to check for undefined explicitly
-        "no-undefined": "off",
-        // chai uses these as assertions
-        "no-unused-expressions": "off",
     }
 };
