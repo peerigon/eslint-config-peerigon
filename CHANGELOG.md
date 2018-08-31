@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="15.0.2"></a>
+## [15.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v15.0.1...v15.0.2) (2018-08-31)
+
+
+### Bug Fixes
+
+* Wrong rule configurations ([#49](https://github.com/peerigon/eslint-config-peerigon/issues/49)) ([58da102](https://github.com/peerigon/eslint-config-peerigon/commit/58da102))
+
+
+
 <a name="15.0.1"></a>
 ## [15.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v15.0.0...v15.0.1) (2018-08-30)
 
