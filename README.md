@@ -124,6 +124,16 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
 }
 ```
 
+You need to add `--ext js,ts,tsx` to the `lint` script:
+
+```js
+{
+    "scripts": {
+        "lint": "eslint ./src ./test --ext js,ts,tsx"
+    }
+}
+```
+
 ### [`peerigon/flowtype`](flowtype.js)
 
 **Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as project dependency.**
