@@ -14,6 +14,10 @@ These rules are intentionally strict about formatting or whitespace issues. You 
 
 **Base rules for every project. You should always add these rules.**
 
+```
+npm i eslint@5 eslint-config-peerigon --save-dev
+```
+
 These rules assume a modern project with full ES2015 support, including ES modules. For specific environments like Node.js or old JS engines, see below. The base rules do not define an `env`, so you might want to do that for yourself to enable specific globals.
 
 Add an `.eslintrc.json` to the project's root folder:
@@ -30,6 +34,17 @@ Add an `.eslintrc.json` to the project's root folder:
     },
     // Do not search for further eslint configs in upper directories
     "root": true
+}
+```
+
+In your `package.json`, add a `lint` script and run it as `posttest`:
+
+```js
+{
+    "scripts": {
+        "lint": "eslint ./src ./test",
+        "posttest": "npm run lint"
+    }
 }
 ```
 
@@ -72,6 +87,10 @@ Special rules for Node.js >= 8.0.0 environments:
 
 **Important: Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) and [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y) as project dependency.**
 
+```
+npm i eslint-plugin-react eslint-plugin-jsx-a11y --save-dev
+```
+
 Rules for [React](https://facebook.github.io/react/) development, including accessibility rules.
 These rules are also applicable in other JSX environments, like [Preact](https://github.com/developit/preact):
 
@@ -89,6 +108,10 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 
 **Important: Requires [`typescript-eslint-parser`](https://github.com/babel/typescript-eslint-parser) and [`eslint-plugin-typescript`](https://github.com/nzakas/eslint-plugin-typescript) as project dependency.**
 
+```
+npm i typescript-eslint-parser eslint-plugin-typescript --save-dev
+```
+
 Rules for [TypeScript](https://www.typescriptlang.org/).
 
 ```js
@@ -104,6 +127,10 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
 ### [`peerigon/flowtype`](flowtype.js)
 
 **Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as project dependency.**
+
+```
+npm i babel-eslint eslint-plugin-flowtype --save-dev
+```
 
 Rules for [Flowtype](https://flowtype.org/).
 
@@ -140,6 +167,10 @@ The following rules enable specific writing styles. Use them as you prefer.
 ### [`peerigon/styles/prefer-arrow`](styles/prefer-arrow.js)
 
 **Important: Requires [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow) as project dependency.**
+
+```
+npm i eslint-plugin-prefer-arrow --save-dev
+```
 
 Enforces arrow function expressions instead of function declarations (see [#23](https://github.com/peerigon/eslint-config-peerigon/issues/23)).
 Regular functions are still allowed as methods in objects or classes.
