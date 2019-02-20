@@ -1,6 +1,8 @@
 /* eslint sort-keys: ["error", "asc"], quote-props: ["error", "consistent"] */
 /* eslint-disable sort-keys */
 
+const options = require("./options.js");
+
 module.exports = {
     parser: "babel-eslint",
     env: {
@@ -43,6 +45,8 @@ module.exports = {
         "array-callback-return": ["warn"], // http://eslint.org/docs/rules/array-callback-return
         "array-element-newline": "off", // http://eslint.org/docs/rules/array-element-newline
         "array-func/prefer-array-from": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
+        "array-func/prefer-flat": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
+        "array-func/prefer-flat-map": "error", // https://github.com/freaktechnik/eslint-plugin-array-func
         "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
         "arrow-parens": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": [
@@ -53,6 +57,7 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/arrow-spacing
         // https://github.com/babel/eslint-plugin-babel
+        "babel/camelcase": "error",
         "babel/new-cap": "error",
         "babel/no-invalid-this": "error",
         "babel/no-unused-expressions": [
@@ -65,6 +70,7 @@ module.exports = {
         "babel/object-curly-spacing": ["error", "never"],
         "babel/quotes": ["error", "double", "avoid-escape"],
         "babel/semi": "error",
+        "babel/valid-typeof": "error",
         "block-scoped-var": "error", // http://eslint.org/docs/rules/block-scoped-var
         "block-spacing": "error", // http://eslint.org/docs/rules/block-spacing
         "brace-style": [
@@ -75,7 +81,8 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/brace-style
         "callback-return": "warn", // http://eslint.org/docs/rules/callback-return
-        "camelcase": ["error", {properties: "always"}], // http://eslint.org/docs/rules/camelcase
+        // Handled by babel/camelcase
+        "camelcase": "off", // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
         "class-methods-use-this": ["warn"], // http://eslint.org/docs/rules/class-methods-use-this
         "comma-dangle": [
@@ -184,6 +191,7 @@ module.exports = {
         "import/no-named-as-default": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
         "import/no-named-as-default-member": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
         "import/no-named-default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
+        "import/no-named-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-export.md
         "import/no-namespace": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
         "import/no-nodejs-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
         "import/no-relative-parent-imports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
@@ -240,36 +248,17 @@ module.exports = {
         "indent": [
             "error",
             4,
-            {
-                ArrayExpression: 1,
-                CallExpression: {
-                    arguments: 1,
-                },
-                FunctionDeclaration: {
-                    body: 1,
-                    parameters: 1,
-                },
-                FunctionExpression: {
-                    body: 1,
-                    parameters: 1,
-                },
-                MemberExpression: 1,
-                ObjectExpression: 1,
-                SwitchCase: 1,
-                VariableDeclarator: 1,
-                // JSX nodes are handled by react/jsx-indent and should be excluded from this rule
-                // See https://github.com/yannickcr/eslint-plugin-react/issues/1679#issuecomment-363908562
-                ignoredNodes: ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"],
-                outerIIFEBody: 1,
-            },
+            options["indent"],
         ], // http://eslint.org/docs/rules/indent
         "init-declarations": "off", // http://eslint.org/docs/rules/init-declarations
         // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
+        "jsdoc/check-examples": "error",
         "jsdoc/check-param-names": "error",
         "jsdoc/check-tag-names": "error",
         "jsdoc/check-types": "error",
         "jsdoc/newline-after-description": "error",
         "jsdoc/no-undefined-types": "error",
+        "jsdoc/require-description": "off",
         "jsdoc/require-description-complete-sentence": "off",
         "jsdoc/require-example": "off",
         "jsdoc/require-hyphen-before-param-description": "error",
@@ -277,6 +266,8 @@ module.exports = {
         "jsdoc/require-param-description": "off",
         "jsdoc/require-param-name": "off",
         "jsdoc/require-param-type": "error",
+        "jsdoc/require-returns": "error",
+        "jsdoc/require-returns-check": "error",
         "jsdoc/require-returns-description": "off",
         "jsdoc/require-returns-type": "error",
         "jsdoc/valid-types": "error",
@@ -674,7 +665,8 @@ module.exports = {
                 requireReturnDescription: false,
             },
         ], // http://eslint.org/docs/rules/valid-jsdoc
-        "valid-typeof": "error", // http://eslint.org/docs/rules/valid-typeof
+        // Handled by babel/valid-typeof
+        "valid-typeof": "off", // http://eslint.org/docs/rules/valid-typeof
         "vars-on-top": "error", // http://eslint.org/docs/rules/vars-on-top
         "wrap-iife": "off", // http://eslint.org/docs/rules/wrap-iife
         "wrap-regex": "off", // http://eslint.org/docs/rules/wrap-regex
