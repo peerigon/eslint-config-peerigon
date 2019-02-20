@@ -10,7 +10,7 @@ module.exports = {
             jsx: true
         },
         project: "./tsconfig.json",
-        tsconfigRootDir: "../../",
+        tsconfigRootDir: "./",
         extraFileExtensions: [".vue"]
     },
     plugins: [
@@ -19,6 +19,12 @@ module.exports = {
     extends: [
         "plugin:@typescript-eslint/recommended"
     ],
+    settings: {
+        "import/resolver": {
+            "node": true,
+            "typescript": true
+        }
+    },
     rules: {
         /* eslint-enable sort-keys */
         // "no-undef": "off", // produces false positive with some TypeScript syntax. This is caught by TypeScript anyway.
