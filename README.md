@@ -8,6 +8,21 @@
 
 These rules are intentionally strict about formatting or whitespace issues. You should use an editor configuration where you can apply autofixes (`eslint --fix`) on demand (for instance when saving the file). The goal of these rules is to achieve a consistent coding style while avoiding common pitfalls.
 
+We use warnings for typical code smells (e.g. too many dependencies, high complexity, ...) or when a better alternative exists (e.g. `process.exit(1)`)).
+
+Please do not just disable warnings. First, try to fix them. If it's too difficult for now, leave them as hints for other developers that this place might need some refactoring in the future. If there is a good reason why the code is written that way, you're allowed to disable that particular warning with a disabling comment using the rule-code. Please put an explanation above that comment why it's ok to disable the rule in that case, like:
+
+```js
+// Validation logic typically contains a lot of if() clauses.
+// It's better to keep this complexity hidden behind a single function.
+// eslint-disable-next-line complexity
+function validate() {
+    // ...
+}
+```
+
+`// eslint-disable-next-line` is usually better because it resists [Prettier](https://prettier.io/) reformatting.
+
 ## Provided configs
 
 ### [`peerigon`](base.js)
