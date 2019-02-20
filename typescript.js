@@ -86,7 +86,7 @@ module.exports = {
             "error",
             {
                 allowDestructuring: true,
-              allowedNames: [],
+                allowedNames: [],
             },
         ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md
         "@typescript-eslint/no-triple-slash-reference": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/rules/no-triple-slash-reference.md
@@ -124,6 +124,13 @@ module.exports = {
             ],
             "parserOptions": {
                 "sourceType": "script"
+            }
+        },
+        {
+            "files": ["*.d.ts"],
+            "rules": {
+                "import/unambiguous": "off", // produces false positive with some TypeScript syntax
+                "import/export": "off" // produces false positive with some TypeScript syntax
             }
         }
     ],
