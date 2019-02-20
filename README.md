@@ -318,7 +318,7 @@ If you don't have to change a lot of lines, refactoring is more fun. As a nice s
 Sometimes, there is a legitimate use-case to disable a specific rule. You can disable a rule for the current line like this
 
 ```js
-// eslint-disable-line rule-code
+// eslint-disable-next-line rule-code
 ```
 
 where `rule-code` is the code that is displayed along the error message.
