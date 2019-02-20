@@ -8,7 +8,7 @@
 
 These rules are intentionally strict about formatting or whitespace issues. You should use an editor configuration where you can apply autofixes (`eslint --fix`) on demand (for instance when saving the file). The goal of these rules is to achieve a consistent coding style while avoiding common pitfalls.
 
-We use warnings for typical code smells (e.g. too many dependencies, high complexity, ...) or when a better alternative exists (e.g. `throw Error("...")` over `process.exit(1)`)).
+We use warnings for typical code smells (e.g. too many dependencies, high complexity, ...) or when a better alternative exists (e.g. `throw Error("...")` over `process.exit(1)`).
 
 Please do not just disable warnings. First, try to fix them. If it's too difficult for now, leave them as hints for other developers that this place might need some refactoring in the future. If there is a good reason why the code is written that way, you're allowed to disable that particular warning with a disabling comment using the rule-code. Please put an explanation above that comment why it's ok to disable the rule in that case, like:
 
@@ -221,9 +221,10 @@ We judge our rules by these features, ordered by priority:
 2. Ease of refactoring
 3. Ease of writing
 
-Because,<br>
-we read code more often then we change it and<br>
-we change core more often then we write it.
+Because:
+
+- we read code more often then we change it and
+- we change code more often then we write it.
 
 ---
 
