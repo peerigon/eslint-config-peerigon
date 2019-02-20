@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [16.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v15.0.2...v16.0.0) (2019-02-20)
+
+
+### Features
+
+* Add and refactor rules ([be86a71](https://github.com/peerigon/eslint-config-peerigon/commit/be86a71))
+
+
+### BREAKING CHANGES
+
+* This commit adds and changes a bunch of TypeScript rules because the original plugin was deprecated.
+
+However, there were also notable changes to the base rules:
+
+- "array-func/prefer-flat-map": "error" // https://github.com/freaktechnik/eslint-plugin-array-func
+- "jsdoc/check-examples": "error"
+- "jsdoc/require-returns": "error"
+- "jsdoc/require-returns-check": "error"
+
+
+
 <a name="15.0.2"></a>
 ## [15.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v15.0.1...v15.0.2) (2018-08-31)
 
