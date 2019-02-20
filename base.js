@@ -191,7 +191,7 @@ module.exports = {
         "import/no-named-as-default": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
         "import/no-named-as-default-member": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
         "import/no-named-default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
-        "import/no-named-export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-export.md
+        "import/no-named-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-export.md
         "import/no-namespace": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
         "import/no-nodejs-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
         "import/no-relative-parent-imports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
