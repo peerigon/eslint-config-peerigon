@@ -107,7 +107,7 @@ module.exports = {
         ], // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
         "@typescript-eslint/restrict-plus-operands": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md
         "@typescript-eslint/type-annotation-spacing": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/rules/type-annotation-spacing.md
-        "camelcase": "off",
+        "babel/camelcase": "off",
         "indent": "off",
     },
     /* eslint-disable sort-keys */
