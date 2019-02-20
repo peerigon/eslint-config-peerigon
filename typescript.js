@@ -67,7 +67,7 @@ module.exports = {
         "@typescript-eslint/no-inferrable-types": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/rules/no-inferrable-types.md
         "@typescript-eslint/no-misused-new": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-misused-new.md
         "@typescript-eslint/no-namespace": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/rules/no-namespace.md
-        "@typescript-eslint/no-non-null-assertion": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/rules/no-non-null-assertion.md
+        "@typescript-eslint/no-non-null-assertion": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/rules/no-non-null-assertion.md
         // In an object expression, it can be beneficial to cast the object to a certain type instead of the inferred type
         // Example:
         // const options = {
