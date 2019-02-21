@@ -525,9 +525,7 @@ module.exports = {
         "one-var-declaration-per-line": "off", // http://eslint.org/docs/rules/one-var-declaration-per-line
         "operator-assignment": ["off", "always"], // http://eslint.org/docs/rules/operator-assignment
         "operator-linebreak": ["error", "after"], // http://eslint.org/docs/rules/operator-linebreak
-        // TODO: Re-active once unexpected optimizing behavior has been fixed
-        // https://github.com/BrainMaestro/eslint-plugin-optimize-regex/pull/12
-        "optimize-regex/optimize-regex": "off",
+        "optimize-regex/optimize-regex": "error",
         "padded-blocks": ["error", "never"], // http://eslint.org/docs/rules/padded-blocks
         "padding-line-between-statements": [
             "error",
