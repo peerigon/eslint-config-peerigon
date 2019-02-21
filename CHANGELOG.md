@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-# [16.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v15.0.2...v16.0.0) (2019-02-20)
+# [17.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v16.0.0...v17.0.0) (2019-02-21)
+
+
+### Features
+
+* Add new rule ([#57](https://github.com/peerigon/eslint-config-peerigon/issues/57)) ([7bde0ba](https://github.com/peerigon/eslint-config-peerigon/commit/7bde0ba))
+
+
+### BREAKING CHANGES
+
+* - "optimize-regex/optimize-regex": "error"
+
+
+
+<a name="16.0.0"></a>
 
 
 ### Features
@@ -184,7 +198,7 @@ These overly strict rules don't make sense in JavaScript.
 ### BREAKING CHANGES
 
 * The eslint-config-peerigon now requires at least eslint@^4.9.0
-* There have been new rules added which might break your build. But they should be auto-fixable 🖖 
+* There have been new rules added which might break your build. But they should be auto-fixable 🖖
 
 
 
