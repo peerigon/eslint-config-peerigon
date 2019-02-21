@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="16.0.0"></a>
+## [16.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v15.0.2...v16.0.0) (2019-02-21)
 
 
 ### Features
