@@ -210,6 +210,23 @@ Regular functions are still allowed as methods in objects or classes.
 }
 ```
 
+### [`peerigon/styles/prefer-interface`](styles/prefer-interface.js)
+
+**Important: Use it in combination with [`peerigon/typescript`](typescript.js).**
+
+[Prefer `interface` over `type`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md).
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/typescript",
+        "peerigon/styles/prefer-interface"
+    ],
+    "root": true
+}
+```
+
 ## Goals
 
 Coding rules and coding conventions are always a hot topic because they tend to be subjective.
