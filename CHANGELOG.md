@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="17.1.0"></a>
+# [17.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v17.0.0...v17.1.0) (2019-02-22)
+
+
+### Features
+
+* Add prefer-interface style for TypeScript apps ([#58](https://github.com/peerigon/eslint-config-peerigon/issues/58)) ([529503f](https://github.com/peerigon/eslint-config-peerigon/commit/529503f))
+
+
+
+<a name="17.0.0"></a>
 # [17.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v16.0.0...v17.0.0) (2019-02-21)
 
 
