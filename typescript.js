@@ -118,14 +118,6 @@ module.exports = {
     /* eslint-disable sort-keys */
     overrides: [
         {
-            "files": [
-                "**/*.js"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        },
-        {
             "files": ["*.d.ts"],
             "rules": {
                 "import/unambiguous": "off", // produces false positive with some TypeScript syntax
