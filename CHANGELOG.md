@@ -1,6 +1,37 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [19.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v17.1.0...v19.0.0) (2019-05-29)
+
+
+### Bug Fixes
+
+* Activate TypeScript rules only for *.tsx? files ([338d98f](https://github.com/peerigon/eslint-config-peerigon/commit/338d98f))
+* Remove JS file overrides in typescript rules ([68fc6df](https://github.com/peerigon/eslint-config-peerigon/commit/68fc6df))
+
+
+### chore
+
+* Update dependencies ([b28d7a4](https://github.com/peerigon/eslint-config-peerigon/commit/b28d7a4))
+
+
+### Features
+
+* Add lines-between-class-members rule ([b0ce663](https://github.com/peerigon/eslint-config-peerigon/commit/b0ce663))
+* Disable arrow-body-style and arrow-parens rule ([c50a7b4](https://github.com/peerigon/eslint-config-peerigon/commit/c50a7b4))
+
+
+### BREAKING CHANGES
+
+* eslint-plugin-jsdoc received a major version update.
+* It's now required to add a new line between multiline class members.
+* Remove sourceType = script parser option for JS files in
+TypeScript projects. This override made the wrong
+assumption that all JS files should be scripts in a
+TypeScript project which is certainly not correct.
+
+
 
 # [18.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v17.1.0...v18.0.0) (2019-05-29)
 
