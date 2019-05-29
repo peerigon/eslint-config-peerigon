@@ -283,6 +283,9 @@ module.exports = {
         "line-comment-position": "off", // http://eslint.org/docs/rules/line-comment-position
         "linebreak-style": ["off", "unix"], // http://eslint.org/docs/rules/linebreak-style
         "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
+        "lines-between-class-members": ["error", "always", {
+            exceptAfterSingleLine: true
+        }], // https://eslint.org/docs/rules/lines-between-class-members
         "max-depth": ["warn", 4], // http://eslint.org/docs/rules/max-depth
         "max-len": [
             "warn",
@@ -541,8 +544,8 @@ module.exports = {
             },
             {
                 blankLine: "never",
-                next: ["const", "let", "var"],
-                prev: ["const", "let", "var"],
+                next: ["singleline-const", "singleline-let", "singleline-var"],
+                prev: ["singleline-const", "singleline-let", "singleline-var"],
             },
             {
                 blankLine: "always",
