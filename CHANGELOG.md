@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [18.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v17.1.0...v18.0.0) (2019-05-29)
+
+
+### Bug Fixes
+
+* Remove JS file overrides in typescript rules ([ef27f23](https://github.com/peerigon/eslint-config-peerigon/commit/ef27f23))
+
+
+### BREAKING CHANGES
+
+* Remove sourceType = script parser option for JS files in
+TypeScript projects. This override made the wrong
+assumption that all JS files should be scripts in a
+TypeScript project which is certainly not correct.
+
+
+
 <a name="17.1.0"></a>
 # [17.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v17.0.0...v17.1.0) (2019-02-22)
 
