@@ -47,8 +47,8 @@ module.exports = {
         "array-func/prefer-array-from": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
         "array-func/prefer-flat": "off", // https://github.com/freaktechnik/eslint-plugin-array-func
         "array-func/prefer-flat-map": "error", // https://github.com/freaktechnik/eslint-plugin-array-func
-        "arrow-body-style": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-body-style
-        "arrow-parens": ["error", "as-needed"], // http://eslint.org/docs/rules/arrow-parens
+        "arrow-body-style": "off", // http://eslint.org/docs/rules/arrow-body-style
+        "arrow-parens": "off", // http://eslint.org/docs/rules/arrow-parens
         "arrow-spacing": [
             "error",
             {
