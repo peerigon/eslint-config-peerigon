@@ -121,10 +121,10 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 
 ### [`peerigon/typescript`](typescript.js)
 
-**Important: Requires [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint) and [`eslint-import-resolver-typescript`](https://github.com/alexgorbatchev/eslint-import-resolver-typescript) as project dependency.**
+**Important: Requires [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) and [`eslint-import-resolver-typescript`](https://github.com/alexgorbatchev/eslint-import-resolver-typescript) as project dependency.**
 
 ```
-npm i @typescript-eslint/eslint-plugin eslint-import-resolver-typescript --save-dev
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript --save-dev
 ```
 
 Rules for [TypeScript](https://www.typescriptlang.org/).
