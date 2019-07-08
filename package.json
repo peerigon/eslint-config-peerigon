@@ -18,6 +18,10 @@
     "rules",
     "style"
   ],
+  "files": [
+    "*.js",
+    "styles"
+  ],
   "author": "developers@peerigon.com",
   "license": "Unlicense",
   "bugs": {
