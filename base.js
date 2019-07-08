@@ -295,7 +295,7 @@ module.exports = {
             "warn",
             {
                 code: 120,
-                comments: 120,
+                ignoreComments: true,
                 ignoreRegExpLiterals: true,
                 ignoreStrings: true,
                 ignoreTemplateLiterals: true,
