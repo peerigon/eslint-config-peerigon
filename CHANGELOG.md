@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [20.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v20.0.0...v20.0.1) (2019-07-08)
+
+
+### Bug Fixes
+
+* Allow jsdoc [@swagger](https://github.com/swagger) tags ([b59eb2b](https://github.com/peerigon/eslint-config-peerigon/commit/b59eb2b))
+
+
+
 ## [20.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v19.0.0...v20.0.0) (2019-07-08)
 
 
