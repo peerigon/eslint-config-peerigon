@@ -258,7 +258,9 @@ module.exports = {
         // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
         "jsdoc/check-examples": "error",
         "jsdoc/check-param-names": "error",
-        "jsdoc/check-tag-names": "error",
+        "jsdoc/check-tag-names": ["error", {
+            "definedTags": ["swagger"]
+        }],
         "jsdoc/check-types": "error",
         "jsdoc/newline-after-description": "error",
         "jsdoc/no-undefined-types": "error",
