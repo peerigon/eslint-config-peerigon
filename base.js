@@ -482,12 +482,7 @@ module.exports = {
         "no-unused-labels": "error", // http://eslint.org/docs/rules/no-unused-labels
         "no-unused-vars": [
             "error",
-            {
-                args: "none",
-                caughtErrors: "none",
-                ignoreRestSiblings: true,
-                vars: "all",
-            },
+            options["no-unused-vars"],
         ], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": "off", // http://eslint.org/docs/rules/no-use-before-define
         "no-useless-call": "error", // http://eslint.org/docs/rules/no-useless-call

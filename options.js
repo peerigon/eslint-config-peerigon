@@ -27,6 +27,12 @@ const options = {
         // See https://github.com/yannickcr/eslint-plugin-react/issues/1679#issuecomment-363908562
         ignoredNodes: ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"],
         outerIIFEBody: 1,
+    },
+    ["no-unused-vars"]: {
+        args: "none",
+        caughtErrors: "none",
+        ignoreRestSiblings: true,
+        vars: "all",
     }
 };
 
