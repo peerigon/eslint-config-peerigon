@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [20.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v19.0.0...v20.0.0) (2019-07-08)
+
+
+### Bug Fixes
+
+* Add note on @typescript-eslint/parser in README ([898abe3](https://github.com/peerigon/eslint-config-peerigon/commit/898abe3))
+* Disable import rules that are slow ([41edcb2](https://github.com/peerigon/eslint-config-peerigon/commit/41edcb2))
+* Improve options for import/no-extraneous-dependencies ([5fe07e6](https://github.com/peerigon/eslint-config-peerigon/commit/5fe07e6))
+* Reuse no-unused-vars option in TypeScript ([44464ac](https://github.com/peerigon/eslint-config-peerigon/commit/44464ac))
+
+
+### Features
+
+* Ignore long comments in max-len rule ([4a8d39d](https://github.com/peerigon/eslint-config-peerigon/commit/4a8d39d))
+* Increase import/max-dependencies to 20 ([f5d6c9d](https://github.com/peerigon/eslint-config-peerigon/commit/f5d6c9d))
+* Refactor TypeScript rules ([302d840](https://github.com/peerigon/eslint-config-peerigon/commit/302d840))
+* Update dependencies ([32914ef](https://github.com/peerigon/eslint-config-peerigon/commit/32914ef))
+
+
+### BREAKING CHANGES
+
+* Added and changed a lot of TypeScript rules. This change was necessary because a lot of new rules have been added to @typescript-eslint. Also adds some performance improvements.
+* eslint-plugin-jsdoc received a major version bump
+* The pattern for devDependencies checked by import/no-extraneous-dependencies has changed
+
+
+
 ## [19.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v17.1.0...v19.0.0) (2019-05-29)
 
 
