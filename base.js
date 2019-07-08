@@ -178,9 +178,14 @@ module.exports = {
             "error",
             {
                 devDependencies: [
-                    "test{,s}/**", "config{,s}/**", "script{,s}/**", // contains usually npm scripts
+                    // Tests
+                    "**/test{,s}/**",
+                    "**/*.test.js",
+                    "**/*.spec.js",
+                    // Tooling / Setup
+                    "config/**",
+                    "script{,s}/**", // contains usually npm scripts
                     "tool{,s}/**", // often used for other scripts
-                    "**/*.test.js", "**/*.spec.js", "**/type{,s}.js",
                 ],
                 optionalDependencies: true,
                 peerDependencies: false,
