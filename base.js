@@ -165,13 +165,12 @@ module.exports = {
         // By just allowing default exports with names, refactoring and auto-importing becomes easier.
         "import/no-anonymous-default-export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
         "import/no-commonjs": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
-        // Dependency cycles are usually the sign of a problematic architecture and may also
-        // have odd execution behavior where values are unexpectedly undefined.
-        // There are rare situations where dependency cycles are wanted or necessary.
-        // Disable this rule if you're sure that the cyclic dependency is a good idea.
-        "import/no-cycle": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-cycle.md
+        // Currently disabled because of performance reasons :(
+        "import/no-cycle": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-cycle.md
         "import/no-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-default-export.md
-        "import/no-deprecated": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
+        // Would be nice to turn this rule on but it's rather expensive
+        // and it did not report a lot in the past :(
+        "import/no-deprecated": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
         "import/no-duplicates": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
         "import/no-dynamic-require": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
         "import/no-extraneous-dependencies": [
