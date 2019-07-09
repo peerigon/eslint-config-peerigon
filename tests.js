@@ -1,6 +1,8 @@
 /* eslint sort-keys: ["error", "asc"], quote-props: ["error", "consistent"] */
 /* eslint-disable sort-keys */
 
+const options = require("./options.js");
+
 module.exports = {
     env: {
         mocha: true,
@@ -12,6 +14,10 @@ module.exports = {
         "babel/no-unused-expressions": "off",
         // In order to make mocks more condensed, single line blocks are allowed in tests
         "brace-style": ["error", "1tbs", { allowSingleLine: true }],
+        // Long tests are not necessarily a problem, but there is a certain limit
+        "max-lines": ["warn", Object.assign({}, options["max-lines"], {
+            max: 1500
+        })],
         // mocha blocks are nested all the way down
         "max-nested-callbacks": "off",
         // Can increase the readability of a test if simple mocking functions are in one line
