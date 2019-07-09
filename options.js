@@ -1,6 +1,7 @@
 "use strict";
 
 const options = {
+    /* eslint-enable sort-keys */
     ["camelcase"]: {
         allow: ["^UNSAFE_"], // Allows React UNSAFE_ methods
         ignoreDestructuring: false,
@@ -28,12 +29,18 @@ const options = {
         ignoredNodes: ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"],
         outerIIFEBody: 1,
     },
+    ["max-lines"]: {
+        max: 300,
+        skipBlankLines: true,
+        skipComments: true,
+    },
     ["no-unused-vars"]: {
         args: "none",
         caughtErrors: "none",
         ignoreRestSiblings: true,
         vars: "all",
     }
+    /* eslint-disable sort-keys */
 };
 
 module.exports = options;

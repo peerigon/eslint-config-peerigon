@@ -158,10 +158,16 @@ module.exports = {
                 "func-call-spacing": "off", // covered by @typescript-eslint/func-call-spacing
                 // There's currently a problem with this rule, see https://github.com/benmosher/eslint-plugin-import/issues/1341
                 "import/export": "off", // TypeScript should catch it anyway
+                // TypeScript project have usually more imports due to types
+                "import/max-dependencies": ["warn", {max: 35}],
                 "import/named": "off", // TypeScript should catch it anyway
                 "import/namespace": "off", // TypeScript should catch it anyway
                 "import/no-unresolved": "off", // TypeScript should catch it anyway
                 "indent": "off",
+                // TypeScript files tend to get longer due to types
+                "max-lines": ["warn", Object.assign({}, options["max-lines"], {
+                    max: 600
+                })],
                 "no-empty-function": "off",// covered by @typescript-eslint/no-empty-function
                 "no-useless-constructor": "off", // covered by @typescript-eslint/no-useless-constructor
                 "semi": "off", // covered by @typescript-eslint/semi
