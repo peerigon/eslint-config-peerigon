@@ -4,6 +4,11 @@
 module.exports = {
     plugins: ["react", "jsx-a11y", "react-hooks"],
     extends: ["plugin:import/react", "plugin:react/recommended", "plugin:jsx-a11y/recommended"],
+    settings: {
+        react: {
+            version: "detect"
+        }
+    },
     rules: {
         /* eslint-enable sort-keys */
         // Allow certain react methods to have no this
