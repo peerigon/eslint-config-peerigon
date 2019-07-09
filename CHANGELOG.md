@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [21.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v20.0.1...v21.0.0) (2019-07-09)
+
+
+### Features
+
+* Add eslint-plugin-react-hooks ([6c0d0a3](https://github.com/peerigon/eslint-config-peerigon/commit/6c0d0a3))
+* Add styles/react-jsx-allow-bind ([a8e4326](https://github.com/peerigon/eslint-config-peerigon/commit/a8e4326))
+* Disable promise/prefer-await-to-then and promise/prefer-await-to-callbacks ([b715e44](https://github.com/peerigon/eslint-config-peerigon/commit/b715e44))
+* Relax import/max-dependencies and max-lines ([f692e4b](https://github.com/peerigon/eslint-config-peerigon/commit/f692e4b))
+* Relax max-lines in tests ([cd1e294](https://github.com/peerigon/eslint-config-peerigon/commit/cd1e294))
+* Relax react/jsx-no-bind ([89873c3](https://github.com/peerigon/eslint-config-peerigon/commit/89873c3))
+* Switch off react/no-multi-comp ([366636a](https://github.com/peerigon/eslint-config-peerigon/commit/366636a))
+
+
+### BREAKING CHANGES
+
+* There are linting rules for React hooks now.
+
+
+
 ### [20.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v20.0.0...v20.0.1) (2019-07-08)
 
 
