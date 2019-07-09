@@ -133,7 +133,10 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
 {
     "extends": [
         "peerigon",
-        "peerigon/typescript"
+        "peerigon/typescript",
+        // Arrow functions are preferred with TypeScript
+        // See https://github.com/peerigon/eslint-config-peerigon/issues/23#issuecomment-472614432
+        "peerigon/styles/prefer-arrow",
     ],
     "root": true
 }
