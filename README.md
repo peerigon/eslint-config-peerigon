@@ -227,6 +227,23 @@ Regular functions are still allowed as methods in objects or classes.
 }
 ```
 
+### [`peerigon/styles/react-jsx-allow-bind`](styles/react-jsx-allow-bind.js)
+
+**Important: Use it in combination with [`peerigon/react`](react.js).**
+
+Depending on the way you write your components, it might be ok to create functions during `render()`. Use it if you're not using things like `React.memo()` or `shouldComponentUpdate` a lot.
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/react",
+        "peerigon/styles/react-jsx-allow-bind"
+    ],
+    "root": true
+}
+```
+
 ## Goals
 
 Coding rules and coding conventions are always a hot topic because they tend to be subjective.
