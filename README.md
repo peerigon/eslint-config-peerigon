@@ -119,6 +119,8 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 }
 ```
 
+*We recommend to use [`peerigon/styles/react-jsx-no-literals`](#peerigonstylesreact-jsx-no-literals) if you're using i18n in your project.*
+
 ### [`peerigon/typescript`](typescript.js)
 
 **Important: Requires [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) and [`eslint-import-resolver-typescript`](https://github.com/alexgorbatchev/eslint-import-resolver-typescript) as project dependency.**
@@ -245,6 +247,35 @@ Depending on the way you write your components, it might be ok to create functio
     ],
     "root": true
 }
+```
+
+### [`peerigon/styles/react-jsx-no-literals`](styles/react-jsx-no-literals.js)
+
+**Important: Use it in combination with [`peerigon/react`](react.js).**
+
+Use this style if you're using i18n. It prevents people from putting raw strings in components.
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/react",
+        "peerigon/styles/react-jsx-no-literals"
+    ],
+    "root": true
+}
+```
+
+It disallows this:
+
+```jsx
+const Hello = <div>test</div>;
+```
+
+As an escape hatch, this is still allowed:
+
+```jsx
+const Hello = <div>{'test'}</div>;
 ```
 
 ## Goals
