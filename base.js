@@ -597,8 +597,8 @@ module.exports = {
         "promise/no-return-in-finally": "warn", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-return-in-finally.md
         "promise/no-return-wrap": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-return-wrap.md
         "promise/param-names": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/param-names.md
-        "promise/prefer-await-to-callbacks": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-callbacks.md
-        "promise/prefer-await-to-then": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-then.md
+        "promise/prefer-await-to-callbacks": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-callbacks.md
+        "promise/prefer-await-to-then": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-then.md
         "promise/valid-params": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/valid-params.md
         "quote-props": ["error", "as-needed"], // http://eslint.org/docs/rules/quote-props
         // Handled by babel/quotes
