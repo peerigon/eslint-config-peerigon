@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [21.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v21.1.0...v21.2.0) (2019-07-09)
+
+
+### Features
+
+* Detect React version ([0b85c38](https://github.com/peerigon/eslint-config-peerigon/commit/0b85c38))
+
+
+
 ## [21.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v21.0.0...v21.1.0) (2019-07-09)
 
 
