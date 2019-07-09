@@ -129,7 +129,7 @@ module.exports = {
         "react/no-direct-mutation-state": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
         "react/no-find-dom-node": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
         "react/no-is-mounted": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
-        "react/no-multi-comp": ["error", { ignoreStateless: true }], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
+        "react/no-multi-comp": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
         "react/no-redundant-should-component-update": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
         "react/no-render-return-value": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
         "react/no-set-state": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
