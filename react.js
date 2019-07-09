@@ -2,7 +2,7 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    plugins: ["react", "jsx-a11y"],
+    plugins: ["react", "jsx-a11y", "react-hooks"],
     extends: ["plugin:import/react", "plugin:react/recommended", "plugin:jsx-a11y/recommended"],
     rules: {
         /* eslint-enable sort-keys */
@@ -20,6 +20,8 @@ module.exports = {
                 ],
             },
         ],
+        "react-hooks/exhaustive-deps": "warn", // https://www.npmjs.com/package/eslint-plugin-react-hooks
+        "react-hooks/rules-of-hooks": "error", // https://www.npmjs.com/package/eslint-plugin-react-hooks
         "react/boolean-prop-naming": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
         "react/button-has-type": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
         "react/default-props-match-prop-types": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md

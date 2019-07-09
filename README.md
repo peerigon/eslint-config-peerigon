@@ -100,10 +100,10 @@ Special rules for Node.js >= 8.0.0 environments:
 
 ### [`peerigon/react`](react.js)
 
-**Important: Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) and [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y) as project dependency.**
+**Important: Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react), [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y) and [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) as project dependency.**
 
 ```
-npm i eslint-plugin-react eslint-plugin-jsx-a11y --save-dev
+npm i eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
 ```
 
 Rules for [React](https://facebook.github.io/react/) development, including accessibility rules.
