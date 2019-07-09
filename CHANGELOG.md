@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [21.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v21.0.0...v21.1.0) (2019-07-09)
+
+
+### Features
+
+* Introduce peerigon/styles/react-jsx-no-literals ([8c0425f](https://github.com/peerigon/eslint-config-peerigon/commit/8c0425f))
+
+
+
 ## [21.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v20.0.1...v21.0.0) (2019-07-09)
 
 
