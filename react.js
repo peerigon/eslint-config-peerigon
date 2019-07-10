@@ -9,6 +9,14 @@ module.exports = {
             version: "detect"
         }
     },
+    overrides: [
+        {
+            "files": "*.ts{,x}",
+            "rules": {
+                "react/prop-types": "off" // We expect React components to be checked by TypeScript
+            }
+        }
+    ],
     rules: {
         /* eslint-enable sort-keys */
         // Allow certain react methods to have no this
