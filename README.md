@@ -65,23 +65,6 @@ In your `package.json`, add a `lint` script and run it as `posttest`:
 
 The base rules use the `eslint-plugin-import` to resolve imports. Although it's possible to define [custom resolvers](https://github.com/benmosher/eslint-plugin-import#resolvers), it's highly discouraged to deviate from the common Node/webpack resolving algorithm. Other tools like linters and intellisense don't work reliably when you change the resolver.
 
----
-
-### [`peerigon/tests`](tests.js)
-
-Special rules for tests, like allowing deeper function nesting and function inlining.
-Create a `.eslintrc.json` file inside your `test` folder with these contents:
-
-```js
-{
-    "extends": [
-        "peerigon/tests"
-    ]
-}
-```
-
-Do not add `"root": true` here since we want to *extend* our project config.
-
 ### [`peerigon/node`](node.js)
 
 Special rules for Node.js >= 8.0.0 environments:

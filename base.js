@@ -3,6 +3,7 @@
 
 const options = require("./options.js");
 const globPatterns = require("./globPatterns.js");
+const tests = require("./tests.js");
 
 module.exports = {
     parser: "babel-eslint",
@@ -28,6 +29,15 @@ module.exports = {
         "plugin:array-func/recommended",
         "plugin:promise/recommended"
     ],
+    // TODO: With ESLint 6 you can pass an array of files. Change this once we've updated.
+    overrides: globPatterns.tests.map(testGlobPattern =>
+        Object.assign(
+            {
+                files: testGlobPattern,
+            },
+            tests
+        )
+    ),
     rules: {
         /* eslint-enable sort-keys */
         "accessor-pairs": [
