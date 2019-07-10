@@ -2,6 +2,7 @@
 /* eslint-disable sort-keys */
 
 const options = require("./options.js");
+const globPatterns = require("./globPatterns.js");
 
 module.exports = {
     parser: "babel-eslint",
@@ -176,16 +177,7 @@ module.exports = {
         "import/no-extraneous-dependencies": [
             "error",
             {
-                devDependencies: [
-                    // Tests
-                    "**/test{,s}/**",
-                    "**/*.test.js",
-                    "**/*.spec.js",
-                    // Tooling / Setup
-                    "config/**",
-                    "script{,s}/**", // contains usually npm scripts
-                    "tool{,s}/**", // often used for other scripts
-                ],
+                devDependencies: globPatterns.tests.concat(globPatterns.tooling),
                 optionalDependencies: true,
                 peerDependencies: false,
             },
@@ -199,49 +191,10 @@ module.exports = {
         "import/no-namespace": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
         "import/no-nodejs-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
         "import/no-relative-parent-imports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
-        "import/no-restricted-paths": [
-            "warn",
-            {
-                zones: [
-                    {
-                        from: "./app/server",
-                        target: "./app/client",
-                    },
-                    {
-                        from: "./app/client",
-                        target: "./app/server",
-                    },
-                    {
-                        from: "./test",
-                        target: "./app",
-                    },
-                    {
-                        from: "./src/server",
-                        target: "./src/client",
-                    },
-                    {
-                        from: "./src/client",
-                        target: "./src/server",
-                    },
-                    {
-                        from: "./test",
-                        target: "./src",
-                    },
-                ],
-            },
-        ], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
+        "import/no-restricted-paths": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
         "import/no-self-import": "error", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-self-import.md
         "import/no-unassigned-import": ["warn", {
-            allow: [
-                "**/*.css",
-                "**/*.less",
-                "**/*.scss",
-                "**/*.sass",
-                "babel-register",
-                "@babel/register",
-                "**/polyfills*",
-                "ts-node/register*"
-            ]
+            allow: globPatterns.withSideEffects
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
         "import/no-unresolved": ["warn", {commonjs: true}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
         "import/no-useless-path-segments": "error", // currently undocumented :(, see https://github.com/benmosher/eslint-plugin-import/issues/1032
