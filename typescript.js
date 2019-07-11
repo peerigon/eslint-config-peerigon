@@ -56,12 +56,14 @@ module.exports = {
                 // https://stackoverflow.com/questions/31876947/confused-about-the-interface-and-class-coding-guidelines-for-typescript/41967120#comment75349088_41967120
                 "@typescript-eslint/interface-name-prefix": ["error", "never"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md
                 "@typescript-eslint/member-delimiter-style": ["error", {
+                    // We're using "semi" because classes do only allow semi
+                    // and we want to stay consistent with them.
                     "multiline": {
-                        "delimiter": "comma",
+                        "delimiter": "semi",
                         "requireLast": true
                     },
                     "singleline": {
-                        "delimiter": "comma",
+                        "delimiter": "semi",
                         "requireLast": false
                     }
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md
@@ -155,6 +157,7 @@ module.exports = {
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unbound-method.md
                 "@typescript-eslint/unified-signatures": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md
                 "babel/camelcase": "off",
+                "babel/semi": "off", // covered by @typescript-eslint/semi
                 "func-call-spacing": "off", // covered by @typescript-eslint/func-call-spacing
                 // There's currently a problem with this rule, see https://github.com/benmosher/eslint-plugin-import/issues/1341
                 "import/export": "off", // TypeScript should catch it anyway
