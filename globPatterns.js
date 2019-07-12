@@ -15,6 +15,7 @@ module.exports = {
         "**/*.less",
         "**/*.scss",
         "**/*.sass",
-        "**/*register"
+        "**/*register",
+        "**/*extend",  // mostly because of @testing-library/jest-dom/extend-expect
     ]
 };
