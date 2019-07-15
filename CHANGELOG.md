@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [22.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v21.2.0...v22.0.0) (2019-07-15)
+
+
+### Bug Fixes
+
+* Change @typescript-eslint/member-delimiter-style ([e8dda25](https://github.com/peerigon/eslint-config-peerigon/commit/e8dda25))
+* Turn of react/prop-types for TypeScript files ([afe4ef5](https://github.com/peerigon/eslint-config-peerigon/commit/afe4ef5))
+
+
+### Features
+
+* Enable test rules by glob pattern ([63c023c](https://github.com/peerigon/eslint-config-peerigon/commit/63c023c))
+* Recognize @testing-library/jest-dom/extend-expect as module with side-effects ([3ff10a2](https://github.com/peerigon/eslint-config-peerigon/commit/3ff10a2))
+* Relax some import rules ([6efa5a3](https://github.com/peerigon/eslint-config-peerigon/commit/6efa5a3))
+* Relax typescript rules in tests ([c73ee22](https://github.com/peerigon/eslint-config-peerigon/commit/c73ee22))
+
+
+### BREAKING CHANGES
+
+* Change back to @typescript-eslint/member-delimiter-style "semi" because we want to stay consistent with classes. Sorry for the noise :(
+
+
+
 ## [21.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v21.1.0...v21.2.0) (2019-07-09)
 
 
