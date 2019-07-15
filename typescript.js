@@ -2,6 +2,7 @@
 /* eslint-disable sort-keys */
 
 const options = require("./options.js");
+const globPatterns = require("./globPatterns.js");
 
 module.exports = {
     plugins: [
@@ -177,8 +178,8 @@ module.exports = {
             },
         },
         {
-            "files": ["*.d.ts"],
-            "rules": {
+            files: ["*.d.ts"],
+            rules: {
                 "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
                 // When someone wants to extend the typings of a third-party module, it might
                 // be necessary to import the module so that TypeScript finds the typings that should be extended.
@@ -186,6 +187,15 @@ module.exports = {
                 "import/no-unassigned-import": "off", // sometimes it's important to import the
                 "import/unambiguous": "off", // produces false positive with some TypeScript syntax
             }
+        },
+    // TODO: With ESLint 6 you can pass an array of files. Change this once we've updated.
+    ].concat(globPatterns.tests.map(testGlobPattern => ({
+        files: testGlobPattern,
+        rules: {
+            // The any type is ok in tests
+            "@typescript-eslint/no-explicit-any": "off",
+            // Passing functions around like this can be common with mocking
+            "@typescript-eslint/unbound-method": "off"
         }
-    ],
+    }))),
 }
