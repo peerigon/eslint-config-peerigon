@@ -81,10 +81,10 @@ module.exports = {
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
                 "@typescript-eslint/no-extra-parens": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
                 "@typescript-eslint/no-extraneous-class": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extraneous-class.md
-                // If the error should not be handled, catch the error and throw it immediately
-                // and also add a comment why this is desired in this case.
+                // If the error should not be handled, it's ok to add
+                // eslint-disable-next-line @typescript-eslint/no-floating-promises
                 // This rule forces developers to think about the error case.
-                "@typescript-eslint/no-floating-promises": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
+                "@typescript-eslint/no-floating-promises": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
                 "@typescript-eslint/no-for-in-array": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md
                 "@typescript-eslint/no-inferrable-types": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md
                 "@typescript-eslint/no-magic-numbers": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
