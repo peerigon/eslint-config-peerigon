@@ -147,13 +147,7 @@ module.exports = {
         "guard-for-in": "warn", // http://eslint.org/docs/rules/guard-for-in
         "handle-callback-err": ["error", "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
         "id-blacklist": ["off"], // http://eslint.org/docs/rules/id-blacklist
-        "id-length": [
-            "warn",
-            {
-                max: 40,
-                min: 0,
-            },
-        ], // http://eslint.org/docs/rules/id-length
+        "id-length": "off", // http://eslint.org/docs/rules/id-length
         "id-match": "off", // http://eslint.org/docs/rules/id-match
         "import/default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
         "import/dynamic-import-chunkname": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
