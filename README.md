@@ -6,11 +6,11 @@
 [![](https://img.shields.io/npm/dm/eslint-config-peerigon.svg)](https://www.npmjs.com/package/eslint-config-peerigon)
 [![Dependency Status](https://david-dm.org/peerigon/eslint-config-peerigon.svg)](https://david-dm.org/peerigon/eslint-config-peerigon?branch=master)
 
-These rules are intentionally strict about formatting or whitespace issues. You should use an editor configuration where you can apply autofixes (`eslint --fix`) on demand (for instance when saving the file). The goal of these rules is to achieve a consistent coding style while avoiding common pitfalls.
+These rules are intentionally strict about formatting or whitespace issues. You should use an editor configuration where you can apply autofixes (`eslint --fix`) on demand (for instance when saving the file). The goal of these rules is to achieve a consistent coding style while avoiding common pitfalls. You can also combine these linting rules with [Prettier](https://prettier.io/) (see [below](#prettier)).
 
 We use warnings for typical code smells (e.g. too many dependencies, high complexity, ...) or when a better alternative exists (e.g. `throw Error("...")` over `process.exit(1)`).
 
-Please do not just disable warnings. First, try to fix them. If it's too difficult for now, leave them as hints for other developers that this place might need some refactoring in the future. If there is a good reason why the code is written that way, you're allowed to disable that particular warning with a disabling comment using the rule-code. Please put an explanation above that comment why it's ok to disable the rule in that case, like:
+Please do not just disable warnings. Try to fix them first. If it's too difficult for now, leave them as hints for other developers that this place might need some refactoring in the future. If there is a good reason why the code is written that way, it's also ok to disable that particular warning with a disabling comment using the linting rule code (not just `eslint-disable`). Please put an explanation above that comment why it's ok to disable the rule in that case, like:
 
 ```js
 // Validation logic typically contains a lot of if() clauses.
@@ -382,6 +382,16 @@ If you don't agree with a rule, please do not disable the rule. It's better to c
 ### Should I apply `--fix` as part of my `posttest` script?
 
 **No**. Because this way, eslint won't report all linting errors on Travis CI. Thus, a PR could contain linting errors without Travis CI complaining about it.
+
+## Prettier
+
+There is a [Prettier](https://prettier.io/) config in this repository that corresponds to our linting rules as much as possible. Add a `.prettierrc` file to your repository with the following content:
+
+```json
+"eslint-config-peerigon/prettier"
+```
+
+Please note that our linting rules will complain about specific code snippets coming from Prettier. Use [prettier-eslint-cli](https://github.com/prettier/prettier-eslint-cli) instead of Prettier to get the best of both worlds.
 
 ## License
 
