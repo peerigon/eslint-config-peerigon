@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [22.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v22.0.0...v22.1.0) (2019-07-31)
+
+
+### Features
+
+* Add Prettier config ([4d5e84e](https://github.com/peerigon/eslint-config-peerigon/commit/4d5e84e))
+* Disable id-length ([a8c791b](https://github.com/peerigon/eslint-config-peerigon/commit/a8c791b))
+* Relax @typescript-eslint/no-floating-promises ([ce7bf3e](https://github.com/peerigon/eslint-config-peerigon/commit/ce7bf3e))
+
+
+
 ## [22.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v21.2.0...v22.0.0) (2019-07-15)
 
 
