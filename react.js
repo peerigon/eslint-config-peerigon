@@ -128,7 +128,7 @@ module.exports = {
         "react/jsx-uses-react": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
         "react/jsx-uses-vars": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
         "react/jsx-wrap-multilines": [
-            "error",
+            "off", // This rule does not play well with Prettier
             {
                 arrow: "parens-new-line",
                 assignment: "parens-new-line",
