@@ -1,8 +1,17 @@
 /* eslint sort-keys: ["error", "asc"], quote-props: ["error", "consistent"] */
 /* eslint-disable sort-keys */
 
+const path = require("path");
 const options = require("./options.js");
 const globPatterns = require("./globPatterns.js");
+
+let pathToTsConfig = path.resolve(__dirname, "../../tsconfig.json");
+
+try {
+    pathToTsConfig = require.resolve(pathToTsConfig);
+} catch (error) {
+    throw new Error("Error while trying to resolve tsconfig.json at " + pathToTsConfig + ": " + error.message);
+}
 
 module.exports = {
     plugins: [
@@ -21,7 +30,7 @@ module.exports = {
                 ecmaFeatures: {
                     jsx: true
                 },
-                project: "./tsconfig.json",
+                project: pathToTsConfig,
                 tsconfigRootDir: "./",
                 extraFileExtensions: [".vue"]
             },
