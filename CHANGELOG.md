@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [23.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v22.1.0...v23.0.0) (2019-08-01)
+
+
+### Bug Fixes
+
+* Add additional check for tsconfig.json resolving ([dd53d16](https://github.com/peerigon/eslint-config-peerigon/commit/dd53d16))
+
+
+### Features
+
+* Enable `@typescript-eslint/explicit-member-accessibility rule` ([f036659](https://github.com/peerigon/eslint-config-peerigon/commit/f036659))
+* Relax `import/order` rule ([ae8d12a](https://github.com/peerigon/eslint-config-peerigon/commit/ae8d12a))
+
+
+### BREAKING CHANGES
+
+* The `@typescript-eslint/explicit-member-accessibility` rule will now reports errors when someone uses the public keyword in TypeScript classes where it is not necessary.
+
+
+
 ## [22.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v22.0.0...v22.1.0) (2019-07-31)
 
 
