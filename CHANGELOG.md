@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [23.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v23.0.0...v23.1.0) (2019-08-01)
+
+
+### Features
+
+* Disable `react/jsx-wrap-multilines` ([2eb57e2](https://github.com/peerigon/eslint-config-peerigon/commit/2eb57e2))
+
+
+
 ## [23.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v22.1.0...v23.0.0) (2019-08-01)
 
 
