@@ -71,7 +71,7 @@ For example, our linting rules will complain about:
 We know that for every warning there is a legitimate use case:
 
 - Application entry files usually have a lot of imports and almost no actual code.
-- Unknown/unreliable data sources often cause unavoidable cyclomatic complexity. 
+- Unknown/unreliable data sources often cause unavoidable cyclomatic complexity.
 - Within `process.on("uncaughtException", ...` maybe we don't want to print the regular stack trace.
 
 If you think that there is a good reason for deviating from the standard path, disable the warning and put an explanation above that comment why it's ok to disable the rule in that case, like:
@@ -362,27 +362,31 @@ Please note that our linting rules will complain about specific code snippets co
 
 ## VSCode
 
-This is our recommended VSCode configuration. Adjust it to the needs of your particular project:
+This is our recommended VSCode configuration using the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode). Adjust it to the needs of your particular project:
 
 ```json
 {
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
     "eslint.validate": [
-        {
-            "language": "javascript",
-            "autoFix": true
-        },
-        {
-            "language": "javascriptreact",
-            "autoFix": true
-        },
-        {
-            "language": "typescript",
-            "autoFix": true
-        },
-        {
-            "language": "typescriptreact",
-            "autoFix": true
-        }
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
     ],
     "prettier.eslintIntegration": true,
     "prettier.tslintIntegration": false,
