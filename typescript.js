@@ -45,7 +45,12 @@ module.exports = {
                 "@typescript-eslint/class-name-casing": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-name-casing.md
                 "@typescript-eslint/consistent-type-definitions": ["error", "type"],  // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-definitions.md
                 "@typescript-eslint/explicit-function-return-type": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
-                "@typescript-eslint/explicit-member-accessibility": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
+                "@typescript-eslint/explicit-member-accessibility": ["error", {
+                    "accessibility": "no-public",
+                    "overrides": {
+                        "parameterProperties": "explicit"
+                    }
+                }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
                 "@typescript-eslint/func-call-spacing": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/func-call-spacing.md
                 "@typescript-eslint/generic-type-naming": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md
                 "@typescript-eslint/indent": [
