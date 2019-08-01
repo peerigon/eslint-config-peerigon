@@ -203,7 +203,16 @@ module.exports = {
         "import/no-unresolved": ["warn", {commonjs: true}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
         "import/no-useless-path-segments": "error", // currently undocumented :(, see https://github.com/benmosher/eslint-plugin-import/issues/1032
         "import/no-webpack-loader-syntax": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
-        "import/order": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+        "import/order": ["error", {
+            // Since we want to keep changes as small as possible we can't order "parent", "sibling" and "index".
+            // Otherwise moving a file from one folder to another might impact a lot of files because
+            // now all the import statements need to be updated.
+            "groups": [
+                "builtin",
+                "external",
+                ["parent", "sibling", "index"]
+            ]
+        }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
         "import/prefer-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
         "import/unambiguous": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
         "indent": [
