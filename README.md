@@ -6,14 +6,78 @@
 [![](https://img.shields.io/npm/dm/eslint-config-peerigon.svg)](https://www.npmjs.com/package/eslint-config-peerigon)
 [![Dependency Status](https://david-dm.org/peerigon/eslint-config-peerigon.svg)](https://david-dm.org/peerigon/eslint-config-peerigon?branch=master)
 
-These rules are intentionally strict about formatting or whitespace issues. You should use an editor configuration where you can apply autofixes (`eslint --fix`) on demand (for instance when saving the file). The goal of these rules is to achieve a consistent coding style while avoiding common pitfalls. You can also combine these linting rules with [Prettier](https://prettier.io/) (see [below](#prettier)).
+## Motivation
 
-We use warnings for typical code smells (e.g. too many dependencies, high complexity, ...) or when a better alternative exists (e.g. `throw Error("...")` over `process.exit(1)`).
+Linting and formatting rules are always a balance between
 
-Please do not just disable warnings. Try to fix them first. If it's too difficult for now, leave them as hints for other developers that this place might need some refactoring in the future. If there is a good reason why the code is written that way, it's also ok to disable that particular warning with a disabling comment using the linting rule code (not just `eslint-disable`). Please put an explanation above that comment why it's ok to disable the rule in that case, like:
+- ease of reading
+- ease of refactoring
+- ease of writing.
+
+We think that
+
+- code is read more often than refactored
+- and refactored more often than written from scratch.
+
+Our linting rules have been designed with these assumptions in mind.
+
+## Features
+
+### Atomic changes
+
+Our formatting rules have been chosen carefully so that a change of a file is as atomic as possible. This makes it easier to review pull requests because there are no meaningless changes anymore.
+
+**Example:** I want to change a variable from `let` to `const`.
+
+```diff
+// Bad coding style because useless whitespace changes were necessary
+-let a   = 1,
++let   a   = 1,
+-    bbb = 2,
++      cc  = 3;
+-    cc  = 3;
++const bbb = 3;
+```
+
+```diff
+// Good coding style because only the relevant parts need to be changed
+let a = 1;
+-let bb = 2;
++const bb = 2;
+let ccc = 3;
+```
+
+This is also the reason why we prefer [dangling commas](https://eslint.org/docs/rules/comma-dangle) for multiline arrays, objects and arguments although they look very unfamiliar on first sight (see [discussion](https://github.com/peerigon/eslint-config-peerigon/issues/10)).
+
+### Consistent formatting
+
+For the purpose of atomic changes, our rules are intentionally strict about formatting which are usually autofixable. You should use an editor configuration where you can apply these autofixes on demand (for instance when saving the file).
+
+You can also combine these linting rules with [Prettier](https://prettier.io/) (see [below](#prettier)). There's also a [recommended configuration for VSCode](#vscode).
+
+### Code smells as a warning
+
+Developers take shortcuts. And that's ok because at the end of the day we have to deliver software within fixed time frames and budgets. Sometimes it's also because we don't know of a better alternative. We call these shortcuts "code smells" and our linting rules will complain about them with a warning.
+
+This means that this code is potentially problematic, but you don't have to fix it right away. You should keep the warning and come back later to refactor it (e.g. during a refactoring sprint). The amount of warnings is also a good indicator for technical debt.
+
+For example, our linting rules will complain about:
+
+- **too many dependencies in a file** because it's usually a sign that you should break the module into more granular pieces
+- **high [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity)** because it's hard for humans to anticipate all possibilities.
+- **`process.exit(1)`** because throwing an error is often the better alternative
+- ...
+
+We know that for every warning there is a legitimate use case:
+
+- Application entry files usually have a lot of imports and almost no actual code.
+- Unknown/unreliable data sources often cause unavoidable cyclomatic complexity. 
+- Within `process.on("uncaughtException", ...` maybe we don't want to print the regular stack trace.
+
+If you think that there is a good reason for deviating from the standard path, disable the warning and put an explanation above that comment why it's ok to disable the rule in that case, like:
 
 ```js
-// Validation logic typically contains a lot of if() clauses.
+// Validation logic typically contains a lot of if() checks.
 // It's better to keep this complexity hidden behind a single function.
 // eslint-disable-next-line complexity
 function validate() {
@@ -21,7 +85,30 @@ function validate() {
 }
 ```
 
-`// eslint-disable-next-line` is usually better because it resists [Prettier](https://prettier.io/) reformatting.
+### Disabling rules
+
+Try to disable as less rules as possible. In most cases it's best to just write
+
+```js
+// eslint-disable-next-line [rule-code]
+```
+
+where `[rule-code]` is the code that is displayed along the error message. Disabling the next line is usually better because it resists [Prettier](https://prettier.io/) reformatting.
+
+Sometimes it makes sense to disable a rule within a specifc file. In that case you can put the following snippet at the beginning of the file:
+
+```js
+/* eslint-disable [rule-code] */
+```
+
+In rare cases, it makes sense to disable a rule for the whole project. For instance, if you work with JSON data coming from a foreign API that uses underscore property names.
+
+If you don't agree with a rule, please do not just disable the rule. Often there are good reasons and the current setting is the result of years of experience. It's better to create an issue here to start a discussion about the pros and cons of a rule.
+
+### Different styles
+
+We acknowledge that there are certain rules where there are no actual pros and cons or where there is no clear winner. You just have to decide for one style and stick with it. That's why we also provide a list of [accepted custom styles](#styles) (see also [this discussion](https://github.com/peerigon/eslint-config-peerigon/issues/11)).
+
 
 ## Provided configs
 
@@ -102,7 +189,7 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 }
 ```
 
-*We recommend to use [`peerigon/styles/react-jsx-no-literals`](#peerigonstylesreact-jsx-no-literals) if you're using i18n in your project.*
+*We recommend using [`peerigon/styles/react-jsx-no-literals`](#peerigonstylesreact-jsx-no-literals) if you're using i18n in your project.*
 
 ### [`peerigon/typescript`](typescript.js)
 
@@ -136,6 +223,8 @@ You need to add `--ext js,ts,tsx` to the `lint` script:
     }
 }
 ```
+
+*We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow) because arrow functions (or function expressions in general) can leverage [TypeScript's contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing).*
 
 ### [`peerigon/flowtype`](flowtype.js)
 
@@ -261,128 +350,6 @@ As an escape hatch, this is still allowed:
 const Hello = <div>{'test'}</div>;
 ```
 
-## Goals
-
-Coding rules and coding conventions are always a hot topic because they tend to be subjective.
-But for the benefit of all team members, it's reasonable to have common rules among projects.
-
-We judge our rules by these features, ordered by priority:
-
-1. Ease of reading
-2. Ease of refactoring
-3. Ease of writing
-
-Because:
-
-- we read code more often then we change it and
-- we change code more often then we write it.
-
----
-
-Since the "ease of reading" tends to be subjective again, we should stick to well-known typography rules:
-
-### Avoid long lines
-
-```
-This line is hard to follow because it's long. The human eye is not used to follow a straight line for so long that's why it feels more comfortable to have some line breaks between them.
-```
-
-### Avoid unbalanced lines
-
-```
-The following two lines look a little bit strange because the first one has a lot of text and is very long while the second
-is short.
-```
-
-### Use horizontal whitespace
-
-```
-this=is+hard-to;read-because/we,can't,distinguish&tokens
-andLongVariableNamesAreHardToReadBecauseCamelCaseHasNoWhitespace
-```
-
-### Don't use too much vertical whitespace
-
-```
-This is a line with some text in it, and after that
-
-
-There is
-
-
-another
-
-
-blank
-
-
-line and than
-
-another blank link and again
-```
-
-### Avoid unnecessary characters
-
-```
-(yes) = {we: (are)}, (programmersWhoAreUsedToReadThis - but);
-
-this = is ? nicer : to(read);
-```
-
-### Repeat familiar patterns and stay consistent
-
-```
-it =is distracting  {to :use } { whitespaces}= inconsistently .
-```
-
----
-
-We should also take into account that code is different than regular paragraphs of text. That's why there are also other concerns, like the following:
-
-### A change should be as atomic as possible
-
-That's why this change:
-
-```javascript
-let a = 1;                   let a = 1;
-let bb = 2;     change to    const bb = 2;
-let ccc = 3;                 let ccc = 3;
-
-// only line 2 has been changed
-```
-
-is better than that change:
-
-```javascript
-let a   = 1,                 let   a   = 1,
-    bbb = 2,    change to          cc  = 3;
-    cc  = 3;                 const bbb = 3;
-
-// all three lines have been changed
-```
-
-If you don't have to change a lot of lines, refactoring is more fun. As a nice side-effect, `git diff` also becomes more readable.
-
-## Recommendations
-
-### Disabling rules
-
-Sometimes, there is a legitimate use-case to disable a specific rule. You can disable a rule for the current line like this
-
-```js
-// eslint-disable-next-line rule-code
-```
-
-where `rule-code` is the code that is displayed along the error message.
-
-In rare cases, it makes sense to disable a rule for the whole project. For instance, if you work with JSON data coming from a foreign API that uses underscore property names.
-
-If you don't agree with a rule, please do not disable the rule. It's better to create an issue here to start a discussion about the pros and cons of a rule.
-
-### Should I apply `--fix` as part of my `posttest` script?
-
-**No**. Because this way, eslint won't report all linting errors on Travis CI. Thus, a PR could contain linting errors without Travis CI complaining about it.
-
 ## Prettier
 
 There is a [Prettier](https://prettier.io/) config in this repository that corresponds to our linting rules as much as possible. Add a `.prettierrc` file to your repository with the following content:
@@ -392,6 +359,36 @@ There is a [Prettier](https://prettier.io/) config in this repository that corre
 ```
 
 Please note that our linting rules will complain about specific code snippets coming from Prettier. Use [prettier-eslint-cli](https://github.com/prettier/prettier-eslint-cli) instead of Prettier to get the best of both worlds.
+
+## VSCode
+
+This is our recommended VSCode configuration. Adjust it to the needs of your particular project:
+
+```json
+{
+    "eslint.validate": [
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        },
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        }
+    ],
+    "prettier.eslintIntegration": true,
+    "prettier.tslintIntegration": false,
+    "prettier.requireConfig": true
+}
+```
 
 ## License
 
