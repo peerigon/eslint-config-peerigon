@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [23.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v23.1.0...v23.2.0) (2019-08-02)
+
+
+### Bug Fixes
+
+* Disable `react/jsx-no-literals` in tests ([ed93deb](https://github.com/peerigon/eslint-config-peerigon/commit/ed93deb))
+
+
+### Features
+
+* Disable `react/jsx-one-expression-per-line` ([136a945](https://github.com/peerigon/eslint-config-peerigon/commit/136a945))
+
+
+
 ## [23.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v23.0.0...v23.1.0) (2019-08-01)
 
 
