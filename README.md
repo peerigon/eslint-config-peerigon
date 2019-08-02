@@ -358,7 +358,7 @@ There is a [Prettier](https://prettier.io/) config in this repository that corre
 "eslint-config-peerigon/prettier"
 ```
 
-Please note that our linting rules will complain about specific code snippets coming from Prettier. Use [prettier-eslint-cli](https://github.com/prettier/prettier-eslint-cli) instead of Prettier to get the best of both worlds.
+Please note that our linting rules will complain about specific code snippets coming from Prettier. We recommend running `eslint --fix` afterwards.
 
 ## VSCode
 
