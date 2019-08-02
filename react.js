@@ -108,8 +108,9 @@ module.exports = {
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
         "react/jsx-no-target-blank": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
         "react/jsx-no-undef": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
+
         "react/jsx-one-expression-per-line": [
-            "error",
+            "off", // This rule does not play well with Prettier
             {
                 allow: "literal"
             }
