@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [24.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v23.2.0...v24.0.0) (2019-08-23)
+
+
+### Features
+
+* Update TypeScript rules ([31fbf88](https://github.com/peerigon/eslint-config-peerigon/commit/31fbf88))
+
+
+### BREAKING CHANGES
+
+* You need to update `@typescript-eslint/eslint-plugin@^2.0.0` if you're using the TypeScript rules. The recommended rules changed a little bit and there have been some breaking rule changes like `@typescript-eslint/consistent-type-assertions`, `@typescript-eslint/no-unnecessary-type-arguments` and `@typescript-eslint/strict-boolean-expressions`
+
+
+
 ## [23.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v23.1.0...v23.2.0) (2019-08-02)
 
 
