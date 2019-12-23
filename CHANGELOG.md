@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [25.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v24.0.0...v25.0.0) (2019-12-23)
+
+
+### Bug Fixes
+
+* Allow non-null assertions in test files ([240beec](https://github.com/peerigon/eslint-config-peerigon/commit/240beec))
+* Do not require .ts extensions in TypeScript files ([e40ffbe](https://github.com/peerigon/eslint-config-peerigon/commit/e40ffbe))
+* Turn off consistent-type-definitions in d.ts files ([1c00846](https://github.com/peerigon/eslint-config-peerigon/commit/1c00846))
+
+
+### Features
+
+* Don't allow loose equality checks ([8e065bf](https://github.com/peerigon/eslint-config-peerigon/commit/8e065bf))
+
+
+### BREAKING CHANGES
+
+* Loose equality checks are not allowed anymore.
+
+
+
 ## [24.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v23.2.0...v24.0.0) (2019-08-23)
 
 
