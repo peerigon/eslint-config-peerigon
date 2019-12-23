@@ -211,7 +211,8 @@ module.exports = {
         {
             files: ["*.d.ts"],
             rules: {
-                "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+                // In d.ts files it might be necessary to merge an existing interface
+                "@typescript-eslint/consistent-type-definitions": "off",
                 // When someone wants to extend the typings of a third-party module, it might
                 // be necessary to import the module so that TypeScript finds the typings that should be extended.
                 // This is a better alternative than the triple-slash directive
