@@ -227,6 +227,8 @@ module.exports = {
             rules: {
                 // The any type is ok in tests
                 "@typescript-eslint/no-explicit-any": "off",
+                // Non-null assertions can be handy when testing instances of Map
+                "@typescript-eslint/no-non-null-assertion": "off",
                 // Passing functions around like this can be common with mocking
                 "@typescript-eslint/unbound-method": "off",
             },
