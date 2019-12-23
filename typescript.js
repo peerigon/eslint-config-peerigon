@@ -190,6 +190,9 @@ module.exports = {
                 "func-call-spacing": "off", // covered by @typescript-eslint/func-call-spacing
                 // There's currently a problem with this rule, see https://github.com/benmosher/eslint-plugin-import/issues/1341
                 "import/export": "off", // TypeScript should catch it anyway
+                "import/extensions": ["error", "ignorePackages", {
+                    "ts": "never"
+                }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
                 // TypeScript project have usually more imports due to types
                 "import/max-dependencies": ["warn", {max: 35}],
                 "import/named": "off", // TypeScript should catch it anyway
