@@ -39,6 +39,9 @@ const options = {
         caughtErrors: "none",
         ignoreRestSiblings: true,
         vars: "all",
+    },
+    ["quotes"]: {
+        avoidEscape: true,
     }
     /* eslint-disable sort-keys */
 };

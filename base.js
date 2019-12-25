@@ -79,7 +79,7 @@ module.exports = {
             },
         ],
         "babel/object-curly-spacing": ["error", "never"],
-        "babel/quotes": ["error", "double", "avoid-escape"],
+        "babel/quotes": ["error", "double", options.quotes],
         "babel/semi": "error",
         "babel/valid-typeof": "error",
         "block-scoped-var": "error", // http://eslint.org/docs/rules/block-scoped-var
@@ -548,6 +548,8 @@ module.exports = {
         "prefer-promise-reject-errors": "error", // http://eslint.org/docs/rules/prefer-promise-reject-errors
         "prefer-rest-params": "error", // http://eslint.org/docs/rules/prefer-rest-params
         "prefer-spread": "error", // http://eslint.org/docs/rules/prefer-spread
+        // Using regular string concatentation can sometimes be easier to read
+        // We leave it up to the developer to decide
         "prefer-template": "off", // http://eslint.org/docs/rules/prefer-template
         "promise/always-return": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/always-return.md
         "promise/avoid-new": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/avoid-new.md
@@ -568,7 +570,7 @@ module.exports = {
         "promise/valid-params": "error", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/valid-params.md
         "quote-props": ["error", "as-needed"], // http://eslint.org/docs/rules/quote-props
         // Handled by babel/quotes
-        "quotes": ["off", "double", "avoid-escape"], // http://eslint.org/docs/rules/quotes
+        "quotes": ["off", "double", options.quotes], // http://eslint.org/docs/rules/quotes
         "radix": "off", // http://eslint.org/docs/rules/radix
         "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
