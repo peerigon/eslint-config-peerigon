@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [25.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v25.0.0...v25.0.1) (2019-12-25)
+
+
+### Bug Fixes
+
+* Allow template literals for Jest inline snapshots ([2b9c4e5](https://github.com/peerigon/eslint-config-peerigon/commit/2b9c4e5))
+
+
+
 ## [25.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v24.0.0...v25.0.0) (2019-12-23)
 
 
