@@ -191,7 +191,8 @@ module.exports = {
                 // There's currently a problem with this rule, see https://github.com/benmosher/eslint-plugin-import/issues/1341
                 "import/export": "off", // TypeScript should catch it anyway
                 "import/extensions": ["error", "ignorePackages", {
-                    "ts": "never"
+                    "ts": "never",
+                    "tsx": "never",
                 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
                 // TypeScript project have usually more imports due to types
                 "import/max-dependencies": ["warn", {max: 35}],
