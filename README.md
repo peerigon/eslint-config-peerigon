@@ -117,7 +117,7 @@ We acknowledge that there are certain rules where there are no actual pros and c
 **Base rules for every project. You should always add these rules.**
 
 ```
-npm i eslint@5 eslint-config-peerigon --save-dev
+npm i eslint eslint-config-peerigon --save-dev
 ```
 
 These rules assume a modern project with full ES2015 support, including ES modules. For specific environments like Node.js or old JS engines, see below. The base rules do not define an `env`, so you might want to do that for yourself to enable specific globals.
