@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [25.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.0.1...v25.1.0) (2020-01-10)
+
+
+### Bug Fixes
+
+* Disable import/extensions for tsx files ([b13c7f6](https://github.com/peerigon/eslint-config-peerigon/commit/b13c7f6))
+
+
+### Features
+
+* Allow ESLint 6 as peer dependency ([e474e5e](https://github.com/peerigon/eslint-config-peerigon/commit/e474e5e))
+
+
+
 ### [25.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v25.0.0...v25.0.1) (2019-12-25)
 
 
