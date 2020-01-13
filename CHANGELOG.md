@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [25.1.1](https://github.com/peerigon/eslint-config-peerigon/compare/v25.1.0...v25.1.1) (2020-01-13)
+
+
+### Bug Fixes
+
+* Turn off no-empty-function for TypeScript ([1c8c5ac](https://github.com/peerigon/eslint-config-peerigon/commit/1c8c5ac))
+
+
+
 ## [25.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.0.1...v25.1.0) (2020-01-10)
 
 
