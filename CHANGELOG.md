@@ -1,3 +1,10 @@
+# [25.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.1.1...v25.2.0) (2020-01-23)
+
+
+### Features
+
+* Add semantic-release ([eb3f1d4](https://github.com/peerigon/eslint-config-peerigon/commit/eb3f1d4e8f4b01377865582e4816f859c628e46f))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
