@@ -323,6 +323,7 @@ module.exports = {
         "no-console": "off", // http://eslint.org/docs/rules/no-console
         "no-const-assign": "error", // http://eslint.org/docs/rules/no-const-assign
         "no-constant-condition": "error", // http://eslint.org/docs/rules/no-constant-condition
+        "no-constructor-return": "error", // https://eslint.org/docs/rules/no-constructor-return
         "no-continue": "off", // http://eslint.org/docs/rules/no-continue
         "no-control-regex": "error", // http://eslint.org/docs/rules/no-control-regex
         "no-debugger": "error", // http://eslint.org/docs/rules/no-debugger
