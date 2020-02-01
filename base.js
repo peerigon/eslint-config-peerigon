@@ -145,6 +145,7 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/generator-star-spacing
         "global-require": "off", // http://eslint.org/docs/rules/global-require
+        "grouped-accessor-pairs": ["error", "setBeforeGet"], // https://eslint.org/docs/rules/grouped-accessor-pairs
         "guard-for-in": "warn", // http://eslint.org/docs/rules/guard-for-in
         "handle-callback-err": ["error", "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
         "id-blacklist": ["off"], // http://eslint.org/docs/rules/id-blacklist
