@@ -1,3 +1,17 @@
+# [25.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.2.0...v25.3.0) (2020-02-01)
+
+
+### Bug Fixes
+
+* **base:** Allow finally() as a replacement for catch() ([0d2b2df](https://github.com/peerigon/eslint-config-peerigon/commit/0d2b2df))
+
+
+### Features
+
+* **base:** Relax eqeqeq ([e8f9cd6](https://github.com/peerigon/eslint-config-peerigon/commit/e8f9cd6))
+* **react:** Relax react/require-default-props rule ([8be6c52](https://github.com/peerigon/eslint-config-peerigon/commit/8be6c52))
+* **typescript:** Relax @typescript-eslint/strict-boolean-expressions rule ([524c462](https://github.com/peerigon/eslint-config-peerigon/commit/524c462))
+
 # [25.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.1.1...v25.2.0) (2020-01-23)
 
 
