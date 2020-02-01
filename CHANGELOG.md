@@ -1,3 +1,10 @@
+## [25.3.1](https://github.com/peerigon/eslint-config-peerigon/compare/v25.3.0...v25.3.1) (2020-02-01)
+
+
+### Bug Fixes
+
+* **typescript:** Do not "fix" 'any' to 'unknown' ([154a42b](https://github.com/peerigon/eslint-config-peerigon/commit/154a42b))
+
 # [25.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.2.0...v25.3.0) (2020-02-01)
 
 
