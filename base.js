@@ -439,6 +439,7 @@ module.exports = {
         "no-self-assign": "error", // http://eslint.org/docs/rules/no-self-assign
         "no-self-compare": "error", // http://eslint.org/docs/rules/no-self-compare
         "no-sequences": "error", // http://eslint.org/docs/rules/no-sequences
+        "no-setter-return": "error", // https://eslint.org/docs/rules/no-setter-return
         "no-shadow": "off", // http://eslint.org/docs/rules/no-shadow
         "no-shadow-restricted-names": "error", // http://eslint.org/docs/rules/no-shadow-restricted-names
         "no-sparse-arrays": "error", // http://eslint.org/docs/rules/no-sparse-arrays
