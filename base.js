@@ -158,9 +158,9 @@ module.exports = {
         "import/extensions": ["error", "ignorePackages"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
         "import/first": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
         "import/group-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/group-exports.md
-        // Using more than 25 dependencies in one module is a sign that this module is doing too much.
+        // Using more than 35 dependencies in one module is a sign that this module is doing too much.
         // You should consider splitting that module into different parts.
-        "import/max-dependencies": ["warn", {max: 25}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
+        "import/max-dependencies": ["warn", {max: 35}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
         "import/named": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
         "import/namespace": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
         // Is already covered by eslint rule padding-line-between-statements
