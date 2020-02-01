@@ -108,7 +108,7 @@ module.exports = {
                 "@typescript-eslint/no-explicit-any": [
                     "warn",
                     {
-                        fixToUnknown: true,
+                        fixToUnknown: false,
                         ignoreRestArgs: true,
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
