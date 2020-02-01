@@ -30,7 +30,7 @@ const options = {
         outerIIFEBody: 1,
     },
     ["max-lines"]: {
-        max: 300,
+        max: 700,
         skipBlankLines: true,
         skipComments: true,
     },

@@ -197,7 +197,7 @@ module.exports = {
                     "tsx": "never",
                 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
                 // TypeScript project have usually more imports due to types
-                "import/max-dependencies": ["warn", {max: 35}],
+                "import/max-dependencies": ["warn", {max: 45}],
                 "import/named": "off", // TypeScript should catch it anyway
                 "import/namespace": "off", // TypeScript should catch it anyway
                 "import/no-unresolved": "off", // TypeScript should catch it anyway
@@ -206,7 +206,7 @@ module.exports = {
                 "max-lines": [
                     "warn",
                     Object.assign({}, options["max-lines"], {
-                        max: 600,
+                        max: 1400,
                     }),
                 ],
                 "no-empty-function": "off", // covered by @typescript-eslint/no-empty-function
