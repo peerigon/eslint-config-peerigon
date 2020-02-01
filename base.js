@@ -357,6 +357,7 @@ module.exports = {
         "no-implicit-coercion": "error", // http://eslint.org/docs/rules/no-implicit-coercion
         "no-implicit-globals": "error", // http://eslint.org/docs/rules/no-implicit-globals
         "no-implied-eval": "error", // http://eslint.org/docs/rules/no-implied-eval
+        "no-import-assign": "error", // https://eslint.org/docs/rules/no-import-assign
         "no-inline-comments": "off", // http://eslint.org/docs/rules/no-inline-comments
         "no-inner-declarations": ["error", "functions"], // http://eslint.org/docs/rules/no-inner-declarations
         "no-invalid-regexp": "error", // http://eslint.org/docs/rules/no-invalid-regexp
