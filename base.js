@@ -136,6 +136,7 @@ module.exports = {
         "func-name-matching": ["off"], // http://eslint.org/docs/rules/func-name-matching
         "func-names": "off", // http://eslint.org/docs/rules/func-names
         "func-style": ["error", "declaration"], // http://eslint.org/docs/rules/func-style
+        "function-call-argument-newline": "off", // https://eslint.org/docs/rules/function-call-argument-newline
         "generator-star-spacing": [
             "error",
             {
@@ -201,6 +202,7 @@ module.exports = {
             allow: globPatterns.withSideEffects
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
         "import/no-unresolved": ["warn", {commonjs: true}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+        "import/no-unused-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
         "import/no-useless-path-segments": "error", // currently undocumented :(, see https://github.com/benmosher/eslint-plugin-import/issues/1032
         "import/no-webpack-loader-syntax": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
         "import/order": ["error", {
@@ -258,6 +260,7 @@ module.exports = {
         "lines-between-class-members": ["error", "always", {
             exceptAfterSingleLine: true
         }], // https://eslint.org/docs/rules/lines-between-class-members
+        "max-classes-per-file": "off", // https://eslint.org/docs/rules/max-classes-per-file
         "max-depth": ["warn", 4], // http://eslint.org/docs/rules/max-depth
         "max-len": [
             "warn",
@@ -276,10 +279,12 @@ module.exports = {
             "warn",
             options["max-lines"]
         ],
+        "max-lines-per-function": "off", // https://eslint.org/docs/rules/max-lines-per-function
         "max-nested-callbacks": ["warn", 3], // http://eslint.org/docs/rules/max-nested-callbacks
         "max-params": ["warn", {max: 4}], // http://eslint.org/docs/rules/max-params
         "max-statements": "off", // http://eslint.org/docs/rules/max-statements
         "max-statements-per-line": ["error", {max: 1}], // http://eslint.org/docs/rules/max-statements-per-line
+        "multiline-comment-style": "off", // https://eslint.org/docs/rules/multiline-comment-style
         "multiline-ternary": ["error", "always-multiline"], // http://eslint.org/docs/rules/multiline-ternary
         // Handled by babel/new-cap
         "new-cap": "off", // http://eslint.org/docs/rules/new-cap
@@ -471,6 +476,8 @@ module.exports = {
         ],
         "no-whitespace-before-property": "error", // http://eslint.org/docs/rules/no-whitespace-before-property
         "no-with": "error", // http://eslint.org/docs/rules/no-with
+        // Non-block statements are disallowed anyway
+        "nonblock-statement-body-position": "off", // https://eslint.org/docs/rules/nonblock-statement-body-position
         "object-curly-newline": [
             "error",
             {
@@ -544,7 +551,9 @@ module.exports = {
         "prefer-arrow-callback": "error", // http://eslint.org/docs/rules/prefer-arrow-callback
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
         "prefer-destructuring": "off", // http://eslint.org/docs/rules/prefer-destructuring
+        "prefer-named-capture-group": "off", // https://eslint.org/docs/rules/prefer-named-capture-group
         "prefer-numeric-literals": "error", // http://eslint.org/docs/rules/prefer-numeric-literals
+        "prefer-object-spread": "off", // https://eslint.org/docs/rules/prefer-object-spread
         "prefer-promise-reject-errors": "error", // http://eslint.org/docs/rules/prefer-promise-reject-errors
         "prefer-rest-params": "error", // http://eslint.org/docs/rules/prefer-rest-params
         "prefer-spread": "error", // http://eslint.org/docs/rules/prefer-spread
