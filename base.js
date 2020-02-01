@@ -331,6 +331,7 @@ module.exports = {
         "no-div-regex": "off", // http://eslint.org/docs/rules/no-div-regex
         "no-dupe-args": "error", // http://eslint.org/docs/rules/no-dupe-args
         "no-dupe-class-members": "error", // http://eslint.org/docs/rules/no-dupe-class-members
+        "no-dupe-else-if": "error", // https://eslint.org/docs/rules/no-dupe-else-if
         "no-dupe-keys": "error", // http://eslint.org/docs/rules/no-dupe-keys
         "no-duplicate-case": "error", // http://eslint.org/docs/rules/no-duplicate-case
         // handled by import/no-duplicates
