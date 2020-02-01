@@ -172,6 +172,8 @@ module.exports = {
                 "@typescript-eslint/strict-boolean-expressions": [
                     "error",
                     {
+                        allowNullable: true,
+                        allowSafe: true,
                         ignoreRhs: true,
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md
