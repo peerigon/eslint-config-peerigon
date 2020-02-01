@@ -172,7 +172,7 @@ module.exports = {
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
         "react/prop-types": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
         "react/react-in-jsx-scope": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
-        "react/require-default-props": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+        "react/require-default-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
         "react/require-optimization": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
         "react/require-render-return": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
         "react/self-closing-comp": "error", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
