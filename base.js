@@ -581,6 +581,7 @@ module.exports = {
         "prefer-arrow-callback": "error", // http://eslint.org/docs/rules/prefer-arrow-callback
         "prefer-const": "error", // http://eslint.org/docs/rules/prefer-const
         "prefer-destructuring": "off", // http://eslint.org/docs/rules/prefer-destructuring
+        "prefer-exponentiation-operator": "error", // https://eslint.org/docs/rules/prefer-exponentiation-operator
         "prefer-named-capture-group": "off", // https://eslint.org/docs/rules/prefer-named-capture-group
         "prefer-numeric-literals": "error", // http://eslint.org/docs/rules/prefer-numeric-literals
         "prefer-object-spread": "off", // https://eslint.org/docs/rules/prefer-object-spread
