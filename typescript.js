@@ -19,11 +19,6 @@ module.exports = {
     plugins: ["@typescript-eslint"],
     // We cannot extend in overrides, so let's hope that the recommended
     // rules don't specify anything problematic for .js files.
-    extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    ],
     overrides: [
         {
             files: ["*.ts", "*.tsx"],
@@ -42,6 +37,11 @@ module.exports = {
                     typescript: true,
                 },
             },
+            extends: [
+                "plugin:@typescript-eslint/recommended",
+                "plugin:@typescript-eslint/eslint-recommended",
+                "plugin:@typescript-eslint/recommended-requiring-type-checking",
+            ],
             rules: {
                 /* eslint-enable sort-keys */
                 // "no-undef": "off", // produces false positive with some TypeScript syntax. This is caught by TypeScript anyway.
@@ -206,9 +206,10 @@ module.exports = {
                 // TypeScript files tend to get longer due to types
                 "max-lines": [
                     "warn",
-                    Object.assign({}, options["max-lines"], {
+                    {
+                        ...options["max-lines"],
                         max: 1400,
-                    }),
+                    },
                 ],
                 "no-empty-function": "off", // covered by @typescript-eslint/no-empty-function
                 "no-useless-constructor": "off", // covered by @typescript-eslint/no-useless-constructor
@@ -227,10 +228,8 @@ module.exports = {
                 "import/unambiguous": "off", // produces false positive with some TypeScript syntax
             },
         },
-        // TODO: With ESLint 6 you can pass an array of files. Change this once we've updated.
-    ].concat(
-        globPatterns.tests.map((testGlobPattern) => ({
-            files: testGlobPattern,
+        {
+            files: globPatterns.tests,
             rules: {
                 // The any type is ok in tests
                 "@typescript-eslint/no-explicit-any": "off",
@@ -239,6 +238,6 @@ module.exports = {
                 // Passing functions around like this can be common with mocking
                 "@typescript-eslint/unbound-method": "off",
             },
-        })),
-    ),
+        },
+    ]
 };
