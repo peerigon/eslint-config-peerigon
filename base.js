@@ -126,6 +126,7 @@ module.exports = {
         "constructor-super": "error", // http://eslint.org/docs/rules/constructor-super
         "curly": ["error", "all"], // http://eslint.org/docs/rules/curly
         "default-case": "off", // http://eslint.org/docs/rules/default-case
+        "default-param-last": "off", // https://eslint.org/docs/rules/default-param-last
         "dot-location": ["error", "property"], // http://eslint.org/docs/rules/dot-location
         // We don't support ES3 envs anymore, so allowKeywords: true is ok
         "dot-notation": ["error", {allowKeywords: true}], // http://eslint.org/docs/rules/dot-notation
@@ -137,6 +138,9 @@ module.exports = {
         "func-names": "off", // http://eslint.org/docs/rules/func-names
         "func-style": ["error", "declaration"], // http://eslint.org/docs/rules/func-style
         "function-call-argument-newline": "off", // https://eslint.org/docs/rules/function-call-argument-newline
+        // We can't use that rule since it conflicts with Prettier's
+        // formating when the line is too long
+        "function-paren-newline": ["off", "multiline"], // https://eslint.org/docs/rules/function-paren-newline
         "generator-star-spacing": [
             "error",
             {
@@ -151,6 +155,9 @@ module.exports = {
         "id-blacklist": ["off"], // http://eslint.org/docs/rules/id-blacklist
         "id-length": "off", // http://eslint.org/docs/rules/id-length
         "id-match": "off", // http://eslint.org/docs/rules/id-match
+        // We can't use that rule since it conflicts with Prettier's
+        // formating when the line is too long
+        "implicit-arrow-linebreak": ["off", "beside"], // https://eslint.org/docs/rules/implicit-arrow-linebreak
         "import/default": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
         "import/dynamic-import-chunkname": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
         "import/export": "error", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
