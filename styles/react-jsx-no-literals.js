@@ -5,14 +5,19 @@ const globPatterns = require("../globPatterns.js");
 
 module.exports = {
     rules: {
+        /* eslint-enable sort-keys */
         "react/jsx-no-literals": "error",  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
+        /* eslint-disable sort-keys */
     },
-    // TODO: With ESLint 6 you can pass an array of files. Change this once we've updated.
-    overrides: globPatterns.tests.map(testGlobPattern => ({
-        files: testGlobPattern,
-        rules: {
-            // It's quite common in tests to use example strings
-            "react/jsx-no-literals": "off"
+    overrides: [
+        {
+            files: globPatterns.tests,
+            rules: {
+                /* eslint-enable sort-keys */
+                // It's quite common in tests to use example strings
+                "react/jsx-no-literals": "off"
+                /* eslint-disable sort-keys */
+            }
         }
-    })),
+    ],
 };
