@@ -616,6 +616,7 @@ module.exports = {
         "require-atomic-updates": "error", // https://eslint.org/docs/rules/require-atomic-updates
         "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
+        "require-unicode-regexp": "error", // https://eslint.org/docs/rules/require-unicode-regexp
         "require-yield": "off", // http://eslint.org/docs/rules/require-yield
         "rest-spread-spacing": ["error", "never"], // http://eslint.org/docs/rules/rest-spread-spacing
         // Handled by babel/semi
