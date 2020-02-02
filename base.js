@@ -117,7 +117,7 @@ module.exports = {
         "complexity": [
             "warn",
             {
-                max: 8,
+                max: 12,
             },
         ], // http://eslint.org/docs/rules/complexity
         "computed-property-spacing": ["error", "never"], // http://eslint.org/docs/rules/computed-property-spacing
