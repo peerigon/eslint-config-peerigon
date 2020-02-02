@@ -586,6 +586,7 @@ module.exports = {
         "prefer-numeric-literals": "error", // http://eslint.org/docs/rules/prefer-numeric-literals
         "prefer-object-spread": "off", // https://eslint.org/docs/rules/prefer-object-spread
         "prefer-promise-reject-errors": "error", // http://eslint.org/docs/rules/prefer-promise-reject-errors
+        "prefer-regex-literals": "error", // https://eslint.org/docs/rules/prefer-regex-literals
         "prefer-rest-params": "error", // http://eslint.org/docs/rules/prefer-rest-params
         "prefer-spread": "error", // http://eslint.org/docs/rules/prefer-spread
         // Using regular string concatentation can sometimes be easier to read
