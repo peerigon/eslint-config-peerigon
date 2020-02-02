@@ -29,15 +29,7 @@ module.exports = {
         "plugin:array-func/recommended",
         "plugin:promise/recommended"
     ],
-    // TODO: With ESLint 6 you can pass an array of files. Change this once we've updated.
-    overrides: globPatterns.tests.map(testGlobPattern =>
-        Object.assign(
-            {
-                files: testGlobPattern,
-            },
-            tests
-        )
-    ),
+    reportUnusedDisableDirectives: true,
     rules: {
         /* eslint-enable sort-keys */
         "accessor-pairs": [
@@ -681,5 +673,12 @@ module.exports = {
         "wrap-regex": "off", // http://eslint.org/docs/rules/wrap-regex
         "yield-star-spacing": ["error", "after"], // http://eslint.org/docs/rules/yield-star-spacing
         "yoda": ["error", "never"], // http://eslint.org/docs/rules/yoda
+        /* eslint-disable sort-keys */
     },
+    overrides: [
+        {
+            files: globPatterns.tests,
+            ...tests,
+        }
+    ],
 };
