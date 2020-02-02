@@ -3,7 +3,7 @@
 
 const path = require("path");
 const options = require("./options.js");
-const globPatterns = require("./globPatterns.js");
+const globPatterns = require("./glob-patterns.js");
 
 let pathToTsConfig = path.resolve(__dirname, "../../tsconfig.json");
 
@@ -21,7 +21,7 @@ module.exports = {
     // rules don't specify anything problematic for .js files.
     overrides: [
         {
-            files: ["*.ts", "*.tsx"],
+            files: globPatterns.typescript,
             parser: "@typescript-eslint/parser",
             parserOptions: {
                 ecmaFeatures: {
@@ -50,8 +50,7 @@ module.exports = {
                 "@typescript-eslint/await-thenable": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/await-thenable.md
                 // Disable the warning for legimitate use cases
                 "@typescript-eslint/ban-ts-ignore": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-ignore.md
-                // Using the default options https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/rules/ban-types.ts
-                "@typescript-eslint/ban-types": "error", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
+                "@typescript-eslint/ban-types": ["error", options["@typescript-eslint/ban-types"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
                 "@typescript-eslint/camelcase": ["error", options["camelcase"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
                 "@typescript-eslint/class-name-casing": [
                     "error",

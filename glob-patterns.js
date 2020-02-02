@@ -17,5 +17,9 @@ module.exports = {
         "**/*.sass",
         "**/*register",
         "**/*extend",  // mostly because of @testing-library/jest-dom/extend-expect
+    ],
+    typescript: [
+        "*.ts",
+        "*.tsx",
     ]
 };

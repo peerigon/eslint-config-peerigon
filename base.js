@@ -2,7 +2,7 @@
 /* eslint-disable sort-keys */
 
 const options = require("./options.js");
-const globPatterns = require("./globPatterns.js");
+const globPatterns = require("./glob-patterns.js");
 const tests = require("./tests.js");
 
 module.exports = {
