@@ -613,6 +613,7 @@ module.exports = {
         // Handled by babel/quotes
         "quotes": ["off", "double", options.quotes], // http://eslint.org/docs/rules/quotes
         "radix": "off", // http://eslint.org/docs/rules/radix
+        "require-atomic-updates": "error", // https://eslint.org/docs/rules/require-atomic-updates
         "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
         "require-yield": "off", // http://eslint.org/docs/rules/require-yield
