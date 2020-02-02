@@ -1,6 +1,6 @@
 "use strict";
 
-const options = {
+module.exports = {
     /* eslint-enable sort-keys */
     ["camelcase"]: {
         allow: ["^UNSAFE_"], // Allows React UNSAFE_ methods
@@ -42,8 +42,31 @@ const options = {
     },
     ["quotes"]: {
         avoidEscape: true,
+    },
+    ["@typescript-eslint/ban-types"]: {
+        types: {
+            // Default options taken from https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/rules/ban-types.ts
+            String: {
+                message: 'Use string instead',
+                fixWith: 'string',
+            },
+            Boolean: {
+                message: 'Use boolean instead',
+                fixWith: 'boolean',
+            },
+            Number: {
+                message: 'Use number instead',
+                fixWith: 'number',
+            },
+            Object: {
+                message: 'Use Record<string, unknown> instead',
+                fixWith: 'Record<string, unknown>',
+            },
+            Symbol: {
+                message: 'Use symbol instead',
+                fixWith: 'symbol',
+            },
+        },
     }
     /* eslint-disable sort-keys */
 };
-
-module.exports = options;
