@@ -279,14 +279,24 @@ Enforces arrow function expressions instead of function declarations (see [#23](
 Regular functions are still allowed as methods in objects or classes.
 
 ```js
-{
     "extends": [
         "peerigon",
         "peerigon/styles/prefer-arrow"
     ],
-    "root": true
-}
 ```
+
+### [`peerigon/styles/no-default-export`](styles/no-default-export.js)
+
+Forbids usage of `export default`. When using default exports, it becomes harder to name classes or functions consistently throughout the codebase since every module can pick its own name for the imported thing. Nicholas C. Zakas, the creator of ESLint, wrote [an article with more compelling arguments why he stopped using `export default`](https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/).
+
+```js
+    "extends": [
+        "peerigon",
+        "peerigon/styles/no-default-export"
+    ],
+```
+
+**Please note:** This rule is disabled in `.jsx` and `.tsx` files because React components are usually exported via `export default`. [`React.lazy`](https://reactjs.org/docs/code-splitting.html#reactlazy) even expects the lazy loaded component to be exported as `default`.
 
 ### [`peerigon/styles/prefer-interface`](styles/prefer-interface.js)
 
@@ -295,14 +305,11 @@ Regular functions are still allowed as methods in objects or classes.
 [Prefer `interface` over `type`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md).
 
 ```js
-{
     "extends": [
         "peerigon",
         "peerigon/typescript",
         "peerigon/styles/prefer-interface"
     ],
-    "root": true
-}
 ```
 
 ### [`peerigon/styles/react-jsx-allow-bind`](styles/react-jsx-allow-bind.js)
@@ -312,14 +319,11 @@ Regular functions are still allowed as methods in objects or classes.
 Depending on the way you write your components, it might be ok to create functions during `render()`. Use it if you're not using things like `React.memo()` or `shouldComponentUpdate` a lot.
 
 ```js
-{
     "extends": [
         "peerigon",
         "peerigon/react",
         "peerigon/styles/react-jsx-allow-bind"
     ],
-    "root": true
-}
 ```
 
 ### [`peerigon/styles/react-jsx-no-literals`](styles/react-jsx-no-literals.js)
@@ -329,14 +333,11 @@ Depending on the way you write your components, it might be ok to create functio
 Use this style if you're using i18n. It prevents people from putting raw strings in components.
 
 ```js
-{
     "extends": [
         "peerigon",
         "peerigon/react",
         "peerigon/styles/react-jsx-no-literals"
     ],
-    "root": true
-}
 ```
 
 It disallows this:
