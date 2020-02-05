@@ -1,11 +1,22 @@
 "use strict";
 
 module.exports = {
-    tabWidth: 4,
-    // Set the printWidth explicitly so that prettier-eslint does not take our 120 as printWidth
-    printWidth: 100,
+    printWidth: 80,
+    // When we're using Prettier, we can also just use tabs.
+    // This way every developer is free to configure their
+    // preferred indentation width.
+    useTabs: true,
+    semi: true,
+    singleQuote: false,
+    quoteProps: "as-needed",
+    jsxSingleQuote: false,
     trailingComma: "all",
     bracketSpacing: false,
+    jsxBracketSameLine: false,
     // Adding a parameter to an arrow functions becomes easier when we add parens all the time.
-    arrowParens: "always"
+    arrowParens: "always",
+    proseWrap: "preserve",
+    htmlWhitespaceSensitivity: "css",
+    vueIndentScriptAndStyle: true,
+    endOfLine: "lf"
 };

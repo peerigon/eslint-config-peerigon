@@ -54,7 +54,7 @@ This is also the reason why we prefer [dangling commas](https://eslint.org/docs/
 
 For the purpose of atomic changes, our rules are intentionally strict about formatting which are usually autofixable. You should use an editor configuration where you can apply these autofixes on demand (for instance when saving the file).
 
-You can also combine these linting rules with [Prettier](https://prettier.io/) (see [below](#prettier)). There's also a [recommended configuration for VSCode](#vscode).
+We recommend combining these linting rules with [Prettier](https://prettier.io/) (see [below](#prettier)). There's also a [recommended configuration for VSCode](#vscode).
 
 ### Code smells as a warning
 
@@ -108,7 +108,7 @@ If you don't agree with a rule, please do not just disable the rule. Often there
 
 ### Different styles
 
-We acknowledge that there are certain rules where there are no actual pros and cons or where there is no clear winner. You just have to decide for one style and stick with it. That's why we also provide a list of [accepted custom styles](#styles) (see also [this discussion](https://github.com/peerigon/eslint-config-peerigon/issues/11)).
+We acknowledge that there are certain rules where there are no actual pros and cons or where there is no clear winner. You just have to decide for one style and stick with it. We also know that some rules make sense in one project, but don't make sense in another project. That's why we also provide a list of [accepted custom styles](#styles) (see also [this discussion](https://github.com/peerigon/eslint-config-peerigon/issues/11)) which you can pick.
 
 
 ## Provided configs
@@ -129,7 +129,8 @@ Add an `.eslintrc.json` to the project's root folder:
 {
     "extends": [
         // Base rules for every project
-        "peerigon"
+        "peerigon",
+        "prettier" // add this at the end of 'extends' if you're using Prettier
     ],
     "env": {
         // Enable node globals
@@ -140,13 +141,13 @@ Add an `.eslintrc.json` to the project's root folder:
 }
 ```
 
-In your `package.json`, add a `lint` script and run it as `posttest`:
+In your `package.json`, add a `test:lint` script and run it as `posttest`:
 
 ```js
 {
     "scripts": {
-        "lint": "eslint ./src ./test",
-        "posttest": "npm run lint"
+        "test:lint": "eslint ./src ./test",
+        "posttest": "npm run test:lint"
     }
 }
 ```
@@ -163,7 +164,8 @@ Special rules for Node.js >= 8.0.0 environments:
         // Base rules with full ES2015 support
         "peerigon",
         // Rules for node
-        "peerigon/node"
+        "peerigon/node",
+        "prettier" // add this if you're using Prettier
     ]
     // Setting env.node = true is not necessary, this is already done by peerigon/node
 }
@@ -184,7 +186,9 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 {
     "extends": [
         "peerigon",
-        "peerigon/react"
+        "peerigon/react",
+        "prettier", // add this and...
+        "prettier/react", // ...this if you're using Prettier
     ],
     "root": true
 }
@@ -210,17 +214,19 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
         // Arrow functions are preferred with TypeScript
         // See https://github.com/peerigon/eslint-config-peerigon/issues/23#issuecomment-472614432
         "peerigon/styles/prefer-arrow",
+        "prettier", // add this and...
+        "prettier/typescript", // ...this if you're using Prettier
     ],
     "root": true
 }
 ```
 
-You need to add `--ext js,ts,tsx` to the `lint` script:
+You need to add `--ext js,ts,tsx` to the `test:lint` script:
 
 ```js
 {
     "scripts": {
-        "lint": "eslint ./src ./test --ext js,ts,tsx"
+        "test:lint": "eslint ./src ./test --ext js,ts,tsx"
     }
 }
 ```
@@ -241,7 +247,9 @@ Rules for [Flowtype](https://flowtype.org/).
 {
     "extends": [
         "peerigon",
-        "peerigon/flowtype"
+        "peerigon/flowtype",
+        "prettier", // add this and...
+        "prettier/flowtype", // ...this if you're using Prettier
     ],
     "root": true
 }
@@ -384,7 +392,24 @@ There is a [Prettier](https://prettier.io/) config in this repository that corre
 "eslint-config-peerigon/prettier"
 ```
 
-Please note that our linting rules will complain about specific code snippets coming from Prettier. We recommend running `eslint --fix` afterwards.
+In order to avoid conflicts between Prettier and our rules, you should always add **prettier rules at the end of `extends`**. For example, in a TypeScript + React project you would use the following configuration:
+
+```json
+{
+    "extends": [
+        "peerigon",
+        "peerigon/typescript",
+        "peerigon/react",
+        // prettier must be at the end
+        "prettier",
+        "prettier/typescript",
+        "prettier/react"
+    ],
+    "root": true,
+};
+```
+
+This module already lists [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) as dependency which is why you don't have to install it manually.
 
 ## VSCode
 
@@ -392,31 +417,10 @@ This is our recommended VSCode configuration using the [Prettier extension](http
 
 ```json
 {
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-    "prettier.eslintIntegration": true,
-    "prettier.tslintIntegration": false,
-    "prettier.requireConfig": true
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }
 ```
 
