@@ -298,6 +298,30 @@ Forbids usage of `export default`. When using default exports, it becomes harder
 
 **Please note:** This rule is disabled in `.jsx` and `.tsx` files because React components are usually exported via `export default`. [`React.lazy`](https://reactjs.org/docs/code-splitting.html#reactlazy) even expects the lazy loaded component to be exported as `default`.
 
+### [`peerigon/styles/no-null`](styles/no-null.js)
+
+**Important: Requires [`eslint-plugin-no-null`](https://github.com/nene/eslint-plugin-no-null) as project dependency.**
+
+```
+npm i eslint-plugin-no-null --save-dev
+```
+
+Forbids the usage of `null`. In a codebase it's often better to use a single non-value to represent *the absence of a value*. With the rise of default parameters and destructuring defaults, JavaScript developed a clear tendency towards `undefined`. [This issue](https://github.com/peerigon/eslint-config-peerigon/issues/71) summarizes the arguments (and trade-offs) of **null vs. undefined**.
+
+```js
+    "extends": [
+        "peerigon",
+        "peerigon/styles/no-null"
+    ],
+```
+
+**Please note:** If you use this rule, you will probably still need a single `null` value which you can refer to whenever you need to use `null` because of third-party code:
+
+```js
+// eslint-disable-next-line no-null/no-null
+export const NULL = null;
+```
+
 ### [`peerigon/styles/prefer-interface`](styles/prefer-interface.js)
 
 **Important: Use it in combination with [`peerigon/typescript`](typescript.js).**
