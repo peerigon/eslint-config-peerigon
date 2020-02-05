@@ -17,8 +17,6 @@ try {
 
 module.exports = {
     plugins: ["@typescript-eslint"],
-    // We cannot extend in overrides, so let's hope that the recommended
-    // rules don't specify anything problematic for .js files.
     overrides: [
         {
             files: globPatterns.typescript,
