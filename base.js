@@ -659,11 +659,15 @@ module.exports = {
             "error",
             {
                 prefer: {
+                    arg: "param",
+                    argument: "param",
                     return: "returns",
                 },
                 requireParamDescription: false,
+                requireParamType: false, // handled by jsdoc/require-param-type
                 requireReturn: false, // still requires to document returns if there is a return
                 requireReturnDescription: false,
+                requireReturnType: false, // handled by jsdoc/require-return-type
             },
         ], // http://eslint.org/docs/rules/valid-jsdoc
         // Handled by babel/valid-typeof

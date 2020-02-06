@@ -200,6 +200,8 @@ module.exports = {
                 "import/no-unresolved": "off", // TypeScript should catch it anyway
                 "indent": "off",
                 "jsdoc/no-types": "error", // JSDoc types are not necessary when using TypeScript
+                "jsdoc/require-param-type": "off",
+                "jsdoc/require-returns-type": "off",
                 // TypeScript files tend to get longer due to types
                 "max-lines": [
                     "warn",
