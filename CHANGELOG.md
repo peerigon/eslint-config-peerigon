@@ -1,3 +1,15 @@
+# [26.0.0-beta.2](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0-beta.1...v26.0.0-beta.2) (2020-02-06)
+
+
+### Features
+
+* Improve jsdoc rules ([0a6694d](https://github.com/peerigon/eslint-config-peerigon/commit/0a6694d061e4553ebde0653322b7567a69956e44))
+
+
+### BREAKING CHANGES
+
+* Use param instead of arg and argument.
+
 # [26.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v25.3.0...v26.0.0-beta.1) (2020-02-06)
 
 
