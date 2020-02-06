@@ -76,6 +76,12 @@ module.exports = {
                         },
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
+                "@typescript-eslint/explicit-module-boundary-types": ["error", {
+                    allowDirectConstAssertionInArrowFunctions: true,
+                    allowHigherOrderFunctions: true,
+                    allowTypedFunctionExpressions: true,
+                    allowedNames: [],
+                }], // https://github.com/typescript-eslint/typescript-eslint/blob/v2.19.0/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md
                 "@typescript-eslint/func-call-spacing": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/func-call-spacing.md
                 "@typescript-eslint/generic-type-naming": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md
                 "@typescript-eslint/indent": ["error", 4, options["indent"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
