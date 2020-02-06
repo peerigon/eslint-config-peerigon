@@ -427,7 +427,17 @@ module.exports = {
         "no-restricted-properties": "off", // http://eslint.org/docs/rules/no-restricted-properties
         "no-restricted-syntax": ["error", "WithStatement"], // http://eslint.org/docs/rules/no-restricted-syntax
         "no-return-assign": ["error", "except-parens"], // http://eslint.org/docs/rules/no-return-assign
-        "no-return-await": "error", // http://eslint.org/docs/rules/no-return-await
+        // We actually want a rule that enforces to *always use return await*.
+        // Reasoning: Putting try/catch around a return without await is a footgun.
+        // try {
+        //     return somethingAsync();
+        // } catch (error) { <-- will never be caught
+        // }
+        // Further discussions:
+        // - https://github.com/eslint/eslint/issues/12246
+        // - https://github.com/standard/eslint-config-standard-with-typescript/pull/206
+        // - https://github.com/typescript-eslint/typescript-eslint/issues/1378
+        "no-return-await": "off", // http://eslint.org/docs/rules/no-return-await
         "no-script-url": "warn", // http://eslint.org/docs/rules/no-script-url
         "no-self-assign": "error", // http://eslint.org/docs/rules/no-self-assign
         "no-self-compare": "error", // http://eslint.org/docs/rules/no-self-compare
