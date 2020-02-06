@@ -1,3 +1,10 @@
+# [26.0.0-beta.3](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0-beta.2...v26.0.0-beta.3) (2020-02-06)
+
+
+### Features
+
+* Disable some jsdoc rules when using TypeScript ([82220fa](https://github.com/peerigon/eslint-config-peerigon/commit/82220fa862bcb2d3298a1c076b7a7c50b2794491))
+
 # [26.0.0-beta.2](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0-beta.1...v26.0.0-beta.2) (2020-02-06)
 
 
