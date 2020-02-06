@@ -7,6 +7,10 @@ module.exports = {
         ignoreDestructuring: false,
         properties: "always"
     },
+    ["comma-spacing"]: {
+        after: true,
+        before: false,
+    },
     ["indent"]: {
         ArrayExpression: 1,
         CallExpression: {
@@ -34,6 +38,10 @@ module.exports = {
         skipBlankLines: true,
         skipComments: true,
     },
+    ["no-unused-expressions"]: {
+        allowShortCircuit: true,
+        allowTernary: true,
+    },
     ["no-unused-vars"]: {
         args: "none",
         caughtErrors: "none",
@@ -42,6 +50,10 @@ module.exports = {
     },
     ["quotes"]: {
         avoidEscape: true,
+    },
+    ["space-before-function-paren"]: {
+        anonymous: "always",
+        named: "never",
     },
     ["@typescript-eslint/ban-types"]: {
         types: {

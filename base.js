@@ -65,10 +65,7 @@ module.exports = {
         "babel/no-invalid-this": "error",
         "babel/no-unused-expressions": [
             "error",
-            {
-                allowShortCircuit: true,
-                allowTernary: true,
-            },
+            options["no-unused-expressions"],
         ],
         "babel/object-curly-spacing": ["error", "never"],
         "babel/quotes": ["error", "double", options.quotes],
@@ -100,10 +97,7 @@ module.exports = {
         ], // http://eslint.org/docs/rules/comma-dangle
         "comma-spacing": [
             "error",
-            {
-                after: true,
-                before: false,
-            },
+            options["comma-spacing"],
         ], // http://eslint.org/docs/rules/comma-spacing
         "comma-style": ["error", "last"], // http://eslint.org/docs/rules/comma-style
         "complexity": [
@@ -469,10 +463,7 @@ module.exports = {
         // Handled by babel/no-unused-expressions
         "no-unused-expressions": [
             "off",
-            {
-                allowShortCircuit: true,
-                allowTernary: true,
-            },
+            options["no-unused-expressions"],
         ], // http://eslint.org/docs/rules/no-unused-expressions
         "no-unused-labels": "error", // http://eslint.org/docs/rules/no-unused-labels
         "no-unused-vars": [
@@ -627,10 +618,7 @@ module.exports = {
         "space-before-blocks": ["error", "always"], // http://eslint.org/docs/rules/space-before-blocks
         "space-before-function-paren": [
             "error",
-            {
-                anonymous: "always",
-                named: "never",
-            },
+            options["space-before-function-paren"],
         ], // http://eslint.org/docs/rules/space-before-function-paren
         "space-in-parens": ["error", "never"], // http://eslint.org/docs/rules/space-in-parens
         "space-infix-ops": "error", // http://eslint.org/docs/rules/space-infix-ops
