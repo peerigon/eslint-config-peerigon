@@ -609,7 +609,11 @@ module.exports = {
         "require-atomic-updates": "error", // https://eslint.org/docs/rules/require-atomic-updates
         "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
-        "require-unicode-regexp": "error", // https://eslint.org/docs/rules/require-unicode-regexp
+        // We would like to use this rule but there is currently a bug that would show
+        // an ESLint error at a lot of RegExp, like /\./u
+        // See https://github.com/DmitrySoshnikov/regexp-tree/issues/162
+        // TODO: Enables this rule once the issue gets addressed
+        "require-unicode-regexp": "off", // https://eslint.org/docs/rules/require-unicode-regexp
         "require-yield": "off", // http://eslint.org/docs/rules/require-yield
         "rest-spread-spacing": ["error", "never"], // http://eslint.org/docs/rules/rest-spread-spacing
         // Handled by babel/semi
