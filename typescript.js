@@ -85,7 +85,7 @@ module.exports = {
                         },
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
-                "@typescript-eslint/explicit-module-boundary-types": ["error", {
+                "@typescript-eslint/explicit-module-boundary-types": ["off", {
                     allowDirectConstAssertionInArrowFunctions: true,
                     allowHigherOrderFunctions: true,
                     allowTypedFunctionExpressions: true,
