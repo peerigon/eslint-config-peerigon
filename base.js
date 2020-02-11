@@ -536,9 +536,9 @@ module.exports = {
                 prev: ["const", "let", "var"],
             },
             {
-                blankLine: "never",
-                next: ["singleline-const", "singleline-let", "singleline-var"],
-                prev: ["singleline-const", "singleline-let", "singleline-var"],
+                blankLine: "any",
+                next: ["const", "let", "var"],
+                prev: ["const", "let", "var"],
             },
             {
                 blankLine: "always",
