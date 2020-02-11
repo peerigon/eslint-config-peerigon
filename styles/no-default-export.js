@@ -5,7 +5,7 @@ const globPatterns = require("../glob-patterns.js");
 
 module.exports = {
     rules: {
-        "import/no-default-export": "error"
+        "import/no-default-export": "warn"
     },
     overrides: [
         {

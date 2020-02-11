@@ -14,14 +14,13 @@ module.exports = {
     },
     rules: {
         /* eslint-enable sort-keys */
-        "flowtype/boolean-style": ["error", "boolean"],
+        "flowtype/boolean-style": ["warn", "boolean"],
         "flowtype/define-flow-type": "warn",
-        "flowtype/delimiter-dangle": ["error", "never"],
-        "flowtype/generic-spacing": ["error", "never"],
-        "flowtype/no-dupe-keys": "error",
-        "flowtype/no-primitive-constructor-types": "error",
-        "flowtype/no-weak-types": "error",
-        "flowtype/object-type-delimiter": ["error", "comma"],
+        "flowtype/delimiter-dangle": ["warn", "never"],
+        "flowtype/generic-spacing": ["warn", "never"],
+        "flowtype/no-primitive-constructor-types": "warn",
+        "flowtype/no-weak-types": "warn",
+        "flowtype/object-type-delimiter": ["warn", "comma"],
         // If we don't enforce return type annotation, we don't need to enforce param types
         // See below for reasoning
         "flowtype/require-parameter-type": "off",
@@ -29,7 +28,7 @@ module.exports = {
         // Also pure lambda functions don't need a return type
         "flowtype/require-return-type": "off",
         "flowtype/require-valid-file-annotation": [
-            "error",
+            "warn",
             "always",
             {
                 annotationStyle: "line",
@@ -37,13 +36,13 @@ module.exports = {
         ],
         // It's ok to not declare types inside functions
         "flowtype/require-variable-type": "off",
-        "flowtype/semi": ["error", "always"],
+        "flowtype/semi": ["warn", "always"],
         "flowtype/sort-keys": "off",
-        "flowtype/space-after-type-colon": ["error", "always"],
-        "flowtype/space-before-generic-bracket": ["error", "never"],
-        "flowtype/space-before-type-colon": ["error", "never"],
+        "flowtype/space-after-type-colon": ["warn", "always"],
+        "flowtype/space-before-generic-bracket": ["warn", "never"],
+        "flowtype/space-before-type-colon": ["warn", "never"],
         "flowtype/type-id-match": "off",
-        "flowtype/union-intersection-spacing": ["error", "always"],
+        "flowtype/union-intersection-spacing": ["warn", "always"],
         "flowtype/use-flow-type": "warn",
     },
 };

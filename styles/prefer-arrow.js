@@ -6,10 +6,10 @@ module.exports = {
         "prefer-arrow"
     ],
     rules: {
-        "func-style": ["error", "expression"], // http://eslint.org/docs/rules/func-style
+        "func-style": ["warn", "expression"], // http://eslint.org/docs/rules/func-style
         // https://github.com/TristonJ/eslint-plugin-prefer-arrow
         "prefer-arrow/prefer-arrow-functions": [
-            "error",
+            "warn",
             {
               "disallowPrototype": false,
               "singleReturnOnly": false,

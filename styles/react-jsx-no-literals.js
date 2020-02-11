@@ -6,7 +6,7 @@ const globPatterns = require("../glob-patterns.js");
 module.exports = {
     rules: {
         /* eslint-enable sort-keys */
-        "react/jsx-no-literals": "error",  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
+        "react/jsx-no-literals": "warn",  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
         /* eslint-disable sort-keys */
     },
     overrides: [
