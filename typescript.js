@@ -118,8 +118,8 @@ module.exports = {
                     "error",
                     {
                         format: [
-                            "strictCamelCase",
-                            "StrictPascalCase",
+                            "camelCase",
+                            "PascalCase",
                             "UPPER_CASE",
                         ],
                         leadingUnderscore: "allow",
@@ -128,14 +128,14 @@ module.exports = {
                     },
                     {
                         format: [
-                            "strictCamelCase",
+                            "camelCase",
                         ],
                         selector: "function",
                     },
                     {
                         format: [
-                            "strictCamelCase",
-                            "StrictPascalCase"
+                            "camelCase",
+                            "PascalCase"
                         ],
                         selector: "parameter",
                     },
@@ -146,16 +146,16 @@ module.exports = {
                             regex: "^UNSAFE_",
                         },
                         format: [
-                            "strictCamelCase",
+                            "camelCase",
                         ],
                         selector: "method",
                     },
                     {
-                        format: ["StrictPascalCase"],
+                        format: ["PascalCase"],
                         selector: "typeLike",
                     },
                     {
-                        format: ["StrictPascalCase"],
+                        format: ["PascalCase"],
                         selector: "enumMember",
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
