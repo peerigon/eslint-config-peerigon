@@ -188,7 +188,7 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
         "peerigon",
         "peerigon/react",
         "prettier", // add this and...
-        "prettier/react", // ...this if you're using Prettier
+        "prettier/react" // ...this if you're using Prettier
     ],
     "root": true
 }
@@ -215,7 +215,7 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
         // See https://github.com/peerigon/eslint-config-peerigon/issues/23#issuecomment-472614432
         "peerigon/styles/prefer-arrow",
         "prettier", // add this and...
-        "prettier/typescript", // ...this if you're using Prettier
+        "prettier/@typescript-eslint" // ...this if you're using Prettier
     ],
     "root": true
 }
@@ -249,7 +249,7 @@ Rules for [Flowtype](https://flowtype.org/).
         "peerigon",
         "peerigon/flowtype",
         "prettier", // add this and...
-        "prettier/flowtype", // ...this if you're using Prettier
+        "prettier/flowtype" // ...this if you're using Prettier
     ],
     "root": true
 }
@@ -402,7 +402,7 @@ In order to avoid conflicts between Prettier and our rules, you should always ad
         "peerigon/react",
         // prettier must be at the end
         "prettier",
-        "prettier/typescript",
+        "prettier/@typescript-eslint",
         "prettier/react"
     ],
     "root": true,
