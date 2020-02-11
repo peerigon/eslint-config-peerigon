@@ -1,3 +1,38 @@
+# [26.0.0-beta.4](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0-beta.3...v26.0.0-beta.4) (2020-02-11)
+
+
+### Bug Fixes
+
+* **base:** Temporarily disable require-unicode-regexp ([b248df7](https://github.com/peerigon/eslint-config-peerigon/commit/b248df7736fd7a4ccf7914a418c46cd533ec052a))
+* Disable no-return-await ([14db3eb](https://github.com/peerigon/eslint-config-peerigon/commit/14db3eb268b4ffd1923958fb1952248ae77dbbec))
+
+
+### Features
+
+* **typescript:** Add new TypeScript rules ([9e77b24](https://github.com/peerigon/eslint-config-peerigon/commit/9e77b24ef7ff906c8a7259ba9b33ebb434dc45e7))
+* **typescript:** Disable @typescript-eslint/explicit-module-boundary-types again ([a88a683](https://github.com/peerigon/eslint-config-peerigon/commit/a88a6833367c45a85a8497fa207f4395c82fe736))
+* **typescript:** Enforce naming convention ([1fb0844](https://github.com/peerigon/eslint-config-peerigon/commit/1fb0844068673f22e6c2bcccb86852b10bb2aa8f))
+* **typescript:** Improve TypeScript support in base ESLint rules ([6763671](https://github.com/peerigon/eslint-config-peerigon/commit/6763671c22c9d5512f53294e33fcbc838fd12012))
+* Add @typescript-eslint/explicit-module-boundary-types ([3f106a0](https://github.com/peerigon/eslint-config-peerigon/commit/3f106a050bbfa2a3466fe985e1bd810856afb0b0))
+
+
+### BREAKING CHANGES
+
+* **typescript:** There are new rules for TypeScript code:
+- [no-dynamic-delete](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md)
+- [no-extra-non-null-assertion](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-non-null-assertion.md)
+- [no-floating-promises](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md)
+- [no-non-null-asserted-optional-chain](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.md)
+- [no-unnecessary-condition](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-condition.md)
+- [prefer-as-con](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-as-const.md)
+- [prefer-nullish-coalescing](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-nullish-coalescing.md)
+- [prefer-optional-chain](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-optional-chain.md)
+- [restrict-template-expressions](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md)
+- [return-await](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md)
+- [switch-exhaustiveness-check](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/switch-exhaustiveness-check.md)
+* **typescript:** The new rule enforces the consistent use of camelCase, PascalCase and UPPER_CASE for variable, property and member names. Additionally, only PascalCase is allowed for type-like structures.
+* Exported functions now need to specify an explicit return type. This enforces everyone to be explicit about the public interface of the module. This is likely to increase the developer experience because type errors will show up closer to the actual error.
+
 # [26.0.0-beta.3](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0-beta.2...v26.0.0-beta.3) (2020-02-06)
 
 
