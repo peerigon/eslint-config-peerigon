@@ -258,7 +258,7 @@ module.exports = {
                     allowNullable: false,
                     allowNumber: true,
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
-                "@typescript-eslint/return-await": ["error", "always"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
+                "@typescript-eslint/return-await": ["error", "in-try-catch"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
                 "@typescript-eslint/semi": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
                 "@typescript-eslint/space-before-function-paren": ["error", options["space-before-function-paren"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
                 "@typescript-eslint/strict-boolean-expressions": [
