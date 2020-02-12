@@ -197,7 +197,8 @@ module.exports = {
             ]
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
         "import/prefer-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-        "import/unambiguous": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
+        // This rule was just too impractical since code bases often mix commonjs modules and ecmascript modules
+        "import/unambiguous": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
         "indent": [
             "warn",
             4,

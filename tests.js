@@ -6,7 +6,12 @@ const options = require("./options.js");
 module.exports = {
     env: {
         mocha: true,
-        jest: true
+        jest: true,
+    },
+    globals: {
+        cy: true,
+        Cypress: true,
+        assert: true
     },
     rules: {
         /* eslint-enable sort-keys */
@@ -14,6 +19,8 @@ module.exports = {
         "babel/no-unused-expressions": "off",
         // In order to make mocks more condensed, single line blocks are allowed in tests
         "brace-style": ["warn", "1tbs", { allowSingleLine: true }],
+        // In test scenarios this kind of module pattern is more usual
+        "import/no-unassigned-import": "off",
         // Long tests are not necessarily a problem, but there is a certain limit
         "max-lines": "off",
         // mocha blocks are nested all the way down

@@ -328,7 +328,6 @@ module.exports = {
                 // be necessary to import the module so that TypeScript finds the typings that should be extended.
                 // This is a better alternative to the triple-slash directive
                 "import/no-unassigned-import": "off",
-                "import/unambiguous": "off", // produces false positive with some TypeScript syntax
             },
         },
         {
@@ -338,6 +337,8 @@ module.exports = {
                 "@typescript-eslint/no-explicit-any": "off",
                 // Non-null assertions can be handy when testing instances of Map
                 "@typescript-eslint/no-non-null-assertion": "off",
+                // chai uses these as assertions
+                "@typescript-eslint/no-unused-expressions": "off",
                 // Passing functions around like this can be common with mocking
                 "@typescript-eslint/unbound-method": "off",
             },
