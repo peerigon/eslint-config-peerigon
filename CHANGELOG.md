@@ -1,3 +1,15 @@
+# [27.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0...v27.0.0) (2020-02-12)
+
+
+### Bug Fixes
+
+* **typescript:** Do not set tsconfig.json by default ([6b35fd4](https://github.com/peerigon/eslint-config-peerigon/commit/6b35fd420d98ae9b6837fabdb5c88d13ec1254fa))
+
+
+### BREAKING CHANGES
+
+* **typescript:** We don't set the tsconfig.json now by default. Every project needs to specify it explicitly. This prevents some bugs that would be otherwise hard to understand. We also added a note to the README which should help people to set it up.
+
 # [26.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.3.1...v26.0.0) (2020-02-12)
 
 
