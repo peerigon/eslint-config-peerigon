@@ -62,26 +62,12 @@ Developers take shortcuts. And that's ok because at the end of the day we have t
 
 This means that this code is potentially problematic, but you don't have to fix it right away. You should keep the warning and come back later to refactor it (e.g. during a refactoring sprint). The amount of warnings is also a good indicator for technical debt.
 
-For example, our linting rules will complain about:
-
-- **too many dependencies in a file** because it's usually a sign that you should break the module into more granular pieces
-- **high [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity)** because it's hard for humans to anticipate all possibilities.
-- **`process.exit(1)`** because throwing an error is often the better alternative
-- ...
-
-We know that for every warning there is a legitimate use case:
-
-- Application entry files usually have a lot of imports and almost no actual code.
-- Unknown/unreliable data sources often cause unavoidable cyclomatic complexity.
-- Within `process.on("uncaughtException", ...` maybe we don't want to print the regular stack trace.
-
 If you think that there is a good reason for deviating from the standard path, disable the warning and put an explanation above that comment why it's ok to disable the rule in that case, like:
 
 ```js
-// Validation logic typically contains a lot of if() checks.
-// It's better to keep this complexity hidden behind a single function.
-// eslint-disable-next-line complexity
-function validate() {
+// The API returns snakecase properties
+// eslint-disable-next-line babel/camelcase
+function fetchUsers() {
     // ...
 }
 ```
@@ -102,7 +88,7 @@ Sometimes it makes sense to disable a rule within a specifc file. In that case y
 /* eslint-disable [rule-code] */
 ```
 
-In rare cases, it makes sense to disable a rule for the whole project. For instance, if you work with JSON data coming from a foreign API that uses underscore property names.
+In rare cases, it makes sense to disable a rule for the whole project. For instance, if you work with JSON data coming from a foreign API that uses snakecase property names.
 
 If you don't agree with a rule, please do not just disable the rule. Often there are good reasons and the current setting is the result of years of experience. It's better to create an issue here to start a discussion about the pros and cons of a rule.
 
@@ -132,10 +118,6 @@ Add an `.eslintrc.json` to the project's root folder:
         "peerigon",
         "prettier" // add this at the end of 'extends' if you're using Prettier
     ],
-    "env": {
-        // Enable node globals
-        "node": true
-    },
     // Do not search for further eslint configs in upper directories
     "root": true
 }
@@ -195,13 +177,14 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 ```
 
 *We recommend using [`peerigon/styles/react-jsx-no-literals`](#peerigonstylesreact-jsx-no-literals) if you're using i18n in your project.*
+*You can use [`peerigon/styles/react-jsx-no-bind`](#peerigonstylesreact-jsx-no-bind) if you're using `memo` and `shouldComponentUpdate` a lot.*
 
 ### [`peerigon/typescript`](typescript.js)
 
-**Important: Requires [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin), [`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) and [`eslint-import-resolver-typescript`](https://github.com/alexgorbatchev/eslint-import-resolver-typescript) as project dependency.**
+**Important: Requires [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) as project dependency.**
 
 ```
-npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript --save-dev
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
 ```
 
 Rules for [TypeScript](https://www.typescriptlang.org/).
