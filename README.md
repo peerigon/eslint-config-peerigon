@@ -189,6 +189,8 @@ npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
 
 Rules for [TypeScript](https://www.typescriptlang.org/).
 
+**⚠️ Attention:** These rules require your `tsconfig.json`. Specify the path in `parserOptions.project` (see also [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject) for more information). *The path should be relative to the folder where `eslint` is executed.*
+
 ```js
 {
     "extends": [
@@ -200,7 +202,12 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
         "prettier", // add this and...
         "prettier/@typescript-eslint" // ...this if you're using Prettier
     ],
-    "root": true
+    "parserOptions": {
+        // Relative to the folder where eslint is executed
+        // See https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
+        "project": "./tsconfig.json"
+    },
+    "root": true,
 }
 ```
 
@@ -215,6 +222,16 @@ You need to add `--ext js,ts,tsx` to the `test:lint` script:
 ```
 
 *We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow) because arrow functions (or function expressions in general) can leverage [TypeScript's contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing).*
+
+Do you see an error that looks like this?
+
+```
+Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
+The file does not match your project config: ...
+The file must be included in at least one of the projects provided
+```
+
+This is a sign that ESLint is trying to lint a file that is not included by your `tsconfig.json`. You need to adjust either `parserOptions.project` or `include` of the referenced `tsconfig.json`.
 
 ### [`peerigon/flowtype`](flowtype.js)
 
