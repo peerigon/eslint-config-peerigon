@@ -570,7 +570,8 @@ module.exports = {
         // Handled by babel/quotes
         "quotes": ["off", "double", options.quotes], // http://eslint.org/docs/rules/quotes
         "radix": "off", // http://eslint.org/docs/rules/radix
-        "require-atomic-updates": "warn", // https://eslint.org/docs/rules/require-atomic-updates
+        // This rule would be nice but there are too many false positives :(
+        "require-atomic-updates": "off", // https://eslint.org/docs/rules/require-atomic-updates
         "require-await": "off", // http://eslint.org/docs/rules/require-await
         "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
         // We would like to use this rule but there is currently a bug that would show
