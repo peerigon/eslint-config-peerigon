@@ -1,9 +1,71 @@
-## [25.3.1](https://github.com/peerigon/eslint-config-peerigon/compare/v25.3.0...v25.3.1) (2020-02-01)
+# [26.0.0-beta.3](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0-beta.2...v26.0.0-beta.3) (2020-02-06)
+
+
+### Features
+
+* Disable some jsdoc rules when using TypeScript ([82220fa](https://github.com/peerigon/eslint-config-peerigon/commit/82220fa862bcb2d3298a1c076b7a7c50b2794491))
+
+# [26.0.0-beta.2](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0-beta.1...v26.0.0-beta.2) (2020-02-06)
+
+
+### Features
+
+* Improve jsdoc rules ([0a6694d](https://github.com/peerigon/eslint-config-peerigon/commit/0a6694d061e4553ebde0653322b7567a69956e44))
+
+
+### BREAKING CHANGES
+
+* Use param instead of arg and argument.
+
+# [26.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v25.3.0...v26.0.0-beta.1) (2020-02-06)
 
 
 ### Bug Fixes
 
-* **typescript:** Do not "fix" 'any' to 'unknown' ([154a42b](https://github.com/peerigon/eslint-config-peerigon/commit/154a42b))
+* **base:** Increase soft limit of complexity rule ([a78a702](https://github.com/peerigon/eslint-config-peerigon/commit/a78a702f5b5d16ff9b11237ee9c059618f80eb32))
+* Fine-tune soft limits of max-lines and max-dependencies ([a123f41](https://github.com/peerigon/eslint-config-peerigon/commit/a123f41676aad7b3d56ff35512774fd4860093d9))
+* **typescript:** Do not "fix" 'any' to 'unknown' ([154a42b](https://github.com/peerigon/eslint-config-peerigon/commit/154a42b1de215ffa763f7da32a66588695d5dad0))
+
+
+### chore
+
+* Refactor glob-patterns module ([1db1f22](https://github.com/peerigon/eslint-config-peerigon/commit/1db1f22dedf8a9d1c6cc7342391f3774288e93dc))
+* Remove support for Node<10 ([6c45b41](https://github.com/peerigon/eslint-config-peerigon/commit/6c45b41233bdc381bbc9916193cf3b07914fc8bb))
+* Update dependencies ([b52305e](https://github.com/peerigon/eslint-config-peerigon/commit/b52305ee79c201371d876e58d57a1163ec568ed4))
+
+
+### Features
+
+* Add styles/no-default-export ([d8b0242](https://github.com/peerigon/eslint-config-peerigon/commit/d8b0242069d326e12c3dfb7247867c5dfd336d49))
+* Add styles/no-null ([a30511b](https://github.com/peerigon/eslint-config-peerigon/commit/a30511b1ea55dc8081375ffe0de245f34cc54e79))
+* Improve prettier support ([1cd6537](https://github.com/peerigon/eslint-config-peerigon/commit/1cd6537aa59fd53e9b3f40caa1f72b52a4a8dddf))
+* **base:** Add no-dupe-else-if ([0ee8136](https://github.com/peerigon/eslint-config-peerigon/commit/0ee8136bbff0e53d08def5bc818054b29bea097b))
+* **base:** Add prefer-exponentiation-operator ([fd41a01](https://github.com/peerigon/eslint-config-peerigon/commit/fd41a01e0692670375d43009f45704b02d02c1c3))
+* **base:** Add prefer-regex-literals ([01599bd](https://github.com/peerigon/eslint-config-peerigon/commit/01599bda47b1197fca321780a644c6a5693a54af))
+* **base:** Add require-atomic-updates ([69f2c36](https://github.com/peerigon/eslint-config-peerigon/commit/69f2c36d0d9b57d32a98f617c33cc407423b2904))
+* **base:** Add require-unicode-regexp ([0b44ba5](https://github.com/peerigon/eslint-config-peerigon/commit/0b44ba50add0a1a8b378c8f311000c2558fe3f54))
+* **base:** Disallow assignments of imports ([0e6af86](https://github.com/peerigon/eslint-config-peerigon/commit/0e6af861370cd95bbff8dc0f96c112cb3a26ba83))
+* **base:** Disallow return in constructors ([f9edbbc](https://github.com/peerigon/eslint-config-peerigon/commit/f9edbbcce36703d644b9ada2315e5be310ae7102))
+* **base:** Disallow return in setters ([f3f574c](https://github.com/peerigon/eslint-config-peerigon/commit/f3f574cfcff59a8e65efda84658a746246720e3d))
+* **base:** Require grouping of setters and getters ([94792f2](https://github.com/peerigon/eslint-config-peerigon/commit/94792f2a8ab22bb777fa70ba09ef96ecefee0e38))
+* Add bunch of JSDoc rules ([680550e](https://github.com/peerigon/eslint-config-peerigon/commit/680550e6415658081bebc89fd834081fecc61f96))
+
+
+### BREAKING CHANGES
+
+* The prettier config now uses tabs instead of spaces. This is not actually breaking since Prettier will just format your code in a different way, but it will produce a lot of noise.
+* globPatterns.js has been renamed to glob-patterns.js
+* **base:** Require u flag in all regexes. The u flag adds unicode support and reports invalid regex patterns.
+* **base:** ESLint now reports a potential unsafe use of +=,-=,*=,/= in combination with async await
+* **base:** Regex literals are now preferred over new RegExp() if the regex is not dynamic.
+* **base:** The exponentiation operator is now preferred over Math.pow()
+* Support for Node versions below 10 has been removed.
+* **base:** Setters can't return values. This is enforced with a linting rule now. See https://eslint.org/docs/rules/no-setter-return
+* **base:** Assignments of imports are now disallowed. They throw a runtime error anyway. See https://eslint.org/docs/rules/no-import-assign
+* **base:** Certain If-else usages that were an error anyway are now a linting error. See ttps://eslint.org/docs/rules/no-dupe-else-if
+* **base:** Returning values from constructors is not allowed anymore. See https://eslint.org/docs/rules/no-constructor-return
+* **base:** Setters and getters now need to be grouped together. See https://eslint.org/docs/rules/grouped-accessor-pairs
+* Remove official ESLint 5 support
 
 # [25.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v25.2.0...v25.3.0) (2020-02-01)
 

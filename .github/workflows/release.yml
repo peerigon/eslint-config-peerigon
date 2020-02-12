@@ -3,7 +3,7 @@ on:
     push:
         branches:
             - master
-            - next
+            - beta
 jobs:
     prepare:
         runs-on: ubuntu-latest
@@ -14,12 +14,15 @@ jobs:
         needs: prepare
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
+            - uses: actions/checkout@v2
             - name: npm install
               run: |
                 npm install --ignore-scripts
-                npm install @semantic-release/changelog@3 @semantic-release/git@7 --ignore-scripts --no-save
-            - uses: codfish/semantic-release-action@v1
+                npm install @semantic-release/changelog @semantic-release/git --ignore-scripts --no-save
+            - name: semantic-release
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+              run: |
+                npx semantic-release
+

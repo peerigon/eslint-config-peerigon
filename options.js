@@ -1,11 +1,15 @@
 "use strict";
 
-const options = {
+module.exports = {
     /* eslint-enable sort-keys */
     ["camelcase"]: {
         allow: ["^UNSAFE_"], // Allows React UNSAFE_ methods
         ignoreDestructuring: false,
         properties: "always"
+    },
+    ["comma-spacing"]: {
+        after: true,
+        before: false,
     },
     ["indent"]: {
         ArrayExpression: 1,
@@ -30,9 +34,13 @@ const options = {
         outerIIFEBody: 1,
     },
     ["max-lines"]: {
-        max: 300,
+        max: 700,
         skipBlankLines: true,
         skipComments: true,
+    },
+    ["no-unused-expressions"]: {
+        allowShortCircuit: true,
+        allowTernary: true,
     },
     ["no-unused-vars"]: {
         args: "none",
@@ -42,8 +50,35 @@ const options = {
     },
     ["quotes"]: {
         avoidEscape: true,
+    },
+    ["space-before-function-paren"]: {
+        anonymous: "always",
+        named: "never",
+    },
+    ["@typescript-eslint/ban-types"]: {
+        types: {
+            // Default options taken from https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/rules/ban-types.ts
+            String: {
+                message: 'Use string instead',
+                fixWith: 'string',
+            },
+            Boolean: {
+                message: 'Use boolean instead',
+                fixWith: 'boolean',
+            },
+            Number: {
+                message: 'Use number instead',
+                fixWith: 'number',
+            },
+            Object: {
+                message: 'Use Record<string, unknown> instead',
+                fixWith: 'Record<string, unknown>',
+            },
+            Symbol: {
+                message: 'Use symbol instead',
+                fixWith: 'symbol',
+            },
+        },
     }
     /* eslint-disable sort-keys */
 };
-
-module.exports = options;
