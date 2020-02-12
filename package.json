@@ -5,7 +5,7 @@
   "main": "base.js",
   "scripts": {
     "unused": "eslint-find-rules -u -n",
-    "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" ."
+    "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" ."
   },
   "repository": {
     "type": "git",
