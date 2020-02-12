@@ -1,3 +1,10 @@
+## [27.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.0.0...v27.0.1) (2020-02-12)
+
+
+### Bug Fixes
+
+* Add new example `.editorconfig` ([5891b4c](https://github.com/peerigon/eslint-config-peerigon/commit/5891b4c78b2a0007d393dd3490d350c4d8c700a5))
+
 # [27.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v26.0.0...v27.0.0) (2020-02-12)
 
 
