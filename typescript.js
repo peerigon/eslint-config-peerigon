@@ -128,6 +128,10 @@ module.exports = {
                         selector: "function",
                     },
                     {
+                        filter: {
+                            match: false,
+                            regex: "^_+$",
+                        },
                         format: [
                             "camelCase",
                             "PascalCase"
