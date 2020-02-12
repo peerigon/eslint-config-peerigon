@@ -344,17 +344,17 @@ export const NULL = null;
     ],
 ```
 
-### [`peerigon/styles/react-jsx-allow-bind`](styles/react-jsx-allow-bind.js)
+### [`peerigon/styles/react-jsx-no-bind`](styles/react-jsx-no-bind.js)
 
 **Important: Use it in combination with [`peerigon/react`](react.js).**
 
-Depending on the way you write your components, it might be ok to create functions during `render()`. Use it if you're not using things like `React.memo()` or `shouldComponentUpdate` a lot.
+Depending on the way you write your components, it might be not ok to create functions during `render()`. Use it if you're using things like `React.memo()` or `shouldComponentUpdate` a lot.
 
 ```js
     "extends": [
         "peerigon",
         "peerigon/react",
-        "peerigon/styles/react-jsx-allow-bind"
+        "peerigon/styles/react-jsx-no-bind"
     ],
 ```
 
