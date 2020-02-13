@@ -422,17 +422,18 @@ const Hello = <div>{'test'}</div>;
 
 There is a [Prettier](https://prettier.io/) config in this repository that corresponds to our linting rules as much as possible. Add a `.prettierrc` file to your repository with the following content:
 
-```json
+```js
 "eslint-config-peerigon/prettier"
 ```
 
 In order to avoid conflicts between Prettier and our rules, you should always add **prettier rules at the end of `extends`**. For example, in a TypeScript + React project you would use the following configuration:
 
-```json
+```js
 {
     "extends": [
         "peerigon",
         "peerigon/typescript",
+        "peerigon/styles/prefer-arrow",
         "peerigon/react",
         // prettier must be at the end
         "prettier",
