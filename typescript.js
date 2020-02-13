@@ -143,7 +143,7 @@ module.exports = {
                 "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-boolean-literal-compare.md
                 "@typescript-eslint/no-unnecessary-condition": ["warn", {
                     allowConstantLoopConditions: true,
-                    checkArrayPredicates: false,
+                    checkArrayPredicates: true,
                     ignoreRhs: true,
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-condition.md
                 "@typescript-eslint/no-unnecessary-qualifier": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md
@@ -192,7 +192,7 @@ module.exports = {
                 "@typescript-eslint/require-array-sort-compare": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-array-sort-compare.md
                 "@typescript-eslint/require-await": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
                 "@typescript-eslint/restrict-plus-operands": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md
-                "@typescript-eslint/restrict-template-expressions": ["warn", {
+                "@typescript-eslint/restrict-template-expressions": ["off", {
                     allowBoolean: false,
                     allowNullable: false,
                     allowNumber: true,
