@@ -1,3 +1,10 @@
+## [27.1.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.0...v27.1.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* **react:** Fix problem with escape hatch in styles/react-jsx-no-literals ([993568b](https://github.com/peerigon/eslint-config-peerigon/commit/993568b6884b068407e01443d8551be4467dc8d6))
+
 # [27.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.0.1...v27.1.0) (2020-02-13)
 
 
