@@ -1,3 +1,11 @@
+# [27.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.0.1...v27.1.0) (2020-02-13)
+
+
+### Features
+
+* **typescript:** Disable no-extraneous-class ([c4f49eb](https://github.com/peerigon/eslint-config-peerigon/commit/c4f49eb6a8b752322adb299b568d28526087ae0d))
+* Allow exceptions for naming conventions in TypeScript projects ([89de83b](https://github.com/peerigon/eslint-config-peerigon/commit/89de83bc54a1809de6e0a0ec7bb20cc3e0a41067))
+
 ## [27.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.0.0...v27.0.1) (2020-02-12)
 
 
