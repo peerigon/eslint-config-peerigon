@@ -1,3 +1,10 @@
+## [27.1.2](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.1...v27.1.2) (2020-02-13)
+
+
+### Bug Fixes
+
+* **typescript:** Disable @typescript-eslint/require-array-sort-compare ([e6ac2e1](https://github.com/peerigon/eslint-config-peerigon/commit/e6ac2e1b9015504ba3dd3dcf79cb8234fbbe7a5c))
+
 ## [27.1.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.0...v27.1.1) (2020-02-13)
 
 
