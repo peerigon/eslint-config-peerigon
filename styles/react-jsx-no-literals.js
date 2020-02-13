@@ -24,6 +24,7 @@ module.exports = {
             rules: {
                 /* eslint-enable sort-keys */
                 // It's quite common in tests to use example strings
+                "react/jsx-curly-brace-presence": ["warn", "never"],
                 "react/jsx-no-literals": "off",
                 /* eslint-disable sort-keys */
             }
