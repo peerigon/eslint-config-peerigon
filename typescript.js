@@ -191,7 +191,7 @@ module.exports = {
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
                 "@typescript-eslint/quotes": ["warn", "double", options.quotes], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/quotes.md
-                "@typescript-eslint/require-array-sort-compare": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-array-sort-compare.md
+                "@typescript-eslint/require-array-sort-compare": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-array-sort-compare.md
                 "@typescript-eslint/require-await": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
                 "@typescript-eslint/restrict-plus-operands": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md
                 "@typescript-eslint/restrict-template-expressions": ["warn", {
