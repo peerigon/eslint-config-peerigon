@@ -1,3 +1,12 @@
+## [27.1.3](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.2...v27.1.3) (2020-02-13)
+
+
+### Bug Fixes
+
+* **base:** Relax some promise rules ([8b357e1](https://github.com/peerigon/eslint-config-peerigon/commit/8b357e1a16f583ba68a980ef27666ab18bcba599))
+* **react:** Fix minor issue when using styles/react-jsx-no-literals ([049cac6](https://github.com/peerigon/eslint-config-peerigon/commit/049cac6997c59f6c093b750700cb72e636c0f7e1))
+* **typescript:** Disable @typescript-eslint/restrict-template-expressions ([efbb8b3](https://github.com/peerigon/eslint-config-peerigon/commit/efbb8b3728aad709b0a9d3f3461de369cf0bd8c6))
+
 ## [27.1.2](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.1...v27.1.2) (2020-02-13)
 
 
