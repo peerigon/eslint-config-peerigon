@@ -116,10 +116,8 @@ module.exports = {
                 "@typescript-eslint/no-extra-non-null-assertion": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-non-null-assertion.md
                 "@typescript-eslint/no-extra-parens": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
                 "@typescript-eslint/no-extraneous-class": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extraneous-class.md
-                // If the error should not be handled, it's ok to add
-                // eslint-disable-next-line @typescript-eslint/no-floating-promises
-                // This rule forces developers to think about the error case.
-                "@typescript-eslint/no-floating-promises": ["warn", {
+                // This rule might be a good idea, but often it's ok to let the global error handler handle it
+                "@typescript-eslint/no-floating-promises": ["off", {
                     ignoreVoid: true
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
                 "@typescript-eslint/no-for-in-array": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md

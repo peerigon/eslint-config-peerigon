@@ -554,9 +554,9 @@ module.exports = {
         // Using regular string concatentation can sometimes be easier to read
         // We leave it up to the developer to decide
         "prefer-template": "off", // http://eslint.org/docs/rules/prefer-template
-        "promise/always-return": "warn", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/always-return.md
+        "promise/always-return": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/always-return.md
         "promise/avoid-new": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/avoid-new.md
-        "promise/catch-or-return": ["warn", {"allowFinally":  true}], // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/catch-or-return.md
+        "promise/catch-or-return": ["off", {"allowFinally":  true}], // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/catch-or-return.md
         "promise/no-callback-in-promise": "warn", // https://github.com/xjamundx/eslint-plugin-promise
         "promise/no-native": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-native.md
         // Nesting is rarely necessary and often the sign of confusing code.
