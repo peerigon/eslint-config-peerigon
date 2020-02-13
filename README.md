@@ -88,14 +88,48 @@ Sometimes it makes sense to disable a rule within a specifc file. In that case y
 /* eslint-disable [rule-code] */
 ```
 
-In rare cases, it makes sense to disable a rule for the whole project. For instance, if you work with JSON data coming from a foreign API that uses snakecase property names.
-
 If you don't agree with a rule, please do not just disable the rule. Often there are good reasons and the current setting is the result of years of experience. It's better to create an issue here to start a discussion about the pros and cons of a rule.
 
 ### Different styles
 
 We acknowledge that there are certain rules where there are no actual pros and cons or where there is no clear winner. You just have to decide for one style and stick with it. We also know that some rules make sense in one project, but don't make sense in another project. That's why we also provide a list of [accepted custom styles](#styles) (see also [this discussion](https://github.com/peerigon/eslint-config-peerigon/issues/11)) which you can pick.
 
+### Naming conventions for properties
+
+Sometimes we're not in full control over the naming conventions in our codebase, for instance if data is coming from a foreign API. While it often is preferable to transform property names into camelCase, it might not be practical. In these situations you can disable the check for properties like this:
+
+```js
+const options = require("eslint-config-peerigon/options.js");
+
+module.exports = {
+    /* ... */
+    rules: {
+        // The API uses snake_case as properties
+        "babel/camelcase": ["warn", {
+            ...options["camelcase"],
+            properties: "never"
+        }]
+    },
+};
+```
+
+**In TypeScript projects:**
+
+```js
+const options = require("eslint-config-peerigon/options.js");
+
+module.exports = {
+    /* ... */
+    rules: {
+        // The API uses snake_case as properties
+        "@typescript-eslint/naming-convention": [
+            "warn",
+            options["@typescript-eslint/naming-convention"].ignoreProperties,
+            ...options["@typescript-eslint/naming-convention"].defaultRules,
+        ],
+    },
+};
+```
 
 ## Provided configs
 

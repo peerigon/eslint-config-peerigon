@@ -38,7 +38,8 @@ module.exports = {
                         "allowSingleLine": false,
                     }
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md
-                "@typescript-eslint/camelcase": ["warn", options["camelcase"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
+                // Handled by @typescript-eslint/naming-convention
+                "@typescript-eslint/camelcase": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
                 "@typescript-eslint/class-name-casing": [
                     "warn",
                     {
@@ -98,52 +99,7 @@ module.exports = {
                 "@typescript-eslint/member-ordering": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
                 "@typescript-eslint/naming-convention": [
                     "warn",
-                    {
-                        format: [
-                            "camelCase",
-                            "PascalCase",
-                            "UPPER_CASE",
-                        ],
-                        leadingUnderscore: "allow",
-                        selector: "default",
-                        trailingUnderscore: "allow",
-                    },
-                    {
-                        format: [
-                            "camelCase",
-                        ],
-                        selector: "function",
-                    },
-                    {
-                        filter: {
-                            match: false,
-                            regex: "^_+$",
-                        },
-                        format: [
-                            "camelCase",
-                            "PascalCase"
-                        ],
-                        selector: "parameter",
-                    },
-                    {
-                        filter: {
-                            // Allow React's UNSAFE_ prefix
-                            match: false,
-                            regex: "^UNSAFE_",
-                        },
-                        format: [
-                            "camelCase",
-                        ],
-                        selector: "method",
-                    },
-                    {
-                        format: ["PascalCase"],
-                        selector: "typeLike",
-                    },
-                    {
-                        format: ["PascalCase"],
-                        selector: "enumMember",
-                    },
+                    ...options["@typescript-eslint/naming-convention"].defaultRules,
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
                 "@typescript-eslint/no-array-constructor": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
                 "@typescript-eslint/no-dupe-class-members": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.md

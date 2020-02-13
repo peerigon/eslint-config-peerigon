@@ -5,6 +5,10 @@ const options = require("./options.js");
 const globPatterns = require("./glob-patterns.js");
 const tests = require("./tests.js");
 
+// babel/camelcase doesn't support allow currently
+// TODO: Remove this once https://github.com/babel/eslint-plugin-babel/pull/187 has been merged
+const {allow, ...camelcase} = options["camelcase"];
+
 module.exports = {
     parser: "babel-eslint",
     env: {
@@ -56,7 +60,7 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/arrow-spacing
         // https://github.com/babel/eslint-plugin-babel
-        "babel/camelcase": "warn",
+        "babel/camelcase": ["warn", camelcase],
         "babel/new-cap": "warn",
         "babel/no-invalid-this": "warn",
         "babel/no-unused-expressions": [
