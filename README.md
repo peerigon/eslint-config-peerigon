@@ -187,6 +187,8 @@ Special rules for Node.js >= 8.0.0 environments:
 }
 ```
 
+These rules assume that you're using CommonJS modules. In case you're using ECMAScript modules, you should set [`parserOptions.sourceType: "module"`](https://eslint.org/docs/user-guide/configuring#specifying-parser-options). We will change that once a LTS Node.js version has official support for ECMAScript modules.
+
 ### [`peerigon/react`](react.js)
 
 **Important: Requires [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react), [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y) and [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) as project dependency.**
