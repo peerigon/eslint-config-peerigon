@@ -84,7 +84,7 @@ module.exports = {
         // Handled by babel/camelcase
         "camelcase": "off", // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
-        "class-methods-use-this": ["warn"], // http://eslint.org/docs/rules/class-methods-use-this
+        "class-methods-use-this": ["off"], // http://eslint.org/docs/rules/class-methods-use-this
         "comma-dangle": [
             "warn",
             {
