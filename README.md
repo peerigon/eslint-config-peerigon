@@ -420,6 +420,32 @@ As an escape hatch, this is still allowed:
 const Hello = <div>{'test'}</div>;
 ```
 
+### [`peerigon/styles/prefer-array-shorthand`](styles/prefer-array-shorthand.js)
+
+**Important: Use it in combination with [`peerigon/typescript`](typescript.js).**
+
+Enforces typescript arrays to use the shorthand array-style instead of the generic style.
+
+```js
+    "extends": [
+        "peerigon",
+        "peerigon/typescript",
+        "peerigon/styles/prefer-array-shorthand"
+    ],
+```
+
+It enforces this:
+
+```ts
+const foo: string[] = [];
+```
+
+instead of
+
+```ts
+const foo: Array<string> = [];
+```
+
 ## Prettier
 
 There is a [Prettier](https://prettier.io/) config in this repository that corresponds to our linting rules as much as possible. Add a `.prettierrc` file to your repository with the following content:
