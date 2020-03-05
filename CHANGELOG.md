@@ -1,3 +1,15 @@
+# [27.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.3...v27.2.0) (2020-03-05)
+
+
+### Bug Fixes
+
+* Disable "no-anonymous-default-exports" rule in tests ([#82](https://github.com/peerigon/eslint-config-peerigon/issues/82)) ([01f4cd4](https://github.com/peerigon/eslint-config-peerigon/commit/01f4cd48a1feb811ddd4c33b853e9736a20d350a))
+
+
+### Features
+
+* Add prefer array shorthand style option ([#81](https://github.com/peerigon/eslint-config-peerigon/issues/81)) ([fb9f50a](https://github.com/peerigon/eslint-config-peerigon/commit/fb9f50aa7f69cd74306b784fb30f3750dfccb818))
+
 ## [27.1.3](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.2...v27.1.3) (2020-02-13)
 
 
