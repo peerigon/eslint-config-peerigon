@@ -2,7 +2,7 @@
 
 module.exports = {
     tests: [
-        "**/*.{test,spec}.*",
+        "**/*.{test,spec,stories}.*",
         "**/test{s,}/**",
     ],
     tooling: [

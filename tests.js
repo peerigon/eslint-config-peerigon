@@ -37,5 +37,7 @@ module.exports = {
             // Allow Jest inline snapshots
             allowTemplateLiterals: true,
         }],
+        // Storybook stories export a default config object which gets used by their pipeline
+        "import/no-anonymous-default-export": "off"
     }
 };
