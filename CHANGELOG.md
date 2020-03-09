@@ -1,3 +1,10 @@
+# [27.4.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.3.0...v27.4.0) (2020-03-09)
+
+
+### Features
+
+* Disable "class-methods-use-this" ([f8f03c0](https://github.com/peerigon/eslint-config-peerigon/commit/f8f03c0bf9800d140d44ecdb356c348ccd2f3846))
+
 # [27.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.2.0...v27.3.0) (2020-03-09)
 
 
