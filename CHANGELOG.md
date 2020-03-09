@@ -1,3 +1,10 @@
+# [27.5.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.4.0...v27.5.0) (2020-03-09)
+
+
+### Features
+
+* **typescript:** Improve @typescript-eslint/naming-convention ([#85](https://github.com/peerigon/eslint-config-peerigon/issues/85)) ([86299ff](https://github.com/peerigon/eslint-config-peerigon/commit/86299fff66f6f26597ef7a82453bc2a70810a458))
+
 # [27.4.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.3.0...v27.4.0) (2020-03-09)
 
 
