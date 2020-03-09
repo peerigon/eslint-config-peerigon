@@ -1,3 +1,10 @@
+# [27.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.2.0...v27.3.0) (2020-03-09)
+
+
+### Features
+
+* Disable "no-warning-comments" ([460f385](https://github.com/peerigon/eslint-config-peerigon/commit/460f385324d3cd17c1826b1da3cf40aef0035785))
+
 # [27.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.1.3...v27.2.0) (2020-03-05)
 
 
