@@ -460,12 +460,12 @@ module.exports = {
         "no-var": "warn", // http://eslint.org/docs/rules/no-var
         "no-void": "off", // http://eslint.org/docs/rules/no-void
         "no-warning-comments": [
-            "warn",
+            "off",
             {
                 location: "anywhere",
                 terms: ["todo", "fixme", "quickfix"],
             },
-        ],
+        ], // http://eslint.org/docs/rules/no-warning-comments
         "no-whitespace-before-property": "warn", // http://eslint.org/docs/rules/no-whitespace-before-property
         "no-with": "warn", // http://eslint.org/docs/rules/no-with
         // Non-block statements are disallowed anyway
