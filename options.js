@@ -106,42 +106,70 @@ module.exports = {
                 format: ["camelCase", "PascalCase", "UPPER_CASE"],
                 leadingUnderscore: "allow",
                 selector: "default",
-                trailingUnderscore: "allow"
+                trailingUnderscore: "allow",
             },
             function: {
                 format: ["camelCase"],
-                selector: "function"
+                leadingUnderscore: "allow",
+                selector: "function",
+                trailingUnderscore: "allow",
             },
             parameter: {
-                filter: {
-                    match: false,
-                    regex: "^_+$"
-                },
                 format: ["camelCase", "PascalCase"],
-                selector: "parameter"
+                leadingUnderscore: "allow",
+                selector: "parameter",
+                trailingUnderscore: "allow",
             },
             method: {
-                filter: {
-                    // Allow React's UNSAFE_ prefix
-                    match: false,
-                    regex: "^UNSAFE_",
-                },
-                format: [
-                    "camelCase",
-                ],
+                format: ["camelCase"],
+                leadingUnderscore: "allow",
                 selector: "method",
+                trailingUnderscore: "allow",
             },
             typeLike: {
                 format: ["PascalCase"],
+                leadingUnderscore: "allow",
                 selector: "typeLike",
+                trailingUnderscore: "allow",
             },
             enumMember: {
                 format: ["PascalCase"],
+                leadingUnderscore: "allow",
                 selector: "enumMember",
+                trailingUnderscore: "allow",
             },
         };
 
-        options.defaultRules = Object.values(options);
+        // By enumerating all selectors explicitly we increase the
+        // specificity of these rules.
+        const escapeHatches = [
+            "variable",
+            "function",
+            "parameter",
+            "property",
+            "parameterProperty",
+            "method",
+            "accessor",
+            "enumMember",
+            "class",
+            "interface",
+            "typeAlias",
+            "enum",
+            "typeParameter"
+        ].map(selector => ({
+            filter: {
+                match: true,
+                // UNSAFE_ is a prefix used by React for all lifecycle hooks that are about to be deprecated
+                regex: "^(__|UNSAFE_).+$",
+            },
+            format: null,
+            selector,
+        }));
+
+        options.defaultRules = [
+            ...Object.values(options),
+            ...escapeHatches,
+        ];
 
         options.ignoreProperties = {
             selector: "property",
