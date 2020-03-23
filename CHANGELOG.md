@@ -1,3 +1,10 @@
+## [27.5.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.5.0...v27.5.1) (2020-03-23)
+
+
+### Bug Fixes
+
+* **base:** Disable no-eq-null ([df9922f](https://github.com/peerigon/eslint-config-peerigon/commit/df9922f99a948c54afccc0fe40ba1972502fe821))
+
 # [27.5.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.4.0...v27.5.0) (2020-03-09)
 
 
