@@ -162,7 +162,7 @@ In your `package.json`, add a `test:lint` script and run it as `posttest`:
 ```js
 {
     "scripts": {
-        "test:lint": "eslint ./src ./test",
+        "test:lint": "eslint --cache ./src ./test",
         "posttest": "npm run test:lint"
     }
 }
@@ -252,7 +252,7 @@ You need to add `--ext js,ts,tsx` to the `test:lint` script:
 ```js
 {
     "scripts": {
-        "test:lint": "eslint ./src ./test --ext js,ts,tsx"
+        "test:lint": "eslint --cache --ext js,jsx,ts,tsx ./src ./test"
     }
 }
 ```
@@ -480,6 +480,7 @@ This is our recommended VSCode configuration using the [Prettier extension](http
 
 ```json
 {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
