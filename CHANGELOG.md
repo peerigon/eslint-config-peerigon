@@ -1,3 +1,10 @@
+## [27.5.2](https://github.com/peerigon/eslint-config-peerigon/compare/v27.5.1...v27.5.2) (2020-03-23)
+
+
+### Bug Fixes
+
+* Fix security issues found by npm audit ([6501094](https://github.com/peerigon/eslint-config-peerigon/commit/6501094f33261e72db96a77c3ecbcae0936a3749))
+
 ## [27.5.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.5.0...v27.5.1) (2020-03-23)
 
 
