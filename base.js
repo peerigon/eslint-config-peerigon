@@ -317,7 +317,7 @@ module.exports = {
         "no-empty": "warn", // http://eslint.org/docs/rules/no-empty
         "no-empty-function": "off", // http://eslint.org/docs/rules/no-empty-function
         "no-empty-pattern": "warn", // http://eslint.org/docs/rules/no-empty-pattern
-        "no-eq-null": "warn", // http://eslint.org/docs/rules/no-eq-null
+        "no-eq-null": "off", // http://eslint.org/docs/rules/no-eq-null
         "no-eval": "warn", // http://eslint.org/docs/rules/no-eval
         "no-extend-native": "warn", // http://eslint.org/docs/rules/no-extend-native
         "no-extra-bind": "warn", // http://eslint.org/docs/rules/no-extra-bind
