@@ -1,3 +1,10 @@
+# [27.6.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.5.2...v27.6.0) (2020-03-23)
+
+
+### Features
+
+* **typescript:** Disable @typescript-eslint/prefer-regexp-exec ([f170b8a](https://github.com/peerigon/eslint-config-peerigon/commit/f170b8ae8ab316271fccceda7eb06f70cb4bc39d))
+
 ## [27.5.2](https://github.com/peerigon/eslint-config-peerigon/compare/v27.5.1...v27.5.2) (2020-03-23)
 
 
