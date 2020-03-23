@@ -175,7 +175,9 @@ module.exports = {
                 // that are functions as readonly (although it would be correct).
                 // That would just be too verbose.
                 "@typescript-eslint/prefer-readonly": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
-                "@typescript-eslint/prefer-regexp-exec": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
+                // Sometimes it makes more sense to use .match() or maybe the global flag is added later.
+                // In this case we want to prevent the developer from needing to refactor the code.
+                "@typescript-eslint/prefer-regexp-exec": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
                 "@typescript-eslint/prefer-string-starts-ends-with": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
                 "@typescript-eslint/promise-function-async": [
                     "warn",
