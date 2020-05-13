@@ -22,7 +22,7 @@ module.exports = {
         // Allow certain react methods to have no this
         // See https://github.com/peerigon/eslint-config-peerigon/issues/12
         "class-methods-use-this": [
-            "warn",
+            "off",
             {
                 exceptMethods: [
                     "render",
