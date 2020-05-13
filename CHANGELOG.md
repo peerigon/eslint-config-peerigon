@@ -1,3 +1,10 @@
+## [27.6.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.6.0...v27.6.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* Disable class-methods-use-this in react rules ([a0fe36b](https://github.com/peerigon/eslint-config-peerigon/commit/a0fe36bf9578e76ef94e60a99d96f2683c512b73))
+
 # [27.6.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.5.2...v27.6.0) (2020-03-23)
 
 
