@@ -269,6 +269,26 @@ The file must be included in at least one of the projects provided
 
 This is a sign that ESLint is trying to lint a file that is not included by your `tsconfig.json`. You need to adjust either `parserOptions.project` or `include` of the referenced `tsconfig.json`.
 
+### [`peerigon/jsdoc`](jsdoc.js)
+
+**Important: Requires [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc) as project dependency.**
+
+```
+npm i eslint-plugin-jsdoc --save-dev
+```
+
+Makes sure that JSDoc annotations are written in a standard-compliant and uniform way.
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/jsdoc"
+    ],
+    "root": true
+}
+```
+
 ### [`peerigon/flowtype`](flowtype.js)
 
 **Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as project dependency.**
