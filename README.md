@@ -468,12 +468,6 @@ const foo: Array<string> = [];
 
 ## Prettier
 
-There is a [Prettier](https://prettier.io/) config in this repository that corresponds to our linting rules as much as possible. Add a `.prettierrc` file to your repository with the following content:
-
-```js
-"eslint-config-peerigon/prettier"
-```
-
 In order to avoid conflicts between Prettier and our rules, you should always add **prettier rules at the end of `extends`**. For example, in a TypeScript + React project you would use the following configuration:
 
 ```js
