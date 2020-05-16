@@ -1,3 +1,16 @@
+# [28.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.8.0...v28.0.0) (2020-05-16)
+
+
+### Features
+
+* Remove Prettier configuration ([e6c0d39](https://github.com/peerigon/eslint-config-peerigon/commit/e6c0d393f2de987e7ad33198085b2173ea9a9cd3))
+
+
+### BREAKING CHANGES
+
+* Based on discussion https://github.com/peerigon/eslint-config-peerigon/issues/76 we decided to remove our Prettier configuration.
+In order to avoid useless discussions, people should format their code with thatever style Prettier uses. Configuring Prettier ultimately defeats the purpose of Prettier, see https://github.com/prettier/prettier/issues/40
+
 # [27.8.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.7.0...v27.8.0) (2020-05-16)
 
 
