@@ -1,3 +1,10 @@
+# [27.8.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.7.0...v27.8.0) (2020-05-16)
+
+
+### Features
+
+* Move jsdoc rules to separate config ([c810d1f](https://github.com/peerigon/eslint-config-peerigon/commit/c810d1f969e96ce51907a619109f9e75d4ef5733)), closes [#87](https://github.com/peerigon/eslint-config-peerigon/issues/87)
+
 # [27.7.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.6.1...v27.7.0) (2020-05-16)
 
 
