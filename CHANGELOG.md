@@ -1,3 +1,10 @@
+# [27.7.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.6.1...v27.7.0) (2020-05-16)
+
+
+### Features
+
+* Increase eslint peerDependency to 7.0.0 ([45d5003](https://github.com/peerigon/eslint-config-peerigon/commit/45d5003b8ff2681b114d9ce370be5e903409da41))
+
 ## [27.6.1](https://github.com/peerigon/eslint-config-peerigon/compare/v27.6.0...v27.6.1) (2020-05-13)
 
 
