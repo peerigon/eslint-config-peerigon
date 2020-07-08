@@ -29,7 +29,9 @@ module.exports = {
                 "@typescript-eslint/array-type": ["warn", {default: "generic"}], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md
                 "@typescript-eslint/await-thenable": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/await-thenable.md
                 // Disable the warning for legimitate use cases
-                "@typescript-eslint/ban-ts-ignore": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-ignore.md
+                "@typescript-eslint/ban-ts-comment": ["warn", {
+                    "ts-expect-error": "allow-with-description"
+                }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
                 "@typescript-eslint/ban-types": ["warn", options["@typescript-eslint/ban-types"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
                 "@typescript-eslint/brace-style": [
                     "warn",
