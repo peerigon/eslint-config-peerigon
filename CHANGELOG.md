@@ -1,3 +1,10 @@
+## [28.1.3](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.2...v28.1.3) (2020-07-09)
+
+
+### Bug Fixes
+
+* **base:** Disable accessor-pairs ([e9ca31d](https://github.com/peerigon/eslint-config-peerigon/commit/e9ca31dc264f3834764d50886f769df33a8e86c3))
+
 ## [28.1.2](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.1...v28.1.2) (2020-07-09)
 
 
