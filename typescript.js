@@ -42,12 +42,6 @@ module.exports = {
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md
                 // Handled by @typescript-eslint/naming-convention
                 "@typescript-eslint/camelcase": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
-                "@typescript-eslint/class-name-casing": [
-                    "warn",
-                    {
-                        allowUnderscorePrefix: true,
-                    },
-                ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-name-casing.md
                 "@typescript-eslint/comma-spacing": ["warn", options["comma-spacing"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
                 "@typescript-eslint/consistent-type-assertions": [
                     "warn",
@@ -79,9 +73,6 @@ module.exports = {
                 "@typescript-eslint/func-call-spacing": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/func-call-spacing.md
                 "@typescript-eslint/generic-type-naming": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md
                 "@typescript-eslint/indent": ["warn", 4, options["indent"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
-                // There are good reasons why interfaces should not be prefixed
-                // https://stackoverflow.com/questions/31876947/confused-about-the-interface-and-class-coding-guidelines-for-typescript/41967120#comment75349088_41967120
-                "@typescript-eslint/interface-name-prefix": ["warn", "never"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md
                 "@typescript-eslint/member-delimiter-style": [
                     "warn",
                     {
