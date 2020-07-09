@@ -1,3 +1,20 @@
+# [28.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v28.0.0...v28.1.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* **typescript:** Relax rules that forbid the reassignment of 'any' ([93bc5ca](https://github.com/peerigon/eslint-config-peerigon/commit/93bc5ca8ec7e909a6a4afab77adedfaae9656bcd))
+* **typescript:** Remove additional @typescript-eslint/no-unnecessary-condition options ([033011a](https://github.com/peerigon/eslint-config-peerigon/commit/033011a356902847f184f895bfff6472b4e10665))
+* **typescript:** Remove deprecated rules ([d4f0048](https://github.com/peerigon/eslint-config-peerigon/commit/d4f00484e5867ec940ba1f76979b354f61af4269))
+
+
+### Features
+
+* Add presets for a quick start ([326052d](https://github.com/peerigon/eslint-config-peerigon/commit/326052d92d04d7414b9d973c6df71af8aeda1c97))
+* **typescript:** Allow ts-expect-error with description ([b80c6a5](https://github.com/peerigon/eslint-config-peerigon/commit/b80c6a53aae14324a1006f859b329c6a155b3422))
+* **typescript:** Disable @typescript-eslint/no-explicit-any ([5332eb1](https://github.com/peerigon/eslint-config-peerigon/commit/5332eb184b5ab6e6cb9314c26d5d81f48a0ee0a5))
+* **typescript:** Disable @typescript-eslint/no-non-null-assertion ([94b79dd](https://github.com/peerigon/eslint-config-peerigon/commit/94b79ddc81bb3aaed7e3eae3765c246c070ff633))
+
 # [28.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v27.8.0...v28.0.0) (2020-05-16)
 
 
