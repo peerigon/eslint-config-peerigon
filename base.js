@@ -35,7 +35,7 @@ module.exports = {
     rules: {
         /* eslint-enable sort-keys */
         "accessor-pairs": [
-            "warn",
+            "off",
             {
                 getWithoutSet: true,
             },
