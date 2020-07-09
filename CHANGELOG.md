@@ -1,3 +1,10 @@
+## [28.1.2](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.1...v28.1.2) (2020-07-09)
+
+
+### Bug Fixes
+
+* Missing preset files in published package ([0b79df1](https://github.com/peerigon/eslint-config-peerigon/commit/0b79df1404e48777bb91af739d4fde496092e961))
+
 ## [28.1.1](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.0...v28.1.1) (2020-07-09)
 
 
