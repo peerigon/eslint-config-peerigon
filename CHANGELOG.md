@@ -1,3 +1,11 @@
+## [28.1.1](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.0...v28.1.1) (2020-07-09)
+
+
+### Bug Fixes
+
+* **base:** Disable import/no-unassigned-import ([3ccf48a](https://github.com/peerigon/eslint-config-peerigon/commit/3ccf48acc02c0c6aad0343561c63aafb588c5e57))
+* **typescript:** Disable @typescript-eslint/no-unsafe-return in tests ([4ef74ab](https://github.com/peerigon/eslint-config-peerigon/commit/4ef74aba0803911d4fda4da5d2355cd07edb8889))
+
 # [28.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v28.0.0...v28.1.0) (2020-07-09)
 
 
