@@ -182,7 +182,8 @@ module.exports = {
         "import/no-relative-parent-imports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
         "import/no-restricted-paths": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
         "import/no-self-import": "error", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-self-import.md
-        "import/no-unassigned-import": ["warn", {
+        // While unassigned imports are often a bad choice, the false positive rate was just too high
+        "import/no-unassigned-import": ["off", {
             allow: globPatterns.withSideEffects
         }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
         "import/no-unresolved": ["error", {commonjs: true}], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
