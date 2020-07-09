@@ -20,7 +20,8 @@
   ],
   "files": [
     "*.js",
-    "styles"
+    "styles",
+    "presets"
   ],
   "author": "developers@peerigon.com",
   "license": "Unlicense",
