@@ -99,8 +99,10 @@ module.exports = {
                 "@typescript-eslint/no-dynamic-delete": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
                 "@typescript-eslint/no-empty-function": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
                 "@typescript-eslint/no-empty-interface": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md
+                // There are situations where explicit 'any' is the most pragmatic way.
+                // The appropiate use of 'any' requires human peer reviews :)
                 "@typescript-eslint/no-explicit-any": [
-                    "warn",
+                    "off",
                     {
                         fixToUnknown: false,
                         ignoreRestArgs: true,
