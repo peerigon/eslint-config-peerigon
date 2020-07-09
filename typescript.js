@@ -276,6 +276,8 @@ module.exports = {
                 "@typescript-eslint/no-explicit-any": "off",
                 // Non-null assertions can be handy when testing instances of Map
                 "@typescript-eslint/no-non-null-assertion": "off",
+                // We allow any to be used in tests, so returning it is ok
+                "@typescript-eslint/no-unsafe-return": "off",
                 // chai uses these as assertions
                 "@typescript-eslint/no-unused-expressions": "off",
                 // Passing functions around like this can be common with mocking

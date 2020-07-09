@@ -19,6 +19,8 @@ module.exports = {
         "babel/no-unused-expressions": "off",
         // In order to make mocks more condensed, single line blocks are allowed in tests
         "brace-style": ["warn", "1tbs", { allowSingleLine: true }],
+        // Storybook stories export a default config object which gets used by their pipeline
+        "import/no-anonymous-default-export": "off",
         // In test scenarios this kind of module pattern is more usual
         "import/no-unassigned-import": "off",
         // Long tests are not necessarily a problem, but there is a certain limit
@@ -37,7 +39,5 @@ module.exports = {
             // Allow Jest inline snapshots
             allowTemplateLiterals: true,
         }],
-        // Storybook stories export a default config object which gets used by their pipeline
-        "import/no-anonymous-default-export": "off"
     }
 };
