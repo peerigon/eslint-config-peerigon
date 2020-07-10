@@ -272,10 +272,8 @@ module.exports = {
         {
             files: globPatterns.tests,
             rules: {
-                // The any type is ok in tests
-                "@typescript-eslint/no-explicit-any": "off",
-                // Non-null assertions can be handy when testing instances of Map
-                "@typescript-eslint/no-non-null-assertion": "off",
+                // Type assertions are quite common in tests
+                "@typescript-eslint/consistent-type-assertions": "off",
                 // We allow any to be used in tests, so returning it is ok
                 "@typescript-eslint/no-unsafe-return": "off",
                 // chai uses these as assertions
