@@ -1,3 +1,11 @@
+## [28.1.4](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.3...v28.1.4) (2020-07-16)
+
+
+### Bug Fixes
+
+* **typescript:** Disable @typescript-eslint/consistent-type-assertions in tests ([938a733](https://github.com/peerigon/eslint-config-peerigon/commit/938a73396dfb687704a8885d128f59ae4866ae5a))
+* **typescript:** Disable @typescript-eslint/no-unsafe-call ([60fd344](https://github.com/peerigon/eslint-config-peerigon/commit/60fd34420829afea96f71c888147dcb88bf7e970))
+
 ## [28.1.3](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.2...v28.1.3) (2020-07-09)
 
 
