@@ -14,28 +14,49 @@ There are presets for the most common setups:
 ### Prettier + TypeScript
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow --save-dev
 ```
 
 ```js
 {
     "extends": [
         "peerigon/presets/prettier-typescript.js"
-    ]
+    ],
+    "env": {
+        "node": true
+    },
+    "root": true,
+    "parserOptions": {
+        // This path is relative to the CWD where eslint is executed
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    }
 }
 ```
 
 ### Prettier + TypeScript + React
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
+npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
 ```
 
 ```js
 {
     "extends": [
         "peerigon/presets/prettier-typescript-react.js"
-    ]
+    ],
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "root": true,
+    "parserOptions": {
+        // This path is relative to the CWD where eslint is executed
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    }
 }
 ```
 
