@@ -135,7 +135,10 @@ module.exports = {
                         allowedNames: [],
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md
-                "@typescript-eslint/no-throw-literal": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-throw-literal.md
+                // When this rule is enabled, re-throwing an unknown error becomes a problem because
+                // we can't guarantee that it's going to be an error object.
+                // This rule would always report a warning in this case which is annoying.
+                "@typescript-eslint/no-throw-literal": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-throw-literal.md
                 "@typescript-eslint/no-type-alias": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md
                 "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-boolean-literal-compare.md
                 "@typescript-eslint/no-unnecessary-condition": ["warn", {
