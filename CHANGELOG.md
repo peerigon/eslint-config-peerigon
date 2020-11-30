@@ -1,3 +1,10 @@
+## [28.1.5](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.4...v28.1.5) (2020-11-30)
+
+
+### Bug Fixes
+
+* **TypeScript:** Disable @typescript-eslint/no-throw-literal ([1b8aa70](https://github.com/peerigon/eslint-config-peerigon/commit/1b8aa70555ab625ed4aca7b288bd223ee74d8b1f))
+
 ## [28.1.4](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.3...v28.1.4) (2020-07-16)
 
 
