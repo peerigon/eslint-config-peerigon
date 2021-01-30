@@ -4,7 +4,9 @@
   "description": "Peerigon coding rules as eslint config",
   "main": "base.js",
   "scripts": {
-    "unused": "eslint-find-rules -u -n",
+    "unused": "eslint-find-rules -u -n -d",
+    "unused:javascript": "npm run unused -- ./tests/javascript/.eslintrc.json",
+    "unused:typescript": "npm run unused -- --ext .ts ./tests/typescript/.eslintrc.json",
     "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
     "test": "run-s test:*",
     "test:javascript": "cd tests/javascript; eslint .",
