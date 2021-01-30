@@ -300,6 +300,7 @@ module.exports = {
         "no-lone-blocks": "warn", // http://eslint.org/docs/rules/no-lone-blocks
         "no-lonely-if": "warn", // http://eslint.org/docs/rules/no-lonely-if
         "no-loop-func": "warn", // http://eslint.org/docs/rules/no-loop-func
+        "no-loss-of-precision": "warn", // https://eslint.org/docs/rules/no-loss-of-precision
         "no-magic-numbers": [
             "off",
             {
