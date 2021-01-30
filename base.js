@@ -424,6 +424,7 @@ module.exports = {
             options["no-unused-vars"],
         ], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": "off", // http://eslint.org/docs/rules/no-use-before-define
+        "no-useless-backreference": "warn", // http://eslint.org/docs/rules/no-useless-backreference
         "no-useless-call": "warn", // http://eslint.org/docs/rules/no-useless-call
         "no-useless-computed-key": "warn", // http://eslint.org/docs/rules/no-useless-computed-key
         "no-useless-concat": "warn", // http://eslint.org/docs/rules/no-useless-concat
