@@ -411,6 +411,7 @@ module.exports = {
         "no-unmodified-loop-condition": "warn", // http://eslint.org/docs/rules/no-unmodified-loop-condition
         "no-unneeded-ternary": "warn", // http://eslint.org/docs/rules/no-unneeded-ternary
         "no-unreachable-loop": "warn", // http://eslint.org/docs/rules/no-unreachable-loop
+        "no-unsafe-optional-chaining": "warn", // http://eslint.org/docs/rules/no-unsafe-optional-chaining
         'no-unsafe-regex/no-unsafe-regex': "warn", // https://github.com/kgryte/eslint-plugin-no-unsafe-regex
         // Handled by babel/no-unused-expressions
         "no-unused-expressions": [
