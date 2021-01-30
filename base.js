@@ -111,6 +111,7 @@ module.exports = {
         "constructor-super": "error", // http://eslint.org/docs/rules/constructor-super
         "curly": ["warn", "all"], // http://eslint.org/docs/rules/curly
         "default-case": "off", // http://eslint.org/docs/rules/default-case
+        "default-case-last": "off", // https://eslint.org/docs/rules/default-case-last
         "default-param-last": "off", // https://eslint.org/docs/rules/default-param-last
         "dot-location": ["warn", "property"], // http://eslint.org/docs/rules/dot-location
         // We don't support ES3 envs anymore, so allowKeywords: true is ok
@@ -136,7 +137,7 @@ module.exports = {
         "grouped-accessor-pairs": ["warn", "setBeforeGet"], // https://eslint.org/docs/rules/grouped-accessor-pairs
         "guard-for-in": "off", // http://eslint.org/docs/rules/guard-for-in
         "handle-callback-err": ["warn", "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
-        "id-blacklist": ["off"], // http://eslint.org/docs/rules/id-blacklist
+        "id-denylist": "off", // https://eslint.org/docs/rules/id-denylist
         "id-length": "off", // http://eslint.org/docs/rules/id-length
         "id-match": "off", // http://eslint.org/docs/rules/id-match
         // We can't use that rule since it conflicts with Prettier's
@@ -222,9 +223,7 @@ module.exports = {
         "line-comment-position": "off", // http://eslint.org/docs/rules/line-comment-position
         "linebreak-style": ["off", "unix"], // http://eslint.org/docs/rules/linebreak-style
         "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
-        "lines-between-class-members": ["warn", "always", {
-            exceptAfterSingleLine: true
-        }], // https://eslint.org/docs/rules/lines-between-class-members
+        "lines-between-class-members": ["warn", "always", options["lines-between-class-members"]], // https://eslint.org/docs/rules/lines-between-class-members
         "max-classes-per-file": "off", // https://eslint.org/docs/rules/max-classes-per-file
         "max-depth": ["warn", 5], // http://eslint.org/docs/rules/max-depth
         "max-len": [

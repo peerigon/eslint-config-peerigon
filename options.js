@@ -49,6 +49,9 @@ module.exports = {
         ],
         outerIIFEBody: 1
     },
+    ["lines-between-class-members"]: {
+        exceptAfterSingleLine: true
+    },
     ["max-lines"]: {
         max: 700,
         skipBlankLines: true,
