@@ -358,6 +358,14 @@ module.exports = {
         "no-promise-executor-return": "warn", // http://eslint.org/docs/rules/no-promise-executor-return
         "no-proto": "warn", // http://eslint.org/docs/rules/no-proto
         "no-redeclare": "warn", // http://eslint.org/docs/rules/no-redeclare
+        "no-restricted-exports": ["warn", {
+            "restrictedNamedExports": [
+                // If "then" is a function, the module will not be loadedable by an async import()
+                // because it looks like a promise. The JS engine will call the .then() function in that case
+                // Since this is super confusing, let's warn the user about it
+                "then"
+            ]
+        }], // http://eslint.org/docs/rules/no-restricted-exports
         "no-restricted-globals": ["warn", "event"], // http://eslint.org/docs/rules/no-restricted-globals
         "no-restricted-imports": "off", // http://eslint.org/docs/rules/no-restricted-imports
         "no-restricted-modules": "off", // http://eslint.org/docs/rules/no-restricted-modules
