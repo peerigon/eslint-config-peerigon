@@ -355,6 +355,7 @@ module.exports = {
         // If you want to set the exit code, you can also use process.exitCode.
         // Disable this rule if you have to exit the process forcefully and you know what you're doing.
         "no-process-exit": "warn", // http://eslint.org/docs/rules/no-process-exit
+        "no-promise-executor-return": "warn", // http://eslint.org/docs/rules/no-promise-executor-return
         "no-proto": "warn", // http://eslint.org/docs/rules/no-proto
         "no-redeclare": "warn", // http://eslint.org/docs/rules/no-redeclare
         "no-restricted-globals": ["warn", "event"], // http://eslint.org/docs/rules/no-restricted-globals
