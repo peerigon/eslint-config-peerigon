@@ -1,0 +1,9 @@
+{
+    "extends": [
+        "../../base.js"
+    ],
+    "env": {
+        "node": true
+    },
+    "root": true
+}

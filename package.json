@@ -5,7 +5,10 @@
   "main": "base.js",
   "scripts": {
     "unused": "eslint-find-rules -u -n",
-    "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" ."
+    "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
+    "test": "run-s test:*",
+    "test:javascript": "cd tests/javascript; eslint .",
+    "test:typescript": "cd tests/typescript; eslint ."
   },
   "repository": {
     "type": "git",
