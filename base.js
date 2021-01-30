@@ -341,6 +341,7 @@ module.exports = {
         "no-new-require": "warn", // http://eslint.org/docs/rules/no-new-require
         "no-new-symbol": "warn", // http://eslint.org/docs/rules/no-new-symbol
         "no-new-wrappers": "warn", // http://eslint.org/docs/rules/no-new-wrappers
+        "no-nonoctal-decimal-escape": "warn", // http://eslint.org/docs/rules/no-nonoctal-decimal-escape
         "no-octal": "warn", // http://eslint.org/docs/rules/no-octal
         "no-octal-escape": "warn", // http://eslint.org/docs/rules/no-octal-escape
         "no-param-reassign": "off", // http://eslint.org/docs/rules/no-param-reassign
