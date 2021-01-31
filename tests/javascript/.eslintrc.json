@@ -1,7 +1,5 @@
 {
-    "extends": [
-        "../../base.js"
-    ],
+    "extends": ["../../base.js"],
     "env": {
         "browser": true
     },

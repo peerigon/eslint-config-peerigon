@@ -2,19 +2,17 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    plugins: [
-        "prefer-arrow"
-    ],
+    plugins: ["prefer-arrow"],
     rules: {
         "func-style": ["warn", "expression"], // http://eslint.org/docs/rules/func-style
         // https://github.com/TristonJ/eslint-plugin-prefer-arrow
         "prefer-arrow/prefer-arrow-functions": [
             "warn",
             {
-              "disallowPrototype": false,
-              "singleReturnOnly": false,
-              "classPropertiesAllowed": true
-            }
-        ]
-    }
+                disallowPrototype: false,
+                singleReturnOnly: false,
+                classPropertiesAllowed: true,
+            },
+        ],
+    },
 };

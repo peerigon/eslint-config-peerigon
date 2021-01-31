@@ -11,11 +11,11 @@ module.exports = {
         "react/jsx-curly-brace-presence": [
             "warn",
             {
-                "children": "always",
-                "props": "never",
-            }
+                children: "always",
+                props: "never",
+            },
         ],
-        "react/jsx-no-literals": "warn",  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
+        "react/jsx-no-literals": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
         /* eslint-disable sort-keys */
     },
     overrides: [
@@ -27,7 +27,7 @@ module.exports = {
                 "react/jsx-curly-brace-presence": ["warn", "never"],
                 "react/jsx-no-literals": "off",
                 /* eslint-disable sort-keys */
-            }
-        }
+            },
+        },
     ],
 };

@@ -2,8 +2,8 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    "plugins": ["no-null"],
-    "rules": {
-        "no-null/no-null": "warn"
-    }
+    plugins: ["no-null"],
+    rules: {
+        "no-null/no-null": "warn",
+    },
 };

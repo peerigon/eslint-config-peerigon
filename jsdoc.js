@@ -2,20 +2,18 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    plugins: [
-        "jsdoc",
-    ],
+    plugins: ["jsdoc"],
     overrides: [
         {
-            "files": "*.ts{,x}",
-            "rules": {
+            files: "*.ts{,x}",
+            rules: {
                 "jsdoc/no-types": "warn", // JSDoc types are not necessary when using TypeScript
                 "jsdoc/require-param": "off",
                 "jsdoc/require-param-type": "off",
                 "jsdoc/require-returns": "off",
                 "jsdoc/require-returns-type": "off",
-            }
-        }
+            },
+        },
     ],
     rules: {
         // https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md
@@ -26,9 +24,12 @@ module.exports = {
         "jsdoc/check-param-names": "warn",
         "jsdoc/check-property-names": "warn",
         "jsdoc/check-syntax": "off",
-        "jsdoc/check-tag-names": ["warn", {
-            "definedTags": ["swagger"]
-        }],
+        "jsdoc/check-tag-names": [
+            "warn",
+            {
+                definedTags: ["swagger"],
+            },
+        ],
         "jsdoc/check-types": "warn",
         "jsdoc/check-values": "off",
         "jsdoc/empty-tags": "warn",
@@ -58,5 +59,5 @@ module.exports = {
         "jsdoc/require-returns-description": "off",
         "jsdoc/require-returns-type": "warn",
         "jsdoc/valid-types": "warn",
-    }
+    },
 };

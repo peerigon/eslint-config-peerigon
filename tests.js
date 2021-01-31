@@ -11,7 +11,7 @@ module.exports = {
     globals: {
         cy: true,
         Cypress: true,
-        assert: true
+        assert: true,
     },
     rules: {
         /* eslint-enable sort-keys */
@@ -34,10 +34,14 @@ module.exports = {
         // If you want to test for thrown errors in a constructor function, it's common to ignore the result
         // @see https://github.com/peerigon/clockodo/pull/1#discussion_r180795825
         "no-new": "off",
-        "quotes": ["warn", "double", {
-            ...options["quotes"],
-            // Allow Jest inline snapshots
-            allowTemplateLiterals: true,
-        }],
-    }
+        quotes: [
+            "warn",
+            "double",
+            {
+                ...options["quotes"],
+                // Allow Jest inline snapshots
+                allowTemplateLiterals: true,
+            },
+        ],
+    },
 };

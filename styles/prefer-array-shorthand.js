@@ -2,15 +2,13 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    plugins: [
-        "@typescript-eslint"
-    ],
+    plugins: ["@typescript-eslint"],
     rules: {
         "@typescript-eslint/array-type": [
             "warn",
             {
-                default: 'array',
-            }
-        ]
-    }
+                default: "array",
+            },
+        ],
+    },
 };

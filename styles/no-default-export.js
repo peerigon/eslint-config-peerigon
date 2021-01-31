@@ -5,14 +5,14 @@ const globPatterns = require("../glob-patterns.js");
 
 module.exports = {
     rules: {
-        "import/no-default-export": "warn"
+        "import/no-default-export": "warn",
     },
     overrides: [
         {
             files: globPatterns.react,
             rules: {
-                "import/no-default-export": "off"
+                "import/no-default-export": "off",
             },
-        }
+        },
     ],
 };
