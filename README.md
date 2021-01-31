@@ -60,6 +60,38 @@ npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript
 }
 ```
 
+### Prettier + TypeScript + Node
+
+```
+npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow eslint-plugin-node --save-dev
+```
+
+```js
+{
+    "extends": [
+        "peerigon/presets/prettier-typescript-node.js"
+    ],
+    "root": true,
+    "parserOptions": {
+        // This path is relative to the CWD where eslint is executed
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    }
+}
+```
+
+Your `package.json`:
+
+```json
+{
+    "type": "module",
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
+```
+
 ## Motivation
 
 Linting and formatting rules are always a balance between
@@ -249,7 +281,7 @@ npm i eslint-plugin-node --save-dev
 {
     "type": "module",
     "engines": {
-        "node": ">=8.10.0"
+        "node": ">=14.0.0"
     }
 }
 ```
