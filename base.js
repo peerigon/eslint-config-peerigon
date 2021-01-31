@@ -79,7 +79,6 @@ module.exports = {
                 "allowSingleLine": false,
             },
         ], // http://eslint.org/docs/rules/brace-style
-        "callback-return": "warn", // http://eslint.org/docs/rules/callback-return
         // Handled by babel/camelcase
         "camelcase": "off", // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
@@ -111,6 +110,7 @@ module.exports = {
         "constructor-super": "error", // http://eslint.org/docs/rules/constructor-super
         "curly": ["warn", "all"], // http://eslint.org/docs/rules/curly
         "default-case": "off", // http://eslint.org/docs/rules/default-case
+        "default-case-last": "off", // https://eslint.org/docs/rules/default-case-last
         "default-param-last": "off", // https://eslint.org/docs/rules/default-param-last
         "dot-location": ["warn", "property"], // http://eslint.org/docs/rules/dot-location
         // We don't support ES3 envs anymore, so allowKeywords: true is ok
@@ -132,11 +132,9 @@ module.exports = {
                 before: false,
             },
         ], // http://eslint.org/docs/rules/generator-star-spacing
-        "global-require": "off", // http://eslint.org/docs/rules/global-require
         "grouped-accessor-pairs": ["warn", "setBeforeGet"], // https://eslint.org/docs/rules/grouped-accessor-pairs
         "guard-for-in": "off", // http://eslint.org/docs/rules/guard-for-in
-        "handle-callback-err": ["warn", "^(err|error)$"], // http://eslint.org/docs/rules/handle-callback-err
-        "id-blacklist": ["off"], // http://eslint.org/docs/rules/id-blacklist
+        "id-denylist": "off", // https://eslint.org/docs/rules/id-denylist
         "id-length": "off", // http://eslint.org/docs/rules/id-length
         "id-match": "off", // http://eslint.org/docs/rules/id-match
         // We can't use that rule since it conflicts with Prettier's
@@ -222,9 +220,7 @@ module.exports = {
         "line-comment-position": "off", // http://eslint.org/docs/rules/line-comment-position
         "linebreak-style": ["off", "unix"], // http://eslint.org/docs/rules/linebreak-style
         "lines-around-comment": "off", // http://eslint.org/docs/rules/lines-around-comment
-        "lines-between-class-members": ["warn", "always", {
-            exceptAfterSingleLine: true
-        }], // https://eslint.org/docs/rules/lines-between-class-members
+        "lines-between-class-members": ["warn", "always", options["lines-between-class-members"]], // https://eslint.org/docs/rules/lines-between-class-members
         "max-classes-per-file": "off", // https://eslint.org/docs/rules/max-classes-per-file
         "max-depth": ["warn", 5], // http://eslint.org/docs/rules/max-depth
         "max-len": [
@@ -259,10 +255,8 @@ module.exports = {
         "no-array-constructor": "warn", // http://eslint.org/docs/rules/no-array-constructor
         "no-await-in-loop": "warn", // http://eslint.org/docs/rules/no-await-in-loop
         "no-bitwise": "warn", // http://eslint.org/docs/rules/no-bitwise
-        "no-buffer-constructor": "warn", // http://eslint.org/docs/rules/no-buffer-constructor
         "no-caller": "warn", // http://eslint.org/docs/rules/no-caller
         "no-case-declarations": "warn", // http://eslint.org/docs/rules/no-case-declarations
-        "no-catch-shadow": "off", // http://eslint.org/docs/rules/no-catch-shadow
         "no-class-assign": "warn", // http://eslint.org/docs/rules/no-class-assign
         "no-confusing-arrow": ["off", {allowParens: true}], // http://eslint.org/docs/rules/no-confusing-arrow
         "no-console": "off", // http://eslint.org/docs/rules/no-console
@@ -300,6 +294,7 @@ module.exports = {
         "no-lone-blocks": "warn", // http://eslint.org/docs/rules/no-lone-blocks
         "no-lonely-if": "warn", // http://eslint.org/docs/rules/no-lonely-if
         "no-loop-func": "warn", // http://eslint.org/docs/rules/no-loop-func
+        "no-loss-of-precision": "warn", // https://eslint.org/docs/rules/no-loss-of-precision
         "no-magic-numbers": [
             "off",
             {
@@ -320,13 +315,6 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/no-magic-numbers
         "no-mixed-operators": "warn", // http://eslint.org/docs/rules/no-mixed-operators
-        "no-mixed-requires": [
-            "warn",
-            {
-                allowCall: true,
-                grouping: false,
-            },
-        ], // http://eslint.org/docs/rules/no-mixed-requires
         "no-mixed-spaces-and-tabs": ["warn", false], // http://eslint.org/docs/rules/no-mixed-spaces-and-tabs
         "no-multi-assign": "off", // http://eslint.org/docs/rules/no-multi-assign
         "no-multi-spaces": "warn", // http://eslint.org/docs/rules/no-multi-spaces
@@ -337,27 +325,30 @@ module.exports = {
         "no-new": "warn", // http://eslint.org/docs/rules/no-new
         "no-new-func": "warn", // http://eslint.org/docs/rules/no-new-func
         "no-new-object": "warn", // http://eslint.org/docs/rules/no-new-object
-        "no-new-require": "warn", // http://eslint.org/docs/rules/no-new-require
         "no-new-symbol": "warn", // http://eslint.org/docs/rules/no-new-symbol
         "no-new-wrappers": "warn", // http://eslint.org/docs/rules/no-new-wrappers
+        "no-nonoctal-decimal-escape": "warn", // http://eslint.org/docs/rules/no-nonoctal-decimal-escape
         "no-octal": "warn", // http://eslint.org/docs/rules/no-octal
         "no-octal-escape": "warn", // http://eslint.org/docs/rules/no-octal-escape
         "no-param-reassign": "off", // http://eslint.org/docs/rules/no-param-reassign
-        "no-path-concat": "warn", // http://eslint.org/docs/rules/no-path-concat
         "no-plusplus": "off", // http://eslint.org/docs/rules/no-plusplus
-        "no-process-env": "off", // http://eslint.org/docs/rules/no-process-env
-        // process.exit() is often used in situations where it would have been better to either throw an error or
-        // let the process exit by itself.
-        // There are situations where process.exit() is the cause of truncated stdout output,
-        // see https://nodejs.org/api/process.html#process_process_exit_code
-        // If you want to set the exit code, you can also use process.exitCode.
-        // Disable this rule if you have to exit the process forcefully and you know what you're doing.
-        "no-process-exit": "warn", // http://eslint.org/docs/rules/no-process-exit
+        // The rule reported
+        // await new Promise((resolve) => setTimeout(resolve, 0))
+        // which is pretty common.
+        // Maybe there's an exception for one-liners now?
+        "no-promise-executor-return": "off", // http://eslint.org/docs/rules/no-promise-executor-return
         "no-proto": "warn", // http://eslint.org/docs/rules/no-proto
         "no-redeclare": "warn", // http://eslint.org/docs/rules/no-redeclare
+        "no-restricted-exports": ["warn", {
+            "restrictedNamedExports": [
+                // If "then" is a function, the module will not be loadedable by an async import()
+                // because it looks like a promise. The JS engine will call the .then() function in that case
+                // Since this is super confusing, let's warn the user about it
+                "then"
+            ]
+        }], // http://eslint.org/docs/rules/no-restricted-exports
         "no-restricted-globals": ["warn", "event"], // http://eslint.org/docs/rules/no-restricted-globals
         "no-restricted-imports": "off", // http://eslint.org/docs/rules/no-restricted-imports
-        "no-restricted-modules": "off", // http://eslint.org/docs/rules/no-restricted-modules
         "no-restricted-properties": "off", // http://eslint.org/docs/rules/no-restricted-properties
         "no-restricted-syntax": ["warn", "WithStatement"], // http://eslint.org/docs/rules/no-restricted-syntax
         "no-return-assign": ["warn", "except-parens"], // http://eslint.org/docs/rules/no-return-assign
@@ -379,7 +370,6 @@ module.exports = {
         "no-setter-return": "warn", // https://eslint.org/docs/rules/no-setter-return
         "no-shadow": "off", // http://eslint.org/docs/rules/no-shadow
         "no-shadow-restricted-names": "warn", // http://eslint.org/docs/rules/no-shadow-restricted-names
-        "no-sync": "off", // http://eslint.org/docs/rules/no-sync
         "no-tabs": "warn", // http://eslint.org/docs/rules/no-tabs
         "no-template-curly-in-string": "warn", // http://eslint.org/docs/rules/no-template-curly-in-string
         "no-ternary": "off", // eslint.org/docs/rules/no-ternary
@@ -399,6 +389,8 @@ module.exports = {
         "no-unexpected-multiline": "warn", // http://eslint.org/docs/rules/no-unexpected-multiline
         "no-unmodified-loop-condition": "warn", // http://eslint.org/docs/rules/no-unmodified-loop-condition
         "no-unneeded-ternary": "warn", // http://eslint.org/docs/rules/no-unneeded-ternary
+        "no-unreachable-loop": "warn", // http://eslint.org/docs/rules/no-unreachable-loop
+        "no-unsafe-optional-chaining": "warn", // http://eslint.org/docs/rules/no-unsafe-optional-chaining
         'no-unsafe-regex/no-unsafe-regex': "warn", // https://github.com/kgryte/eslint-plugin-no-unsafe-regex
         // Handled by babel/no-unused-expressions
         "no-unused-expressions": [
@@ -411,6 +403,7 @@ module.exports = {
             options["no-unused-vars"],
         ], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": "off", // http://eslint.org/docs/rules/no-use-before-define
+        "no-useless-backreference": "warn", // http://eslint.org/docs/rules/no-useless-backreference
         "no-useless-call": "warn", // http://eslint.org/docs/rules/no-useless-call
         "no-useless-computed-key": "warn", // http://eslint.org/docs/rules/no-useless-computed-key
         "no-useless-concat": "warn", // http://eslint.org/docs/rules/no-useless-concat
@@ -539,7 +532,6 @@ module.exports = {
         // This rule would be nice but there are too many false positives :(
         "require-atomic-updates": "off", // https://eslint.org/docs/rules/require-atomic-updates
         "require-await": "off", // http://eslint.org/docs/rules/require-await
-        "require-jsdoc": "off", // http://eslint.org/docs/rules/require-jsdoc
         // We would like to use this rule but there is currently a bug that would show
         // an ESLint error at a lot of RegExp, like /\./u
         // See https://github.com/DmitrySoshnikov/regexp-tree/issues/162
@@ -587,21 +579,6 @@ module.exports = {
         "template-curly-spacing": ["warn", "never"], // http://eslint.org/docs/rules/template-curly-spacing
         "template-tag-spacing": ["warn", "never"], // http://eslint.org/docs/rules/template-tag-spacing
         "unicode-bom": ["warn", "never"], // http://eslint.org/docs/rules/unicode-bom
-        "valid-jsdoc": [
-            "warn",
-            {
-                prefer: {
-                    arg: "param",
-                    argument: "param",
-                    return: "returns",
-                },
-                requireParamDescription: false,
-                requireParamType: false, // handled by jsdoc/require-param-type
-                requireReturn: false, // still requires to document returns if there is a return
-                requireReturnDescription: false,
-                requireReturnType: false, // handled by jsdoc/require-return-type
-            },
-        ], // http://eslint.org/docs/rules/valid-jsdoc
         // Handled by babel/valid-typeof
         "valid-typeof": "off", // http://eslint.org/docs/rules/valid-typeof
         "vars-on-top": "warn", // http://eslint.org/docs/rules/vars-on-top

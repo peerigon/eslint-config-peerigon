@@ -7,7 +7,39 @@
 [![Dependency Status](https://david-dm.org/peerigon/eslint-config-peerigon.svg)](https://david-dm.org/peerigon/eslint-config-peerigon?branch=master)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
+Linting and formatting rules are always a balance between
+
+- ease of reading
+- ease of refactoring
+- ease of writing.
+
+We think that
+
+- code is read more often than refactored
+- and refactored more often than written from scratch.
+
+Our linting rules have been designed with these assumptions in mind.
+
+## Table of contents
+
+- [Quick start](#quick-start)
+- [Features](#features)
+- [Practical guide](#practical-guide)
+- [Provided configs](#provided-configs)
+- [Styles](#styles)
+
 ## Quick start
+
+Recommended configuration in your `package.json`:
+
+```js
+{
+    "scripts": {
+        "test:lint": "eslint --cache --max-warnings 0 .",
+        "posttest": "npm run test:lint"
+    }
+}
+```
 
 There are presets for the most common setups:
 
@@ -60,20 +92,37 @@ npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript
 }
 ```
 
-## Motivation
+### Prettier + TypeScript + Node
 
-Linting and formatting rules are always a balance between
+```
+npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow eslint-plugin-node --save-dev
+```
 
-- ease of reading
-- ease of refactoring
-- ease of writing.
+```js
+{
+    "extends": [
+        "peerigon/presets/prettier-typescript-node.js"
+    ],
+    "root": true,
+    "parserOptions": {
+        // This path is relative to the CWD where eslint is executed
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    }
+}
+```
 
-We think that
+Your `package.json`:
 
-- code is read more often than refactored
-- and refactored more often than written from scratch.
-
-Our linting rules have been designed with these assumptions in mind.
+```json
+{
+    "type": "module",
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
+```
 
 ## Features
 
@@ -119,11 +168,15 @@ If you think that there is a good reason for deviating from the standard path, d
 
 ```js
 // The API returns snakecase properties
-// eslint-disable-next-line babel/camelcase
+/* eslint-disable babel/camelcase */
 function fetchUsers() {
     // ...
 }
 ```
+
+We use warnings instead of errors for most code issues since it's visually less distracting. We recommend to use `--max-warnings 0` as part of your test script or within your CI. These warnings can serve as a hint that the code needs to be fixed before it can be merged into the `main` branch.
+
+## Practical guide
 
 ### Disabling rules
 
@@ -146,6 +199,43 @@ If you don't agree with a rule, please do not just disable the rule. Often there
 ### Different styles
 
 We acknowledge that there are certain rules where there are no actual pros and cons or where there is no clear winner. You just have to decide for one style and stick with it. We also know that some rules make sense in one project, but don't make sense in another project. That's why we also provide a list of [accepted custom styles](#styles) (see also [this discussion](https://github.com/peerigon/eslint-config-peerigon/issues/11)) which you can pick.
+
+### Prettier
+
+In order to avoid conflicts between Prettier and our rules, you should always add **prettier rules at the end of `extends`**. For example, in a TypeScript + React project you would use the following configuration:
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/typescript",
+        "peerigon/styles/prefer-arrow",
+        "peerigon/react",
+        // prettier must be at the end
+        "prettier",
+        "prettier/@typescript-eslint",
+        "prettier/react"
+    ],
+    "root": true,
+};
+```
+
+This module already lists [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) as dependency which is why you don't have to install it manually.
+
+### VSCode
+
+This is our recommended VSCode configuration using the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode). Adjust it to the needs of your particular project:
+
+```json
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
+```
+
 
 ### Naming conventions for properties
 
@@ -210,37 +300,38 @@ Add an `.eslintrc.json` to the project's root folder:
 }
 ```
 
-In your `package.json`, add a `test:lint` script and run it as `posttest`:
-
-```js
-{
-    "scripts": {
-        "test:lint": "eslint --cache ./src ./test",
-        "posttest": "npm run test:lint"
-    }
-}
-```
-
 The base rules use the `eslint-plugin-import` to resolve imports. Although it's possible to define [custom resolvers](https://github.com/benmosher/eslint-plugin-import#resolvers), it's highly discouraged to deviate from the common Node/webpack resolving algorithm. Other tools like linters and intellisense don't work reliably when you change the resolver.
 
 ### [`peerigon/node`](node.js)
 
-Special rules for Node.js >= 8.0.0 environments:
+**Important: Requires [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node).**
+
+```
+npm i eslint-plugin-node --save-dev
+```
 
 ```js
 {
     "extends": [
-        // Base rules with full ES2015 support
         "peerigon",
-        // Rules for node
         "peerigon/node",
         "prettier" // add this if you're using Prettier
-    ]
+    ],
     // Setting env.node = true is not necessary, this is already done by peerigon/node
+    "root": true
 }
 ```
 
-These rules assume that you're using CommonJS modules. In case you're using ECMAScript modules, you should set [`parserOptions.sourceType: "module"`](https://eslint.org/docs/user-guide/configuring#specifying-parser-options). We will change that once a LTS Node.js version has official support for ECMAScript modules.
+[`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node) uses the ["engines" field](https://docs.npmjs.com/files/package.json#engines) and the ["type" field](https://nodejs.org/api/esm.html#esm_enabling) in your `package.json` to check for compatibility issues. We recommend the following configuration:
+
+```json
+{
+    "type": "module",
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
+```
 
 ### [`peerigon/react`](react.js)
 
@@ -517,42 +608,6 @@ instead of
 
 ```ts
 const foo: Array<string> = [];
-```
-
-## Prettier
-
-In order to avoid conflicts between Prettier and our rules, you should always add **prettier rules at the end of `extends`**. For example, in a TypeScript + React project you would use the following configuration:
-
-```js
-{
-    "extends": [
-        "peerigon",
-        "peerigon/typescript",
-        "peerigon/styles/prefer-arrow",
-        "peerigon/react",
-        // prettier must be at the end
-        "prettier",
-        "prettier/@typescript-eslint",
-        "prettier/react"
-    ],
-    "root": true,
-};
-```
-
-This module already lists [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) as dependency which is why you don't have to install it manually.
-
-## VSCode
-
-This is our recommended VSCode configuration using the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode). Adjust it to the needs of your particular project:
-
-```json
-{
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
-}
 ```
 
 ## License

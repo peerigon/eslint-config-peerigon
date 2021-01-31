@@ -1,0 +1,19 @@
+{
+    "extends": [
+        // Should be the same as in "../../presets/prettier-typescript.js"
+        "../../base.js",
+        "../../typescript.js",
+        "../../styles/prefer-arrow.js",
+        // prettier must be at the end
+        "prettier",
+        "prettier/babel",
+        "prettier/@typescript-eslint"
+    ],
+    "root": true,
+    "parserOptions": {
+        // This path is relative to the CWD where eslint is executed
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    }
+}
