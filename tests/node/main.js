@@ -1,3 +1,3 @@
-import {getMessage} from "./message.js";
+import { getMessage } from "./message.js";
 
-console.log(getMessage());
+console.log(getMessage(), SomeClass);

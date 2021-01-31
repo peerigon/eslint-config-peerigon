@@ -1,3 +1,3 @@
-export const getMessage = () => {
+export const getMessage = (): string => {
     return "Hello World";
-}
+};

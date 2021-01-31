@@ -8,7 +8,7 @@
     "unused:javascript": "npm run unused -- ./tests/javascript/.eslintrc.json",
     "unused:typescript": "npm run unused -- --ext .ts ./tests/typescript/.eslintrc.json",
     "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
-    "test": "run-s test:*",
+    "test": "run-p test:*",
     "test:javascript": "cd tests/javascript; eslint --max-warnings 0 .",
     "test:node": "cd tests/node; eslint --max-warnings 0 .",
     "test:typescript": "cd tests/typescript; eslint --max-warnings 0 ."
@@ -55,6 +55,8 @@
     "eslint-plugin-promise": ">=4.2.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
     "eslint": "^7.18.0",
     "eslint-find-rules": "^3.6.1",
     "eslint-plugin-flowtype": "^5.2.0",

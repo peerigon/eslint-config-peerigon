@@ -5,10 +5,6 @@ const options = require("./options.js");
 const globPatterns = require("./glob-patterns.js");
 const tests = require("./tests.js");
 
-// babel/camelcase doesn't support allow currently
-// TODO: Remove this once https://github.com/babel/eslint-plugin-babel/pull/187 has been merged
-const {allow, ...camelcase} = options["camelcase"];
-
 module.exports = {
     parser: "@babel/eslint-parser",
     env: {
@@ -16,7 +12,11 @@ module.exports = {
     },
     parserOptions: {
         sourceType: "module",
-        ecmaVersion: 2020
+        ecmaVersion: 2021,
+        // We don't require a Babel config file in our base rules since it would complain
+        // for every regular JS file that the babel config is missing, even when Babel isn't used.
+        // If experimental syntax is used, you can still set this to true.
+        requireConfigFile: false,
     },
     plugins: [
         "@babel",
@@ -40,7 +40,7 @@ module.exports = {
             "warn",
             options["no-unused-expressions"],
         ],
-        "@babel/object-curly-spacing": ["warn", "never"],
+        "@babel/object-curly-spacing": ["warn", "always"],
         "@babel/semi": "warn",
         "accessor-pairs": [
             "off",
@@ -76,7 +76,7 @@ module.exports = {
                 "allowSingleLine": false,
             },
         ], // http://eslint.org/docs/rules/brace-style
-        "camelcase": ["warn", camelcase], // http://eslint.org/docs/rules/camelcase
+        "camelcase": ["warn", options.camelcase], // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
         "class-methods-use-this": ["off"], // http://eslint.org/docs/rules/class-methods-use-this
         "comma-dangle": [
