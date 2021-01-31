@@ -3,11 +3,14 @@
 
 module.exports = {
     plugins: ["node"],
-    extends: [
-        "plugin:node/recommended"
-    ],
+    extends: ["plugin:node/recommended"],
     env: {
-        node: true
+        node: true,
+    },
+    parserOptions: {
+        // Most Node projects don't use Babel to preprocess JS files
+        // Requiring them would be annoying
+        requireConfigFile: false,
     },
     rules: {
         /* eslint-enable sort-keys */
@@ -31,5 +34,5 @@ module.exports = {
         // Disable this rule if you have to exit the process forcefully and you know what you're doing.
         "node/no-process-exit": "warn", // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-process-exit.md
         /* eslint-disable sort-keys */
-    }
+    },
 };

@@ -11,12 +11,12 @@ module.exports = {
     globals: {
         cy: true,
         Cypress: true,
-        assert: true
+        assert: true,
     },
     rules: {
         /* eslint-enable sort-keys */
         // chai uses these as assertions
-        "babel/no-unused-expressions": "off",
+        "@babel/no-unused-expressions": "off",
         // In order to make mocks more condensed, single line blocks are allowed in tests
         "brace-style": ["warn", "1tbs", { allowSingleLine: true }],
         // Storybook stories export a default config object which gets used by their pipeline
@@ -34,10 +34,14 @@ module.exports = {
         // If you want to test for thrown errors in a constructor function, it's common to ignore the result
         // @see https://github.com/peerigon/clockodo/pull/1#discussion_r180795825
         "no-new": "off",
-        "quotes": ["warn", "double", {
-            ...options["quotes"],
-            // Allow Jest inline snapshots
-            allowTemplateLiterals: true,
-        }],
-    }
+        quotes: [
+            "warn",
+            "double",
+            {
+                ...options["quotes"],
+                // Allow Jest inline snapshots
+                allowTemplateLiterals: true,
+            },
+        ],
+    },
 };

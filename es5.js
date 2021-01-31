@@ -3,11 +3,11 @@
 
 module.exports = {
     env: {
-        es6: false
+        es6: false,
     },
     parserOptions: {
         ecmaVersion: 5,
-        sourceType: "script"
+        sourceType: "script",
     },
     rules: {
         /* eslint-enable sort-keys */
@@ -18,6 +18,6 @@ module.exports = {
         "prefer-numeric-literals": "off",
         "prefer-rest-params": "off",
         "prefer-spread": "off",
-        "prefer-template": "off"
-    }
+        "prefer-template": "off",
+    },
 };

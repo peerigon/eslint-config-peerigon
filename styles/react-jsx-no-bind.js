@@ -9,12 +9,12 @@ module.exports = {
             // Use styles/react-jsx-allow-bind if you're not using React.memo.
             "warn",
             {
-                "allowArrowFunctions": false,
-                "allowBind": false,
-                "allowFunctions": false,
-                "ignoreDOMComponents": true,
-                "ignoreRefs": true,
+                allowArrowFunctions: false,
+                allowBind: false,
+                allowFunctions: false,
+                ignoreDOMComponents: true,
+                ignoreRefs: true,
             },
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-    }
+    },
 };

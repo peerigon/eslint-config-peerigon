@@ -1,68 +1,79 @@
 {
-  "name": "eslint-config-peerigon",
-  "version": "0.0.0-semantically-released",
-  "description": "Peerigon coding rules as eslint config",
-  "main": "base.js",
-  "scripts": {
-    "unused": "eslint-find-rules -u -n -d",
-    "unused:javascript": "npm run unused -- ./tests/javascript/.eslintrc.json",
-    "unused:typescript": "npm run unused -- --ext .ts ./tests/typescript/.eslintrc.json",
-    "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
-    "test": "run-s test:*",
-    "test:javascript": "cd tests/javascript; eslint --max-warnings 0 .",
-    "test:node": "cd tests/node; eslint --max-warnings 0 .",
-    "test:typescript": "cd tests/typescript; eslint --max-warnings 0 ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/peerigon/eslint-config-peerigon.git"
-  },
-  "keywords": [
-    "eslint",
-    "peerigon",
-    "coding",
-    "rules",
-    "style"
-  ],
-  "files": [
-    "*.js",
-    "styles",
-    "presets"
-  ],
-  "author": "developers@peerigon.com",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/peerigon/eslint-config-peerigon/issues"
-  },
-  "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
-  "engines": {
-    "node": ">=10.0.0"
-  },
-  "peerDependencies": {
-    "eslint": "^7.15.0"
-  },
-  "dependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-no-unsafe-regex": "^1.0.0",
-    "eslint-plugin-optimize-regex": "^1.2.0",
-    "eslint-plugin-promise": "^4.2.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
-    "@typescript-eslint/parser": "^4.14.1",
-    "eslint": "^7.18.0",
-    "eslint-find-rules": "^3.6.1",
-    "eslint-plugin-flowtype": "^5.2.0",
-    "eslint-plugin-flowtype-errors": "^4.4.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-react": "^7.22.0",
-    "flow-bin": "^0.143.1",
-    "npm-run-all": "^4.1.5",
-    "typescript": "^4.1.3"
-  }
+    "name": "eslint-config-peerigon",
+    "version": "0.0.0-semantically-released",
+    "description": "Peerigon coding rules as eslint config",
+    "main": "base.js",
+    "scripts": {
+        "unused": "eslint-find-rules -u -n -d",
+        "unused:javascript": "npm run unused -- ./tests/javascript/.eslintrc.json",
+        "unused:typescript": "npm run unused -- --ext .ts ./tests/typescript/.eslintrc.json",
+        "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
+        "test": "run-p test:*",
+        "test:javascript": "cd tests/javascript; eslint --max-warnings 0 .",
+        "test:node": "cd tests/node; eslint --max-warnings 0 .",
+        "test:typescript": "cd tests/typescript; eslint --max-warnings 0 ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/peerigon/eslint-config-peerigon.git"
+    },
+    "keywords": [
+        "eslint",
+        "peerigon",
+        "coding",
+        "rules",
+        "style"
+    ],
+    "files": [
+        "*.js",
+        "styles",
+        "presets"
+    ],
+    "author": "developers@peerigon.com",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/peerigon/eslint-config-peerigon/issues"
+    },
+    "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "peerDependencies": {
+        "eslint": ">=7.15.0"
+    },
+    "dependencies": {
+        "@babel/core": ">=7.11.0",
+        "@babel/eslint-parser": "^7.12.1",
+        "@babel/eslint-plugin": ">=7.12.1",
+        "@typescript-eslint/eslint-plugin": ">=4.14.1",
+        "@typescript-eslint/parser": "^4.14.1",
+        "eslint-config-prettier": ">=7.2.0",
+        "eslint-plugin-import": ">=2.22.1",
+        "eslint-plugin-no-unsafe-regex": ">=1.0.0",
+        "eslint-plugin-optimize-regex": ">=1.2.0",
+        "eslint-plugin-prefer-arrow": ">=1.2.3",
+        "eslint-plugin-promise": ">=4.2.1"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/preset-env": "^7.12.11",
+        "eslint": "^7.18.0",
+        "eslint-find-rules": "^3.6.1",
+        "eslint-plugin-flowtype": "^5.2.0",
+        "eslint-plugin-flowtype-errors": "^4.4.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-react": "^7.22.0",
+        "flow-bin": "^0.143.1",
+        "husky": "^4.3.8",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.2.1",
+        "pretty-quick": "^3.1.0",
+        "typescript": "^4.1.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    }
 }

@@ -2,7 +2,7 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    "extends": [
+    extends: [
         "peerigon",
         "peerigon/typescript",
         "peerigon/styles/prefer-arrow",
@@ -12,5 +12,5 @@ module.exports = {
         "prettier/babel",
         "prettier/@typescript-eslint",
     ],
-    "root": true,
+    root: true,
 };

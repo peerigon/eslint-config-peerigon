@@ -1,3 +1,8 @@
-import {getMessage} from "./message.js";
+import { getMessage } from "./message.js";
 
-console.log(getMessage());
+class SomeClass {
+    #someProp = true;
+    private someMethod = () => {};
+}
+
+console.log(getMessage(), SomeClass);

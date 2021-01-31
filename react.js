@@ -3,19 +3,23 @@
 
 module.exports = {
     plugins: ["react", "jsx-a11y", "react-hooks"],
-    extends: ["plugin:import/react", "plugin:react/recommended", "plugin:jsx-a11y/recommended"],
+    extends: [
+        "plugin:import/react",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+    ],
     settings: {
         react: {
-            version: "detect"
-        }
+            version: "detect",
+        },
     },
     overrides: [
         {
-            "files": "*.ts{,x}",
-            "rules": {
-                "react/prop-types": "off" // We expect React components to be checked by TypeScript
-            }
-        }
+            files: "*.ts{,x}",
+            rules: {
+                "react/prop-types": "off", // We expect React components to be checked by TypeScript
+            },
+        },
     ],
     rules: {
         /* eslint-enable sort-keys */
@@ -29,7 +33,7 @@ module.exports = {
                     "getInitialState",
                     "getDefaultProps",
                     "getChildContext",
-                    "shouldComponentUpdate"
+                    "shouldComponentUpdate",
                 ],
             },
         ],
@@ -100,8 +104,8 @@ module.exports = {
         "react/jsx-one-expression-per-line": [
             "off", // This rule does not play well with Prettier
             {
-                allow: "literal"
-            }
+                allow: "literal",
+            },
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
         "react/jsx-pascal-case": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
         "react/jsx-sort-default-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md

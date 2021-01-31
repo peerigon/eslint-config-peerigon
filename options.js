@@ -11,20 +11,20 @@ module.exports = {
     ["camelcase"]: camelcase,
     ["comma-spacing"]: {
         after: true,
-        before: false
+        before: false,
     },
     ["indent"]: {
         ArrayExpression: 1,
         CallExpression: {
-            arguments: 1
+            arguments: 1,
         },
         FunctionDeclaration: {
             body: 1,
-            parameters: 1
+            parameters: 1,
         },
         FunctionExpression: {
             body: 1,
-            parameters: 1
+            parameters: 1,
         },
         MemberExpression: 1,
         ObjectExpression: 1,
@@ -45,63 +45,63 @@ module.exports = {
             "JSXClosingElement",
             "JSXText",
             "JSXEmptyExpression",
-            "JSXSpreadChild"
+            "JSXSpreadChild",
         ],
-        outerIIFEBody: 1
+        outerIIFEBody: 1,
     },
     ["lines-between-class-members"]: {
-        exceptAfterSingleLine: true
+        exceptAfterSingleLine: true,
     },
     ["max-lines"]: {
         max: 700,
         skipBlankLines: true,
-        skipComments: true
+        skipComments: true,
     },
     ["no-unused-expressions"]: {
         allowShortCircuit: true,
-        allowTernary: true
+        allowTernary: true,
     },
     ["no-unused-vars"]: {
         args: "none",
         caughtErrors: "none",
         ignoreRestSiblings: true,
-        vars: "all"
+        vars: "all",
     },
     ["quotes"]: {
-        avoidEscape: true
+        avoidEscape: true,
     },
     ["space-before-function-paren"]: {
         anonymous: "always",
-        named: "never"
+        named: "never",
     },
     ["@typescript-eslint/ban-types"]: {
         types: {
             // Default options taken from https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/rules/ban-types.ts
             String: {
                 message: "Use string instead",
-                fixWith: "string"
+                fixWith: "string",
             },
             Boolean: {
                 message: "Use boolean instead",
-                fixWith: "boolean"
+                fixWith: "boolean",
             },
             Number: {
                 message: "Use number instead",
-                fixWith: "number"
+                fixWith: "number",
             },
             Object: {
                 message: "Use Record<string, unknown> instead",
-                fixWith: "Record<string, unknown>"
+                fixWith: "Record<string, unknown>",
             },
             Symbol: {
                 message: "Use symbol instead",
-                fixWith: "symbol"
-            }
-        }
+                fixWith: "symbol",
+            },
+        },
     },
     ["@typescript-eslint/camelcase"]: {
         ...camelcase,
-        genericType: "always"
+        genericType: "always",
     },
     ["@typescript-eslint/naming-convention"]: (() => {
         const options = {
@@ -158,8 +158,8 @@ module.exports = {
             "interface",
             "typeAlias",
             "enum",
-            "typeParameter"
-        ].map(selector => ({
+            "typeParameter",
+        ].map((selector) => ({
             filter: {
                 match: true,
                 // UNSAFE_ is a prefix used by React for all lifecycle hooks that are about to be deprecated
@@ -169,10 +169,7 @@ module.exports = {
             selector,
         }));
 
-        options.defaultRules = [
-            ...Object.values(options),
-            ...escapeHatches,
-        ];
+        options.defaultRules = [...Object.values(options), ...escapeHatches];
 
         options.ignoreProperties = {
             selector: "property",
@@ -180,6 +177,6 @@ module.exports = {
         };
 
         return options;
-    })()
+    })(),
     /* eslint-disable sort-keys */
 };

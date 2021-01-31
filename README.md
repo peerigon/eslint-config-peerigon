@@ -9,24 +9,24 @@
 
 Linting and formatting rules are always a balance between
 
-- ease of reading
-- ease of refactoring
-- ease of writing.
+-   ease of reading
+-   ease of refactoring
+-   ease of writing.
 
 We think that
 
-- code is read more often than refactored
-- and refactored more often than written from scratch.
+-   code is read more often than refactored
+-   and refactored more often than written from scratch.
 
 Our linting rules have been designed with these assumptions in mind.
 
 ## Table of contents
 
-- [Quick start](#quick-start)
-- [Features](#features)
-- [Practical guide](#practical-guide)
-- [Provided configs](#provided-configs)
-- [Styles](#styles)
+-   [Quick start](#quick-start)
+-   [Features](#features)
+-   [Practical guide](#practical-guide)
+-   [Provided configs](#provided-configs)
+-   [Styles](#styles)
 
 ## Quick start
 
@@ -46,7 +46,7 @@ There are presets for the most common setups:
 ### Prettier + TypeScript
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow --save-dev
+npm i eslint eslint-config-peerigon --save-dev
 ```
 
 ```js
@@ -70,7 +70,7 @@ npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript
 ### Prettier + TypeScript + React
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
+npm i eslint eslint-config-peerigon eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
 ```
 
 ```js
@@ -95,7 +95,7 @@ npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript
 ### Prettier + TypeScript + Node
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow eslint-plugin-node --save-dev
+npm i eslint eslint-config-peerigon eslint-plugin-node --save-dev
 ```
 
 ```js
@@ -236,6 +236,15 @@ This is our recommended VSCode configuration using the [Prettier extension](http
 }
 ```
 
+### Experimental syntax using Babel
+
+If you're using Babel you should set [`requireConfigFile: true`](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration) in your ESLint config. ESLint will then use your `babel.config.json`.
+
+```js
+{
+    "parserOptions": { "requireConfigFile": true },
+}
+```
 
 ### Naming conventions for properties
 
@@ -248,10 +257,13 @@ module.exports = {
     /* ... */
     rules: {
         // The API uses snake_case as properties
-        "babel/camelcase": ["warn", {
-            ...options["camelcase"],
-            properties: "never"
-        }]
+        camelcase: [
+            "warn",
+            {
+                ...options["camelcase"],
+                properties: "never",
+            },
+        ],
     },
 };
 ```
@@ -296,7 +308,10 @@ Add an `.eslintrc.json` to the project's root folder:
         "prettier" // add this at the end of 'extends' if you're using Prettier
     ],
     // Do not search for further eslint configs in upper directories
-    "root": true
+    "root": true,
+    // If you're using Babel, you should set requireConfigFile: true
+    // ESLint will then use your babel.config.json.
+    // "parserOptions": { "requireConfigFile": true },
 }
 ```
 
@@ -356,20 +371,14 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 }
 ```
 
-*We recommend using [`peerigon/styles/react-jsx-no-literals`](#peerigonstylesreact-jsx-no-literals) if you're using i18n in your project.*
-*You can use [`peerigon/styles/react-jsx-no-bind`](#peerigonstylesreact-jsx-no-bind) if you're using `memo` and `shouldComponentUpdate` a lot.*
+_We recommend using [`peerigon/styles/react-jsx-no-literals`](#peerigonstylesreact-jsx-no-literals) if you're using i18n in your project._
+_You can use [`peerigon/styles/react-jsx-no-bind`](#peerigonstylesreact-jsx-no-bind) if you're using `memo` and `shouldComponentUpdate` a lot._
 
 ### [`peerigon/typescript`](typescript.js)
 
-**Important: Requires [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) as project dependency.**
-
-```
-npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
-```
-
 Rules for [TypeScript](https://www.typescriptlang.org/).
 
-**⚠️ Attention:** These rules require your `tsconfig.json`. Specify the path in `parserOptions.project` (see also [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject) for more information). *The path should be relative to the folder where `eslint` is executed.*
+**⚠️ Attention:** These rules require your `tsconfig.json`. Specify the path in `parserOptions.project` (see also [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject) for more information). _The path should be relative to the folder where `eslint` is executed._
 
 ```js
 {
@@ -401,7 +410,7 @@ You need to add `--ext js,ts,tsx` to the `test:lint` script:
 }
 ```
 
-*We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow) because arrow functions (or function expressions in general) can leverage [TypeScript's contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing).*
+_We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow) because arrow functions (or function expressions in general) can leverage [TypeScript's contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing)._
 
 Do you see an error that looks like this?
 
@@ -514,7 +523,7 @@ Forbids usage of `export default`. When using default exports, it becomes harder
 npm i eslint-plugin-no-null --save-dev
 ```
 
-Forbids the usage of `null`. In a codebase it's often better to use a single non-value to represent *the absence of a value*. With the rise of default parameters and destructuring defaults, JavaScript developed a clear tendency towards `undefined`. [This issue](https://github.com/peerigon/eslint-config-peerigon/issues/71) summarizes the arguments (and trade-offs) of **null vs. undefined**.
+Forbids the usage of `null`. In a codebase it's often better to use a single non-value to represent _the absence of a value_. With the rise of default parameters and destructuring defaults, JavaScript developed a clear tendency towards `undefined`. [This issue](https://github.com/peerigon/eslint-config-peerigon/issues/71) summarizes the arguments (and trade-offs) of **null vs. undefined**.
 
 ```js
     "extends": [
@@ -581,7 +590,7 @@ const Hello = <div>test</div>;
 As an escape hatch, this is still allowed:
 
 ```jsx
-const Hello = <div>{'test'}</div>;
+const Hello = <div>{"test"}</div>;
 ```
 
 ### [`peerigon/styles/prefer-array-shorthand`](styles/prefer-array-shorthand.js)

@@ -2,10 +2,8 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    parser: "babel-eslint",
-    plugins: [
-        "flowtype"
-    ],
+    parser: "@babel/eslint-parser",
+    plugins: ["flowtype"],
     extends: ["plugin:flowtype/recommended"],
     settings: {
         flowtype: {

@@ -1,10 +1,7 @@
 "use strict";
 
 module.exports = {
-    tests: [
-        "**/*.{test,spec,stories}.*",
-        "**/test{s,}/**",
-    ],
+    tests: ["**/*.{test,spec,stories}.*", "**/test{s,}/**"],
     tooling: [
         "config/**",
         "script{,s}/**", // contains usually npm scripts
@@ -16,14 +13,8 @@ module.exports = {
         "**/*.scss",
         "**/*.sass",
         "**/*register",
-        "**/*extend",  // mostly because of @testing-library/jest-dom/extend-expect
+        "**/*extend", // mostly because of @testing-library/jest-dom/extend-expect
     ],
-    typescript: [
-        "*.ts",
-        "*.tsx",
-    ],
-    react: [
-        "*.jsx",
-        "*.tsx",
-    ]
+    typescript: ["*.ts", "*.tsx"],
+    react: ["*.jsx", "*.tsx"],
 };
