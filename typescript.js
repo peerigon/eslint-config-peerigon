@@ -277,8 +277,9 @@ module.exports = {
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unbound-method.md
                 "@typescript-eslint/unified-signatures": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md
-                "brace-style": "off", // covered by @comma-spacing/brace-style
-                "comma-spacing": "off", // covered by @comma-spacing/comma-spacing
+                "brace-style": "off", // covered by @typescript-eslint/brace-style
+                "camelcase": "off", // covered by @typescript-eslint/naming-convention
+                "comma-spacing": "off", // covered by @typescript-eslint/comma-spacing
                 "func-call-spacing": "off", // covered by @typescript-eslint/func-call-spacing
                 // There's currently a problem with this rule, see https://github.com/benmosher/eslint-plugin-import/issues/1341
                 "import/export": "off", // TypeScript should catch it anyway
