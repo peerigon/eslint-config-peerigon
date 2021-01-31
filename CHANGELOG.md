@@ -1,3 +1,16 @@
+# [30.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v29.0.0...v30.0.0-beta.1) (2021-01-31)
+
+
+### chore
+
+* Update dependencies ([a957c21](https://github.com/peerigon/eslint-config-peerigon/commit/a957c211fb5302dd6a7d126c7d5d7be1ed1f0477))
+
+
+### BREAKING CHANGES
+
+* You should have @babel/core as your project dependency now, see https://babel.dev/blog/2020/07/13/the-state-of-babel-eslint#the-present
+* You can remove TypeScript-specific ESLint dependencies, especially @typescript-eslint/parser. They should ship with the config.
+
 # [29.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.5...v29.0.0) (2021-01-31)
 
 
