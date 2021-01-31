@@ -1,3 +1,36 @@
+# [29.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.5...v29.0.0-beta.1) (2021-01-31)
+
+
+### Bug Fixes
+
+* **JavaScript:** Remove deprecated rules ([eb52883](https://github.com/peerigon/eslint-config-peerigon/commit/eb528832d9d38289d8bc3a6bc34dea78d6023ee2))
+
+
+### chore
+
+* Update dependencies ([44e21b5](https://github.com/peerigon/eslint-config-peerigon/commit/44e21b5ab59783af869e93eb5d5e1a0e0f5802a0))
+
+
+### Features
+
+* Add prettier-typescript-node preset ([1464581](https://github.com/peerigon/eslint-config-peerigon/commit/1464581a8ec2cdf5e2479078125e283004d5d0dd))
+* **JavaScript:** Add "no-loss-of-precision" rule as warning ([5fd2828](https://github.com/peerigon/eslint-config-peerigon/commit/5fd2828c9489d3bf9a332aed358432bba7cd87b9))
+* **JavaScript:** Add "no-nonoctal-decimal-escape" rule as warning ([92e7aa9](https://github.com/peerigon/eslint-config-peerigon/commit/92e7aa9aaf7e71e3e97b7cfe7c46d7327635af20))
+* **JavaScript:** Add "no-promise-executor-return" rule as warning ([a679f6b](https://github.com/peerigon/eslint-config-peerigon/commit/a679f6bb22e99ce78f82c858c048e4ab00560db3))
+* **JavaScript:** Add "no-restricted-exports" rule as warning ([c1f3852](https://github.com/peerigon/eslint-config-peerigon/commit/c1f3852956f5ba4fbdfd58dbc32760d407a0f930))
+* **JavaScript:** Add "no-unreachable-loop" rule as warning ([5757b4b](https://github.com/peerigon/eslint-config-peerigon/commit/5757b4b43240905ee839a6910f19eab6f5f01728))
+* **JavaScript:** Add "no-unsafe-optional-chaining" rule as warning ([eb77e91](https://github.com/peerigon/eslint-config-peerigon/commit/eb77e91768039ffd9f83eef8c63638cec94c7094))
+* **JavaScript:** Add "no-useless-backreference" rule as warning ([1653191](https://github.com/peerigon/eslint-config-peerigon/commit/165319178dc5cd82b44bad9228a1f751e7493960))
+* **node:** Use eslint-plugin-node ([75c2ffe](https://github.com/peerigon/eslint-config-peerigon/commit/75c2ffe0d2d2fa68ae316ad8bc97964d2c0c0645))
+* **TypeScript:** Add new TypeScript rules ([199a393](https://github.com/peerigon/eslint-config-peerigon/commit/199a393e400d4c6d9ef873db28a59e5ee30730d4))
+
+
+### BREAKING CHANGES
+
+* **node:** We switched to eslint-plugin-node and their recommended rules
+* Change `eslint` peer dependency to `^7.15.0`
+* Update `eslint-config-prettier` to `^7.2.0`
+
 ## [28.1.5](https://github.com/peerigon/eslint-config-peerigon/compare/v28.1.4...v28.1.5) (2020-11-30)
 
 
