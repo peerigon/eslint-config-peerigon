@@ -32,6 +32,7 @@ module.exports = {
                 "@typescript-eslint/ban-ts-comment": ["warn", {
                     "ts-expect-error": "allow-with-description"
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
+                "@typescript-eslint/ban-tslint-comment": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-tslint-comment.md
                 "@typescript-eslint/ban-types": ["warn", options["@typescript-eslint/ban-types"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
                 "@typescript-eslint/brace-style": [
                     "warn",
@@ -42,7 +43,9 @@ module.exports = {
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md
                 // Handled by @typescript-eslint/naming-convention
                 "@typescript-eslint/camelcase": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
+                "@typescript-eslint/class-literal-property-style": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-literal-property-style.md
                 "@typescript-eslint/comma-spacing": ["warn", options["comma-spacing"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
+                "@typescript-eslint/consistent-indexed-object-style": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-indexed-object-style.md
                 "@typescript-eslint/consistent-type-assertions": [
                     "warn",
                     {
@@ -53,7 +56,9 @@ module.exports = {
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md
                 "@typescript-eslint/consistent-type-definitions": ["warn", "type"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-definitions.md
+                "@typescript-eslint/consistent-type-imports": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-imports.md
                 "@typescript-eslint/default-param-last": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/default-param-last.md
+                "@typescript-eslint/dot-notation": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
                 "@typescript-eslint/explicit-function-return-type": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
                 "@typescript-eslint/explicit-member-accessibility": [
                     "warn",
@@ -73,6 +78,11 @@ module.exports = {
                 "@typescript-eslint/func-call-spacing": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/func-call-spacing.md
                 "@typescript-eslint/generic-type-naming": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md
                 "@typescript-eslint/indent": ["warn", 4, options["indent"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
+                "@typescript-eslint/init-declarations": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/init-declarations.md
+                "@typescript-eslint/lines-between-class-members": ["warn", "always", {
+                    ...options["lines-between-class-members"],
+                    exceptAfterOverload: true,
+                }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/lines-between-class-members.md
                 "@typescript-eslint/member-delimiter-style": [
                     "warn",
                     {
@@ -90,12 +100,23 @@ module.exports = {
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md
                 "@typescript-eslint/member-naming": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-naming.md
                 "@typescript-eslint/member-ordering": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
+                "@typescript-eslint/method-signature-style": ["warn", "property"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/method-signature-style.md
                 "@typescript-eslint/naming-convention": [
                     "warn",
                     ...options["@typescript-eslint/naming-convention"].defaultRules,
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
                 "@typescript-eslint/no-array-constructor": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
+                "@typescript-eslint/no-base-to-string": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-base-to-string.md
+                "@typescript-eslint/no-confusing-non-null-assertion": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-non-null-assertion.md
+                "@typescript-eslint/no-confusing-void-expression": [
+                    "warn",
+                    {
+                        ignoreArrowShorthand: true,
+                        ignoreVoidOperator: true,
+                    }
+                ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/no-confusing-void-expression.md
                 "@typescript-eslint/no-dupe-class-members": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.md
+                "@typescript-eslint/no-duplicate-imports": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/@typescript-eslint/no-duplicate-imports.md
                 "@typescript-eslint/no-dynamic-delete": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
                 "@typescript-eslint/no-empty-function": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
                 "@typescript-eslint/no-empty-interface": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md
@@ -116,8 +137,16 @@ module.exports = {
                     ignoreVoid: true
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
                 "@typescript-eslint/no-for-in-array": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md
+                "@typescript-eslint/no-implicit-any-catch": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implicit-any-catch.md
                 "@typescript-eslint/no-implied-eval": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implied-eval.md
                 "@typescript-eslint/no-inferrable-types": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md
+                "@typescript-eslint/no-invalid-this": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-this.md
+                "@typescript-eslint/no-invalid-void-type": ["warn", {
+                    allowAsThisParameter: true,
+                    allowInGenericTypeArguments: true,
+                }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-void-type.md
+                "@typescript-eslint/no-loop-func": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loop-func.md
+                "@typescript-eslint/no-loss-of-precision": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.md
                 "@typescript-eslint/no-magic-numbers": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
                 "@typescript-eslint/no-misused-new": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-misused-new.md
                 "@typescript-eslint/no-misused-promises": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-misused-promises.md
@@ -127,7 +156,9 @@ module.exports = {
                 // e.g. when working with Maps
                 "@typescript-eslint/no-non-null-assertion": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
                 "@typescript-eslint/no-parameter-properties": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md
+                "@typescript-eslint/no-redeclare": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redeclare.md
                 "@typescript-eslint/no-require-imports": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md
+                "@typescript-eslint/no-shadow": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
                 "@typescript-eslint/no-this-alias": [
                     "warn",
                     {
@@ -147,6 +178,7 @@ module.exports = {
                 "@typescript-eslint/no-unnecessary-qualifier": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md
                 "@typescript-eslint/no-unnecessary-type-arguments": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-arguments.md
                 "@typescript-eslint/no-unnecessary-type-assertion": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
+                "@typescript-eslint/no-unnecessary-type-constraint": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-constraint.md
                 // In practice, these unsafe rules are too strict. It's ok to use 'any' within a function.
                 // We decided to keep @typescript-eslint/no-unsafe-return in order to avoid that 'any'
                 // leaks into the rest of the application
@@ -162,15 +194,22 @@ module.exports = {
                 "@typescript-eslint/no-use-before-define": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
                 "@typescript-eslint/no-useless-constructor": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
                 "@typescript-eslint/no-var-requires": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
+                // Using the ! operator to remove the nullable type is often better because it does not
+                // require refactoring if you decide to change the non-nullable type later.
+                // For instance:
+                // declare a: undefined | string;
+                // const b = a as string; // what if we change "string" later to "number"?
+                "@typescript-eslint/non-nullable-type-assertion-style": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/non-nullable-type-assertion-style.md
                 "@typescript-eslint/prefer-as-const": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-as-const.md
+                "@typescript-eslint/prefer-enum-initializers": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-enum-initializers.md
                 "@typescript-eslint/prefer-for-of": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-for-of.md
                 "@typescript-eslint/prefer-function-type": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-function-type.md
                 "@typescript-eslint/prefer-includes": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
                 "@typescript-eslint/prefer-interface": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md
+                // Dynamic enum members are quite rare and the problem illustrated in the readme sounds like a footgun.
+                // If dynamic enums are necessary in certain cases, this rule can be disabled.
+                "@typescript-eslint/prefer-literal-enum-member": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-literal-enum-member.md
                 "@typescript-eslint/prefer-namespace-keyword": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-namespace-keyword.md
-                // Enabling prefer-readonly would require developers to write
-                // private readonly someMethod = () => {};
-                // which is verbose and kind of annoying.
                 "@typescript-eslint/prefer-nullish-coalescing": ["warn", {
                     ignoreConditionalTests: true,
                     ignoreMixedLogicalExpressions: true,
@@ -178,12 +217,17 @@ module.exports = {
                 "@typescript-eslint/prefer-optional-chain": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-optional-chain.md
                 // We can't activate prefer-readonly currently as we don't want to flag class properties
                 // that are functions as readonly (although it would be correct).
-                // That would just be too verbose.
-                "@typescript-eslint/prefer-readonly": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
+                // Enabling prefer-readonly would require developers to write
+                // private readonly someMethod = () => {};
+                // which is verbose and kind of annoying.
+                "@typescript-eslint/prefer-readonly": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-readonly.md
+                "@typescript-eslint/prefer-readonly-parameter-types": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-readonly-parameter-types.md
+                "@typescript-eslint/prefer-reduce-type-parameter": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-reduce-type-parameter.md
                 // Sometimes it makes more sense to use .match() or maybe the global flag is added later.
                 // In this case we want to prevent the developer from needing to refactor the code.
                 "@typescript-eslint/prefer-regexp-exec": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
                 "@typescript-eslint/prefer-string-starts-ends-with": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
+                "@typescript-eslint/prefer-ts-expect-error": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-ts-expect-error.md
                 "@typescript-eslint/promise-function-async": [
                     "warn",
                     {
@@ -206,6 +250,7 @@ module.exports = {
                 }], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
                 "@typescript-eslint/return-await": ["warn", "in-try-catch"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
                 "@typescript-eslint/semi": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
+                "@typescript-eslint/sort-type-union-intersection-members": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/sort-type-union-intersection-members.md
                 "@typescript-eslint/space-before-function-paren": ["warn", options["space-before-function-paren"]], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
                 "@typescript-eslint/strict-boolean-expressions": [
                     "off",
@@ -227,6 +272,7 @@ module.exports = {
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unbound-method.md
                 "@typescript-eslint/unified-signatures": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md
                 "babel/camelcase": "off",
+                "babel/no-invalid-this": "off", // covered by @typescript-eslint/no-invalid-this
                 "babel/no-unused-expressions": "off", // covered by @typescript-eslint/no-unused-expressions
                 "babel/quotes": "off", // covered by @typescript-eslint/quotes
                 "babel/semi": "off", // covered by @typescript-eslint/semi
@@ -243,8 +289,10 @@ module.exports = {
                 "import/max-dependencies": ["warn", {max: 45}],
                 "import/named": "off", // TypeScript should catch it anyway
                 "import/namespace": "off", // TypeScript should catch it anyway
+                "import/no-duplicates": "off", // covered by @typescript-eslint/no-duplicate-imports
                 "import/no-unresolved": "off", // TypeScript should catch it anyway
                 "indent": "off",
+                "lines-between-class-members": "off", // covered by @typescript-eslint/lines-between-class-members
                 // TypeScript files tend to get longer due to types
                 "max-lines": [
                     "warn",
@@ -256,10 +304,12 @@ module.exports = {
                 "no-dupe-class-members": "off", // covered by @typescript-eslint/no-dupe-class-members
                 "no-empty-function": "off", // covered by @typescript-eslint/no-empty-function
                 "no-extra-parens": "off",
+                "no-loop-func": "off", // covered by @typescript-eslint/no-loop-func
+                "no-loss-of-precision": "off", // covered by @typescript-eslint/no-loss-of-precision
+                "no-redeclare": "off", // covered by @typescript-eslint/no-redeclare
                 "no-useless-constructor": "off", // covered by @typescript-eslint/no-useless-constructor
                 "semi": "off", // covered by @typescript-eslint/semi
                 "space-before-function-paren": "off", // covered by @typescript-eslint/space-before-function-paren
-                "valid-jsdoc": "off", // when using TypeScript most things enforced by valid-jsdoc don't make sense
             },
         },
         {
