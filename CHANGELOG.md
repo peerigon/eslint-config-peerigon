@@ -1,3 +1,16 @@
+# [30.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v29.0.0...v30.0.0) (2021-01-31)
+
+
+### chore
+
+* Update dependencies ([#91](https://github.com/peerigon/eslint-config-peerigon/issues/91)) ([371ec42](https://github.com/peerigon/eslint-config-peerigon/commit/371ec4294808a48a92d9c8d625d40b8c5feae0e5)), closes [#89](https://github.com/peerigon/eslint-config-peerigon/issues/89)
+
+
+### BREAKING CHANGES
+
+* We switched to @babel/eslint-parser and @babel/eslint-plugin, see https://babel.dev/blog/2020/07/13/the-state-of-babel-eslint . If you're using Babel you should set [`requireConfigFile: true`](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration) in your ESLint config. ESLint will then use your `babel.config.json`.
+* You can remove TypeScript-specific ESLint dependencies, especially `@typescript-eslint/parser`. They should ship with the config.
+
 # [30.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v29.0.0...v30.0.0-beta.1) (2021-01-31)
 
 ### chore
