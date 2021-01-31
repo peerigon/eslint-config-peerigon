@@ -9,9 +9,6 @@
         "prettier/babel",
         "prettier/@typescript-eslint"
     ],
-    "env": {
-        "node": true
-    },
     "root": true,
     "parserOptions": {
         // This path is relative to the CWD where eslint is executed

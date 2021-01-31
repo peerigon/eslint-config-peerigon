@@ -10,6 +10,7 @@
     "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
     "test": "run-s test:*",
     "test:javascript": "cd tests/javascript; eslint .",
+    "test:node": "cd tests/node; eslint .",
     "test:typescript": "cd tests/typescript; eslint ."
   },
   "repository": {
@@ -57,6 +58,7 @@
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-flowtype-errors": "^4.4.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-react": "^7.22.0",
     "flow-bin": "^0.143.1",

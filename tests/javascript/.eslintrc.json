@@ -3,7 +3,7 @@
         "../../base.js"
     ],
     "env": {
-        "node": true
+        "browser": true
     },
     "root": true
 }

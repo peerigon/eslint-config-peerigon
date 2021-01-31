@@ -1,13 +1,35 @@
 /* eslint sort-keys: ["error", "asc"], quote-props: ["error", "consistent"] */
 /* eslint-disable sort-keys */
 
-// These rules try to be as close as possible to base.js while omitting the language features that are not supported by the current active LTS version of node.
-// See https://github.com/nodejs/LTS and http://node.green/
 module.exports = {
+    plugins: ["node"],
+    extends: [
+        "plugin:node/recommended"
+    ],
     env: {
         node: true
     },
-    parserOptions: {
-        sourceType: "script"
+    rules: {
+        /* eslint-enable sort-keys */
+        "node/callback-return": "warn", // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/callback-return.md
+        "node/global-require": "off", // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/global-require.md
+        "node/handle-callback-err": ["warn", "^(err|error)$"], // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/handle-callback-err
+        "node/no-mixed-requires": [
+            "warn",
+            {
+                allowCall: true,
+                grouping: false,
+            },
+        ], // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-mixed-requires.md
+        "node/no-new-require": "warn", // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-new-require.md
+        "node/no-path-concat": "warn", // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-path-concat.md
+        // process.exit() is often used in situations where it would have been better to either throw an error or
+        // let the process exit by itself.
+        // There are situations where process.exit() is the cause of truncated stdout output,
+        // see https://nodejs.org/api/process.html#process_process_exit_code
+        // If you want to set the exit code, you can also use process.exitCode.
+        // Disable this rule if you have to exit the process forcefully and you know what you're doing.
+        "node/no-process-exit": "warn", // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-process-exit.md
+        /* eslint-disable sort-keys */
     }
 };

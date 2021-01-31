@@ -225,22 +225,34 @@ The base rules use the `eslint-plugin-import` to resolve imports. Although it's 
 
 ### [`peerigon/node`](node.js)
 
-Special rules for Node.js >= 8.0.0 environments:
+**Important: Requires [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node).**
+
+```
+npm i eslint-plugin-node --save-dev
+```
 
 ```js
 {
     "extends": [
-        // Base rules with full ES2015 support
         "peerigon",
-        // Rules for node
         "peerigon/node",
         "prettier" // add this if you're using Prettier
-    ]
+    ],
     // Setting env.node = true is not necessary, this is already done by peerigon/node
+    "root": true
 }
 ```
 
-These rules assume that you're using CommonJS modules. In case you're using ECMAScript modules, you should set [`parserOptions.sourceType: "module"`](https://eslint.org/docs/user-guide/configuring#specifying-parser-options). We will change that once a LTS Node.js version has official support for ECMAScript modules.
+[`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node) uses the ["engines" field](https://docs.npmjs.com/files/package.json#engines) and the ["type" field](https://nodejs.org/api/esm.html#esm_enabling) in your `package.json` to check for compatibility issues. We recommend the following configuration:
+
+```json
+{
+    "type": "module",
+    "engines": {
+        "node": ">=8.10.0"
+    }
+}
+```
 
 ### [`peerigon/react`](react.js)
 
