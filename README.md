@@ -236,6 +236,15 @@ This is our recommended VSCode configuration using the [Prettier extension](http
 }
 ```
 
+### Experimental syntax using Babel
+
+If you're using Babel you should set [`requireConfigFile: true`](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration) in your ESLint config. ESLint will then use your `babel.config.json`.
+
+```js
+{
+    "parserOptions": { "requireConfigFile": true },
+}
+```
 
 ### Naming conventions for properties
 
@@ -296,7 +305,10 @@ Add an `.eslintrc.json` to the project's root folder:
         "prettier" // add this at the end of 'extends' if you're using Prettier
     ],
     // Do not search for further eslint configs in upper directories
-    "root": true
+    "root": true,
+    // If you're using Babel, you should set requireConfigFile: true
+    // ESLint will then use your babel.config.json.
+    // "parserOptions": { "requireConfigFile": true },
 }
 ```
 
