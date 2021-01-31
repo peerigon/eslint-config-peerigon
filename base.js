@@ -332,7 +332,11 @@ module.exports = {
         "no-octal-escape": "warn", // http://eslint.org/docs/rules/no-octal-escape
         "no-param-reassign": "off", // http://eslint.org/docs/rules/no-param-reassign
         "no-plusplus": "off", // http://eslint.org/docs/rules/no-plusplus
-        "no-promise-executor-return": "warn", // http://eslint.org/docs/rules/no-promise-executor-return
+        // The rule reported
+        // await new Promise((resolve) => setTimeout(resolve, 0))
+        // which is pretty common.
+        // Maybe there's an exception for one-liners now?
+        "no-promise-executor-return": "off", // http://eslint.org/docs/rules/no-promise-executor-return
         "no-proto": "warn", // http://eslint.org/docs/rules/no-proto
         "no-redeclare": "warn", // http://eslint.org/docs/rules/no-redeclare
         "no-restricted-exports": ["warn", {

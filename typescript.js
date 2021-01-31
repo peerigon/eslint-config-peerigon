@@ -108,8 +108,11 @@ module.exports = {
                 "@typescript-eslint/no-array-constructor": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
                 "@typescript-eslint/no-base-to-string": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-base-to-string.md
                 "@typescript-eslint/no-confusing-non-null-assertion": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-non-null-assertion.md
+                // There are too many false positives with this rule
+                // Additionally, there are situations where you just want to pass on the returned value even
+                // when it's currently annotated as 'void'
                 "@typescript-eslint/no-confusing-void-expression": [
-                    "warn",
+                    "off",
                     {
                         ignoreArrowShorthand: true,
                         ignoreVoidOperator: true,
