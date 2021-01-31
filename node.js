@@ -9,6 +9,11 @@ module.exports = {
     env: {
         node: true
     },
+    parserOptions: {
+        // Most Node projects don't use Babel to preprocess JS files
+        // Requiring them would be annoying
+        requireConfigFile: false,
+    },
     rules: {
         /* eslint-enable sort-keys */
         "node/callback-return": "warn", // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/callback-return.md

@@ -46,7 +46,7 @@ There are presets for the most common setups:
 ### Prettier + TypeScript
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow --save-dev
+npm i eslint eslint-config-peerigon --save-dev
 ```
 
 ```js
@@ -70,7 +70,7 @@ npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript
 ### Prettier + TypeScript + React
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
+npm i eslint eslint-config-peerigon eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
 ```
 
 ```js
@@ -95,7 +95,7 @@ npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript
 ### Prettier + TypeScript + Node
 
 ```
-npm i eslint eslint-config-peerigon @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prefer-arrow eslint-plugin-node --save-dev
+npm i eslint eslint-config-peerigon eslint-plugin-node --save-dev
 ```
 
 ```js
@@ -248,7 +248,7 @@ module.exports = {
     /* ... */
     rules: {
         // The API uses snake_case as properties
-        "babel/camelcase": ["warn", {
+        "camelcase": ["warn", {
             ...options["camelcase"],
             properties: "never"
         }]
@@ -360,12 +360,6 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 *You can use [`peerigon/styles/react-jsx-no-bind`](#peerigonstylesreact-jsx-no-bind) if you're using `memo` and `shouldComponentUpdate` a lot.*
 
 ### [`peerigon/typescript`](typescript.js)
-
-**Important: Requires [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) as project dependency.**
-
-```
-npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
-```
 
 Rules for [TypeScript](https://www.typescriptlang.org/).
 

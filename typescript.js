@@ -24,6 +24,9 @@ module.exports = {
             ],
             rules: {
                 /* eslint-enable sort-keys */
+                "@babel/no-invalid-this": "off", // covered by @typescript-eslint/no-invalid-this
+                "@babel/no-unused-expressions": "off", // covered by @typescript-eslint/no-unused-expressions
+                "@babel/semi": "off", // covered by @typescript-eslint/semi
                 // "no-undef": "off", // produces false positive with some TypeScript syntax. This is caught by TypeScript anyway.
                 "@typescript-eslint/adjacent-overload-signatures": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md
                 "@typescript-eslint/array-type": ["warn", {default: "generic"}], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md
@@ -274,11 +277,6 @@ module.exports = {
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unbound-method.md
                 "@typescript-eslint/unified-signatures": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md
-                "babel/camelcase": "off",
-                "babel/no-invalid-this": "off", // covered by @typescript-eslint/no-invalid-this
-                "babel/no-unused-expressions": "off", // covered by @typescript-eslint/no-unused-expressions
-                "babel/quotes": "off", // covered by @typescript-eslint/quotes
-                "babel/semi": "off", // covered by @typescript-eslint/semi
                 "brace-style": "off", // covered by @comma-spacing/brace-style
                 "comma-spacing": "off", // covered by @comma-spacing/comma-spacing
                 "func-call-spacing": "off", // covered by @typescript-eslint/func-call-spacing
@@ -311,6 +309,7 @@ module.exports = {
                 "no-loss-of-precision": "off", // covered by @typescript-eslint/no-loss-of-precision
                 "no-redeclare": "off", // covered by @typescript-eslint/no-redeclare
                 "no-useless-constructor": "off", // covered by @typescript-eslint/no-useless-constructor
+                "quotes": "off", // covered by @typescript-eslint/quotes
                 "semi": "off", // covered by @typescript-eslint/semi
                 "space-before-function-paren": "off", // covered by @typescript-eslint/space-before-function-paren
             },

@@ -10,7 +10,7 @@ const tests = require("./tests.js");
 const {allow, ...camelcase} = options["camelcase"];
 
 module.exports = {
-    parser: "babel-eslint",
+    parser: "@babel/eslint-parser",
     env: {
         es6: true,
     },
@@ -19,10 +19,10 @@ module.exports = {
         ecmaVersion: 2020
     },
     plugins: [
+        "@babel",
         "import",
         "optimize-regex",
         "promise",
-        "babel",
         "no-unsafe-regex"
     ],
     extends: [
@@ -34,6 +34,14 @@ module.exports = {
     reportUnusedDisableDirectives: true,
     rules: {
         /* eslint-enable sort-keys */
+        "@babel/new-cap": "warn",
+        "@babel/no-invalid-this": "warn",
+        "@babel/no-unused-expressions": [
+            "warn",
+            options["no-unused-expressions"],
+        ],
+        "@babel/object-curly-spacing": ["warn", "never"],
+        "@babel/semi": "warn",
         "accessor-pairs": [
             "off",
             {
@@ -59,17 +67,6 @@ module.exports = {
             },
         ], // http://eslint.org/docs/rules/arrow-spacing
         // https://github.com/babel/eslint-plugin-babel
-        "babel/camelcase": ["warn", camelcase],
-        "babel/new-cap": "warn",
-        "babel/no-invalid-this": "warn",
-        "babel/no-unused-expressions": [
-            "warn",
-            options["no-unused-expressions"],
-        ],
-        "babel/object-curly-spacing": ["warn", "never"],
-        "babel/quotes": ["warn", "double", options.quotes],
-        "babel/semi": "warn",
-        "babel/valid-typeof": "error",
         "block-scoped-var": "error", // http://eslint.org/docs/rules/block-scoped-var
         "block-spacing": "warn", // http://eslint.org/docs/rules/block-spacing
         "brace-style": [
@@ -79,8 +76,7 @@ module.exports = {
                 "allowSingleLine": false,
             },
         ], // http://eslint.org/docs/rules/brace-style
-        // Handled by babel/camelcase
-        "camelcase": "off", // http://eslint.org/docs/rules/camelcase
+        "camelcase": ["warn", camelcase], // http://eslint.org/docs/rules/camelcase
         "capitalized-comments": ["off"], // http://eslint.org/docs/rules/capitalized-comments
         "class-methods-use-this": ["off"], // http://eslint.org/docs/rules/class-methods-use-this
         "comma-dangle": [
@@ -526,8 +522,7 @@ module.exports = {
         "promise/prefer-await-to-then": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-then.md
         "promise/valid-params": "warn", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/valid-params.md
         "quote-props": ["warn", "as-needed"], // http://eslint.org/docs/rules/quote-props
-        // Handled by babel/quotes
-        "quotes": ["off", "double", options.quotes], // http://eslint.org/docs/rules/quotes
+        "quotes": ["warn", "double", options.quotes],// http://eslint.org/docs/rules/quotes
         "radix": "off", // http://eslint.org/docs/rules/radix
         // This rule would be nice but there are too many false positives :(
         "require-atomic-updates": "off", // https://eslint.org/docs/rules/require-atomic-updates
@@ -579,8 +574,7 @@ module.exports = {
         "template-curly-spacing": ["warn", "never"], // http://eslint.org/docs/rules/template-curly-spacing
         "template-tag-spacing": ["warn", "never"], // http://eslint.org/docs/rules/template-tag-spacing
         "unicode-bom": ["warn", "never"], // http://eslint.org/docs/rules/unicode-bom
-        // Handled by babel/valid-typeof
-        "valid-typeof": "off", // http://eslint.org/docs/rules/valid-typeof
+        "valid-typeof": "error", // http://eslint.org/docs/rules/valid-typeof
         "vars-on-top": "warn", // http://eslint.org/docs/rules/vars-on-top
         "wrap-iife": "off", // http://eslint.org/docs/rules/wrap-iife
         "wrap-regex": "off", // http://eslint.org/docs/rules/wrap-regex

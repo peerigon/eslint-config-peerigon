@@ -2,7 +2,7 @@
 /* eslint-disable sort-keys */
 
 module.exports = {
-    parser: "babel-eslint",
+    parser: "@babel/eslint-parser",
     plugins: [
         "flowtype"
     ],
