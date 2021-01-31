@@ -9,9 +9,9 @@
     "unused:typescript": "npm run unused -- --ext .ts ./tests/typescript/.eslintrc.json",
     "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
     "test": "run-s test:*",
-    "test:javascript": "cd tests/javascript; eslint .",
-    "test:node": "cd tests/node; eslint .",
-    "test:typescript": "cd tests/typescript; eslint ."
+    "test:javascript": "cd tests/javascript; eslint --max-warnings 0 .",
+    "test:node": "cd tests/node; eslint --max-warnings 0 .",
+    "test:typescript": "cd tests/typescript; eslint --max-warnings 0 ."
   },
   "repository": {
     "type": "git",
