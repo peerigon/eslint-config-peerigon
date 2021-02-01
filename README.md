@@ -486,12 +486,6 @@ The following rules enable specific writing styles. Use them as you prefer.
 
 ### [`peerigon/styles/prefer-arrow`](styles/prefer-arrow.js)
 
-**Important: Requires [`eslint-plugin-prefer-arrow`](https://github.com/TristonJ/eslint-plugin-prefer-arrow) as project dependency.**
-
-```
-npm i eslint-plugin-prefer-arrow --save-dev
-```
-
 Enforces arrow function expressions instead of function declarations (see [#23](https://github.com/peerigon/eslint-config-peerigon/issues/23)).
 Regular functions are still allowed as methods in objects or classes.
 
