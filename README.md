@@ -405,7 +405,7 @@ You need to add `--ext js,ts,tsx` to the `test:lint` script:
 ```js
 {
     "scripts": {
-        "test:lint": "eslint --cache --ext js,jsx,ts,tsx ./src ./test"
+        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx ."
     }
 }
 ```
