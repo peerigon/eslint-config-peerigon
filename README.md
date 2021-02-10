@@ -35,7 +35,7 @@ Recommended configuration in your `package.json`:
 ```js
 {
     "scripts": {
-        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx .",
+        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx --ignore-path .gitignore .",
         "posttest": "npm run test:lint"
     }
 }
@@ -405,7 +405,7 @@ You need to add `--ext js,ts,tsx` to the `test:lint` script:
 ```js
 {
     "scripts": {
-        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx ."
+        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx --ignore-path .gitignore ."
     }
 }
 ```
