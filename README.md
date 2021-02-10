@@ -35,7 +35,7 @@ Recommended configuration in your `package.json`:
 ```js
 {
     "scripts": {
-        "test:lint": "eslint --cache --max-warnings 0 .",
+        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx .",
         "posttest": "npm run test:lint"
     }
 }
