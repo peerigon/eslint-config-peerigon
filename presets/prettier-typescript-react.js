@@ -9,7 +9,6 @@ module.exports = {
         "peerigon/react",
         // prettier must be at the end
         "prettier",
-        "prettier/react",
     ],
     root: true,
 };
