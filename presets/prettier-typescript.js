@@ -8,8 +8,6 @@ module.exports = {
         "peerigon/styles/prefer-arrow",
         // prettier must be at the end
         "prettier",
-        "prettier/babel",
-        "prettier/@typescript-eslint",
     ],
     root: true,
 };

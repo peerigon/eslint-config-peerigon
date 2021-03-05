@@ -5,9 +5,7 @@
         "../../typescript.js",
         "../../styles/prefer-arrow.js",
         // prettier must be at the end
-        "prettier",
-        "prettier/babel",
-        "prettier/@typescript-eslint"
+        "prettier"
     ],
     "root": true,
     "parserOptions": {

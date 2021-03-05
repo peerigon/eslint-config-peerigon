@@ -213,7 +213,6 @@ In order to avoid conflicts between Prettier and our rules, you should always ad
         "peerigon/react",
         // prettier must be at the end
         "prettier",
-        "prettier/@typescript-eslint",
         "prettier/react"
     ],
     "root": true,
@@ -388,8 +387,7 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
         // Arrow functions are preferred with TypeScript
         // See https://github.com/peerigon/eslint-config-peerigon/issues/23#issuecomment-472614432
         "peerigon/styles/prefer-arrow",
-        "prettier", // add this and...
-        "prettier/@typescript-eslint" // ...this if you're using Prettier
+        "prettier", // add this if you're using Prettier
     ],
     "parserOptions": {
         // Relative to the folder where eslint is executed

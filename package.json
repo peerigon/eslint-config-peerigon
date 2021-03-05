@@ -39,20 +39,20 @@
         "node": ">=10.0.0"
     },
     "peerDependencies": {
-        "eslint": ">=7.15.0"
+        "eslint": "^7.15.0"
     },
     "dependencies": {
-        "@babel/core": ">=7.11.0",
+        "@babel/core": "^7.11.0",
         "@babel/eslint-parser": "^7.12.1",
-        "@babel/eslint-plugin": ">=7.12.1",
-        "@typescript-eslint/eslint-plugin": ">=4.14.1",
+        "@babel/eslint-plugin": "^7.12.1",
+        "@typescript-eslint/eslint-plugin": "^4.14.1",
         "@typescript-eslint/parser": "^4.14.1",
-        "eslint-config-prettier": ">=7.2.0",
-        "eslint-plugin-import": ">=2.22.1",
-        "eslint-plugin-no-unsafe-regex": ">=1.0.0",
-        "eslint-plugin-optimize-regex": ">=1.2.0",
-        "eslint-plugin-prefer-arrow": ">=1.2.3",
-        "eslint-plugin-promise": ">=4.2.1"
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-no-unsafe-regex": "^1.0.0",
+        "eslint-plugin-optimize-regex": "^1.2.0",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
+        "eslint-plugin-promise": "^4.2.1"
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.12.1",

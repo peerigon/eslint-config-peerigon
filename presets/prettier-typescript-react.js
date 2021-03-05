@@ -9,8 +9,6 @@ module.exports = {
         "peerigon/react",
         // prettier must be at the end
         "prettier",
-        "prettier/babel",
-        "prettier/@typescript-eslint",
         "prettier/react",
     ],
     root: true,
