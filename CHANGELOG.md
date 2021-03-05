@@ -1,3 +1,10 @@
+## [30.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.0...v30.0.1) (2021-03-05)
+
+
+### Bug Fixes
+
+* Problem with updated eslint-config-prettier ([3108084](https://github.com/peerigon/eslint-config-peerigon/commit/3108084d43c8cadd27d3714229f90a4fee7df251))
+
 # [30.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v29.0.0...v30.0.0) (2021-01-31)
 
 
