@@ -1,3 +1,10 @@
+## [30.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.1...v30.0.2) (2021-03-05)
+
+
+### Bug Fixes
+
+* Problem with prettier/react ([dcbd28f](https://github.com/peerigon/eslint-config-peerigon/commit/dcbd28fbc45f409c1c24a7abae5abde383fc2036))
+
 ## [30.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.0...v30.0.1) (2021-03-05)
 
 
