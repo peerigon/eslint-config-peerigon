@@ -254,6 +254,13 @@ module.exports = {
         "no-class-assign": "warn", // http://eslint.org/docs/rules/no-class-assign
         "no-confusing-arrow": ["off", { allowParens: true }], // http://eslint.org/docs/rules/no-confusing-arrow
         "no-console": "off", // http://eslint.org/docs/rules/no-console
+        "no-constant-condition": [
+            "error", // "error" because this is part of "eslint:recommended"
+            {
+                // while (true) loops are pretty common
+                checkLoops: false,
+            },
+        ], // http://eslint.org/docs/rules/no-constant-condition
         "no-constructor-return": "warn", // https://eslint.org/docs/rules/no-constructor-return
         "no-continue": "off", // http://eslint.org/docs/rules/no-continue
         "no-delete-var": "warn", // http://eslint.org/docs/rules/no-delete-var
