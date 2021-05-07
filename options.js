@@ -62,9 +62,13 @@ module.exports = {
         allowTernary: true,
     },
     ["no-unused-vars"]: {
+        // Sometimes you want to keep the function parameters for future usage
         args: "none",
+        // Handling errors doesn't always mean that you need to use the error
         caughtErrors: "none",
+        // This pattern is pretty common
         ignoreRestSiblings: true,
+        // ESLint can't always infer if a global variable is unused or not
         vars: "all",
     },
     ["quotes"]: {
