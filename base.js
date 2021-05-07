@@ -1,4 +1,4 @@
-/* eslint sort-keys: ["error", "asc"], quote-props: ["error", "consistent"] */
+/* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
 const options = require("./options.js");
