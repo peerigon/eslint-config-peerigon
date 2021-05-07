@@ -68,7 +68,6 @@ module.exports = {
         caughtErrors: "none",
         // This pattern is pretty common
         ignoreRestSiblings: true,
-        // ESLint can't always infer if a global variable is unused or not
         vars: "all",
     },
     ["quotes"]: {
