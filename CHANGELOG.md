@@ -1,3 +1,10 @@
+# [30.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.2...v30.1.0) (2021-05-07)
+
+
+### Features
+
+* Relax "no-constant-condition" for loops ([7337bb7](https://github.com/peerigon/eslint-config-peerigon/commit/7337bb70d14c7ea01ebb10f02ab9fdbb9cf7b3de))
+
 ## [30.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.1...v30.0.2) (2021-03-05)
 
 
