@@ -377,6 +377,8 @@ module.exports = {
             rules: {
                 // In d.ts files it might be necessary to merge an existing interface
                 "@typescript-eslint/consistent-type-definitions": "off",
+                // Unused vars can be common in d.ts files when declaration merging is used
+                "@typescript-eslint/no-unused-vars": "off",
                 // When someone wants to extend the typings of a third-party module, it might
                 // be necessary to import the module so that TypeScript finds the typings that should be extended.
                 // This is a better alternative to the triple-slash directive
