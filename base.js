@@ -173,6 +173,7 @@ module.exports = {
         "import/no-named-export": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-export.md
         "import/no-namespace": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
         "import/no-nodejs-modules": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
+        "import/no-relative-packages": "error", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
         "import/no-relative-parent-imports": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
         "import/no-restricted-paths": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
         "import/no-self-import": "error", // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/no-self-import.md
