@@ -166,6 +166,7 @@ module.exports = {
                 peerDependencies: false,
             },
         ], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+        "import/no-import-module-exports": "error", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
         "import/no-internal-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
         "import/no-mutable-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
         "import/no-named-default": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
