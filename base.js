@@ -133,29 +133,29 @@ module.exports = {
         // We can't use that rule since it conflicts with Prettier's
         // formating when the line is too long
         "implicit-arrow-linebreak": ["off", "beside"], // https://eslint.org/docs/rules/implicit-arrow-linebreak
-        "import/dynamic-import-chunkname": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
-        "import/exports-last": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/exports-last.md
-        "import/extensions": ["warn", "ignorePackages"], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-        "import/first": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
-        "import/group-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/group-exports.md
-        "import/max-dependencies": ["off", { max: 35 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
+        "import/dynamic-import-chunkname": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
+        "import/exports-last": "off", // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/exports-last.md
+        "import/extensions": ["warn", "ignorePackages"], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/extensions.md
+        "import/first": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/first.md
+        "import/group-exports": "off", // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/group-exports.md
+        "import/max-dependencies": ["off", { max: 35 }], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
         // Is already covered by eslint rule padding-line-between-statements
-        "import/newline-after-import": ["off", { count: 1 }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
-        "import/no-absolute-path": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
-        "import/no-amd": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
+        "import/newline-after-import": ["off", { count: 1 }], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
+        "import/no-absolute-path": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
+        "import/no-amd": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         // The auto-import feature of VS Code (and probably other editors) cannot work when things are
         // exported anonymously because the editor does not know what the user wants to import.
         // By just allowing default exports with names, refactoring and auto-importing becomes easier.
-        "import/no-anonymous-default-export": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
-        "import/no-commonjs": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
+        "import/no-anonymous-default-export": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
+        "import/no-commonjs": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
         // Currently disabled because of performance reasons :(
-        "import/no-cycle": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-cycle.md
-        "import/no-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-default-export.md
+        "import/no-cycle": "off", // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/no-cycle.md
+        "import/no-default-export": "off", // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/no-default-export.md
         // Would be nice to turn this rule on but it's rather expensive
         // and it did not report a lot in the past :(
-        "import/no-deprecated": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
-        "import/no-duplicates": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
-        "import/no-dynamic-require": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
+        "import/no-deprecated": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
+        "import/no-duplicates": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
+        "import/no-dynamic-require": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
         "import/no-extraneous-dependencies": [
             "off",
             {
@@ -165,28 +165,28 @@ module.exports = {
                 optionalDependencies: true,
                 peerDependencies: false,
             },
-        ], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+        ], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
         "import/no-import-module-exports": "error", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
-        "import/no-internal-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
-        "import/no-mutable-exports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
-        "import/no-named-default": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
-        "import/no-named-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-export.md
-        "import/no-namespace": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
-        "import/no-nodejs-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
-        "import/no-relative-parent-imports": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
-        "import/no-restricted-paths": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
-        "import/no-self-import": "error", // https://github.com/benmosher/eslint-plugin-import/blob/HEAD/docs/rules/no-self-import.md
+        "import/no-internal-modules": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
+        "import/no-mutable-exports": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
+        "import/no-named-default": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
+        "import/no-named-export": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-export.md
+        "import/no-namespace": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
+        "import/no-nodejs-modules": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
+        "import/no-relative-parent-imports": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
+        "import/no-restricted-paths": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
+        "import/no-self-import": "error", // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/no-self-import.md
         // While unassigned imports are often a bad choice, the false positive rate was just too high
         "import/no-unassigned-import": [
             "off",
             {
                 allow: globPatterns.withSideEffects,
             },
-        ], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
-        "import/no-unresolved": ["error", { commonjs: true }], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-        "import/no-unused-modules": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
-        "import/no-useless-path-segments": "warn", // currently undocumented :(, see https://github.com/benmosher/eslint-plugin-import/issues/1032
-        "import/no-webpack-loader-syntax": "warn", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
+        ], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
+        "import/no-unresolved": ["error", { commonjs: true }], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+        "import/no-unused-modules": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
+        "import/no-useless-path-segments": "warn", // currently undocumented :(, see https://github.com/import-js/eslint-plugin-import/issues/1032
+        "import/no-webpack-loader-syntax": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
         "import/order": [
             "warn",
             {
@@ -195,10 +195,10 @@ module.exports = {
                 // now all the import statements need to be updated.
                 groups: ["builtin", "external", ["parent", "sibling", "index"]],
             },
-        ], // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-        "import/prefer-default-export": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+        ], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/order.md
+        "import/prefer-default-export": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
         // This rule was just too impractical since code bases often mix commonjs modules and ecmascript modules
-        "import/unambiguous": "off", // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
+        "import/unambiguous": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
         indent: ["warn", 4, options["indent"]], // http://eslint.org/docs/rules/indent
         "init-declarations": "off", // http://eslint.org/docs/rules/init-declarations
 
