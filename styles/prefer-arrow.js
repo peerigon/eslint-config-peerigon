@@ -11,7 +11,10 @@ module.exports = {
             {
                 disallowPrototype: false,
                 singleReturnOnly: false,
-                classPropertiesAllowed: true,
+                // We used to enforce arrow functions also for class methods (as class properties)
+                // but arrow functions in sub-classes can't call their overridden counterpart
+                // in their super-class, see https://stackoverflow.com/a/52823577
+                classPropertiesAllowed: false,
             },
         ],
     },
