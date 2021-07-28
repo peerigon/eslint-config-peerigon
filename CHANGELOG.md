@@ -1,3 +1,17 @@
+# [31.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.2.0...v31.0.0) (2021-07-28)
+
+
+### Features
+
+* Enable `import/no-import-module-exports` ([d4be1ce](https://github.com/peerigon/eslint-config-peerigon/commit/d4be1ce1fc354422f3e721555a0cd8b1db0253a4))
+* Enable `import/no-relative-packages` ([b44fd1c](https://github.com/peerigon/eslint-config-peerigon/commit/b44fd1cf4c92103bbcbc86d4a9cce9629f092e00))
+
+
+### BREAKING CHANGES
+
+* Prevent relative package imports in Yarn/Lerna workspaces. See https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
+* import and module.exports should not be mixed. See https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
+
 # [30.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.1.0...v30.2.0) (2021-07-28)
 
 
