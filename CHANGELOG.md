@@ -1,3 +1,15 @@
+# [30.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.1.0...v30.2.0) (2021-07-28)
+
+
+### Bug Fixes
+
+* **styles/prefer-arrow:** Allow class methods again ([6c7b1b8](https://github.com/peerigon/eslint-config-peerigon/commit/6c7b1b855693212b40d3c18093fc699ff0c73d82))
+
+
+### Features
+
+* **typescript:** Relax "@typescript-eslint/no-unused-vars" in d.ts files ([561b939](https://github.com/peerigon/eslint-config-peerigon/commit/561b939c01f55ac5d425f64ecdf3dfe1035a5f65))
+
 # [30.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.2...v30.1.0) (2021-05-07)
 
 
