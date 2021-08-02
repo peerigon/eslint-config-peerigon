@@ -377,6 +377,8 @@ module.exports = {
             rules: {
                 // In d.ts files it might be necessary to merge an existing interface
                 "@typescript-eslint/consistent-type-definitions": "off",
+                // In d.ts files it's sometimes necessary to overload existing methods
+                "@typescript-eslint/method-signature-style": "off",
                 // Unused vars can be common in d.ts files when declaration merging is used
                 "@typescript-eslint/no-unused-vars": "off",
                 // When someone wants to extend the typings of a third-party module, it might
