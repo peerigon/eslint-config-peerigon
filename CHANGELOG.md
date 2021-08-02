@@ -1,3 +1,10 @@
+## [31.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.0...v31.0.1) (2021-08-02)
+
+
+### Bug Fixes
+
+* **TypeScript:**  Disable `@typescript-eslint/method-signature-style` for `d.ts` files ([87e915b](https://github.com/peerigon/eslint-config-peerigon/commit/87e915b75fc84ca729ac3ac38efa38cd1a4cbadb))
+
 # [31.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.2.0...v31.0.0) (2021-07-28)
 
 
