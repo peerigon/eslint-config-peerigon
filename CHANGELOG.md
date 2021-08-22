@@ -1,3 +1,10 @@
+## [31.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.1...v31.0.2) (2021-08-22)
+
+
+### Bug Fixes
+
+* **typescript:** Disable "@babel/new-cap" for TypeScript projects ([aa363af](https://github.com/peerigon/eslint-config-peerigon/commit/aa363af0fd84f0e990742790803db0ddc9c7f16e))
+
 ## [31.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.0...v31.0.1) (2021-08-02)
 
 
