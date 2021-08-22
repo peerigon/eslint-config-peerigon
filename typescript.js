@@ -24,6 +24,7 @@ module.exports = {
             ],
             rules: {
                 /* eslint-enable sort-keys */
+                "@babel/new-cap": "off", // There are some false positives with this rule (e.g. when a library is using uppercase letters) and TypeScript catches these errors anyway
                 "@babel/no-invalid-this": "off", // covered by @typescript-eslint/no-invalid-this
                 "@babel/no-unused-expressions": "off", // covered by @typescript-eslint/no-unused-expressions
                 "@babel/semi": "off", // covered by @typescript-eslint/semi
