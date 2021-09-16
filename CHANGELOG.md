@@ -1,3 +1,10 @@
+## [31.0.3](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.2...v31.0.3) (2021-09-16)
+
+
+### Bug Fixes
+
+* Disable no-loop-func ([be1b0f4](https://github.com/peerigon/eslint-config-peerigon/commit/be1b0f4aaa5187acbeaf3bfcb2bd7e909e3a9a82))
+
 ## [31.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.1...v31.0.2) (2021-08-22)
 
 
