@@ -296,7 +296,8 @@ module.exports = {
         "no-labels": "warn", // http://eslint.org/docs/rules/no-labels
         "no-lone-blocks": "warn", // http://eslint.org/docs/rules/no-lone-blocks
         "no-lonely-if": "warn", // http://eslint.org/docs/rules/no-lonely-if
-        "no-loop-func": "warn", // http://eslint.org/docs/rules/no-loop-func
+        // With let and const this is not an issue anymore
+        "no-loop-func": "off", // http://eslint.org/docs/rules/no-loop-func
         "no-loss-of-precision": "warn", // https://eslint.org/docs/rules/no-loss-of-precision
         "no-magic-numbers": [
             "off",
