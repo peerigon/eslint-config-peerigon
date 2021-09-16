@@ -43,11 +43,11 @@
         "eslint": "^7.15.0"
     },
     "dependencies": {
-        "@babel/core": "^7.15.0",
-        "@babel/eslint-parser": "^7.15.0",
+        "@babel/core": "^7.15.5",
+        "@babel/eslint-parser": "^7.15.4",
         "@babel/eslint-plugin": "^7.12.1",
-        "@typescript-eslint/eslint-plugin": "^4.30.0",
-        "@typescript-eslint/parser": "^4.30.0",
+        "@typescript-eslint/eslint-plugin": "^4.31.1",
+        "@typescript-eslint/parser": "^4.31.1",
         "eslint-config-prettier": "^8.1.0",
         "eslint-plugin-import": "^2.24.2",
         "eslint-plugin-no-unsafe-regex": "^1.0.0",
@@ -57,23 +57,23 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.12.1",
-        "@babel/preset-env": "^7.15.0",
-        "@types/react": "^17.0.19",
+        "@babel/preset-env": "^7.15.6",
+        "@types/react": "^17.0.21",
         "eslint": "^7.15.0",
         "eslint-find-rules": "^3.6.1",
-        "eslint-plugin-flowtype": "^5.9.2",
+        "eslint-plugin-flowtype": "^6.0.1",
         "eslint-plugin-flowtype-errors": "^4.4.0",
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-react": "^7.25.1",
         "eslint-plugin-react-hooks": "^4.2.0",
-        "flow-bin": "^0.159.0",
+        "flow-bin": "^0.160.0",
         "husky": "^7.0.2",
         "npm-run-all": "^4.1.5",
-        "prettier": "^2.2.1",
+        "prettier": "^2.4.1",
         "pretty-quick": "^3.1.0",
         "react": "^17.0.1",
-        "typescript": "^4.4.2"
+        "typescript": "^4.4.3"
     },
     "husky": {
         "hooks": {
