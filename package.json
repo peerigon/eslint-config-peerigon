@@ -40,7 +40,7 @@
         "node": ">=10.0.0"
     },
     "peerDependencies": {
-        "eslint": "^7.15.0"
+        "eslint": "^7.15.0 || ^8.0.0"
     },
     "dependencies": {
         "@babel/core": "^7.15.5",
