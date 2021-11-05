@@ -26,13 +26,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - name: 🗄 Cache node_modules
-        id: cache-node_modules
-        uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # pin@v2
-        with:
-          path: "**/node_modules"
-          key: node_modules-${{ runner.os }}-node-${{ matrix.node-version }}-${{
-            hashFiles('**/package-lock.json') }}
       - name: 📥 Install dependencies
         if: steps.cache-node_modules.outputs.cache-hit != 'true'
         run: |
