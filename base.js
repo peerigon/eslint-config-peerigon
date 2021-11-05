@@ -298,7 +298,7 @@ module.exports = {
         "no-lonely-if": "warn", // http://eslint.org/docs/rules/no-lonely-if
         // With let and const this is not an issue anymore
         "no-loop-func": "off", // http://eslint.org/docs/rules/no-loop-func
-        "no-loss-of-precision": "warn", // https://eslint.org/docs/rules/no-loss-of-precision
+        "no-loss-of-precision": "error", // https://eslint.org/docs/rules/no-loss-of-precision
         "no-magic-numbers": [
             "off",
             {
@@ -358,7 +358,7 @@ module.exports = {
         "no-new-object": "warn", // http://eslint.org/docs/rules/no-new-object
         "no-new-symbol": "warn", // http://eslint.org/docs/rules/no-new-symbol
         "no-new-wrappers": "warn", // http://eslint.org/docs/rules/no-new-wrappers
-        "no-nonoctal-decimal-escape": "warn", // http://eslint.org/docs/rules/no-nonoctal-decimal-escape
+        "no-nonoctal-decimal-escape": "error", // http://eslint.org/docs/rules/no-nonoctal-decimal-escape
         "no-octal": "warn", // http://eslint.org/docs/rules/no-octal
         "no-octal-escape": "warn", // http://eslint.org/docs/rules/no-octal-escape
         "no-param-reassign": "off", // http://eslint.org/docs/rules/no-param-reassign
@@ -424,14 +424,14 @@ module.exports = {
         "no-unmodified-loop-condition": "warn", // http://eslint.org/docs/rules/no-unmodified-loop-condition
         "no-unneeded-ternary": "warn", // http://eslint.org/docs/rules/no-unneeded-ternary
         "no-unreachable-loop": "warn", // http://eslint.org/docs/rules/no-unreachable-loop
-        "no-unsafe-optional-chaining": "warn", // http://eslint.org/docs/rules/no-unsafe-optional-chaining
+        "no-unsafe-optional-chaining": "error", // http://eslint.org/docs/rules/no-unsafe-optional-chaining
         "no-unsafe-regex/no-unsafe-regex": "warn", // https://github.com/kgryte/eslint-plugin-no-unsafe-regex
         // Handled by babel/no-unused-expressions
         "no-unused-expressions": ["off", options["no-unused-expressions"]], // http://eslint.org/docs/rules/no-unused-expressions
         "no-unused-labels": "warn", // http://eslint.org/docs/rules/no-unused-labels
         "no-unused-vars": ["warn", options["no-unused-vars"]], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": "off", // http://eslint.org/docs/rules/no-use-before-define
-        "no-useless-backreference": "warn", // http://eslint.org/docs/rules/no-useless-backreference
+        "no-useless-backreference": "error", // http://eslint.org/docs/rules/no-useless-backreference
         "no-useless-call": "warn", // http://eslint.org/docs/rules/no-useless-call
         "no-useless-computed-key": "warn", // http://eslint.org/docs/rules/no-useless-computed-key
         "no-useless-concat": "warn", // http://eslint.org/docs/rules/no-useless-concat
