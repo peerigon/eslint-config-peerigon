@@ -1,3 +1,15 @@
+# [32.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.3...v32.0.0) (2021-11-05)
+
+
+### Features
+
+* Add support for ESLint 8.x ([#96](https://github.com/peerigon/eslint-config-peerigon/issues/96)) ([8d43d6d](https://github.com/peerigon/eslint-config-peerigon/commit/8d43d6deaa8dbc7107f9059924cf1d134c1da805))
+
+
+### BREAKING CHANGES
+
+* ESLint >= 8.1.0 and Node >= 14.0.0 is required now
+
 ## [31.0.3](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.2...v31.0.3) (2021-09-16)
 
 
