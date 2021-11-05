@@ -305,42 +305,15 @@ module.exports = {
                 // These settings are currently unused, but we may re-use them once we decide to have that rule again.
                 ignore: [
                     // digits are ok
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
+                    0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
                     // multiplications of 10
-                    -1,
-                    -10,
-                    -100,
-                    -1000,
-                    10,
-                    100,
-                    1000,
+                    -1, -10, -100, -1000, 10, 100, 1000,
                     // bytes
-                    16,
-                    32,
-                    64,
-                    128,
-                    256,
-                    512,
-                    1024,
+                    16, 32, 64, 128, 256, 512, 1024,
                     // time
-                    60,
-                    24,
-                    365,
+                    60, 24, 365,
                     // ports
-                    80,
-                    443,
-                    1337,
-                    3000,
-                    8080,
+                    80, 443, 1337, 3000, 8080,
                 ],
                 ignoreArrayIndexes: true, // using array indexes is not a good style, but we don't want to be too strict about that
             },

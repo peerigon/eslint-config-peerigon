@@ -12,7 +12,8 @@
         "test:javascript": "cd tests/javascript; eslint --max-warnings 0 .",
         "test:node": "cd tests/node; eslint --max-warnings 0 .",
         "test:typescript": "cd tests/typescript; eslint --max-warnings 0 .",
-        "test:react": "cd tests/react; eslint --max-warnings 0 ."
+        "test:react": "cd tests/react; eslint --max-warnings 0 .",
+        "prepare": "husky install"
     },
     "repository": {
         "type": "git",
@@ -69,15 +70,14 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "flow-bin": "^0.163.0",
         "husky": "^7.0.4",
+        "lint-staged": "^11.2.6",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.4.1",
-        "pretty-quick": "^3.1.1",
         "react": "^17.0.2",
         "typescript": "^4.4.4"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged"
-        }
+    "lint-staged": {
+        "*.js": "eslint --cache --fix",
+        "*.{js,css,md}": "prettier --write"
     }
 }
