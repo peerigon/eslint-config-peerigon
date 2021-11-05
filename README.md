@@ -2,10 +2,10 @@
 
 **[Peerigon](https://peerigon.com/) coding rules as [ESLint](http://eslint.org/) config.**
 
-[![](https://img.shields.io/npm/v/eslint-config-peerigon.svg)](https://www.npmjs.com/package/eslint-config-peerigon)
-[![](https://img.shields.io/npm/dm/eslint-config-peerigon.svg)](https://www.npmjs.com/package/eslint-config-peerigon)
-[![Dependency Status](https://david-dm.org/peerigon/eslint-config-peerigon.svg)](https://david-dm.org/peerigon/eslint-config-peerigon?branch=main)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Version on NPM](https://img.shields.io/npm/v/eslint-config-peerigon?style=for-the-badge)](https://www.npmjs.com/package/eslint-config-peerigon)
+[![Semantically released](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=for-the-badge)](https://github.com/semantic-release/semantic-release)
+[![Monthly downloads on NPM](https://img.shields.io/npm/dm/eslint-config-peerigon?style=for-the-badge)](https://www.npmjs.com/package/eslint-config-peerigon)<br>
+[![License](https://img.shields.io/npm/l/eslint-config-peerigon?style=for-the-badge)](./LICENSE)
 
 Linting and formatting rules are always a balance between
 
