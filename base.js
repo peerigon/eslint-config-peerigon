@@ -12,7 +12,7 @@ module.exports = {
     },
     parserOptions: {
         sourceType: "module",
-        ecmaVersion: 2021,
+        ecmaVersion: "latest",
         // We don't require a Babel config file in our base rules since it would complain
         // for every regular JS file that the babel config is missing, even when Babel isn't used.
         // If experimental syntax is used, you can still set this to true.
