@@ -1,3 +1,10 @@
+## [32.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v32.0.0...v32.0.1) (2021-11-12)
+
+
+### Bug Fixes
+
+* Switch parser ecmaVersion to "latest" ([a08dde8](https://github.com/peerigon/eslint-config-peerigon/commit/a08dde874d1aebd2111d5e71c1c05eba947aeded))
+
 # [32.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.3...v32.0.0) (2021-11-05)
 
 
