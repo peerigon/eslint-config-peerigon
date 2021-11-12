@@ -10,9 +10,7 @@
     ],
     "root": true,
     "parserOptions": {
-        // This path is relative to the CWD where eslint is executed
-        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
-        "project": "./tsconfig.json",
+        "project": "./tests/react/tsconfig.json",
         "sourceType": "module"
     }
 }

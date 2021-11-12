@@ -57,13 +57,7 @@ npm i eslint eslint-config-peerigon --save-dev
     "env": {
         "node": true
     },
-    "root": true,
-    "parserOptions": {
-        // This path is relative to the CWD where eslint is executed
-        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
-        "project": "./tsconfig.json",
-        "sourceType": "module"
-    }
+    "root": true
 }
 ```
 
@@ -82,13 +76,7 @@ npm i eslint eslint-config-peerigon eslint-plugin-react eslint-plugin-jsx-a11y e
         "node": true,
         "browser": true
     },
-    "root": true,
-    "parserOptions": {
-        // This path is relative to the CWD where eslint is executed
-        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
-        "project": "./tsconfig.json",
-        "sourceType": "module"
-    }
+    "root": true
 }
 ```
 
@@ -103,13 +91,7 @@ npm i eslint eslint-config-peerigon eslint-plugin-node --save-dev
     "extends": [
         "peerigon/presets/prettier-typescript-node.js"
     ],
-    "root": true,
-    "parserOptions": {
-        // This path is relative to the CWD where eslint is executed
-        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
-        "project": "./tsconfig.json",
-        "sourceType": "module"
-    }
+    "root": true
 }
 ```
 
@@ -389,11 +371,6 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
         "peerigon/styles/prefer-arrow",
         "prettier", // add this if you're using Prettier
     ],
-    "parserOptions": {
-        // Relative to the folder where eslint is executed
-        // See https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
-        "project": "./tsconfig.json"
-    },
     "root": true,
 }
 ```
@@ -410,6 +387,16 @@ You need to add `--ext js,ts,tsx` to the `test:lint` script:
 
 _We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow) because arrow functions (or function expressions in general) can leverage [TypeScript's contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing)._
 
+If your `tsconfig.json` is not next to your `package.json`, you might need to specify [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject):
+
+```js
+{
+    "parserOptions": {
+        "project": "./src/tsconfig.json"
+    }
+}
+```
+
 Do you see an error that looks like this?
 
 ```
@@ -418,7 +405,7 @@ The file does not match your project config: ...
 The file must be included in at least one of the projects provided
 ```
 
-This is a sign that ESLint is trying to lint a file that is not included by your `tsconfig.json`. You need to adjust either `parserOptions.project` or `include` of the referenced `tsconfig.json`.
+This is a sign that ESLint is trying to lint a file that is not included by your `tsconfig.json`. You need to adjust either [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject) or `include` of the referenced `tsconfig.json`.
 
 ### [`peerigon/jsdoc`](jsdoc.js)
 
