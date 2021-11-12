@@ -6,6 +6,7 @@ module.exports = {
     extends: [
         "plugin:import/react",
         "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
         "plugin:jsx-a11y/recommended",
     ],
     settings: {
