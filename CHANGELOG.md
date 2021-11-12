@@ -1,3 +1,17 @@
+# [33.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v32.0.1...v33.0.0) (2021-11-12)
+
+
+### Features
+
+* **react:** Add support for new JSX transformer ([07c01a0](https://github.com/peerigon/eslint-config-peerigon/commit/07c01a0543c3588e2c36789147ce2d4cc10a2627))
+* **typescript:** Simplify typescript setup ([763644a](https://github.com/peerigon/eslint-config-peerigon/commit/763644ae1d0750dc52e569e49bf23af984e024cf))
+
+
+### BREAKING CHANGES
+
+* **typescript:** The tsconfig.json path is not relative to the CWD now, but to your package.json. In most cases you don't need to change anything. If your tsconfig.json is not next to your package.json, you need to specify parserOptions.project as described in the README.
+* **react:** This assumes that you're using at least React 17. In React 16, things will break if you omit the React import. See also https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+
 ## [32.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v32.0.0...v32.0.1) (2021-11-12)
 
 
