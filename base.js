@@ -295,7 +295,9 @@ module.exports = {
         "no-label-var": "warn", // http://eslint.org/docs/rules/no-label-var
         "no-labels": "warn", // http://eslint.org/docs/rules/no-labels
         "no-lone-blocks": "warn", // http://eslint.org/docs/rules/no-lone-blocks
-        "no-lonely-if": "warn", // http://eslint.org/docs/rules/no-lonely-if
+        // Lonely ifs can sometimes be a stylistic choice when the nested condition
+        // is completely unrelated to the first condition
+        "no-lonely-if": "off", // http://eslint.org/docs/rules/no-lonely-if
         // With let and const this is not an issue anymore
         "no-loop-func": "off", // http://eslint.org/docs/rules/no-loop-func
         "no-loss-of-precision": "error", // https://eslint.org/docs/rules/no-loss-of-precision
