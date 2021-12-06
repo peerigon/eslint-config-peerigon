@@ -1,3 +1,10 @@
+## [33.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v33.0.0...v33.0.1) (2021-12-06)
+
+
+### Bug Fixes
+
+* Disable "no-lonely-if" ([08200d2](https://github.com/peerigon/eslint-config-peerigon/commit/08200d202ed5699b78a8838c1ad8edb14c9635ad))
+
 # [33.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v32.0.1...v33.0.0) (2021-11-12)
 
 
