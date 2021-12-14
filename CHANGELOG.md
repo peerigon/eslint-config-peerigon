@@ -1,3 +1,10 @@
+# [33.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.1.0...v33.2.0) (2021-12-14)
+
+
+### Features
+
+* Update dependencies ([fdd44c6](https://github.com/peerigon/eslint-config-peerigon/commit/fdd44c6062ff1fe19921b15405845b85943d71b2))
+
 # [33.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.0.1...v33.1.0) (2021-12-14)
 
 
