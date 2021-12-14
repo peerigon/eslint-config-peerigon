@@ -1,3 +1,10 @@
+# [33.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.0.1...v33.1.0) (2021-12-14)
+
+
+### Features
+
+* Disable import/no-anonymous-default-export in config files ([e5f05c1](https://github.com/peerigon/eslint-config-peerigon/commit/e5f05c1e23aa039a6dcfdbd81f1d0029ee6fd534))
+
 ## [33.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v33.0.0...v33.0.1) (2021-12-06)
 
 
