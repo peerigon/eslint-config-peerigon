@@ -17,4 +17,5 @@ module.exports = {
     ],
     typescript: ["*.ts", "*.tsx"],
     react: ["*.jsx", "*.tsx"],
+    configs: ["*.config.*"],
 };

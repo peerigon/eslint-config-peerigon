@@ -4,6 +4,7 @@
 const options = require("./options.js");
 const globPatterns = require("./glob-patterns.js");
 const tests = require("./tests.js");
+const configs = require("./configs.js");
 
 module.exports = {
     parser: "@babel/eslint-parser",
@@ -593,6 +594,10 @@ module.exports = {
         {
             files: globPatterns.tests,
             ...tests,
+        },
+        {
+            files: globPatterns.configs,
+            ...configs,
         },
     ],
 };
