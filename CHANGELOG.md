@@ -1,3 +1,10 @@
+## [33.2.1](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.0...v33.2.1) (2021-12-22)
+
+
+### Bug Fixes
+
+* **TypeScript:** Disable "@typescript-eslint/no-unsafe-argument" ([8022f7e](https://github.com/peerigon/eslint-config-peerigon/commit/8022f7e35c5dcfb05352b6dbdfd3a6e279fc364f))
+
 # [33.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.1.0...v33.2.0) (2021-12-14)
 
 
