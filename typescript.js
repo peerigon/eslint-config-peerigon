@@ -231,6 +231,7 @@ module.exports = {
                 // In practice, these unsafe rules are too strict. It's ok to use 'any' within a function.
                 // We decided to keep @typescript-eslint/no-unsafe-return in order to avoid that 'any'
                 // leaks into the rest of the application
+                "@typescript-eslint/no-unsafe-argument": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-argument.md
                 "@typescript-eslint/no-unsafe-assignment": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
                 "@typescript-eslint/no-unsafe-call": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md
                 "@typescript-eslint/no-unsafe-member-access": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md
