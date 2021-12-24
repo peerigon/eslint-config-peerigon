@@ -1,3 +1,10 @@
+## [33.2.2](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.1...v33.2.2) (2021-12-24)
+
+
+### Bug Fixes
+
+* **TypeScript:** Disable import/no-default-export for d.ts files ([f6f0a2a](https://github.com/peerigon/eslint-config-peerigon/commit/f6f0a2afa77d96576f4913de204de73765508f1e))
+
 ## [33.2.1](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.0...v33.2.1) (2021-12-22)
 
 
