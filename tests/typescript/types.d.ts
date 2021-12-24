@@ -4,3 +4,8 @@ interface SomeInterface {
     someMethod(param: boolean): void;
     someMethod(param1: number, param2: number): void;
 }
+
+declare module "some-module" {
+    // Should not complain about export default
+    export default SomeInterface;
+}
