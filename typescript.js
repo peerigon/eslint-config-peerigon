@@ -386,6 +386,7 @@ module.exports = {
                 "@typescript-eslint/consistent-type-definitions": "off",
                 // In d.ts files it's sometimes necessary to overload existing methods
                 "@typescript-eslint/method-signature-style": "off",
+                "@typescript-eslint/naming-convention": "off",
                 // Unused vars can be common in d.ts files when declaration merging is used
                 "@typescript-eslint/no-unused-vars": "off",
                 // Since d.ts files are used to type external modules, we can't control the coding style
