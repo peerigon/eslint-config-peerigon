@@ -1,3 +1,10 @@
+## [33.2.4](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.3...v33.2.4) (2022-01-23)
+
+
+### Bug Fixes
+
+* Update dependencies ([b95374e](https://github.com/peerigon/eslint-config-peerigon/commit/b95374e9068f4c6526f76691a0a837c829c0e338))
+
 ## [33.2.3](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.2...v33.2.3) (2022-01-23)
 
 
