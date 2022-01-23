@@ -1,3 +1,10 @@
+## [33.2.3](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.2...v33.2.3) (2022-01-23)
+
+
+### Bug Fixes
+
+* Relax TypeScript rules for d.ts files ([ebbd53d](https://github.com/peerigon/eslint-config-peerigon/commit/ebbd53d96f19a5414eb6b70f19d947bfd13b9a9c))
+
 ## [33.2.2](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.1...v33.2.2) (2021-12-24)
 
 
