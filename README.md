@@ -35,7 +35,7 @@ Recommended configuration in your `package.json`:
 ```js
 {
     "scripts": {
-        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx --ignore-path .gitignore .",
+        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,cjs,mjs,ts,tsx --ignore-path .gitignore .",
         "posttest": "npm run test:lint"
     }
 }
@@ -375,12 +375,12 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
 }
 ```
 
-You need to add `--ext js,ts,tsx` to the `test:lint` script:
+You need to add `--ext js,jsx,cjs,mjs,ts,tsx` to the `test:lint` script:
 
 ```js
 {
     "scripts": {
-        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,ts,tsx --ignore-path .gitignore ."
+        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,cjs,mjs,ts,tsx --ignore-path .gitignore ."
     }
 }
 ```
