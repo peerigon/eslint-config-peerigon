@@ -1,3 +1,10 @@
+## [33.2.5](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.4...v33.2.5) (2022-04-02)
+
+
+### Bug Fixes
+
+* **TypeScript:** Relax @typescript-eslint/naming-convention ([36e61df](https://github.com/peerigon/eslint-config-peerigon/commit/36e61dfa1b4791253213043807f38da1916a119b))
+
 ## [33.2.4](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.3...v33.2.4) (2022-01-23)
 
 
