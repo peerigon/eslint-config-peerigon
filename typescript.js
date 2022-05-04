@@ -402,10 +402,15 @@ module.exports = {
             rules: {
                 // Type assertions are quite common in tests
                 "@typescript-eslint/consistent-type-assertions": "off",
+                // Mocking often requires to mock objects with a different naming convention
+                "@typescript-eslint/naming-convention": "off",
                 // We allow any to be used in tests, so returning it is ok
                 "@typescript-eslint/no-unsafe-return": "off",
                 // chai uses these as assertions
                 "@typescript-eslint/no-unused-expressions": "off",
+                // It's uncommon to use async/await in Cypress tests
+                // https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Commands-Are-Asynchronous
+                "@typescript-eslint/promise-function-async": "off",
                 // Passing functions around like this can be common with mocking
                 "@typescript-eslint/unbound-method": "off",
             },

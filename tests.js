@@ -43,5 +43,8 @@ module.exports = {
                 allowTemplateLiterals: true,
             },
         ],
+        // It's uncommon to use async/await in Cypress tests
+        // https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Commands-Are-Asynchronous
+        "promise/no-nesting": "off",
     },
 };
