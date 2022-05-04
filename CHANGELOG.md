@@ -1,3 +1,10 @@
+# [33.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.5...v33.3.0) (2022-05-04)
+
+
+### Features
+
+* Relax lint rules in tests ([52e3f2e](https://github.com/peerigon/eslint-config-peerigon/commit/52e3f2e032f4105867c04dcf3ee65bfc0b3abff3))
+
 ## [33.2.5](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.4...v33.2.5) (2022-04-02)
 
 
