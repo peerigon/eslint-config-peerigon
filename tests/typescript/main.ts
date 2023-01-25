@@ -1,5 +1,9 @@
 import { getMessage } from "./message.js";
 
+// Should be an error
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const snake_case = 123;
+
 class SomeClass {
     #someProp = true;
     private someEventHandler = () => {
@@ -10,6 +14,10 @@ class SomeClass {
         // ...as well as regular functions.
         // See styles/prefer-arrow.js for an explanation.
     }
+
+    // Should be an error
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    snake_case() {}
 }
 
-console.log(getMessage(), SomeClass);
+console.log(getMessage(), SomeClass, snake_case);
