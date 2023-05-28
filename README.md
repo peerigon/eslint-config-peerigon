@@ -427,28 +427,6 @@ Makes sure that JSDoc annotations are written in a standard-compliant and unifor
 }
 ```
 
-### [`peerigon/flowtype`](flowtype.js)
-
-**Important: Requires [`babel-eslint`](https://github.com/babel/babel-eslint) and [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype) as project dependency.**
-
-```
-npm i babel-eslint eslint-plugin-flowtype --save-dev
-```
-
-Rules for [Flowtype](https://flowtype.org/).
-
-```js
-{
-    "extends": [
-        "peerigon",
-        "peerigon/flowtype",
-        "prettier", // add this and...
-        "prettier/flowtype" // ...this if you're using Prettier
-    ],
-    "root": true
-}
-```
-
 ### [`peerigon/es5`](es5.js)
 
 Special rules for older projects:
