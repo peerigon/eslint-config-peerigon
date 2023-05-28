@@ -1,3 +1,20 @@
+# [34.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.3.0...v34.0.0) (2023-05-28)
+
+
+### Features
+
+* Remove flowtype rules ([4d94b30](https://github.com/peerigon/eslint-config-peerigon/commit/4d94b30b3004ea1f4c8db6e399305365280be63c))
+* Remove Node 14 and 16 support ([715155c](https://github.com/peerigon/eslint-config-peerigon/commit/715155c55f92461692ac721e67cbbc2e10894454))
+* Remove old ES5 rules ([63494c6](https://github.com/peerigon/eslint-config-peerigon/commit/63494c6bdf7eea8198405dfa5ef869b75432eeff))
+* Update dependencies ([11bcc84](https://github.com/peerigon/eslint-config-peerigon/commit/11bcc84a28909a3e56050a043f578043ca610661))
+
+
+### BREAKING CHANGES
+
+* We've removed official Node 14 and 16 support. We don't know of any breaking change though, so it may still work with older Node versions.
+* Removed old ES5 rules as they aren't used by any current projects anymore.
+* We've removed all rules related to FlowType as they haven't been maintained for quite a while.
+
 # [33.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.5...v33.3.0) (2022-05-04)
 
 
