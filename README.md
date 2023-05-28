@@ -427,22 +427,6 @@ Makes sure that JSDoc annotations are written in a standard-compliant and unifor
 }
 ```
 
-### [`peerigon/es5`](es5.js)
-
-Special rules for older projects:
-
-```js
-{
-    "extends": [
-        // Base rules with full ES2015 support
-        "peerigon",
-        // Legacy rules for older projects
-        "peerigon/es5"
-    ],
-    "root": true
-}
-```
-
 ## Styles
 
 The following rules enable specific writing styles. Use them as you prefer.
