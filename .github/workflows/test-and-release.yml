@@ -6,26 +6,35 @@ on:
       - main
       - beta
   pull_request: {}
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test-and-release:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
 
     strategy:
       matrix:
         node-version: [ 18.x, 20.x ]
 
     steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@a40b8845c0683271d9f53dfcb887a7e181d3918b # pin@0.9.1
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # pin@v2
-      - name: ⎔ Setup node ${{ matrix.node-version }}
-        uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # pin@v2
+        uses: actions/checkout@f095bcc56b7c2baf48f3ac70d6d6782f4f553222 # pin@main
+      - name: ⎔ Setup node
+        uses: actions/setup-node@869f4dd0c7f320ae834c2724d92a364de3893c24 # pin@main
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - name: 🗄 Cache node_modules
+        id: cache-node_modules
+        uses: actions/cache@04f198bf0b2a39f7230a4304bf07747a0bddf146 # pin@main
+        with:
+          path: "**/node_modules"
+          key: node_modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       - name: 📥 Install dependencies
         if: steps.cache-node_modules.outputs.cache-hit != 'true'
         run: |
@@ -35,10 +44,8 @@ jobs:
           npm test
         env:
           CI: true
-
-      # - RELEASE ---------------------------------------------------------------------------------------
       - name: 🚀 Release on npm
-        if: "contains(' refs/heads/main refs/heads/beta ', github.ref) && matrix.node-version == '20.x'"
+        if: ${{ contains(' refs/heads/main refs/heads/beta ', github.ref) && matrix.node-version == '20.x' }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
