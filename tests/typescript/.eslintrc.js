@@ -11,7 +11,4 @@ module.exports = {
         "prettier",
     ],
     root: true,
-    parserOptions: {
-        project: "./tests/typescript/tsconfig.json",
-    },
 };

@@ -8,9 +8,5 @@
         // prettier must be at the end
         "prettier"
     ],
-    "root": true,
-    "parserOptions": {
-        "project": "./tests/react/tsconfig.json",
-        "sourceType": "module"
-    }
+    "root": true
 }
