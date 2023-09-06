@@ -1,3 +1,15 @@
+# [35.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v34.0.0...v35.0.0) (2023-09-06)
+
+
+### Features
+
+* **TypeScript:** Change parserOptions defaults for resolving tsconfig.json ([21aa03c](https://github.com/peerigon/eslint-config-peerigon/commit/21aa03cc29c49b55442c042d88870bc4ac013fce))
+
+
+### BREAKING CHANGES
+
+* **TypeScript:** The parserOptions defaults for resolving tsconfig.json files have been changed to `project: true` (see also https://typescript-eslint.io/packages/parser/#project). This can be overridden in your ESLint config.
+
 # [34.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.3.0...v34.0.0) (2023-05-28)
 
 
