@@ -4,10 +4,6 @@
 const options = require("./options.js");
 const globPatterns = require("./glob-patterns.js");
 
-const getProjectRootPath = (dirName) => {
-    return dirName.replace(/[\/\\]node_modules[\/\\].*$/, "");
-};
-
 module.exports = {
     plugins: ["@typescript-eslint"],
     overrides: [
@@ -16,8 +12,7 @@ module.exports = {
             parser: "@typescript-eslint/parser",
             parserOptions: {
                 ecmaVersion: "latest",
-                tsconfigRootDir: getProjectRootPath(__dirname),
-                project: "./tsconfig.json",
+                project: true,
                 extraFileExtensions: [".vue"],
             },
             extends: [
