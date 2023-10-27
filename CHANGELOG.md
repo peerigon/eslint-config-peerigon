@@ -1,208 +1,178 @@
 # [35.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v34.0.0...v35.0.0) (2023-09-06)
 
-
 ### Features
 
-* **TypeScript:** Change parserOptions defaults for resolving tsconfig.json ([21aa03c](https://github.com/peerigon/eslint-config-peerigon/commit/21aa03cc29c49b55442c042d88870bc4ac013fce))
-
+-   **TypeScript:** Change parserOptions defaults for resolving tsconfig.json ([21aa03c](https://github.com/peerigon/eslint-config-peerigon/commit/21aa03cc29c49b55442c042d88870bc4ac013fce))
 
 ### BREAKING CHANGES
 
-* **TypeScript:** The parserOptions defaults for resolving tsconfig.json files have been changed to `project: true` (see also https://typescript-eslint.io/packages/parser/#project). This can be overridden in your ESLint config.
+-   **TypeScript:** The parserOptions defaults for resolving tsconfig.json files have been changed to `project: true` (see also https://typescript-eslint.io/packages/parser/#project). This can be overridden in your ESLint config.
 
 # [34.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.3.0...v34.0.0) (2023-05-28)
 
-
 ### Features
 
-* Remove flowtype rules ([4d94b30](https://github.com/peerigon/eslint-config-peerigon/commit/4d94b30b3004ea1f4c8db6e399305365280be63c))
-* Remove Node 14 and 16 support ([715155c](https://github.com/peerigon/eslint-config-peerigon/commit/715155c55f92461692ac721e67cbbc2e10894454))
-* Remove old ES5 rules ([63494c6](https://github.com/peerigon/eslint-config-peerigon/commit/63494c6bdf7eea8198405dfa5ef869b75432eeff))
-* Update dependencies ([11bcc84](https://github.com/peerigon/eslint-config-peerigon/commit/11bcc84a28909a3e56050a043f578043ca610661))
-
+-   Remove flowtype rules ([4d94b30](https://github.com/peerigon/eslint-config-peerigon/commit/4d94b30b3004ea1f4c8db6e399305365280be63c))
+-   Remove Node 14 and 16 support ([715155c](https://github.com/peerigon/eslint-config-peerigon/commit/715155c55f92461692ac721e67cbbc2e10894454))
+-   Remove old ES5 rules ([63494c6](https://github.com/peerigon/eslint-config-peerigon/commit/63494c6bdf7eea8198405dfa5ef869b75432eeff))
+-   Update dependencies ([11bcc84](https://github.com/peerigon/eslint-config-peerigon/commit/11bcc84a28909a3e56050a043f578043ca610661))
 
 ### BREAKING CHANGES
 
-* We've removed official Node 14 and 16 support. We don't know of any breaking change though, so it may still work with older Node versions.
-* Removed old ES5 rules as they aren't used by any current projects anymore.
-* We've removed all rules related to FlowType as they haven't been maintained for quite a while.
+-   We've removed official Node 14 and 16 support. We don't know of any breaking change though, so it may still work with older Node versions.
+-   Removed old ES5 rules as they aren't used by any current projects anymore.
+-   We've removed all rules related to FlowType as they haven't been maintained for quite a while.
 
 # [33.3.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.5...v33.3.0) (2022-05-04)
 
-
 ### Features
 
-* Relax lint rules in tests ([52e3f2e](https://github.com/peerigon/eslint-config-peerigon/commit/52e3f2e032f4105867c04dcf3ee65bfc0b3abff3))
+-   Relax lint rules in tests ([52e3f2e](https://github.com/peerigon/eslint-config-peerigon/commit/52e3f2e032f4105867c04dcf3ee65bfc0b3abff3))
 
 ## [33.2.5](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.4...v33.2.5) (2022-04-02)
 
-
 ### Bug Fixes
 
-* **TypeScript:** Relax @typescript-eslint/naming-convention ([36e61df](https://github.com/peerigon/eslint-config-peerigon/commit/36e61dfa1b4791253213043807f38da1916a119b))
+-   **TypeScript:** Relax @typescript-eslint/naming-convention ([36e61df](https://github.com/peerigon/eslint-config-peerigon/commit/36e61dfa1b4791253213043807f38da1916a119b))
 
 ## [33.2.4](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.3...v33.2.4) (2022-01-23)
 
-
 ### Bug Fixes
 
-* Update dependencies ([b95374e](https://github.com/peerigon/eslint-config-peerigon/commit/b95374e9068f4c6526f76691a0a837c829c0e338))
+-   Update dependencies ([b95374e](https://github.com/peerigon/eslint-config-peerigon/commit/b95374e9068f4c6526f76691a0a837c829c0e338))
 
 ## [33.2.3](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.2...v33.2.3) (2022-01-23)
 
-
 ### Bug Fixes
 
-* Relax TypeScript rules for d.ts files ([ebbd53d](https://github.com/peerigon/eslint-config-peerigon/commit/ebbd53d96f19a5414eb6b70f19d947bfd13b9a9c))
+-   Relax TypeScript rules for d.ts files ([ebbd53d](https://github.com/peerigon/eslint-config-peerigon/commit/ebbd53d96f19a5414eb6b70f19d947bfd13b9a9c))
 
 ## [33.2.2](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.1...v33.2.2) (2021-12-24)
 
-
 ### Bug Fixes
 
-* **TypeScript:** Disable import/no-default-export for d.ts files ([f6f0a2a](https://github.com/peerigon/eslint-config-peerigon/commit/f6f0a2afa77d96576f4913de204de73765508f1e))
+-   **TypeScript:** Disable import/no-default-export for d.ts files ([f6f0a2a](https://github.com/peerigon/eslint-config-peerigon/commit/f6f0a2afa77d96576f4913de204de73765508f1e))
 
 ## [33.2.1](https://github.com/peerigon/eslint-config-peerigon/compare/v33.2.0...v33.2.1) (2021-12-22)
 
-
 ### Bug Fixes
 
-* **TypeScript:** Disable "@typescript-eslint/no-unsafe-argument" ([8022f7e](https://github.com/peerigon/eslint-config-peerigon/commit/8022f7e35c5dcfb05352b6dbdfd3a6e279fc364f))
+-   **TypeScript:** Disable "@typescript-eslint/no-unsafe-argument" ([8022f7e](https://github.com/peerigon/eslint-config-peerigon/commit/8022f7e35c5dcfb05352b6dbdfd3a6e279fc364f))
 
 # [33.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.1.0...v33.2.0) (2021-12-14)
 
-
 ### Features
 
-* Update dependencies ([fdd44c6](https://github.com/peerigon/eslint-config-peerigon/commit/fdd44c6062ff1fe19921b15405845b85943d71b2))
+-   Update dependencies ([fdd44c6](https://github.com/peerigon/eslint-config-peerigon/commit/fdd44c6062ff1fe19921b15405845b85943d71b2))
 
 # [33.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v33.0.1...v33.1.0) (2021-12-14)
 
-
 ### Features
 
-* Disable import/no-anonymous-default-export in config files ([e5f05c1](https://github.com/peerigon/eslint-config-peerigon/commit/e5f05c1e23aa039a6dcfdbd81f1d0029ee6fd534))
+-   Disable import/no-anonymous-default-export in config files ([e5f05c1](https://github.com/peerigon/eslint-config-peerigon/commit/e5f05c1e23aa039a6dcfdbd81f1d0029ee6fd534))
 
 ## [33.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v33.0.0...v33.0.1) (2021-12-06)
 
-
 ### Bug Fixes
 
-* Disable "no-lonely-if" ([08200d2](https://github.com/peerigon/eslint-config-peerigon/commit/08200d202ed5699b78a8838c1ad8edb14c9635ad))
+-   Disable "no-lonely-if" ([08200d2](https://github.com/peerigon/eslint-config-peerigon/commit/08200d202ed5699b78a8838c1ad8edb14c9635ad))
 
 # [33.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v32.0.1...v33.0.0) (2021-11-12)
 
-
 ### Features
 
-* **react:** Add support for new JSX transformer ([07c01a0](https://github.com/peerigon/eslint-config-peerigon/commit/07c01a0543c3588e2c36789147ce2d4cc10a2627))
-* **typescript:** Simplify typescript setup ([763644a](https://github.com/peerigon/eslint-config-peerigon/commit/763644ae1d0750dc52e569e49bf23af984e024cf))
-
+-   **react:** Add support for new JSX transformer ([07c01a0](https://github.com/peerigon/eslint-config-peerigon/commit/07c01a0543c3588e2c36789147ce2d4cc10a2627))
+-   **typescript:** Simplify typescript setup ([763644a](https://github.com/peerigon/eslint-config-peerigon/commit/763644ae1d0750dc52e569e49bf23af984e024cf))
 
 ### BREAKING CHANGES
 
-* **typescript:** The tsconfig.json path is not relative to the CWD now, but to your package.json. In most cases you don't need to change anything. If your tsconfig.json is not next to your package.json, you need to specify parserOptions.project as described in the README.
-* **react:** This assumes that you're using at least React 17. In React 16, things will break if you omit the React import. See also https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+-   **typescript:** The tsconfig.json path is not relative to the CWD now, but to your package.json. In most cases you don't need to change anything. If your tsconfig.json is not next to your package.json, you need to specify parserOptions.project as described in the README.
+-   **react:** This assumes that you're using at least React 17. In React 16, things will break if you omit the React import. See also https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
 
 ## [32.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v32.0.0...v32.0.1) (2021-11-12)
 
-
 ### Bug Fixes
 
-* Switch parser ecmaVersion to "latest" ([a08dde8](https://github.com/peerigon/eslint-config-peerigon/commit/a08dde874d1aebd2111d5e71c1c05eba947aeded))
+-   Switch parser ecmaVersion to "latest" ([a08dde8](https://github.com/peerigon/eslint-config-peerigon/commit/a08dde874d1aebd2111d5e71c1c05eba947aeded))
 
 # [32.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.3...v32.0.0) (2021-11-05)
 
-
 ### Features
 
-* Add support for ESLint 8.x ([#96](https://github.com/peerigon/eslint-config-peerigon/issues/96)) ([8d43d6d](https://github.com/peerigon/eslint-config-peerigon/commit/8d43d6deaa8dbc7107f9059924cf1d134c1da805))
-
+-   Add support for ESLint 8.x ([#96](https://github.com/peerigon/eslint-config-peerigon/issues/96)) ([8d43d6d](https://github.com/peerigon/eslint-config-peerigon/commit/8d43d6deaa8dbc7107f9059924cf1d134c1da805))
 
 ### BREAKING CHANGES
 
-* ESLint >= 8.1.0 and Node >= 14.0.0 is required now
+-   ESLint >= 8.1.0 and Node >= 14.0.0 is required now
 
 ## [31.0.3](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.2...v31.0.3) (2021-09-16)
 
-
 ### Bug Fixes
 
-* Disable no-loop-func ([be1b0f4](https://github.com/peerigon/eslint-config-peerigon/commit/be1b0f4aaa5187acbeaf3bfcb2bd7e909e3a9a82))
+-   Disable no-loop-func ([be1b0f4](https://github.com/peerigon/eslint-config-peerigon/commit/be1b0f4aaa5187acbeaf3bfcb2bd7e909e3a9a82))
 
 ## [31.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.1...v31.0.2) (2021-08-22)
 
-
 ### Bug Fixes
 
-* **typescript:** Disable "@babel/new-cap" for TypeScript projects ([aa363af](https://github.com/peerigon/eslint-config-peerigon/commit/aa363af0fd84f0e990742790803db0ddc9c7f16e))
+-   **typescript:** Disable "@babel/new-cap" for TypeScript projects ([aa363af](https://github.com/peerigon/eslint-config-peerigon/commit/aa363af0fd84f0e990742790803db0ddc9c7f16e))
 
 ## [31.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v31.0.0...v31.0.1) (2021-08-02)
 
-
 ### Bug Fixes
 
-* **TypeScript:**  Disable `@typescript-eslint/method-signature-style` for `d.ts` files ([87e915b](https://github.com/peerigon/eslint-config-peerigon/commit/87e915b75fc84ca729ac3ac38efa38cd1a4cbadb))
+-   **TypeScript:** Disable `@typescript-eslint/method-signature-style` for `d.ts` files ([87e915b](https://github.com/peerigon/eslint-config-peerigon/commit/87e915b75fc84ca729ac3ac38efa38cd1a4cbadb))
 
 # [31.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.2.0...v31.0.0) (2021-07-28)
 
-
 ### Features
 
-* Enable `import/no-import-module-exports` ([d4be1ce](https://github.com/peerigon/eslint-config-peerigon/commit/d4be1ce1fc354422f3e721555a0cd8b1db0253a4))
-* Enable `import/no-relative-packages` ([b44fd1c](https://github.com/peerigon/eslint-config-peerigon/commit/b44fd1cf4c92103bbcbc86d4a9cce9629f092e00))
-
+-   Enable `import/no-import-module-exports` ([d4be1ce](https://github.com/peerigon/eslint-config-peerigon/commit/d4be1ce1fc354422f3e721555a0cd8b1db0253a4))
+-   Enable `import/no-relative-packages` ([b44fd1c](https://github.com/peerigon/eslint-config-peerigon/commit/b44fd1cf4c92103bbcbc86d4a9cce9629f092e00))
 
 ### BREAKING CHANGES
 
-* Prevent relative package imports in Yarn/Lerna workspaces. See https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
-* import and module.exports should not be mixed. See https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
+-   Prevent relative package imports in Yarn/Lerna workspaces. See https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
+-   import and module.exports should not be mixed. See https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
 
 # [30.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.1.0...v30.2.0) (2021-07-28)
 
-
 ### Bug Fixes
 
-* **styles/prefer-arrow:** Allow class methods again ([6c7b1b8](https://github.com/peerigon/eslint-config-peerigon/commit/6c7b1b855693212b40d3c18093fc699ff0c73d82))
-
+-   **styles/prefer-arrow:** Allow class methods again ([6c7b1b8](https://github.com/peerigon/eslint-config-peerigon/commit/6c7b1b855693212b40d3c18093fc699ff0c73d82))
 
 ### Features
 
-* **typescript:** Relax "@typescript-eslint/no-unused-vars" in d.ts files ([561b939](https://github.com/peerigon/eslint-config-peerigon/commit/561b939c01f55ac5d425f64ecdf3dfe1035a5f65))
+-   **typescript:** Relax "@typescript-eslint/no-unused-vars" in d.ts files ([561b939](https://github.com/peerigon/eslint-config-peerigon/commit/561b939c01f55ac5d425f64ecdf3dfe1035a5f65))
 
 # [30.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.2...v30.1.0) (2021-05-07)
 
-
 ### Features
 
-* Relax "no-constant-condition" for loops ([7337bb7](https://github.com/peerigon/eslint-config-peerigon/commit/7337bb70d14c7ea01ebb10f02ab9fdbb9cf7b3de))
+-   Relax "no-constant-condition" for loops ([7337bb7](https://github.com/peerigon/eslint-config-peerigon/commit/7337bb70d14c7ea01ebb10f02ab9fdbb9cf7b3de))
 
 ## [30.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.1...v30.0.2) (2021-03-05)
 
-
 ### Bug Fixes
 
-* Problem with prettier/react ([dcbd28f](https://github.com/peerigon/eslint-config-peerigon/commit/dcbd28fbc45f409c1c24a7abae5abde383fc2036))
+-   Problem with prettier/react ([dcbd28f](https://github.com/peerigon/eslint-config-peerigon/commit/dcbd28fbc45f409c1c24a7abae5abde383fc2036))
 
 ## [30.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v30.0.0...v30.0.1) (2021-03-05)
 
-
 ### Bug Fixes
 
-* Problem with updated eslint-config-prettier ([3108084](https://github.com/peerigon/eslint-config-peerigon/commit/3108084d43c8cadd27d3714229f90a4fee7df251))
+-   Problem with updated eslint-config-prettier ([3108084](https://github.com/peerigon/eslint-config-peerigon/commit/3108084d43c8cadd27d3714229f90a4fee7df251))
 
 # [30.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v29.0.0...v30.0.0) (2021-01-31)
 
-
 ### chore
 
-* Update dependencies ([#91](https://github.com/peerigon/eslint-config-peerigon/issues/91)) ([371ec42](https://github.com/peerigon/eslint-config-peerigon/commit/371ec4294808a48a92d9c8d625d40b8c5feae0e5)), closes [#89](https://github.com/peerigon/eslint-config-peerigon/issues/89)
-
+-   Update dependencies ([#91](https://github.com/peerigon/eslint-config-peerigon/issues/91)) ([371ec42](https://github.com/peerigon/eslint-config-peerigon/commit/371ec4294808a48a92d9c8d625d40b8c5feae0e5)), closes [#89](https://github.com/peerigon/eslint-config-peerigon/issues/89)
 
 ### BREAKING CHANGES
 
-* We switched to @babel/eslint-parser and @babel/eslint-plugin, see https://babel.dev/blog/2020/07/13/the-state-of-babel-eslint . If you're using Babel you should set [`requireConfigFile: true`](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration) in your ESLint config. ESLint will then use your `babel.config.json`.
-* You can remove TypeScript-specific ESLint dependencies, especially `@typescript-eslint/parser`. They should ship with the config.
+-   We switched to @babel/eslint-parser and @babel/eslint-plugin, see https://babel.dev/blog/2020/07/13/the-state-of-babel-eslint . If you're using Babel you should set [`requireConfigFile: true`](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration) in your ESLint config. ESLint will then use your `babel.config.json`.
+-   You can remove TypeScript-specific ESLint dependencies, especially `@typescript-eslint/parser`. They should ship with the config.
 
 # [30.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v29.0.0...v30.0.0-beta.1) (2021-01-31)
 

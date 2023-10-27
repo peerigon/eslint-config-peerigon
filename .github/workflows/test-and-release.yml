@@ -23,15 +23,15 @@ jobs:
 
     steps:
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@f095bcc56b7c2baf48f3ac70d6d6782f4f553222 # pin@main
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # pin@main
       - name: ⎔ Setup node
-        uses: actions/setup-node@869f4dd0c7f320ae834c2724d92a364de3893c24 # pin@main
+        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # pin@main
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - name: 🗄 Cache node_modules
         id: cache-node_modules
-        uses: actions/cache@04f198bf0b2a39f7230a4304bf07747a0bddf146 # pin@main
+        uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 # pin@main
         with:
           path: "**/node_modules"
           key: node_modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}

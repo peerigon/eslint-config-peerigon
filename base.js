@@ -161,7 +161,7 @@ module.exports = {
             "off",
             {
                 devDependencies: globPatterns.tests.concat(
-                    globPatterns.tooling
+                    globPatterns.tooling,
                 ),
                 optionalDependencies: true,
                 peerDependencies: false,
