@@ -1,3 +1,15 @@
+# [36.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v35.0.0...v36.0.0) (2023-10-27)
+
+
+### chore
+
+* Update dependencies ([5ffe402](https://github.com/peerigon/eslint-config-peerigon/commit/5ffe402784d2322143295bbc77f54b7effd65289))
+
+
+### BREAKING CHANGES
+
+* Major version bumps of transitive dependencies @typescript-eslint/eslint-plugin, @typescript-eslint/parser and eslint-config-prettier
+
 # [35.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v34.0.0...v35.0.0) (2023-09-06)
 
 ### Features
