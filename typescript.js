@@ -148,7 +148,6 @@ module.exports = {
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/no-confusing-void-expression.md
                 "@typescript-eslint/no-dupe-class-members": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.md
-                "@typescript-eslint/no-duplicate-imports": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/@typescript-eslint/no-duplicate-imports.md
                 "@typescript-eslint/no-dynamic-delete": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
                 "@typescript-eslint/no-empty-function": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
                 "@typescript-eslint/no-empty-interface": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md
@@ -350,7 +349,6 @@ module.exports = {
                 "import/max-dependencies": ["warn", { max: 45 }],
                 "import/named": "off", // TypeScript should catch it anyway
                 "import/namespace": "off", // TypeScript should catch it anyway
-                "import/no-duplicates": "off", // covered by @typescript-eslint/no-duplicate-imports
                 "import/no-unresolved": "off", // TypeScript should catch it anyway
                 indent: "off",
                 "lines-between-class-members": "off", // covered by @typescript-eslint/lines-between-class-members
