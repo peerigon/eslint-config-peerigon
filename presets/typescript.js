@@ -6,6 +6,8 @@ module.exports = {
         "peerigon",
         "peerigon/typescript",
         "peerigon/styles/prefer-arrow",
+        // prettier must be at the end
+        "prettier",
     ],
     root: true,
 };

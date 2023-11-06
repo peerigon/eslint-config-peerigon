@@ -1,9 +1,12 @@
 {
     "extends": [
+        // Should be the same as in "../../presets/typescript-react.js"
         "../../base.js",
         "../../typescript.js",
         "../../styles/prefer-arrow.js",
-        "../../react.js"
+        "../../react.js",
+        // prettier must be at the end
+        "prettier"
     ],
     "root": true
 }
