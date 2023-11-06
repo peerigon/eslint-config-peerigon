@@ -13,6 +13,8 @@ class SomeClass {
     someMethod() {
         // ...as well as regular functions.
         // See styles/prefer-arrow.js for an explanation.
+
+        console.log(this.#someProp);
     }
 
     // Should be an error

@@ -101,13 +101,6 @@ module.exports = {
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
         "react/jsx-no-target-blank": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
         "react/jsx-no-undef": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
-
-        "react/jsx-one-expression-per-line": [
-            "off", // This rule does not play well with Prettier
-            {
-                allow: "literal",
-            },
-        ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
         "react/jsx-pascal-case": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
         "react/jsx-sort-default-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
         "react/jsx-sort-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
@@ -121,18 +114,6 @@ module.exports = {
         ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
         "react/jsx-uses-react": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
         "react/jsx-uses-vars": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
-        "react/jsx-wrap-multilines": [
-            "off", // This rule does not play well with Prettier
-            {
-                arrow: "parens-new-line",
-                assignment: "parens-new-line",
-                condition: "parens-new-line",
-                declaration: "parens-new-line",
-                logical: "parens-new-line",
-                prop: "parens-new-line",
-                return: "parens-new-line",
-            },
-        ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
         "react/no-access-state-in-setstate": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
         "react/no-array-index-key": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
         "react/no-children-prop": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md

@@ -1,3 +1,46 @@
+# [37.0.0-beta.4](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.3...v37.0.0-beta.4) (2023-11-06)
+
+
+### Features
+
+* New beta release ([c358189](https://github.com/peerigon/eslint-config-peerigon/commit/c3581892a2315cbb90b7aae4149604d78475fa64))
+
+# [37.0.0-beta.3](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.2...v37.0.0-beta.3) (2023-11-06)
+
+
+### Features
+
+* Add new base rules ([#105](https://github.com/peerigon/eslint-config-peerigon/issues/105)) ([10d01ed](https://github.com/peerigon/eslint-config-peerigon/commit/10d01ed2b571608ae2f4c5cade8b8f6a1c0620ed))
+
+
+### BREAKING CHANGES
+
+* Some new base rules have been introduced which might produce linting errors.
+
+# [37.0.0-beta.2](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.1...v37.0.0-beta.2) (2023-11-06)
+
+
+### Features
+
+* Remove special handling for Prettier ([#104](https://github.com/peerigon/eslint-config-peerigon/issues/104)) ([068b731](https://github.com/peerigon/eslint-config-peerigon/commit/068b731e2c62cfe68d86035e7d5506924a12e396))
+
+
+### BREAKING CHANGES
+
+* The `prettier-` prefix has been removed from all preset files: `peerigon/presets/prettier-typescript.js` becomes `peerigon/presets/typescript.js`, `peerigon/presets/prettier-typescript-react.js` becomes `peerigon/presets/typescript-react.js` and `peerigon/presets/prettier-typescript-node.js` becomes `peerigon/presets/typescript-node.js`
+
+# [37.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v36.0.0...v37.0.0-beta.1) (2023-11-06)
+
+
+### Features
+
+* Remove deprecated formatting rules ([#103](https://github.com/peerigon/eslint-config-peerigon/issues/103)) ([deab90a](https://github.com/peerigon/eslint-config-peerigon/commit/deab90a769771931aaa866d31a6dd962722df766))
+
+
+### BREAKING CHANGES
+
+* All formatting rules have been removed as they have been deprecated by ESLint (see eslint.org/blog/2023/10/deprecating-formatting-rules). We won't switch to @stylistic/eslint-plugin-js as code formatting should be done by Prettier nowadays.
+
 # [36.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v35.0.0...v36.0.0) (2023-10-27)
 
 

@@ -1,6 +1,6 @@
 {
     "extends": [
-        // Should be the same as in "../../presets/prettier-typescript-react.js"
+        // Should be the same as in "../../presets/typescript-react.js"
         "../../base.js",
         "../../typescript.js",
         "../../styles/prefer-arrow.js",
