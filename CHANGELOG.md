@@ -1,3 +1,15 @@
+# [37.0.0-beta.3](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.2...v37.0.0-beta.3) (2023-11-06)
+
+
+### Features
+
+* Add new base rules ([#105](https://github.com/peerigon/eslint-config-peerigon/issues/105)) ([10d01ed](https://github.com/peerigon/eslint-config-peerigon/commit/10d01ed2b571608ae2f4c5cade8b8f6a1c0620ed))
+
+
+### BREAKING CHANGES
+
+* Some new base rules have been introduced which might produce linting errors.
+
 # [37.0.0-beta.2](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.1...v37.0.0-beta.2) (2023-11-06)
 
 
