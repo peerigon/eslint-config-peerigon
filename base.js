@@ -359,7 +359,7 @@ module.exports = {
         "promise/avoid-new": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/avoid-new.md
         "promise/catch-or-return": ["off", { allowFinally: true }], // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/catch-or-return.md
         "promise/no-callback-in-promise": "warn", // https://github.com/xjamundx/eslint-plugin-promise
-        "promise/no-multiple-resolved": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-multiple-resolved.md
+        "promise/no-multiple-resolved": "warn", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-multiple-resolved.md
         "promise/no-native": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-native.md
         // Nesting is rarely necessary and often the sign of confusing code.
         // You can often simplify it, see https://github.com/xjamundx/eslint-plugin-promise/issues/42
