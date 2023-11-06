@@ -63,6 +63,7 @@ module.exports = {
         "consistent-return": "warn", // http://eslint.org/docs/rules/consistent-return
         "consistent-this": ["off", "self"], // http://eslint.org/docs/rules/consistent-this
         "constructor-super": "error", // http://eslint.org/docs/rules/constructor-super
+        curly: ["warn", "all"], // http://eslint.org/docs/rules/curly
         "default-case": "off", // http://eslint.org/docs/rules/default-case
         "default-case-last": "off", // https://eslint.org/docs/rules/default-case-last
         "default-param-last": "off", // https://eslint.org/docs/rules/default-param-last
