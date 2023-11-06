@@ -1,3 +1,10 @@
+# [37.0.0-beta.4](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.3...v37.0.0-beta.4) (2023-11-06)
+
+
+### Features
+
+* New beta release ([c358189](https://github.com/peerigon/eslint-config-peerigon/commit/c3581892a2315cbb90b7aae4149604d78475fa64))
+
 # [37.0.0-beta.3](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.2...v37.0.0-beta.3) (2023-11-06)
 
 
