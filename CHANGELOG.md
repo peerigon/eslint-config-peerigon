@@ -1,3 +1,15 @@
+# [37.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v36.0.0...v37.0.0-beta.1) (2023-11-06)
+
+
+### Features
+
+* Remove deprecated formatting rules ([#103](https://github.com/peerigon/eslint-config-peerigon/issues/103)) ([deab90a](https://github.com/peerigon/eslint-config-peerigon/commit/deab90a769771931aaa866d31a6dd962722df766))
+
+
+### BREAKING CHANGES
+
+* All formatting rules have been removed as they have been deprecated by ESLint (see eslint.org/blog/2023/10/deprecating-formatting-rules). We won't switch to @stylistic/eslint-plugin-js as code formatting should be done by Prettier nowadays.
+
 # [36.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v35.0.0...v36.0.0) (2023-10-27)
 
 
