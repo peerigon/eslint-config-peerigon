@@ -43,7 +43,7 @@ Recommended configuration in your `package.json`:
 
 There are presets for the most common setups:
 
-### Prettier + TypeScript
+### TypeScript
 
 ```
 npm i eslint eslint-config-peerigon --save-dev
@@ -52,7 +52,7 @@ npm i eslint eslint-config-peerigon --save-dev
 ```js
 {
     "extends": [
-        "peerigon/presets/prettier-typescript.js"
+        "peerigon/presets/typescript.js"
     ],
     "env": {
         "node": true
@@ -61,7 +61,7 @@ npm i eslint eslint-config-peerigon --save-dev
 }
 ```
 
-### Prettier + TypeScript + React
+### TypeScript + React
 
 ```
 npm i eslint eslint-config-peerigon eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks --save-dev
@@ -70,7 +70,7 @@ npm i eslint eslint-config-peerigon eslint-plugin-react eslint-plugin-jsx-a11y e
 ```js
 {
     "extends": [
-        "peerigon/presets/prettier-typescript-react.js"
+        "peerigon/presets/typescript-react.js"
     ],
     "env": {
         "node": true,
@@ -80,7 +80,7 @@ npm i eslint eslint-config-peerigon eslint-plugin-react eslint-plugin-jsx-a11y e
 }
 ```
 
-### Prettier + TypeScript + Node
+### TypeScript + Node
 
 ```
 npm i eslint eslint-config-peerigon eslint-plugin-node --save-dev
@@ -89,20 +89,9 @@ npm i eslint eslint-config-peerigon eslint-plugin-node --save-dev
 ```js
 {
     "extends": [
-        "peerigon/presets/prettier-typescript-node.js"
+        "peerigon/presets/typescript-node.js"
     ],
     "root": true
-}
-```
-
-Your `package.json`:
-
-```json
-{
-    "type": "module",
-    "engines": {
-        "node": ">=14.0.0"
-    }
 }
 ```
 
@@ -110,7 +99,7 @@ Your `package.json`:
 
 ### Atomic changes
 
-Our formatting rules have been chosen carefully so that a change of a file is as atomic as possible. This makes it easier to review pull requests because there are no meaningless changes anymore.
+Our linting rules have been chosen carefully so that a change of a file is as atomic as possible. This makes it easier to review pull requests because there are no meaningless changes anymore.
 
 **Example:** I want to change a variable from `let` to `const`.
 
@@ -136,9 +125,7 @@ This is also the reason why we prefer [dangling commas](https://eslint.org/docs/
 
 ### Consistent formatting
 
-For the purpose of atomic changes, our rules are intentionally strict about formatting which are usually autofixable. You should use an editor configuration where you can apply these autofixes on demand (for instance when saving the file).
-
-We recommend combining these linting rules with [Prettier](https://prettier.io/) (see [below](#prettier)). There's also a [recommended configuration for VSCode](#vscode).
+We recommend combining these linting rules with [Prettier](https://prettier.io/). There's also a [recommended configuration for VSCode](#vscode).
 
 ### Code smells as a warning
 
@@ -181,27 +168,6 @@ If you don't agree with a rule, please do not just disable the rule. Often there
 ### Different styles
 
 We acknowledge that there are certain rules where there are no actual pros and cons or where there is no clear winner. You just have to decide for one style and stick with it. We also know that some rules make sense in one project, but don't make sense in another project. That's why we also provide a list of [accepted custom styles](#styles) (see also [this discussion](https://github.com/peerigon/eslint-config-peerigon/issues/11)) which you can pick.
-
-### Prettier
-
-In order to avoid conflicts between Prettier and our rules, you should always add **prettier rules at the end of `extends`**. For example, in a TypeScript + React project you would use the following configuration:
-
-```js
-{
-    "extends": [
-        "peerigon",
-        "peerigon/typescript",
-        "peerigon/styles/prefer-arrow",
-        "peerigon/react",
-        // prettier must be at the end
-        "prettier",
-        "prettier/react"
-    ],
-    "root": true,
-};
-```
-
-This module already lists [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) as dependency which is why you don't have to install it manually.
 
 ### VSCode
 
@@ -285,8 +251,7 @@ Add an `.eslintrc.json` to the project's root folder:
 {
     "extends": [
         // Base rules for every project
-        "peerigon",
-        "prettier" // add this at the end of 'extends' if you're using Prettier
+        "peerigon"
     ],
     // Do not search for further eslint configs in upper directories
     "root": true,
@@ -310,8 +275,7 @@ npm i eslint-plugin-node --save-dev
 {
     "extends": [
         "peerigon",
-        "peerigon/node",
-        "prettier" // add this if you're using Prettier
+        "peerigon/node"
     ],
     // Setting env.node = true is not necessary, this is already done by peerigon/node
     "root": true
@@ -344,9 +308,7 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 {
     "extends": [
         "peerigon",
-        "peerigon/react",
-        "prettier", // add this and...
-        "prettier/react" // ...this if you're using Prettier
+        "peerigon/react"
     ],
     "root": true
 }
@@ -368,8 +330,7 @@ Rules for [TypeScript](https://www.typescriptlang.org/).
         "peerigon/typescript",
         // Arrow functions are preferred with TypeScript
         // See https://github.com/peerigon/eslint-config-peerigon/issues/23#issuecomment-472614432
-        "peerigon/styles/prefer-arrow",
-        "prettier", // add this if you're using Prettier
+        "peerigon/styles/prefer-arrow"
     ],
     "root": true,
 }
