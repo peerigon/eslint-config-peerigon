@@ -1,3 +1,15 @@
+# [37.0.0-beta.2](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.1...v37.0.0-beta.2) (2023-11-06)
+
+
+### Features
+
+* Remove special handling for Prettier ([#104](https://github.com/peerigon/eslint-config-peerigon/issues/104)) ([068b731](https://github.com/peerigon/eslint-config-peerigon/commit/068b731e2c62cfe68d86035e7d5506924a12e396))
+
+
+### BREAKING CHANGES
+
+* The `prettier-` prefix has been removed from all preset files: `peerigon/presets/prettier-typescript.js` becomes `peerigon/presets/typescript.js`, `peerigon/presets/prettier-typescript-react.js` becomes `peerigon/presets/typescript-react.js` and `peerigon/presets/prettier-typescript-node.js` becomes `peerigon/presets/typescript-node.js`
+
 # [37.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v36.0.0...v37.0.0-beta.1) (2023-11-06)
 
 
