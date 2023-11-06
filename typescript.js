@@ -26,7 +26,6 @@ module.exports = {
                 "@babel/new-cap": "off", // There are some false positives with this rule (e.g. when a library is using uppercase letters) and TypeScript catches these errors anyway
                 "@babel/no-invalid-this": "off", // covered by @typescript-eslint/no-invalid-this
                 "@babel/no-unused-expressions": "off", // covered by @typescript-eslint/no-unused-expressions
-                "@babel/semi": "off", // covered by @typescript-eslint/semi
                 // "no-undef": "off", // produces false positive with some TypeScript syntax. This is caught by TypeScript anyway.
                 "@typescript-eslint/adjacent-overload-signatures": "warn", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md
                 "@typescript-eslint/array-type": [
@@ -284,7 +283,6 @@ module.exports = {
                     },
                 ], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
                 "@typescript-eslint/return-await": ["warn", "in-try-catch"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
-                "@typescript-eslint/semi": ["warn"], // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
                 "@typescript-eslint/sort-type-union-intersection-members":
                     "off", // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/sort-type-union-intersection-members.md
                 "@typescript-eslint/strict-boolean-expressions": [
