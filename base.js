@@ -78,6 +78,7 @@ module.exports = {
         "id-denylist": "off", // https://eslint.org/docs/rules/id-denylist
         "id-length": "off", // http://eslint.org/docs/rules/id-length
         "id-match": "off", // http://eslint.org/docs/rules/id-match
+        "import/consistent-type-specifier-style": ["warn", "prefer-top-level"], // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md
         "import/dynamic-import-chunkname": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
         "import/exports-last": "off", // https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/exports-last.md
         "import/extensions": ["warn", "ignorePackages"], // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/extensions.md
@@ -101,6 +102,7 @@ module.exports = {
         "import/no-deprecated": "off", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
         "import/no-duplicates": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
         "import/no-dynamic-require": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
+        "import/no-empty-named-blocks": "warn", // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-empty-named-blocks.md
         "import/no-extraneous-dependencies": [
             "off",
             {
@@ -148,6 +150,11 @@ module.exports = {
         "init-declarations": "off", // http://eslint.org/docs/rules/init-declarations
 
         "line-comment-position": "off", // http://eslint.org/docs/rules/line-comment-position
+        "logical-assignment-operators": [
+            "warn",
+            "always",
+            { enforceForIfStatements: true },
+        ], // http://eslint.org/docs/rules/logical-assignment-operators
         "max-classes-per-file": "off", // https://eslint.org/docs/rules/max-classes-per-file
         "max-depth": ["warn", 5], // http://eslint.org/docs/rules/max-depth
         "max-lines": ["off", options["max-lines"]],
@@ -173,6 +180,7 @@ module.exports = {
                 checkLoops: false,
             },
         ], // http://eslint.org/docs/rules/no-constant-condition
+        "no-constant-binary-expression": "warn", // http://eslint.org/docs/rules/no-constant-binary-expression
         "no-constructor-return": "warn", // https://eslint.org/docs/rules/no-constructor-return
         "no-continue": "off", // http://eslint.org/docs/rules/no-continue
         "no-delete-var": "warn", // http://eslint.org/docs/rules/no-delete-var
@@ -185,6 +193,7 @@ module.exports = {
         "no-empty": "warn", // http://eslint.org/docs/rules/no-empty
         "no-empty-function": "off", // http://eslint.org/docs/rules/no-empty-function
         "no-empty-pattern": "warn", // http://eslint.org/docs/rules/no-empty-pattern
+        "no-empty-static-block": "warn", // http://eslint.org/docs/rules/no-empty-static-block
         "no-eq-null": "off", // http://eslint.org/docs/rules/no-eq-null
         "no-eval": "warn", // http://eslint.org/docs/rules/no-eval
         "no-extend-native": "warn", // http://eslint.org/docs/rules/no-extend-native
@@ -234,9 +243,11 @@ module.exports = {
         "no-nested-ternary": "off", // http://eslint.org/docs/rules/no-nested-ternary
         "no-new": "warn", // http://eslint.org/docs/rules/no-new
         "no-new-func": "warn", // http://eslint.org/docs/rules/no-new-func
+        "no-new-native-nonconstructor": "warn", // http://eslint.org/docs/rules/no-new-native-nonconstructor
         "no-new-symbol": "warn", // http://eslint.org/docs/rules/no-new-symbol
         "no-new-wrappers": "warn", // http://eslint.org/docs/rules/no-new-wrappers
         "no-nonoctal-decimal-escape": "error", // http://eslint.org/docs/rules/no-nonoctal-decimal-escape
+        "no-object-constructor": "warn", // http://eslint.org/docs/rules/no-object-constructor
         "no-octal": "warn", // http://eslint.org/docs/rules/no-octal
         "no-octal-escape": "warn", // http://eslint.org/docs/rules/no-octal-escape
         "no-param-reassign": "off", // http://eslint.org/docs/rules/no-param-reassign
@@ -304,6 +315,7 @@ module.exports = {
         // Handled by babel/no-unused-expressions
         "no-unused-expressions": ["off", options["no-unused-expressions"]], // http://eslint.org/docs/rules/no-unused-expressions
         "no-unused-labels": "warn", // http://eslint.org/docs/rules/no-unused-labels
+        "no-unused-private-class-members": "warn", // http://eslint.org/docs/rules/no-unused-private-class-members
         "no-unused-vars": ["warn", options["no-unused-vars"]], // http://eslint.org/docs/rules/no-unused-vars
         "no-use-before-define": "off", // http://eslint.org/docs/rules/no-use-before-define
         "no-useless-backreference": "error", // http://eslint.org/docs/rules/no-useless-backreference
@@ -334,6 +346,7 @@ module.exports = {
         "prefer-exponentiation-operator": "warn", // https://eslint.org/docs/rules/prefer-exponentiation-operator
         "prefer-named-capture-group": "off", // https://eslint.org/docs/rules/prefer-named-capture-group
         "prefer-numeric-literals": "warn", // http://eslint.org/docs/rules/prefer-numeric-literals
+        "prefer-object-has-own": "warn", // https://eslint.org/docs/rules/prefer-object-has-own
         "prefer-object-spread": "off", // https://eslint.org/docs/rules/prefer-object-spread
         "prefer-promise-reject-errors": "warn", // http://eslint.org/docs/rules/prefer-promise-reject-errors
         "prefer-regex-literals": "warn", // https://eslint.org/docs/rules/prefer-regex-literals
@@ -346,6 +359,7 @@ module.exports = {
         "promise/avoid-new": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/avoid-new.md
         "promise/catch-or-return": ["off", { allowFinally: true }], // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/catch-or-return.md
         "promise/no-callback-in-promise": "warn", // https://github.com/xjamundx/eslint-plugin-promise
+        "promise/no-multiple-resolved": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-multiple-resolved.md
         "promise/no-native": "off", // https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-native.md
         // Nesting is rarely necessary and often the sign of confusing code.
         // You can often simplify it, see https://github.com/xjamundx/eslint-plugin-promise/issues/42
