@@ -150,14 +150,9 @@ module.exports = {
         "init-declarations": "off", // http://eslint.org/docs/rules/init-declarations
 
         "line-comment-position": "off", // http://eslint.org/docs/rules/line-comment-position
-        "logical-assignment-operators": [
-            "warn",
-            "always",
-            {
-                // We treat if statements as deliberate decision to branch the code path
-                enforceForIfStatements: false,
-            },
-        ], // http://eslint.org/docs/rules/logical-assignment-operators
+        // We don't want to enforce these operators for now as they are hard to read
+        // This might change later though :)
+        "logical-assignment-operators": ["off", "always"], // http://eslint.org/docs/rules/logical-assignment-operators
         "max-classes-per-file": "off", // https://eslint.org/docs/rules/max-classes-per-file
         "max-depth": ["warn", 5], // http://eslint.org/docs/rules/max-depth
         "max-lines": ["off", options["max-lines"]],
