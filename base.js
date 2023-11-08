@@ -153,7 +153,10 @@ module.exports = {
         "logical-assignment-operators": [
             "warn",
             "always",
-            { enforceForIfStatements: true },
+            {
+                // We treat if statements as deliberate decision to branch the code path
+                enforceForIfStatements: false,
+            },
         ], // http://eslint.org/docs/rules/logical-assignment-operators
         "max-classes-per-file": "off", // https://eslint.org/docs/rules/max-classes-per-file
         "max-depth": ["warn", 5], // http://eslint.org/docs/rules/max-depth
