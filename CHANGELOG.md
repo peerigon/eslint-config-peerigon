@@ -1,3 +1,10 @@
+## [37.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0...v37.0.1) (2023-11-08)
+
+
+### Bug Fixes
+
+* Relax logical-assignment-operators rule ([25fe184](https://github.com/peerigon/eslint-config-peerigon/commit/25fe1847050f1e07a18aa746aa7025fe42a71f7a))
+
 # [37.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v36.0.0...v37.0.0) (2023-11-06)
 
 
