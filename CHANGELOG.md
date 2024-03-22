@@ -1,102 +1,87 @@
 # [37.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v37.1.0...v37.2.0) (2024-03-22)
 
-
 ### Features
 
-* Add shared Prettier config for import sorting ([cb1ba16](https://github.com/peerigon/eslint-config-peerigon/commit/cb1ba1693351150f878aae17ef9dfa85aa83e0b7))
+-   Add shared Prettier config for import sorting ([cb1ba16](https://github.com/peerigon/eslint-config-peerigon/commit/cb1ba1693351150f878aae17ef9dfa85aa83e0b7))
 
 # [37.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.2...v37.1.0) (2024-01-17)
 
-
 ### Features
 
-* Update dependencies ([06db8da](https://github.com/peerigon/eslint-config-peerigon/commit/06db8da283de98631f870229723425a43492b4f8))
+-   Update dependencies ([06db8da](https://github.com/peerigon/eslint-config-peerigon/commit/06db8da283de98631f870229723425a43492b4f8))
 
 ## [37.0.2](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.1...v37.0.2) (2023-11-08)
 
-
 ### Bug Fixes
 
-* Relax logical-assignment-operators rule again ([38c984f](https://github.com/peerigon/eslint-config-peerigon/commit/38c984fddb988386f1313519db22ba4dd81c5f0c))
+-   Relax logical-assignment-operators rule again ([38c984f](https://github.com/peerigon/eslint-config-peerigon/commit/38c984fddb988386f1313519db22ba4dd81c5f0c))
 
 ## [37.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0...v37.0.1) (2023-11-08)
 
-
 ### Bug Fixes
 
-* Relax logical-assignment-operators rule ([25fe184](https://github.com/peerigon/eslint-config-peerigon/commit/25fe1847050f1e07a18aa746aa7025fe42a71f7a))
+-   Relax logical-assignment-operators rule ([25fe184](https://github.com/peerigon/eslint-config-peerigon/commit/25fe1847050f1e07a18aa746aa7025fe42a71f7a))
 
 # [37.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v36.0.0...v37.0.0) (2023-11-06)
 
-
 ### Features
 
-* Add new base rules ([#105](https://github.com/peerigon/eslint-config-peerigon/issues/105)) ([10d01ed](https://github.com/peerigon/eslint-config-peerigon/commit/10d01ed2b571608ae2f4c5cade8b8f6a1c0620ed))
-* New beta release ([c358189](https://github.com/peerigon/eslint-config-peerigon/commit/c3581892a2315cbb90b7aae4149604d78475fa64))
-* Remove deprecated formatting rules ([#103](https://github.com/peerigon/eslint-config-peerigon/issues/103)) ([deab90a](https://github.com/peerigon/eslint-config-peerigon/commit/deab90a769771931aaa866d31a6dd962722df766))
-* Remove special handling for Prettier ([#104](https://github.com/peerigon/eslint-config-peerigon/issues/104)) ([068b731](https://github.com/peerigon/eslint-config-peerigon/commit/068b731e2c62cfe68d86035e7d5506924a12e396))
-
+-   Add new base rules ([#105](https://github.com/peerigon/eslint-config-peerigon/issues/105)) ([10d01ed](https://github.com/peerigon/eslint-config-peerigon/commit/10d01ed2b571608ae2f4c5cade8b8f6a1c0620ed))
+-   New beta release ([c358189](https://github.com/peerigon/eslint-config-peerigon/commit/c3581892a2315cbb90b7aae4149604d78475fa64))
+-   Remove deprecated formatting rules ([#103](https://github.com/peerigon/eslint-config-peerigon/issues/103)) ([deab90a](https://github.com/peerigon/eslint-config-peerigon/commit/deab90a769771931aaa866d31a6dd962722df766))
+-   Remove special handling for Prettier ([#104](https://github.com/peerigon/eslint-config-peerigon/issues/104)) ([068b731](https://github.com/peerigon/eslint-config-peerigon/commit/068b731e2c62cfe68d86035e7d5506924a12e396))
 
 ### BREAKING CHANGES
 
-* Some new base rules have been introduced which might produce linting errors.
-* The `prettier-` prefix has been removed from all preset files: `peerigon/presets/prettier-typescript.js` becomes `peerigon/presets/typescript.js`, `peerigon/presets/prettier-typescript-react.js` becomes `peerigon/presets/typescript-react.js` and `peerigon/presets/prettier-typescript-node.js` becomes `peerigon/presets/typescript-node.js`
-* All formatting rules have been removed as they have been deprecated by ESLint (see eslint.org/blog/2023/10/deprecating-formatting-rules). We won't switch to @stylistic/eslint-plugin-js as code formatting should be done by Prettier nowadays.
+-   Some new base rules have been introduced which might produce linting errors.
+-   The `prettier-` prefix has been removed from all preset files: `peerigon/presets/prettier-typescript.js` becomes `peerigon/presets/typescript.js`, `peerigon/presets/prettier-typescript-react.js` becomes `peerigon/presets/typescript-react.js` and `peerigon/presets/prettier-typescript-node.js` becomes `peerigon/presets/typescript-node.js`
+-   All formatting rules have been removed as they have been deprecated by ESLint (see eslint.org/blog/2023/10/deprecating-formatting-rules). We won't switch to @stylistic/eslint-plugin-js as code formatting should be done by Prettier nowadays.
 
 # [37.0.0-beta.4](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.3...v37.0.0-beta.4) (2023-11-06)
 
-
 ### Features
 
-* New beta release ([c358189](https://github.com/peerigon/eslint-config-peerigon/commit/c3581892a2315cbb90b7aae4149604d78475fa64))
+-   New beta release ([c358189](https://github.com/peerigon/eslint-config-peerigon/commit/c3581892a2315cbb90b7aae4149604d78475fa64))
 
 # [37.0.0-beta.3](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.2...v37.0.0-beta.3) (2023-11-06)
 
-
 ### Features
 
-* Add new base rules ([#105](https://github.com/peerigon/eslint-config-peerigon/issues/105)) ([10d01ed](https://github.com/peerigon/eslint-config-peerigon/commit/10d01ed2b571608ae2f4c5cade8b8f6a1c0620ed))
-
+-   Add new base rules ([#105](https://github.com/peerigon/eslint-config-peerigon/issues/105)) ([10d01ed](https://github.com/peerigon/eslint-config-peerigon/commit/10d01ed2b571608ae2f4c5cade8b8f6a1c0620ed))
 
 ### BREAKING CHANGES
 
-* Some new base rules have been introduced which might produce linting errors.
+-   Some new base rules have been introduced which might produce linting errors.
 
 # [37.0.0-beta.2](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.0-beta.1...v37.0.0-beta.2) (2023-11-06)
 
-
 ### Features
 
-* Remove special handling for Prettier ([#104](https://github.com/peerigon/eslint-config-peerigon/issues/104)) ([068b731](https://github.com/peerigon/eslint-config-peerigon/commit/068b731e2c62cfe68d86035e7d5506924a12e396))
-
+-   Remove special handling for Prettier ([#104](https://github.com/peerigon/eslint-config-peerigon/issues/104)) ([068b731](https://github.com/peerigon/eslint-config-peerigon/commit/068b731e2c62cfe68d86035e7d5506924a12e396))
 
 ### BREAKING CHANGES
 
-* The `prettier-` prefix has been removed from all preset files: `peerigon/presets/prettier-typescript.js` becomes `peerigon/presets/typescript.js`, `peerigon/presets/prettier-typescript-react.js` becomes `peerigon/presets/typescript-react.js` and `peerigon/presets/prettier-typescript-node.js` becomes `peerigon/presets/typescript-node.js`
+-   The `prettier-` prefix has been removed from all preset files: `peerigon/presets/prettier-typescript.js` becomes `peerigon/presets/typescript.js`, `peerigon/presets/prettier-typescript-react.js` becomes `peerigon/presets/typescript-react.js` and `peerigon/presets/prettier-typescript-node.js` becomes `peerigon/presets/typescript-node.js`
 
 # [37.0.0-beta.1](https://github.com/peerigon/eslint-config-peerigon/compare/v36.0.0...v37.0.0-beta.1) (2023-11-06)
 
-
 ### Features
 
-* Remove deprecated formatting rules ([#103](https://github.com/peerigon/eslint-config-peerigon/issues/103)) ([deab90a](https://github.com/peerigon/eslint-config-peerigon/commit/deab90a769771931aaa866d31a6dd962722df766))
-
+-   Remove deprecated formatting rules ([#103](https://github.com/peerigon/eslint-config-peerigon/issues/103)) ([deab90a](https://github.com/peerigon/eslint-config-peerigon/commit/deab90a769771931aaa866d31a6dd962722df766))
 
 ### BREAKING CHANGES
 
-* All formatting rules have been removed as they have been deprecated by ESLint (see eslint.org/blog/2023/10/deprecating-formatting-rules). We won't switch to @stylistic/eslint-plugin-js as code formatting should be done by Prettier nowadays.
+-   All formatting rules have been removed as they have been deprecated by ESLint (see eslint.org/blog/2023/10/deprecating-formatting-rules). We won't switch to @stylistic/eslint-plugin-js as code formatting should be done by Prettier nowadays.
 
 # [36.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v35.0.0...v36.0.0) (2023-10-27)
 
-
 ### chore
 
-* Update dependencies ([5ffe402](https://github.com/peerigon/eslint-config-peerigon/commit/5ffe402784d2322143295bbc77f54b7effd65289))
-
+-   Update dependencies ([5ffe402](https://github.com/peerigon/eslint-config-peerigon/commit/5ffe402784d2322143295bbc77f54b7effd65289))
 
 ### BREAKING CHANGES
 
-* Major version bumps of transitive dependencies @typescript-eslint/eslint-plugin, @typescript-eslint/parser and eslint-config-prettier
+-   Major version bumps of transitive dependencies @typescript-eslint/eslint-plugin, @typescript-eslint/parser and eslint-config-prettier
 
 # [35.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v34.0.0...v35.0.0) (2023-09-06)
 
