@@ -41,6 +41,12 @@ Recommended configuration in your `package.json`:
 }
 ```
 
+We also offer a [Prettier](https://prettier.io/) config that matches our ESLint config. Create a `.prettierrc.json` in your project with the following content:
+
+```json
+"eslint-config-peerigon/prettier.config.js"
+```
+
 There are presets for the most common setups:
 
 ### TypeScript
