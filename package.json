@@ -35,6 +35,10 @@
     ],
     "author": "Peerigon GmbH <hello@peerigon.com>",
     "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/peerigon/eslint-config-peerigon/issues"
+    },
+    "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
     "peerDependencies": {
         "eslint": "^8.1.0"
     },
