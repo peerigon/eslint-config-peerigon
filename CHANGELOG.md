@@ -1,3 +1,15 @@
+# [39.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v38.0.0...v39.0.0) (2024-03-22)
+
+
+### Features
+
+* Replace deprecated eslint-plugin-node with eslint-plugin-n ([#119](https://github.com/peerigon/eslint-config-peerigon/issues/119)) ([f0d0521](https://github.com/peerigon/eslint-config-peerigon/commit/f0d05219a9fe7c209e124e90dfdd73715c14b029))
+
+
+### BREAKING CHANGES
+
+* Since we switched from eslint-plugin-node to eslint-plugin-n, this may introduce new ESLint errors in Node projects.
+
 # [38.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v37.2.0...v38.0.0) (2024-03-22)
 
 
