@@ -23,7 +23,6 @@ Our linting rules have been designed with these assumptions in mind.
 ## Table of contents
 
 -   [Quick start](#quick-start)
--   [Features](#features)
 -   [Practical guide](#practical-guide)
 -   [Provided configs](#provided-configs)
 -   [Styles](#styles)
@@ -100,56 +99,6 @@ npm i eslint eslint-config-peerigon eslint-plugin-node --save-dev
     "root": true
 }
 ```
-
-## Features
-
-### Atomic changes
-
-Our linting rules have been chosen carefully so that a change of a file is as atomic as possible. This makes it easier to review pull requests because there are no meaningless changes anymore.
-
-**Example:** I want to change a variable from `let` to `const`.
-
-```diff
-// Bad coding style because useless whitespace changes were necessary
--let a   = 1,
-+let   a   = 1,
--    bbb = 2,
-+      cc  = 3;
--    cc  = 3;
-+const bbb = 3;
-```
-
-```diff
-// Good coding style because only the relevant parts need to be changed
-let a = 1;
--let bb = 2;
-+const bb = 2;
-let ccc = 3;
-```
-
-This is also the reason why we prefer [dangling commas](https://eslint.org/docs/rules/comma-dangle) for multiline arrays, objects and arguments although they look very unfamiliar on first sight (see [discussion](https://github.com/peerigon/eslint-config-peerigon/issues/10)).
-
-### Consistent formatting
-
-We recommend combining these linting rules with [Prettier](https://prettier.io/). There's also a [recommended configuration for VSCode](#vscode).
-
-### Code smells as a warning
-
-Developers take shortcuts. And that's ok because at the end of the day we have to deliver software within fixed time frames and budgets. Sometimes it's also because we don't know of a better alternative. We call these shortcuts "code smells" and our linting rules will complain about them with a warning.
-
-This means that this code is potentially problematic, but you don't have to fix it right away. You should keep the warning and come back later to refactor it (e.g. during a refactoring sprint). The amount of warnings is also a good indicator for technical debt.
-
-If you think that there is a good reason for deviating from the standard path, disable the warning and put an explanation above that comment why it's ok to disable the rule in that case, like:
-
-```js
-// The API returns snakecase properties
-/* eslint-disable babel/camelcase */
-function fetchUsers() {
-    // ...
-}
-```
-
-We use warnings instead of errors for most code issues since it's visually less distracting. We recommend to use `--max-warnings 0` as part of your test script or within your CI. These warnings can serve as a hint that the code needs to be fixed before it can be merged into the `main` branch.
 
 ## Practical guide
 
@@ -267,7 +216,36 @@ Add an `.eslintrc.json` to the project's root folder:
 }
 ```
 
-The base rules use the `eslint-plugin-import` to resolve imports. Although it's possible to define [custom resolvers](https://github.com/benmosher/eslint-plugin-import#resolvers), it's highly discouraged to deviate from the common Node/webpack resolving algorithm. Other tools like linters and intellisense don't work reliably when you change the resolver.
+The base rules use the `eslint-plugin-import` to resolve imports. Although it's possible to define [custom resolvers](https://github.com/benmosher/eslint-plugin-import#resolvers), it's highly discouraged to deviate from the common Node.js resolving algorithm. Other tools like linters and intellisense don't work reliably when you change the resolver.
+
+### [`peerigon/typescript`](typescript.js)
+
+Rules for [TypeScript](https://www.typescriptlang.org/).
+
+```js
+{
+    "extends": [
+        "peerigon",
+        "peerigon/typescript",
+        // Arrow functions are preferred with TypeScript
+        // See https://github.com/peerigon/eslint-config-peerigon/issues/23#issuecomment-472614432
+        "peerigon/styles/prefer-arrow"
+    ],
+    "root": true,
+}
+```
+
+You need to add `--ext js,jsx,cjs,mjs,ts,tsx` to the `test:lint` script:
+
+```js
+{
+    "scripts": {
+        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,cjs,mjs,ts,tsx --ignore-path .gitignore ."
+    }
+}
+```
+
+_We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow) because arrow functions (or function expressions in general) can leverage [TypeScript's contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing)._
 
 ### [`peerigon/node`](node.js)
 
@@ -322,57 +300,6 @@ These rules are also applicable in other JSX environments, like [Preact](https:/
 
 _We recommend using [`peerigon/styles/react-jsx-no-literals`](#peerigonstylesreact-jsx-no-literals) if you're using i18n in your project._
 _You can use [`peerigon/styles/react-jsx-no-bind`](#peerigonstylesreact-jsx-no-bind) if you're using `memo` and `shouldComponentUpdate` a lot._
-
-### [`peerigon/typescript`](typescript.js)
-
-Rules for [TypeScript](https://www.typescriptlang.org/).
-
-**⚠️ Attention:** These rules require your `tsconfig.json`. Specify the path in `parserOptions.project` (see also [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject) for more information). _The path should be relative to the folder where `eslint` is executed._
-
-```js
-{
-    "extends": [
-        "peerigon",
-        "peerigon/typescript",
-        // Arrow functions are preferred with TypeScript
-        // See https://github.com/peerigon/eslint-config-peerigon/issues/23#issuecomment-472614432
-        "peerigon/styles/prefer-arrow"
-    ],
-    "root": true,
-}
-```
-
-You need to add `--ext js,jsx,cjs,mjs,ts,tsx` to the `test:lint` script:
-
-```js
-{
-    "scripts": {
-        "test:lint": "eslint --max-warnings 0 --cache --ext js,jsx,cjs,mjs,ts,tsx --ignore-path .gitignore ."
-    }
-}
-```
-
-_We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow) because arrow functions (or function expressions in general) can leverage [TypeScript's contextual typing](https://www.typescriptlang.org/docs/handbook/type-inference.html#contextual-typing)._
-
-If your `tsconfig.json` is not next to your `package.json`, you might need to specify [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject):
-
-```js
-{
-    "parserOptions": {
-        "project": "./src/tsconfig.json"
-    }
-}
-```
-
-Do you see an error that looks like this?
-
-```
-Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
-The file does not match your project config: ...
-The file must be included in at least one of the projects provided
-```
-
-This is a sign that ESLint is trying to lint a file that is not included by your `tsconfig.json`. You need to adjust either [`parserOptions.project`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject) or `include` of the referenced `tsconfig.json`.
 
 ### [`peerigon/jsdoc`](jsdoc.js)
 
