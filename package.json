@@ -19,7 +19,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/peerigon/eslint-config-peerigon.git"
+        "url": "https://github.com/peerigon/eslint-config-peerigon.git"
     },
     "keywords": [
         "eslint",
@@ -33,15 +33,8 @@
         "styles",
         "presets"
     ],
-    "author": "developers@peerigon.com",
+    "author": "Peerigon GmbH <hello@peerigon.com>",
     "license": "Unlicense",
-    "bugs": {
-        "url": "https://github.com/peerigon/eslint-config-peerigon/issues"
-    },
-    "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
-    "engines": {
-        "node": ">=14.0.0"
-    },
     "peerDependencies": {
         "eslint": "^8.1.0"
     },
