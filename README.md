@@ -88,7 +88,7 @@ npm i eslint eslint-config-peerigon eslint-plugin-react eslint-plugin-jsx-a11y e
 ### TypeScript + Node
 
 ```
-npm i eslint eslint-config-peerigon eslint-plugin-node --save-dev
+npm i eslint eslint-config-peerigon eslint-plugin-n --save-dev
 ```
 
 ```js
@@ -249,10 +249,10 @@ _We recommend using [`peerigon/styles/prefer-arrow`](#peerigonstylesprefer-arrow
 
 ### [`peerigon/node`](node.js)
 
-**Important: Requires [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node).**
+**Important: Requires [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n).**
 
 ```
-npm i eslint-plugin-node --save-dev
+npm i eslint-plugin-n --save-dev
 ```
 
 ```js
@@ -263,17 +263,6 @@ npm i eslint-plugin-node --save-dev
     ],
     // Setting env.node = true is not necessary, this is already done by peerigon/node
     "root": true
-}
-```
-
-[`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node) uses the ["engines" field](https://docs.npmjs.com/files/package.json#engines) and the ["type" field](https://nodejs.org/api/esm.html#esm_enabling) in your `package.json` to check for compatibility issues. We recommend the following configuration:
-
-```json
-{
-    "type": "module",
-    "engines": {
-        "node": ">=14.0.0"
-    }
 }
 ```
 
