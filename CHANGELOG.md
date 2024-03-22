@@ -1,3 +1,10 @@
+# [37.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v37.1.0...v37.2.0) (2024-03-22)
+
+
+### Features
+
+* Add shared Prettier config for import sorting ([cb1ba16](https://github.com/peerigon/eslint-config-peerigon/commit/cb1ba1693351150f878aae17ef9dfa85aa83e0b7))
+
 # [37.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v37.0.2...v37.1.0) (2024-01-17)
 
 
