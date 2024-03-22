@@ -1,3 +1,16 @@
+# [38.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v37.2.0...v38.0.0) (2024-03-22)
+
+
+### chore
+
+* Update dependencies to latest versions ([#116](https://github.com/peerigon/eslint-config-peerigon/issues/116)) ([20ac5cb](https://github.com/peerigon/eslint-config-peerigon/commit/20ac5cb6ffb60af14acb80030bc4702430023b4e))
+
+
+### BREAKING CHANGES
+
+* Update @typescript-eslint/eslint-plugin and
+@typescript-eslint/parser from 6.x to 7.x
+
 # [37.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v37.1.0...v37.2.0) (2024-03-22)
 
 ### Features
