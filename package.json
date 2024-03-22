@@ -14,7 +14,7 @@
         "test:node": "cd tests/node; eslint --max-warnings 0 .",
         "test:typescript": "cd tests/typescript; eslint --max-warnings 0 .",
         "test:react": "cd tests/react; eslint --max-warnings 0 .",
-        "prepare": "husky install",
+        "prepare": "husky",
         "release": "semantic-release"
     },
     "repository": {
@@ -46,12 +46,12 @@
         "eslint": "^8.1.0"
     },
     "dependencies": {
-        "@babel/core": "^7.23.7",
-        "@babel/eslint-parser": "^7.23.3",
+        "@babel/core": "^7.24.3",
+        "@babel/eslint-parser": "^7.24.1",
         "@babel/eslint-plugin": "^7.23.5",
         "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-        "@typescript-eslint/eslint-plugin": "^6.19.0",
-        "@typescript-eslint/parser": "^6.19.0",
+        "@typescript-eslint/eslint-plugin": "^7.3.1",
+        "@typescript-eslint/parser": "^7.3.1",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-no-unsafe-regex": "^1.0.0",
@@ -61,24 +61,24 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.18.6",
-        "@babel/preset-env": "^7.23.8",
+        "@babel/preset-env": "^7.24.3",
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/git": "^10.0.1",
-        "@types/react": "^18.2.48",
-        "eslint": "^8.56.0",
+        "@types/react": "^18.2.69",
+        "eslint": "^8.57.0",
         "eslint-find-rules": "^4.1.0",
         "eslint-plugin-jsx-a11y": "^6.8.0",
         "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react": "^7.34.1",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "husky": "^8.0.3",
-        "lint-staged": "^15.2.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
         "npm-run-all": "^4.1.5",
         "pin-github-action": "^1.9.1",
-        "prettier": "^3.2.4",
+        "prettier": "^3.2.5",
         "react": "^18.2.0",
-        "semantic-release": "^23.0.0",
-        "typescript": "^5.3.3"
+        "semantic-release": "^23.0.5",
+        "typescript": "^5.4.3"
     },
     "lint-staged": {
         ".github/workflows/*.{yml,yaml}": [
