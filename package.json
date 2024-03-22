@@ -14,7 +14,7 @@
         "test:node": "cd tests/node; eslint --max-warnings 0 .",
         "test:typescript": "cd tests/typescript; eslint --max-warnings 0 .",
         "test:react": "cd tests/react; eslint --max-warnings 0 .",
-        "prepare": "husky install",
+        "prepare": "husky",
         "release": "semantic-release"
     },
     "repository": {
