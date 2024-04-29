@@ -1,3 +1,10 @@
+## [39.0.1](https://github.com/peerigon/eslint-config-peerigon/compare/v39.0.0...v39.0.1) (2024-04-29)
+
+
+### Bug Fixes
+
+* Disable @trivago/prettier-plugin-sort-imports temporarily ([#142](https://github.com/peerigon/eslint-config-peerigon/issues/142)) ([501c74e](https://github.com/peerigon/eslint-config-peerigon/commit/501c74e86767cef936ac96bc2c9757eb4f3690ae))
+
 # [39.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v38.0.0...v39.0.0) (2024-03-22)
 
 
