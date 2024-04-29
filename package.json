@@ -14,6 +14,7 @@
         "test:node": "cd tests/node; eslint --max-warnings 0 .",
         "test:typescript": "cd tests/typescript; eslint --max-warnings 0 .",
         "test:react": "cd tests/react; eslint --max-warnings 0 .",
+        "test:prettier": "prettier --check .",
         "prepare": "husky",
         "release": "semantic-release"
     },
@@ -43,7 +44,7 @@
         "eslint": "^8.1.0"
     },
     "dependencies": {
-        "@babel/core": "^7.24.3",
+        "@babel/core": "^7.24.4",
         "@babel/eslint-parser": "^7.24.1",
         "@babel/eslint-plugin": "^7.23.5",
         "@trivago/prettier-plugin-sort-imports": "^4.3.0",
@@ -58,7 +59,8 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.18.6",
-        "@babel/preset-env": "^7.24.3",
+        "@babel/plugin-syntax-import-attributes": "^7.24.1",
+        "@babel/preset-env": "^7.24.4",
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/git": "^10.0.1",
         "@types/react": "^18.2.69",
