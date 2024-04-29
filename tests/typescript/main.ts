@@ -1,4 +1,6 @@
 import { getMessage } from "./message.js";
+// Check if import attributes are detected and formatted correctly
+import test from "./test.json" with { type: "json" };
 
 // Should be an error
 // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -22,4 +24,4 @@ class SomeClass {
     snake_case() {}
 }
 
-console.log(getMessage(), SomeClass, snake_case);
+console.log(getMessage(), SomeClass, snake_case, test);

@@ -1,4 +1,6 @@
 import { getMessage } from "./message.js";
+// Check if import attributes are detected and formatted correctly
+import test from "./test.json" with { type: "json" };
 
 class SomeClass {
     #someProp = true;
@@ -8,4 +10,4 @@ class SomeClass {
     }
 }
 
-console.log(getMessage(), SomeClass);
+console.log(getMessage(), SomeClass, test);
