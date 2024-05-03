@@ -1,7 +1,7 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-module.exports = {
+export default {
     plugins: ["prefer-arrow"],
     rules: {
         "func-style": ["warn", "expression"], // http://eslint.org/docs/rules/func-style

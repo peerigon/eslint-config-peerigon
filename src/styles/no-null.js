@@ -1,7 +1,7 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-module.exports = {
+export default {
     plugins: ["no-null"],
     rules: {
         "no-null/no-null": "warn",

@@ -1,10 +1,10 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-const options = require("../options.js");
-const globPatterns = require("../glob-patterns.js");
+import { options } from "../options.js";
+import { globPatterns } from "../glob-patterns.js";
 
-module.exports = {
+export default {
     plugins: ["@typescript-eslint"],
     overrides: [
         {

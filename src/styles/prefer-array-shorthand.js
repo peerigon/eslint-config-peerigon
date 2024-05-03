@@ -1,7 +1,7 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-module.exports = {
+export default {
     plugins: ["@typescript-eslint"],
     rules: {
         "@typescript-eslint/array-type": [

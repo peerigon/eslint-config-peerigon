@@ -1,9 +1,9 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-const globPatterns = require("../glob-patterns.js");
+import { globPatterns } from "../glob-patterns.js";
 
-module.exports = {
+export default {
     rules: {
         "import/no-default-export": "warn",
     },

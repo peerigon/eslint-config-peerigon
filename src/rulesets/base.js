@@ -1,12 +1,11 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-const options = require("../options.js");
-const globPatterns = require("../glob-patterns.js");
-const tests = require("./tests.js");
-const configs = require("./configs.js");
+import { options } from "../options.js";
+import * as testRules from "./tests.js";
+import * as configRules from "./configs.js";
 
-module.exports = {
+export default {
     parser: "@babel/eslint-parser",
     env: {
         es6: true,
@@ -397,11 +396,11 @@ module.exports = {
     overrides: [
         {
             files: globPatterns.tests,
-            ...tests,
+            ...testRules,
         },
         {
             files: globPatterns.configs,
-            ...configs,
+            ...configRules,
         },
     ],
 };

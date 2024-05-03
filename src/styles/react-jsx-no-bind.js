@@ -1,7 +1,7 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-module.exports = {
+export default {
     rules: {
         "react/jsx-no-bind": [
             // We're using only "warn" here because it's not a hard error,

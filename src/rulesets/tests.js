@@ -1,9 +1,7 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-const options = require("../options.js");
-
-module.exports = {
+export default {
     env: {
         mocha: true,
         jest: true,
