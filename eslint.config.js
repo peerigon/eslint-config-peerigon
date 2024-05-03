@@ -1,4 +1,4 @@
-import baseConfig from "./src/rulesets/base.js";
+import baseConfig from "./src/rules/base.js";
 
 export default {
     ...baseConfig,

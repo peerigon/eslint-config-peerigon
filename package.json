@@ -71,6 +71,8 @@
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/git": "^10.0.1",
         "@tsconfig/strictest": "^2.0.5",
+        "@types/eslint": "^8.56.10",
+        "@types/eslint__js": "^8.42.3",
         "@types/react": "^18.3.1",
         "eslint": "^9.1.1",
         "eslint-find-rules": "^4.1.0",

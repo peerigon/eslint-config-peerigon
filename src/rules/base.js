@@ -1,37 +1,44 @@
+//@ts-check
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
+import babelEslintParser from "@babel/eslint-parser";
 import { options } from "../options.js";
+import { globPatterns } from "../glob-patterns.js";
 import * as testRules from "./tests.js";
 import * as configRules from "./configs.js";
 
+/**
+ * @type {import("eslint").Linter.FlatConfig}
+ */
 export default {
-    parser: "@babel/eslint-parser",
-    env: {
-        es6: true,
+    linterOptions: {
+        reportUnusedDisableDirectives: "warn",
     },
-    parserOptions: {
-        sourceType: "module",
-        ecmaVersion: "latest",
-        // We don't require a Babel config file in our base rules since it would complain
-        // for every regular JS file that the babel config is missing, even when Babel isn't used.
-        // If experimental syntax is used, you can still set this to true.
-        requireConfigFile: false,
+    languageOptions: {
+        parser: babelEslintParser,
+        parserOptions: {
+            sourceType: "module",
+            ecmaVersion: "latest",
+            // We don't require a Babel config file in our base rules since it would complain
+            // for every regular JS file that the babel config is missing, even when Babel isn't used.
+            // If experimental syntax is used, you can still set this to true.
+            requireConfigFile: false,
+        },
     },
     plugins: [
         "@babel",
-        "import",
+        // "import",
         "optimize-regex",
         "promise",
         "no-unsafe-regex",
     ],
     extends: [
         "eslint:recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings",
+        // "plugin:import/errors",
+        // "plugin:import/warnings",
         "plugin:promise/recommended",
     ],
-    reportUnusedDisableDirectives: true,
     rules: {
         /* eslint-enable sort-keys */
         "@babel/new-cap": "warn",
