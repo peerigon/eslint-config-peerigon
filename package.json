@@ -2,7 +2,11 @@
     "name": "eslint-config-peerigon",
     "version": "0.0.0-semantically-released",
     "description": "Peerigon coding rules as eslint config",
-    "main": "base.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/rulesets/base.js",
+        "./*": "./src/*.js"
+    },
     "scripts": {
         "unused": "eslint-find-rules -u -n -d",
         "unused:javascript": "npm run unused -- ./tests/javascript/.eslintrc.json",
@@ -20,7 +24,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/peerigon/eslint-config-peerigon.git"
+        "url": "git+https://github.com/peerigon/eslint-config-peerigon.git"
     },
     "keywords": [
         "eslint",
@@ -48,8 +52,8 @@
         "@babel/eslint-parser": "^7.24.1",
         "@babel/eslint-plugin": "^7.23.5",
         "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-        "@typescript-eslint/eslint-plugin": "^7.3.1",
-        "@typescript-eslint/parser": "^7.3.1",
+        "@typescript-eslint/eslint-plugin": "^7.5.0",
+        "@typescript-eslint/parser": "^7.5.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-no-unsafe-regex": "^1.0.0",
@@ -63,8 +67,8 @@
         "@babel/preset-env": "^7.24.4",
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/git": "^10.0.1",
-        "@types/react": "^18.2.69",
-        "eslint": "^8.57.0",
+        "@types/react": "^18.2.74",
+        "eslint": "^9.0.0",
         "eslint-find-rules": "^4.1.0",
         "eslint-plugin-jsx-a11y": "^6.8.0",
         "eslint-plugin-n": "^16.6.2",
@@ -77,8 +81,8 @@
         "pin-github-action": "^1.9.1",
         "prettier": "^3.2.5",
         "react": "^18.2.0",
-        "semantic-release": "^23.0.5",
-        "typescript": "^5.4.3"
+        "semantic-release": "^23.0.7",
+        "typescript": "^5.4.4"
     },
     "lint-staged": {
         ".github/workflows/*.{yml,yaml}": [

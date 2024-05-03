@@ -1,8 +1,8 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-const options = require("./options.js");
-const globPatterns = require("./glob-patterns.js");
+const options = require("../options.js");
+const globPatterns = require("../glob-patterns.js");
 
 module.exports = {
     plugins: ["@typescript-eslint"],

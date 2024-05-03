@@ -1,7 +1,7 @@
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
-const options = require("./options.js");
+const options = require("../options.js");
 
 module.exports = {
     env: {

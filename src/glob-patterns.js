@@ -1,6 +1,6 @@
-"use strict";
+/*eslint sort-keys: ["error", "asc"]*/
 
-module.exports = {
+export const globPatterns = {
     tests: ["**/*.{test,spec,stories}.*", "**/test{s,}/**"],
     tooling: [
         "config/**",

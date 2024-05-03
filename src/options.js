@@ -1,4 +1,5 @@
-"use strict";
+/* eslint sort-keys: ["error", "asc"] */
+/* eslint-disable sort-keys */
 
 const camelcase = {
     allow: ["^UNSAFE_"], // Allows React UNSAFE_ methods
@@ -6,7 +7,7 @@ const camelcase = {
     properties: "always",
 };
 
-module.exports = {
+export const options = {
     /* eslint-enable sort-keys */
     ["camelcase"]: camelcase,
     ["max-lines"]: {
