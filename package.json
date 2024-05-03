@@ -34,9 +34,7 @@
         "style"
     ],
     "files": [
-        "*.js",
-        "styles",
-        "presets"
+        "src"
     ],
     "author": "Peerigon GmbH <hello@peerigon.com>",
     "license": "Unlicense",
