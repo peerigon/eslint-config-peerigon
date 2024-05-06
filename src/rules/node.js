@@ -1,5 +1,3 @@
-// @ts-check
-
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 

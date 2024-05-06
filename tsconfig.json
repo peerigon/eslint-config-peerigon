@@ -2,7 +2,10 @@
     "extends": ["@tsconfig/strictest/tsconfig"],
     "compilerOptions": {
         "rootDir": "src",
-        "outDir": "dist"
+        "outDir": "dist",
+        "allowJs": true,
+        "checkJs": true,
+        "lib": ["esnext"]
     },
     "include": ["src", "./types.d.ts"]
 }

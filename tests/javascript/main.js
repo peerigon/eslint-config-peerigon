@@ -6,8 +6,12 @@ class SomeClass {
     #someProp = true;
 
     logSomeProp() {
-        console.log(this.#someProp);
+        void this.#someProp;
     }
 }
 
-console.log(getMessage(), SomeClass, test);
+void getMessage();
+void SomeClass;
+void test;
+
+// new Promise((test) => {});

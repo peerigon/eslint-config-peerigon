@@ -1,13 +1,12 @@
-//@ts-check
 /* eslint sort-keys: ["error", "asc"] */
 /* eslint-disable sort-keys */
 
 import js from "@eslint/js";
+import globals from "globals";
 import babelPlugin from "@babel/eslint-plugin";
 import babelParser from "@babel/eslint-parser";
 import optimizeRegexPlugin from "eslint-plugin-optimize-regex";
 import promisePlugin from "eslint-plugin-promise";
-import noUnsafeRegexPlugin from "eslint-plugin-no-unsafe-regex";
 import { options } from "../options.js";
 import { globPatterns } from "../glob-patterns.js";
 import * as testRules from "./tests.js";
@@ -17,9 +16,21 @@ import * as configRules from "./configs.js";
  * @type {Array<import("eslint").Linter.FlatConfig>}
  */
 export default [
-    // js.configs.recommended,
-    // promise.configs.recommended,
-    // optimizeRegex.configs.recommended,
+    js.configs.recommended,
+    {
+        plugins: {
+            "optimize-regex": optimizeRegexPlugin,
+        },
+        rules: optimizeRegexPlugin.configs.recommended.rules,
+    },
+    // TODO: Re-add promisePlugin when they ship support for ESLint v9
+    // See https://github.com/eslint-community/eslint-plugin-promise/issues/449
+    // {
+    //     plugins: {
+    //         promise: promisePlugin,
+    //     },
+    //     rules: promisePlugin.configs.recommended.rules,
+    // },
     {
         name: "base",
         linterOptions: {
@@ -35,15 +46,19 @@ export default [
                 // If experimental syntax is used, you can still set this to true.
                 requireConfigFile: false,
             },
+            globals: {
+                ...globals.builtin,
+                ...globals.es2015,
+                ...globals.es2017,
+                ...globals.es2020,
+                ...globals.es2021,
+            },
         },
         plugins: {
             "@babel": babelPlugin,
             // TODO: Re-add eslint-plugin-import once v9 support ships
             // See https://github.com/peerigon/eslint-config-peerigon/issues/143
             // "import",
-            "optimize-regex": optimizeRegexPlugin,
-            promise: promisePlugin,
-            "no-unsafe-regex": noUnsafeRegexPlugin,
         },
         rules: {
             /* eslint-enable sort-keys */
@@ -332,7 +347,6 @@ export default [
             "no-unneeded-ternary": "warn", // http://eslint.org/docs/rules/no-unneeded-ternary
             "no-unreachable-loop": "warn", // http://eslint.org/docs/rules/no-unreachable-loop
             "no-unsafe-optional-chaining": "error", // http://eslint.org/docs/rules/no-unsafe-optional-chaining
-            "no-unsafe-regex/no-unsafe-regex": "warn", // https://github.com/kgryte/eslint-plugin-no-unsafe-regex
             // Handled by babel/no-unused-expressions
             "no-unused-expressions": ["off", options["no-unused-expressions"]], // http://eslint.org/docs/rules/no-unused-expressions
             "no-unused-labels": "warn", // http://eslint.org/docs/rules/no-unused-labels

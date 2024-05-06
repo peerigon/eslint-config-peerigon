@@ -55,13 +55,13 @@
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jsx-a11y": "^6.8.0",
         "eslint-plugin-n": "^17.4.0",
-        "eslint-plugin-no-unsafe-regex": "^1.0.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-optimize-regex": "^1.2.1",
         "eslint-plugin-prefer-arrow": "^1.2.3",
         "eslint-plugin-promise": "^6.1.1",
         "eslint-plugin-react": "^7.34.1",
         "eslint-plugin-react-hooks": "^4.6.2",
+        "globals": "^15.1.0",
         "typescript-eslint": "^7.8.0"
     },
     "devDependencies": {
