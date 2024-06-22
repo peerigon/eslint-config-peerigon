@@ -3,5 +3,9 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
-    }
+    },
+    "javascript.preferences.importModuleSpecifier": "shortest",
+    "javascript.preferences.importModuleSpecifierEnding": "js",
+    "typescript.preferences.importModuleSpecifier": "shortest",
+    "typescript.preferences.importModuleSpecifierEnding": "js"
 }
