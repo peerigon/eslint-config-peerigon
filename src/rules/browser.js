@@ -3,12 +3,14 @@ import globals from "globals";
 /**
  * @type {Array<import("eslint").Linter.FlatConfig>}
  */
-export default [
-    {
-        languageOptions: {
-            parserOptions: {
-                globals: { ...globals.browser },
-            },
-        },
+export const browser = [
+  {
+    languageOptions: {
+      parserOptions: {
+        globals: { ...globals.browser },
+      },
     },
+  },
 ];
+
+export default browser;

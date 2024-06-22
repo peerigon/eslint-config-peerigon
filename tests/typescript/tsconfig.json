@@ -3,9 +3,9 @@
   "compilerOptions": {
     "checkJs": true,
     "noEmit": true,
-    "lib": ["esnext"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext"
+    "lib": ["esnext", "dom"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
   },
-  "include": ["src"]
+  "include": ["**/*"]
 }

@@ -9,23 +9,23 @@
 
 Linting and formatting rules are always a balance between
 
--   ease of reading
--   ease of refactoring
--   ease of writing.
+- ease of reading
+- ease of refactoring
+- ease of writing.
 
 We think that
 
--   code is read more often than refactored
--   and refactored more often than written from scratch.
+- code is read more often than refactored
+- and refactored more often than written from scratch.
 
 Our linting rules have been designed with these assumptions in mind.
 
 ## Table of contents
 
--   [Quick start](#quick-start)
--   [Practical guide](#practical-guide)
--   [Provided configs](#provided-configs)
--   [Styles](#styles)
+- [Quick start](#quick-start)
+- [Practical guide](#practical-guide)
+- [Provided configs](#provided-configs)
+- [Styles](#styles)
 
 ## Quick start
 
@@ -130,11 +130,11 @@ This is our recommended VSCode configuration using the [Prettier extension](http
 
 ```json
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
 ```
 
@@ -156,17 +156,17 @@ Sometimes we're not in full control over the naming conventions in our codebase,
 const options = require("eslint-config-peerigon/options.js");
 
 module.exports = {
-    /* ... */
-    rules: {
-        // The API uses snake_case as properties
-        camelcase: [
-            "warn",
-            {
-                ...options["camelcase"],
-                properties: "never",
-            },
-        ],
-    },
+  /* ... */
+  rules: {
+    // The API uses snake_case as properties
+    camelcase: [
+      "warn",
+      {
+        ...options["camelcase"],
+        properties: "never",
+      },
+    ],
+  },
 };
 ```
 
@@ -176,15 +176,15 @@ module.exports = {
 const options = require("eslint-config-peerigon/options.js");
 
 module.exports = {
-    /* ... */
-    rules: {
-        // The API uses snake_case as properties
-        "@typescript-eslint/naming-convention": [
-            "warn",
-            options["@typescript-eslint/naming-convention"].ignoreProperties,
-            ...options["@typescript-eslint/naming-convention"].defaultRules,
-        ],
-    },
+  /* ... */
+  rules: {
+    // The API uses snake_case as properties
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      options["@typescript-eslint/naming-convention"].ignoreProperties,
+      ...options["@typescript-eslint/naming-convention"].defaultRules,
+    ],
+  },
 };
 ```
 
