@@ -1,6 +1,6 @@
 import js from "@eslint/js";
-import { globPatterns } from "../lib/globPatterns.js";
-import { options } from "../lib/ruleOptions.js";
+import { globPatterns } from "../lib/glob-patterns.js";
+import { options } from "../lib/rule-options.js";
 
 /**
  * @type {Array<import("eslint").Linter.FlatConfig>}
