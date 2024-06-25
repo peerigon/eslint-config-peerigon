@@ -25,35 +25,6 @@ export const options = {
     ignoreRestSiblings: true,
     vars: "all",
   },
-  ["@typescript-eslint/ban-types"]: {
-    types: {
-      // Default options taken from https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/rules/ban-types.ts
-      String: {
-        message: "Use string instead",
-        fixWith: "string",
-      },
-      Boolean: {
-        message: "Use boolean instead",
-        fixWith: "boolean",
-      },
-      Number: {
-        message: "Use number instead",
-        fixWith: "number",
-      },
-      Object: {
-        message: "Use Record<string, unknown> instead",
-        fixWith: "Record<string, unknown>",
-      },
-      Symbol: {
-        message: "Use symbol instead",
-        fixWith: "symbol",
-      },
-    },
-  },
-  ["@typescript-eslint/camelcase"]: {
-    ...camelcase,
-    genericType: "always",
-  },
   ["@typescript-eslint/naming-convention"]: (() => {
     const options = {
       default: {
