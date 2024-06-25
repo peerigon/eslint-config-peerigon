@@ -8,6 +8,11 @@ export const typescript = tsEslint.config(
   ...tsEslint.configs.strictTypeChecked,
   ...tsEslint.configs.stylisticTypeChecked,
   {
+    files: [
+      globPatterns.typescript,
+      globPatterns.typescriptAmbient,
+      globPatterns.typescriptReact,
+    ],
     languageOptions: {
       parserOptions: {
         project: true,
@@ -15,15 +20,15 @@ export const typescript = tsEslint.config(
     },
     rules: {
       "@typescript-eslint/ban-ts-comment": [
+        // https://typescript-eslint.io/rules/ban-ts-comment
         "warn",
         {
           "ts-expect-error": "allow-with-description",
         },
       ],
-      "@typescript-eslint/class-literal-property-style": "off",
-      "@typescript-eslint/consistent-indexed-object-style": "off",
-      "@typescript-eslint/dot-notation": "off",
+      "@typescript-eslint/class-literal-property-style": "off", // https://typescript-eslint.io/rules/class-literal-property-style
       "@typescript-eslint/explicit-member-accessibility": [
+        // https://typescript-eslint.io/rules/explicit-member-accessibility
         "warn",
         {
           accessibility: "no-public",
@@ -32,70 +37,48 @@ export const typescript = tsEslint.config(
           },
         },
       ],
-      "@typescript-eslint/func-call-spacing": ["warn"],
-      "@typescript-eslint/member-delimiter-style": [
-        "warn",
-        {
-          multiline: {
-            delimiter: "semi",
-            requireLast: true,
-          },
-          singleline: {
-            delimiter: "semi",
-            requireLast: false,
-          },
-        },
-      ],
-      "@typescript-eslint/method-signature-style": ["warn", "property"],
+      "@typescript-eslint/method-signature-style": ["warn", "property"], // https://typescript-eslint.io/rules/method-signature-style
       "@typescript-eslint/naming-convention": [
+        // https://typescript-eslint.io/rules/naming-convention
         "warn",
         ...options["@typescript-eslint/naming-convention"].defaultRules,
       ],
-      "@typescript-eslint/no-base-to-string": "off",
+      "@typescript-eslint/no-base-to-string": "off", // https://typescript-eslint.io/rules/no-base-to-string
       "@typescript-eslint/no-confusing-void-expression": [
+        // https://typescript-eslint.io/rules/no-confusing-void-expression
         "off",
         {
           ignoreArrowShorthand: true,
           ignoreVoidOperator: true,
         },
       ],
-      "@typescript-eslint/no-dupe-class-members": ["warn"],
-      "@typescript-eslint/no-empty-function": "off",
-      "@typescript-eslint/no-empty-interface": "off",
+      "@typescript-eslint/no-empty-function": "off", // https://typescript-eslint.io/rules/no-empty-function
+      "@typescript-eslint/no-empty-interface": "off", // https://typescript-eslint.io/rules/no-empty-interface
       "@typescript-eslint/no-explicit-any": [
+        // https://typescript-eslint.io/rules/no-explicit-any
         "off",
         {
           fixToUnknown: false,
           ignoreRestArgs: true,
         },
       ],
-      "@typescript-eslint/no-extraneous-class": "off",
-      "@typescript-eslint/no-floating-promises": [
-        "off",
-        {
-          ignoreVoid: true,
-        },
-      ],
-      "@typescript-eslint/no-invalid-this": "warn",
-      "@typescript-eslint/no-misused-promises": "off",
-      "@typescript-eslint/no-non-null-assertion": "off",
-      "@typescript-eslint/no-redeclare": "warn",
-      "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
-      "@typescript-eslint/no-unnecessary-qualifier": "warn",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-non-null-assertion": "off", // https://typescript-eslint.io/rules/no-non-null-assertion
+      "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off", // https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
+      "@typescript-eslint/no-unnecessary-qualifier": "warn", // https://typescript-eslint.io/rules/no-unnecessary-qualifier
+      "@typescript-eslint/no-unsafe-argument": "off", // https://typescript-eslint.io/rules/no-unsafe-argument
+      "@typescript-eslint/no-unsafe-assignment": "off", // https://typescript-eslint.io/rules/no-unsafe-assignment
+      "@typescript-eslint/no-unsafe-call": "off", // https://typescript-eslint.io/rules/no-unsafe-call
+      "@typescript-eslint/no-unsafe-member-access": "off", // https://typescript-eslint.io/rules/no-unsafe-member-access
       "@typescript-eslint/no-unused-expressions": [
+        // https://typescript-eslint.io/rules/no-unused-expressions
         "warn",
         {
           allowShortCircuit: true,
           allowTernary: true,
         },
       ],
-      "@typescript-eslint/prefer-namespace-keyword": "off",
-      "@typescript-eslint/prefer-ts-expect-error": "warn",
       "@typescript-eslint/promise-function-async": [
+        // https://typescript-eslint.io/rules/promise-function-async
         "warn",
         {
           allowAny: true,
@@ -106,9 +89,10 @@ export const typescript = tsEslint.config(
           checkMethodDeclarations: true,
         },
       ],
-      "@typescript-eslint/require-await": "off",
-      "@typescript-eslint/restrict-plus-operands": "off",
+      "@typescript-eslint/require-await": "off", // https://typescript-eslint.io/rules/require-await
+      "@typescript-eslint/restrict-plus-operands": "off", // https://typescript-eslint.io/rules/restrict-plus-operands
       "@typescript-eslint/restrict-template-expressions": [
+        // https://typescript-eslint.io/rules/restrict-template-expressions
         "off",
         {
           allowBoolean: false,
@@ -116,9 +100,9 @@ export const typescript = tsEslint.config(
           allowNumber: true,
         },
       ],
-      "@typescript-eslint/return-await": ["warn", "in-try-catch"],
-      "@typescript-eslint/switch-exhaustiveness-check": "warn",
-      "@typescript-eslint/type-annotation-spacing": "warn",
+      "no-return-await": "off",
+      "@typescript-eslint/return-await": ["warn", "in-try-catch"], // https://typescript-eslint.io/rules/return-await
+      "@typescript-eslint/switch-exhaustiveness-check": "warn", // https://typescript-eslint.io/rules/switch-exhaustiveness-check
       camelcase: "off",
       "max-lines": [
         "warn",
