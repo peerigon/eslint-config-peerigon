@@ -8,16 +8,18 @@ export const typescript = tsEslint.config(
   ...tsEslint.configs.strictTypeChecked,
   ...tsEslint.configs.stylisticTypeChecked,
   {
-    files: [
-      globPatterns.typescript,
-      globPatterns.typescriptAmbient,
-      globPatterns.typescriptReact,
-    ],
     languageOptions: {
       parserOptions: {
         project: true,
       },
     },
+  },
+  {
+    files: [
+      globPatterns.typescript,
+      globPatterns.typescriptAmbient,
+      globPatterns.typescriptReact,
+    ],
     rules: {
       "@typescript-eslint/ban-ts-comment": [
         // https://typescript-eslint.io/rules/ban-ts-comment
