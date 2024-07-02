@@ -1,4 +1,5 @@
 import tsEslint from "typescript-eslint";
+import preferArrow from "eslint-plugin-prefer-arrow";
 import base from "./base.js";
 import { options } from "../lib/rule-options.js";
 import { globPatterns } from "../lib/glob-patterns.js";
@@ -20,6 +21,9 @@ export const typescript = tsEslint.config(
       globPatterns.typescriptAmbient,
       globPatterns.typescriptReact,
     ],
+    plugins: {
+      ["prefer-arrow"]: preferArrow,
+    },
     rules: {
       "@typescript-eslint/ban-ts-comment": [
         // https://typescript-eslint.io/rules/ban-ts-comment
@@ -112,6 +116,19 @@ export const typescript = tsEslint.config(
           max: 1400,
           skipBlankLines: true,
           skipComments: true,
+        },
+      ],
+      "func-style": ["warn", "expression"], // https://eslint.org/docs/latest/rules/func-style
+      "prefer-arrow/prefer-arrow-functions": [
+        // https://github.com/TristonJ/eslint-plugin-prefer-arrow
+        "warn",
+        {
+          disallowPrototype: false,
+          singleReturnOnly: false,
+          // We used to enforce arrow functions also for class methods (as class properties)
+          // but arrow functions in sub-classes can't call their overridden counterpart
+          // in their super-class, see https://stackoverflow.com/a/52823577
+          classPropertiesAllowed: false,
         },
       ],
     },
