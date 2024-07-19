@@ -1,177 +1,125 @@
 import _ from "lodash";
-import tsEslint from "typescript-eslint";
+import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import base from "./base.js";
 import { options } from "../lib/rule-options.js";
 import { globPatterns } from "../lib/glob-patterns.js";
 
-const allRules = [
-  ...base,
-  ...tsEslint.configs.strictTypeChecked,
-  ...tsEslint.configs.stylisticTypeChecked,
-];
+const allRules = [reactRecommended];
 const oldRules = {
-  "@typescript-eslint/array-type": ["warn", { default: "generic" }], // https://typescript-eslint.io/rules/array-type
-  "@typescript-eslint/await-thenable": "warn", // https://typescript-eslint.io/rules/await-thenable
-  "@typescript-eslint/ban-ts-comment": [
-    // https://typescript-eslint.io/rules/ban-ts-comment
-    "warn",
-    { "ts-expect-error": "allow-with-description" },
-  ],
-  "@typescript-eslint/ban-tslint-comment": "warn", // https://typescript-eslint.io/rules/ban-tslint-comment
-  "@typescript-eslint/ban-types": [
-    // https://typescript-eslint.io/rules/ban-types
-    "warn",
-    options["@typescript-eslint/ban-types"],
-  ],
-  "@typescript-eslint/class-literal-property-style": "off", // https://typescript-eslint.io/rules/class-literal-property-style
-  "@typescript-eslint/consistent-indexed-object-style": "off", // https://typescript-eslint.io/rules/consistent-indexed-object-style
-  "@typescript-eslint/consistent-type-assertions": [
-    // https://typescript-eslint.io/rules/consistent-type-assertions
+  "react/boolean-prop-naming": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
+  "react/button-has-type": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
+  "react/default-props-match-prop-types": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
+  "react/destructuring-assignment": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+  "react/display-name": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
+  "react/forbid-component-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
+  "react/forbid-dom-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md
+  "react/forbid-elements": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
+  "react/forbid-foreign-prop-types": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
+  "react/forbid-prop-types": [
     "warn",
     {
-      assertionStyle: "as",
-      objectLiteralTypeAssertions: "allow-as-parameter",
+      checkChildContextTypes: true,
+      checkContextTypes: true,
     },
-  ],
-  "@typescript-eslint/consistent-type-definitions": ["warn", "type"], // https://typescript-eslint.io/rules/consistent-type-definitions
-  "@typescript-eslint/dot-notation": "off", // https://typescript-eslint.io/rules/dot-notation
-  "@typescript-eslint/explicit-member-accessibility": [
-    // https://typescript-eslint.io/rules/explicit-member-accessibility
+  ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
+  "react/jsx-boolean-value": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
+  "react/jsx-child-element-spacing": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
+  "react/jsx-closing-bracket-location": ["warn", "line-aligned"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
+  "react/jsx-closing-tag-location": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+  "react/jsx-curly-brace-presence": ["warn", "never"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
+  "react/jsx-curly-spacing": ["warn", "never"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
+  "react/jsx-equals-spacing": ["warn", "never"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
+  "react/jsx-filename-extension": [
     "warn",
     {
-      accessibility: "no-public",
-      overrides: { parameterProperties: "explicit" },
+      // There's a big discussion whether the jsx/tsx is necessary:
+      // - https://github.com/facebook/create-react-app/issues/87
+      // - https://github.com/airbnb/javascript/pull/985
+      // Since VSCode handles tsx files out-of-the-box, let's stick with the x-extensions
+      extensions: [".jsx", ".tsx"],
     },
-  ],
-  "@typescript-eslint/func-call-spacing": ["warn"], // https://typescript-eslint.io/rules/func-call-spacing
-  "@typescript-eslint/member-delimiter-style": [
-    // https://typescript-eslint.io/rules/member-delimiter-style
+  ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+  "react/jsx-first-prop-new-line": ["warn", "multiline-multiprop"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
+  "react/jsx-handler-names": [
     "warn",
     {
-      multiline: { delimiter: "semi", requireLast: true },
-      singleline: { delimiter: "semi", requireLast: false },
+      eventHandlerPrefix: "handle",
+      eventHandlerPropPrefix: "on",
     },
-  ],
-  "@typescript-eslint/method-signature-style": ["warn", "property"], // https://typescript-eslint.io/rules/method-signature-style
-  "@typescript-eslint/naming-convention": [
-    // https://typescript-eslint.io/rules/naming-convention
-    "warn",
-    ...options["@typescript-eslint/naming-convention"].defaultRules,
-  ],
-  "@typescript-eslint/no-array-constructor": "warn", // https://typescript-eslint.io/rules/no-array-constructor
-  "@typescript-eslint/no-base-to-string": "off", // https://typescript-eslint.io/rules/no-base-to-string
-  "@typescript-eslint/no-confusing-non-null-assertion": "warn", // https://typescript-eslint.io/rules/no-confusing-non-null-assertion
-  "@typescript-eslint/no-confusing-void-expression": [
-    // https://typescript-eslint.io/rules/no-confusing-void-expression
-    "off",
-    { ignoreArrowShorthand: true, ignoreVoidOperator: true },
-  ],
-  "@typescript-eslint/no-dupe-class-members": ["warn"], // https://typescript-eslint.io/rules/no-dupe-class-members
-  "@typescript-eslint/no-dynamic-delete": "warn", // https://typescript-eslint.io/rules/no-dynamic-delete
-  "@typescript-eslint/no-empty-function": "off", // https://typescript-eslint.io/rules/no-empty-function
-  "@typescript-eslint/no-empty-interface": "off", // https://typescript-eslint.io/rules/no-empty-interface
-  "@typescript-eslint/no-explicit-any": [
-    // https://typescript-eslint.io/rules/no-explicit-any
-    "off",
-    { fixToUnknown: false, ignoreRestArgs: true },
-  ],
-  "@typescript-eslint/no-extra-non-null-assertion": ["warn"], // https://typescript-eslint.io/rules/no-extra-non-null-assertion
-  "@typescript-eslint/no-extraneous-class": "off", // https://typescript-eslint.io/rules/no-extraneous-class
-  "@typescript-eslint/no-floating-promises": ["off", { ignoreVoid: true }], // https://typescript-eslint.io/rules/no-floating-promises
-  "@typescript-eslint/no-for-in-array": "warn", // https://typescript-eslint.io/rules/no-for-in-array
-  "@typescript-eslint/no-implied-eval": "warn", // https://typescript-eslint.io/rules/no-implied-eval
-  "@typescript-eslint/no-inferrable-types": "warn", // https://typescript-eslint.io/rules/no-inferrable-types
-  "@typescript-eslint/no-invalid-this": "warn", // https://typescript-eslint.io/rules/no-invalid-this
-  "@typescript-eslint/no-invalid-void-type": [
-    // https://typescript-eslint.io/rules/no-invalid-void-type
-    "warn",
-    { allowAsThisParameter: true, allowInGenericTypeArguments: true },
-  ],
-  "@typescript-eslint/no-loss-of-precision": ["warn"], // https://typescript-eslint.io/rules/no-loss-of-precision
-  "@typescript-eslint/no-misused-new": "warn", // https://typescript-eslint.io/rules/no-misused-new
-  "@typescript-eslint/no-misused-promises": "off", // https://typescript-eslint.io/rules/no-misused-promises
-  "@typescript-eslint/no-namespace": "warn", // https://typescript-eslint.io/rules/no-namespace
-  "@typescript-eslint/no-non-null-asserted-optional-chain": "warn", // https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain
-  "@typescript-eslint/no-non-null-assertion": "off", // https://typescript-eslint.io/rules/no-non-null-assertion
-  "@typescript-eslint/no-redeclare": "warn", // https://typescript-eslint.io/rules/no-redeclare
-  "@typescript-eslint/no-this-alias": [
-    // https://typescript-eslint.io/rules/no-this-alias
-    "warn",
-    { allowDestructuring: true, allowedNames: [] },
-  ],
-  "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off", // https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
-  "@typescript-eslint/no-unnecessary-condition": [
-    // https://typescript-eslint.io/rules/no-unnecessary-condition
-    "warn",
-    { allowConstantLoopConditions: true },
-  ],
-  "@typescript-eslint/no-unnecessary-qualifier": "warn", // https://typescript-eslint.io/rules/no-unnecessary-qualifier
-  "@typescript-eslint/no-unnecessary-type-arguments": "warn", // https://typescript-eslint.io/rules/no-unnecessary-type-arguments
-  "@typescript-eslint/no-unnecessary-type-assertion": "warn", // https://typescript-eslint.io/rules/no-unnecessary-type-assertion
-  "@typescript-eslint/no-unnecessary-type-constraint": "warn", // https://typescript-eslint.io/rules/no-unnecessary-type-constraint
-  "@typescript-eslint/no-unsafe-argument": "off", // https://typescript-eslint.io/rules/no-unsafe-argument
-  "@typescript-eslint/no-unsafe-assignment": "off", // https://typescript-eslint.io/rules/no-unsafe-assignment
-  "@typescript-eslint/no-unsafe-call": "off", // https://typescript-eslint.io/rules/no-unsafe-call
-  "@typescript-eslint/no-unsafe-member-access": "off", // https://typescript-eslint.io/rules/no-unsafe-member-access
-  "@typescript-eslint/no-unsafe-return": "warn", // https://typescript-eslint.io/rules/no-unsafe-return
-  "@typescript-eslint/no-unused-expressions": [
-    // https://typescript-eslint.io/rules/no-unused-expressions
-    "warn",
-    options["no-unused-expressions"],
-  ],
-  "@typescript-eslint/no-unused-vars": ["warn", options["no-unused-vars"]], // https://typescript-eslint.io/rules/no-unused-vars
-  "@typescript-eslint/no-useless-constructor": "warn", // https://typescript-eslint.io/rules/no-useless-constructor
-  "@typescript-eslint/no-var-requires": "warn", // https://typescript-eslint.io/rules/no-var-requires
-  "@typescript-eslint/non-nullable-type-assertion-style": "warn", // https://typescript-eslint.io/rules/non-nullable-type-assertion-style
-  "@typescript-eslint/prefer-as-const": "warn", // https://typescript-eslint.io/rules/prefer-as-const
-  "@typescript-eslint/prefer-for-of": "warn", // https://typescript-eslint.io/rules/prefer-for-of
-  "@typescript-eslint/prefer-function-type": "warn", // https://typescript-eslint.io/rules/prefer-function-type
-  "@typescript-eslint/prefer-includes": "warn", // https://typescript-eslint.io/rules/prefer-includes
-  "@typescript-eslint/prefer-literal-enum-member": "warn", // https://typescript-eslint.io/rules/prefer-literal-enum-member
-  "@typescript-eslint/prefer-namespace-keyword": "off", // https://typescript-eslint.io/rules/prefer-namespace-keyword
-  "@typescript-eslint/prefer-nullish-coalescing": [
-    // https://typescript-eslint.io/rules/prefer-nullish-coalescing
-    "warn",
-    { ignoreConditionalTests: true, ignoreMixedLogicalExpressions: true },
-  ],
-  "@typescript-eslint/prefer-optional-chain": "warn", // https://typescript-eslint.io/rules/prefer-optional-chain
-  "@typescript-eslint/prefer-reduce-type-parameter": "warn", // https://typescript-eslint.io/rules/prefer-reduce-type-parameter
-  "@typescript-eslint/prefer-string-starts-ends-with": "warn", // https://typescript-eslint.io/rules/prefer-string-starts-ends-with
-  "@typescript-eslint/prefer-ts-expect-error": "warn", // https://typescript-eslint.io/rules/prefer-ts-expect-error
-  "@typescript-eslint/promise-function-async": [
-    // https://typescript-eslint.io/rules/promise-function-async
+  ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
+  "react/jsx-indent": ["warn", 4], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
+  "react/jsx-indent-props": ["warn", 4], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
+  "react/jsx-key": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
+  "react/jsx-max-props-per-line": [
     "warn",
     {
-      allowAny: true,
-      allowedPromiseNames: [],
-      checkArrowFunctions: true,
-      checkFunctionDeclarations: true,
-      checkFunctionExpressions: true,
-      checkMethodDeclarations: true,
+      maximum: 4,
     },
-  ],
-  "@typescript-eslint/require-await": "off", // https://typescript-eslint.io/rules/require-await
-  "@typescript-eslint/restrict-plus-operands": "off", // https://typescript-eslint.io/rules/restrict-plus-operands
-  "@typescript-eslint/restrict-template-expressions": [
-    // https://typescript-eslint.io/rules/restrict-template-expressions
-    "off",
-    { allowBoolean: false, allowNullable: false, allowNumber: true },
-  ],
-  "@typescript-eslint/return-await": ["warn", "in-try-catch"], // https://typescript-eslint.io/rules/return-await
-  "@typescript-eslint/switch-exhaustiveness-check": "warn", // https://typescript-eslint.io/rules/switch-exhaustiveness-check
-  "@typescript-eslint/triple-slash-reference": "warn", // https://typescript-eslint.io/rules/triple-slash-reference
-  "@typescript-eslint/type-annotation-spacing": "warn", // https://typescript-eslint.io/rules/type-annotation-spacing
-  "@typescript-eslint/unbound-method": ["warn", { ignoreStatic: true }], // https://typescript-eslint.io/rules/unbound-method
-  "@typescript-eslint/unified-signatures": "warn", // https://typescript-eslint.io/rules/unified-signatures
-  camelcase: "off",
-  // TypeScript files tend to get longer due to types
-  "max-lines": [
+  ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
+  // See https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#protips
+  "react/jsx-no-bind": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
+  "react/jsx-no-comment-textnodes": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
+  "react/jsx-no-duplicate-props": [
     "warn",
     {
-      ...options["max-lines"],
-      max: 1400,
+      ignoreCase: true,
     },
-  ],
+  ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
+  "react/jsx-no-target-blank": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
+  "react/jsx-no-undef": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
+  "react/jsx-pascal-case": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
+  "react/jsx-sort-default-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
+  "react/jsx-sort-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
+  "react/jsx-tag-spacing": [
+    "warn",
+    {
+      afterOpening: "never",
+      beforeSelfClosing: "always",
+      closingSlash: "never",
+    },
+  ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+  "react/jsx-uses-react": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
+  "react/jsx-uses-vars": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
+  "react/no-access-state-in-setstate": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
+  "react/no-array-index-key": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
+  "react/no-children-prop": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
+  "react/no-danger": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
+  "react/no-danger-with-children": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
+  "react/no-deprecated": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
+  "react/no-did-mount-set-state": ["warn", "disallow-in-func"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
+  "react/no-did-update-set-state": ["warn", "disallow-in-func"], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
+  "react/no-direct-mutation-state": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
+  "react/no-find-dom-node": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
+  "react/no-is-mounted": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
+  "react/no-multi-comp": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
+  "react/no-redundant-should-component-update": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
+  "react/no-render-return-value": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
+  "react/no-set-state": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
+  "react/no-string-refs": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
+  "react/no-this-in-sfc": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-this-in-sfc.md
+  "react/no-typos": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md
+  "react/no-unescaped-entities": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
+  "react/no-unknown-property": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
+  "react/no-unused-prop-types": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
+  "react/no-unused-state": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md
+  "react/no-will-update-set-state": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md
+  "react/prefer-es6-class": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
+  "react/prefer-stateless-function": [
+    "warn",
+    {
+      ignorePureComponents: true,
+    },
+  ], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
+  "react/prop-types": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+  "react/react-in-jsx-scope": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
+  "react/require-default-props": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+  "react/require-optimization": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
+  "react/require-render-return": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
+  "react/self-closing-comp": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
+  "react/sort-comp": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
+  "react/sort-prop-types": "off", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
+  "react/style-prop-object": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
+  "react/void-dom-elements-no-children": "warn", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
 };
 
 const allRulesMap = new Map(

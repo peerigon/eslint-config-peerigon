@@ -1,3 +1,4 @@
-import typescript from "../../src/rules/typescript.js";
+import { base } from "../../src/rules/base.js";
+import { typescript } from "../../src/rules/typescript.js";
 
-export default [...typescript];
+export default [...base, ...typescript];

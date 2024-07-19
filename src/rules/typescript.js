@@ -1,11 +1,9 @@
 import tsEslint from "typescript-eslint";
 import preferArrow from "eslint-plugin-prefer-arrow";
-import base from "./base.js";
 import { options } from "../lib/rule-options.js";
 import { globPatterns } from "../lib/glob-patterns.js";
 
 export const typescript = tsEslint.config(
-  ...base,
   ...tsEslint.configs.strictTypeChecked,
   ...tsEslint.configs.stylisticTypeChecked,
   {
