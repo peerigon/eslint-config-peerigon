@@ -6,9 +6,7 @@ import globals from "globals";
 export const node = [
   {
     languageOptions: {
-      parserOptions: {
-        globals: { ...globals.node },
-      },
+      globals: { ...globals.node },
     },
   },
 ];

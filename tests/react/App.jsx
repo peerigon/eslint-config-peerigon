@@ -1,4 +1,16 @@
+import { useEffect, useRef } from "react";
+
 export function App() {
+  for (let j = 0; j < 10; j++) {
+    // eslint-disable-next-line react-compiler/react-compiler
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+      console.log(j);
+      // eslint-disable-next-line react-compiler/react-compiler
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+  }
+
   return (
     <>
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
@@ -13,7 +25,6 @@ export function App() {
 export function doesntWorkWithHmr() {}
 
 export function InvalidRefAccessDuringRender() {
-  // eslint-disable-next-line no-undef
   const ref = useRef(null);
   // eslint-disable-next-line react-compiler/react-compiler
   const value = ref.current;

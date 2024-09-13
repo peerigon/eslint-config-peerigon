@@ -6,9 +6,7 @@ import globals from "globals";
 export const browser = [
   {
     languageOptions: {
-      parserOptions: {
-        globals: { ...globals.browser },
-      },
+      globals: { ...globals.browser },
     },
   },
 ];
