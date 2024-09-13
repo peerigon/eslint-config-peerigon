@@ -1,5 +1,7 @@
+// prettier-ignore
+import { a } from "./other.js";
 // eslint-disable-next-line no-duplicate-imports
-import { a, b } from "./other.js";
+import { b } from "./other.js";
 
 // eslint-disable-next-line array-callback-return
 [1, 2, 3].reduce((memo, item, index) => {
