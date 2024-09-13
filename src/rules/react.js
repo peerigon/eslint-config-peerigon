@@ -1,8 +1,8 @@
 // TODO: Make npm run test:react
 // TODO: Add hooks plugin and a11y plugin
 
-import reactPluginRecommended from "eslint-plugin-react/configs/recommended.js";
 import reactPluginJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
+import reactPluginRecommended from "eslint-plugin-react/configs/recommended.js";
 import { globPatterns } from "../lib/glob-patterns.js";
 
 export const react = [
