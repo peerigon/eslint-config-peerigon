@@ -58,6 +58,9 @@ export const typescript = tsEslint.config(
       ],
       "@typescript-eslint/no-empty-function": "off", // https://typescript-eslint.io/rules/no-empty-function
       "@typescript-eslint/no-empty-interface": "off", // https://typescript-eslint.io/rules/no-empty-interface
+      // `any` is sometimes useful for small and abstract functions.
+      // Should only be used in isolated parts of the codebase.
+      // Appropriate usage can only be checked in a PR review.
       "@typescript-eslint/no-explicit-any": [
         // https://typescript-eslint.io/rules/no-explicit-any
         "off",

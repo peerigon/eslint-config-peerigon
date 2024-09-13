@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 declare module "eslint-plugin-react" {
   const config: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     rules: { [name: string]: any };
+    languageOptions: { [name: string]: any };
   };
 
   export default {
@@ -16,7 +17,6 @@ declare module "eslint-plugin-react" {
 
 declare module "eslint-plugin-prefer-arrow" {
   const config: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     rules: { [name: string]: any };
   };
 
