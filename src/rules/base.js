@@ -3,7 +3,7 @@ import { globPatterns } from "../lib/glob-patterns.js";
 import { options } from "../lib/rule-options.js";
 
 /**
- * @type {Array<import("eslint").Linter.FlatConfig>}
+ * @type {Array<import("eslint").Linter.Config>}
  */
 export const base = [
   js.configs.recommended,
