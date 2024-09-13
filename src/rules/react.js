@@ -1,5 +1,6 @@
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import reactPlugin from "eslint-plugin-react";
+import reactCompilerPlugin from "eslint-plugin-react-compiler";
 import reactRefreshPlugin from "eslint-plugin-react-refresh";
 import { globPatterns } from "../lib/glob-patterns.js";
 
@@ -35,7 +36,6 @@ export const react = [
   },
   {
     files,
-    // in main config for TSX/JSX source files
     plugins: {
       "react-refresh": reactRefreshPlugin,
     },
@@ -56,6 +56,15 @@ export const react = [
           ],
         },
       ],
+    },
+  },
+  {
+    files,
+    plugins: {
+      "react-compiler": reactCompilerPlugin,
+    },
+    rules: {
+      "react-compiler/react-compiler": "error",
     },
   },
   {

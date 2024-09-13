@@ -46,6 +46,7 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-compiler": "^0.0.0-experimental-75b9fd4-20240912",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
     "lodash": "^4.17.21",
