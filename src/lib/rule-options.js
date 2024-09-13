@@ -5,7 +5,7 @@ const camelcase = {
 };
 
 // TODO: Rename to ruleOptions
-export const options = {
+export const ruleOptions = {
   ["camelcase"]: camelcase,
   ["max-lines"]: {
     max: 700,

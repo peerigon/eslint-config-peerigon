@@ -1,6 +1,6 @@
 import js from "@eslint/js";
 import { globPatterns } from "../lib/glob-patterns.js";
-import { options } from "../lib/rule-options.js";
+import { ruleOptions } from "../lib/rule-options.js";
 
 /**
  * @type {Array<import("eslint").Linter.Config>}
@@ -36,7 +36,7 @@ export const base = [
       // ----------------------------------------------
       "accessor-pairs": "warn", // https://eslint.org/docs/latest/rules/accessor-pairs
       "block-scoped-var": "warn", // https://eslint.org/docs/latest/rules/block-scoped-var
-      camelcase: ["warn", options.camelcase], // https://eslint.org/docs/latest/rules/camelcase
+      camelcase: ["warn", ruleOptions.camelcase], // https://eslint.org/docs/latest/rules/camelcase
       "consistent-return": "warn", // https://eslint.org/docs/latest/rules/consistent-return
       "dot-notation": "warn", // https://eslint.org/docs/latest/rules/dot-notation
       eqeqeq: ["warn", "always", { null: "ignore" }], // https://eslint.org/docs/latest/rules/eqeqeq
@@ -87,7 +87,7 @@ export const base = [
       "no-throw-literal": "warn", // https://eslint.org/docs/latest/rules/no-throw-literal
       "no-undef-init": "warn", // https://eslint.org/docs/latest/rules/no-undef-init
       "no-unneeded-ternary": "warn", // https://eslint.org/docs/latest/rules/no-unneeded-ternary
-      "no-unused-expressions": ["warn", options["no-unused-expressions"]], // https://eslint.org/docs/latest/rules/no-unused-expressions
+      "no-unused-expressions": ["warn", ruleOptions["no-unused-expressions"]], // https://eslint.org/docs/latest/rules/no-unused-expressions
       "no-useless-call": "warn", // https://eslint.org/docs/latest/rules/no-useless-call
       "no-useless-computed-key": "warn", // https://eslint.org/docs/latest/rules/no-useless-computed-key
       "no-useless-concat": "warn", // https://eslint.org/docs/latest/rules/no-useless-concat

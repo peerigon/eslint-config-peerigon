@@ -1,7 +1,7 @@
 import preferArrow from "eslint-plugin-prefer-arrow";
 import tsEslint from "typescript-eslint";
 import { globPatterns } from "../lib/glob-patterns.js";
-import { options } from "../lib/rule-options.js";
+import { ruleOptions } from "../lib/rule-options.js";
 
 export const typescript = tsEslint.config(
   ...tsEslint.configs.strictTypeChecked,
@@ -45,7 +45,7 @@ export const typescript = tsEslint.config(
       "@typescript-eslint/naming-convention": [
         // https://typescript-eslint.io/rules/naming-convention
         "warn",
-        ...options["@typescript-eslint/naming-convention"].defaultRules,
+        ...ruleOptions["@typescript-eslint/naming-convention"].defaultRules,
       ],
       "@typescript-eslint/no-base-to-string": "off", // https://typescript-eslint.io/rules/no-base-to-string
       "@typescript-eslint/no-confusing-void-expression": [

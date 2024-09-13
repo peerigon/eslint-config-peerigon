@@ -1,7 +1,7 @@
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import _ from "lodash";
 import { globPatterns } from "../lib/glob-patterns.js";
-import { options } from "../lib/rule-options.js";
+import { ruleOptions } from "../lib/rule-options.js";
 import base from "./base.js";
 
 const allRules = [reactRecommended];
