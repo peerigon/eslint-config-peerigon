@@ -3,7 +3,7 @@ import { a } from "./other.js";
 // eslint-disable-next-line no-duplicate-imports
 import { b } from "./other.js";
 
-// eslint-disable-next-line array-callback-return
+// eslint-disable-next-line array-callback-return, unicorn/no-array-reduce
 [1, 2, 3].reduce((memo, item, index) => {
   memo[item] = index;
 });
@@ -37,7 +37,7 @@ while (a) {
 }
 
 // eslint-disable-next-line no-unreachable-loop
-for (let i = 0; i < 3; i++) {
+for (let index = 0; index < 3; index++) {
   break;
 }
 
@@ -46,7 +46,15 @@ let id = "x1234";
 id = 2;
 void id;
 
+try {
+  /* empty */
+  // eslint-disable-next-line unicorn/catch-error-name
+} catch (bla) {
+  void bla;
+}
+
 let c = 1;
+// eslint-disable-next-line unicorn/prefer-top-level-await
 (async () => {
   // eslint-disable-next-line require-atomic-updates
   c += await c;

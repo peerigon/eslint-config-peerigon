@@ -84,6 +84,19 @@ export const typescript = tsEslint.config(
           allowTernary: true,
         },
       ],
+      "@typescript-eslint/no-unused-vars": [
+        // https://typescript-eslint.io/rules/no-unused-vars
+        "error",
+        {
+          args: "all",
+          argsIgnorePattern: "^_",
+          caughtErrors: "all",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
+        },
+      ],
       "@typescript-eslint/promise-function-async": [
         // https://typescript-eslint.io/rules/promise-function-async
         "warn",

@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 
-export function App() {
-  for (let j = 0; j < 10; j++) {
+export function App(_props) {
+  for (let index = 0; index < 10; index++) {
     // eslint-disable-next-line react-compiler/react-compiler
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-      console.log(j);
+      void index;
+
       // eslint-disable-next-line react-compiler/react-compiler
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

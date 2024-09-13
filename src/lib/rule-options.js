@@ -4,7 +4,6 @@ const camelcase = {
   properties: "always",
 };
 
-// TODO: Rename to ruleOptions
 export const ruleOptions = {
   ["camelcase"]: camelcase,
   ["max-lines"]: {
@@ -17,13 +16,9 @@ export const ruleOptions = {
     allowTernary: true,
   },
   ["no-unused-vars"]: {
-    // Sometimes you want to keep the function parameters for future usage
-    args: "none",
-    // Handling errors doesn't always mean that you need to use the error
-    caughtErrors: "none",
     // This pattern is pretty common
     ignoreRestSiblings: true,
-    vars: "all",
+    varsIgnorePattern: "^_",
   },
   ["@typescript-eslint/naming-convention"]: (() => {
     const options = {

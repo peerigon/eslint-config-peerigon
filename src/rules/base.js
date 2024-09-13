@@ -1,4 +1,7 @@
+// TODO: Add eslint-config-prettier to the project
+
 import js from "@eslint/js";
+import unicornPlugin from "eslint-plugin-unicorn";
 import { globPatterns } from "../lib/glob-patterns.js";
 import { ruleOptions } from "../lib/rule-options.js";
 
@@ -7,6 +10,19 @@ import { ruleOptions } from "../lib/rule-options.js";
  */
 export const base = [
   js.configs.recommended,
+  unicornPlugin.configs["flat/recommended"],
+  {
+    rules: {
+      // Turn of too opinionated rules
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/896
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/filename-case": "off",
+      "unicorn/no-nested-ternary": "off",
+      "unicorn/no-null": "off",
+      "unicorn/no-useless-undefined": "off",
+      "unicorn/prefer-query-selector": "off",
+    },
+  },
   {
     linterOptions: {
       reportUnusedDisableDirectives: "warn",
@@ -88,6 +104,7 @@ export const base = [
       "no-undef-init": "warn", // https://eslint.org/docs/latest/rules/no-undef-init
       "no-unneeded-ternary": "warn", // https://eslint.org/docs/latest/rules/no-unneeded-ternary
       "no-unused-expressions": ["warn", ruleOptions["no-unused-expressions"]], // https://eslint.org/docs/latest/rules/no-unused-expressions
+      "no-unused-vars": ["error", ruleOptions["no-unused-vars"]],
       "no-useless-call": "warn", // https://eslint.org/docs/latest/rules/no-useless-call
       "no-useless-computed-key": "warn", // https://eslint.org/docs/latest/rules/no-useless-computed-key
       "no-useless-concat": "warn", // https://eslint.org/docs/latest/rules/no-useless-concat

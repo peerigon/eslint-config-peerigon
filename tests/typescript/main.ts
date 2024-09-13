@@ -11,7 +11,7 @@ class SomeClass {
     // Arrow functions as class properties should be ok...
   };
 
-  someMethod() {
+  someMethod(_unused: string) {
     // ...as well as regular functions.
     // See styles/prefer-arrow.js for an explanation.
     console.log(this.#someProp);

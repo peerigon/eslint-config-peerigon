@@ -149,4 +149,18 @@ export const react = [
       "react/void-dom-elements-no-children": "warn", // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
     },
   },
+  {
+    files,
+    rules: {
+      // It's very common for React components to use PascalCase.
+      "unicorn/filename-case": [
+        "error",
+        {
+          cases: {
+            pascalCase: true,
+          },
+        },
+      ],
+    },
+  },
 ];
