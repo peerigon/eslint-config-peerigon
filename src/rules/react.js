@@ -1,13 +1,17 @@
-// TODO: Add hooks plugin and a11y plugin
-
+import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import reactPlugin from "eslint-plugin-react";
+import reactRefreshPlugin from "eslint-plugin-react-refresh";
 import { globPatterns } from "../lib/glob-patterns.js";
 
+const files = [globPatterns.react, globPatterns.typescriptReact];
+
+/**
+ * @type {Array<import("eslint").Linter.Config>}
+ */
 export const react = [
   {
-    files: [globPatterns.react, globPatterns.typescriptReact],
     ...reactPlugin.configs.flat.recommended,
-    ...reactPlugin.configs.flat["jsx-runtime"],
+    files,
     languageOptions: {
       ...reactPlugin.configs.flat.recommended.languageOptions,
     },
@@ -18,7 +22,44 @@ export const react = [
     },
   },
   {
-    files: [globPatterns.react, globPatterns.typescriptReact],
+    ...reactPlugin.configs.flat["jsx-runtime"],
+    files,
+  },
+  {
+    ...jsxA11yPlugin.flatConfigs.recommended,
+    files,
+  },
+  {
+    ...jsxA11yPlugin.flatConfigs.strict,
+    files,
+  },
+  {
+    files,
+    // in main config for TSX/JSX source files
+    plugins: {
+      "react-refresh": reactRefreshPlugin,
+    },
+    rules: {
+      "react-refresh/only-export-components": [
+        "warn",
+        {
+          allowConstantExport: true,
+          allowExportNames: [
+            // Next.js
+            "getServerSideProps",
+            // Remix
+            "meta",
+            "links",
+            "headers",
+            "loader",
+            "action",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    files,
     rules: {
       "react/button-has-type": "warn", // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
       "react/default-props-match-prop-types": "warn", // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md

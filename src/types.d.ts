@@ -22,3 +22,11 @@ declare module "eslint-plugin-prefer-arrow" {
 
   export default config;
 }
+
+declare module "eslint-plugin-react-refresh" {
+  const config: {
+    rules: { [name: string]: any };
+  };
+
+  export default config;
+}
