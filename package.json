@@ -1,75 +1,75 @@
 {
-  "name": "eslint-config-peerigon",
-  "version": "0.0.0-semantically-released",
-  "description": "Peerigon coding rules as eslint config",
-  "type": "module",
-  "scripts": {
-    "unused": "eslint-find-rules -u -n -d",
-    "unused:javascript": "npm run unused -- ./tests/javascript/.eslintrc.json",
-    "unused:typescript": "npm run unused -- --ext .ts ./tests/typescript/.eslintrc.json",
-    "unused:react": "npm run unused -- --ext .ts ./tests/react/.eslintrc.json",
-    "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
-    "test": "run-p test:*",
-    "test:javascript": "cd tests/javascript; eslint --max-warnings 0 .",
-    "test:node": "cd tests/node; eslint --max-warnings 0 .",
-    "test:typescript": "cd tests/typescript; eslint --max-warnings 0 .",
-    "test:react": "cd tests/react; eslint --max-warnings 0 .",
-    "test:prettier": "prettier --check .",
-    "prepare": "husky",
-    "release": "semantic-release"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/peerigon/eslint-config-peerigon.git"
-  },
-  "keywords": [
-    "eslint",
-    "peerigon",
-    "coding",
-    "rules",
-    "style"
-  ],
-  "files": [
-    "src"
-  ],
-  "author": "Peerigon GmbH <hello@peerigon.com>",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/peerigon/eslint-config-peerigon/issues"
-  },
-  "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
-  "peerDependencies": {
-    "eslint": "^9.5.0"
-  },
-  "dependencies": {
-    "@eslint/compat": "^1.1.0",
-    "@eslint/js": "^9.6.0",
-    "eslint": "^9.5.0",
-    "eslint-plugin-optimize-regex": "^1.2.1",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-promise": "^6.4.0",
-    "eslint-plugin-react": "^7.34.4",
-    "globals": "^15.8.0",
-    "lodash": "^4.17.21",
-    "typescript-eslint": "^7.15.0"
-  },
-  "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@tsconfig/recommended": "^1.0.7",
-    "@types/eslint__js": "^8.42.3",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7",
-    "npm-run-all": "^4.1.5",
-    "pin-github-action": "^1.9.1",
-    "prettier": "^3.3.2",
-    "semantic-release": "^24.0.0",
-    "typescript": "^5.5.3"
-  },
-  "lint-staged": {
-    ".github/workflows/*.{yml,yaml}": [
-      "pin-github-action --allow-empty"
+    "name": "eslint-config-peerigon",
+    "version": "0.0.0-semantically-released",
+    "description": "Peerigon coding rules as eslint config",
+    "type": "module",
+    "scripts": {
+        "unused": "eslint-find-rules -u -n -d",
+        "unused:javascript": "npm run unused -- ./tests/javascript/.eslintrc.json",
+        "unused:typescript": "npm run unused -- --ext .ts ./tests/typescript/.eslintrc.json",
+        "unused:react": "npm run unused -- --ext .ts ./tests/react/.eslintrc.json",
+        "rsync": "rsync -a --include=\"*.js\" --exclude=\".git\" --exclude=\"node_modules\" .",
+        "test": "run-p test:*",
+        "test:javascript": "cd tests/javascript; eslint --max-warnings 0 .",
+        "test:node": "cd tests/node; eslint --max-warnings 0 .",
+        "test:typescript": "cd tests/typescript; eslint --max-warnings 0 .",
+        "test:react": "cd tests/react; eslint --max-warnings 0 .",
+        "test:prettier": "prettier --check .",
+        "prepare": "husky",
+        "release": "semantic-release"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/peerigon/eslint-config-peerigon.git"
+    },
+    "keywords": [
+        "eslint",
+        "peerigon",
+        "coding",
+        "rules",
+        "style"
     ],
-    "*.{js,jsx,ts,tsx,css,md,yml,yaml}": "prettier --write"
-  }
+    "files": [
+        "src"
+    ],
+    "author": "Peerigon GmbH <hello@peerigon.com>",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/peerigon/eslint-config-peerigon/issues"
+    },
+    "homepage": "https://github.com/peerigon/eslint-config-peerigon#readme",
+    "peerDependencies": {
+        "eslint": "^9.5.0"
+    },
+    "dependencies": {
+        "@eslint/compat": "^1.1.0",
+        "@eslint/js": "^9.6.0",
+        "eslint": "^9.5.0",
+        "eslint-plugin-optimize-regex": "^1.2.1",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
+        "eslint-plugin-promise": "^6.4.0",
+        "eslint-plugin-react": "^7.34.4",
+        "globals": "^15.8.0",
+        "lodash": "^4.17.21",
+        "typescript-eslint": "^7.15.0"
+    },
+    "devDependencies": {
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@tsconfig/recommended": "^1.0.7",
+        "@types/eslint__js": "^8.42.3",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.7",
+        "npm-run-all": "^4.1.5",
+        "pin-github-action": "^1.9.1",
+        "prettier": "^3.3.2",
+        "semantic-release": "^24.0.0",
+        "typescript": "^5.5.3"
+    },
+    "lint-staged": {
+        ".github/workflows/*.{yml,yaml}": [
+            "pin-github-action --allow-empty"
+        ],
+        "*.{js,jsx,ts,tsx,css,md,yml,yaml}": "prettier --write"
+    }
 }

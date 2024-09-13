@@ -1,3 +1,10 @@
+# [39.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v39.1.0...v39.2.0) (2024-07-20)
+
+
+### Features
+
+* Update dependencies ([#165](https://github.com/peerigon/eslint-config-peerigon/issues/165)) ([80bd82b](https://github.com/peerigon/eslint-config-peerigon/commit/80bd82be3dc39de8ebc20f4828258db1f47813bf))
+
 # [39.1.0](https://github.com/peerigon/eslint-config-peerigon/compare/v39.0.1...v39.1.0) (2024-07-09)
 
 
