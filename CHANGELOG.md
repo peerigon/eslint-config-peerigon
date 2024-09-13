@@ -1,3 +1,15 @@
+# [40.0.0](https://github.com/peerigon/eslint-config-peerigon/compare/v39.2.0...v40.0.0) (2024-09-13)
+
+
+### Features
+
+* Sort imports ([#172](https://github.com/peerigon/eslint-config-peerigon/issues/172)) ([0c1eb54](https://github.com/peerigon/eslint-config-peerigon/commit/0c1eb541ad6ab2d05e34b93622e73bb2c2d18c51))
+
+
+### BREAKING CHANGES
+
+* Updated the prettier config to also sort imports.
+
 # [39.2.0](https://github.com/peerigon/eslint-config-peerigon/compare/v39.1.0...v39.2.0) (2024-07-20)
 
 
