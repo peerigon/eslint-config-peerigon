@@ -1,3 +1,6 @@
+> [!WARNING]
+> This package is deprecated. Please switch to [@peerigon/configs](https://github.com/peerigon/configs).
+
 # eslint-config-peerigon
 
 **[Peerigon](https://peerigon.com/) coding rules as [ESLint](http://eslint.org/) config.**
